@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+    <title></title>
+    
+    <link rel="stylesheet" href="../site/estilos/base.css">
+    <link rel="stylesheet" href="../site/estilos/form.css">
+
+    <script src="https://kit.fontawesome.com/55197c00fe.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class="navbar">
+        <ul class="navitens">
+            <li><a href="#" class="text_cad">Sobre</a></li>
+            <li><a href="#" class="text_cad">Personagens</a></li>
+            <li><a href="#" class="grease">Grease</a></li>
+            <li><a href="#" class="text_cad">Cadastrar</a></li>
+            <li><a href="#" class="text_cad">Login</a></li>
+        </ul>
+        <img class="logo" src="imagens/icon-avatar.png" alt="">
+    </div>
+    
+    <main>
+        <div class="left"></div>
+
+        <div class="">
+            <form action="salvarImagem.php" method="post" autocomplete="off">
+                
+                <p class="text"><input class="input_file" type="file" name="logo_user"  minlength="5" required></p>
+                <p class="text"><input type="submit" value="Enviar"></p>
+            </form>    
+        </div>
+    
+    </main>
+
+</body>
+</html>

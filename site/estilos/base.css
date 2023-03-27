@@ -1,0 +1,162 @@
+@font-face {
+    font-family: JosefinSansRegular;
+    src: url(../fontes/JosefinSans/JosefinSans-Regular.ttf);
+}
+@font-face {
+    font-family: JosefinSansLight;
+    src: url(../fontes/JosefinSans/JosefinSans-Light.ttf);
+}
+@font-face {
+    font-family: Inter;
+    src: url(../fontes/Inter/Inter-Regular.ttf);
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --alturaNAV: 10vh;
+    --alturaItemNAV: 9vh;
+}
+
+
+
+body{
+    background-color: #FEFCF3;
+    color: rgba(0, 0, 0, 0.800);
+    font-family: Inter;
+    margin-top: var(--alturaNAV);
+}
+
+
+/* Formatação do navbar */
+.navbar {
+    background: #000000;
+    /* background-color: transparent; */
+    width: 100%;
+    text-align: center;
+    height: var(--alturaNAV);
+    top: 0;
+    position: fixed;
+}
+
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    line-height: var(--alturaItemNAV);
+    /* margin-right: 50px; */
+    
+}
+
+.navitens li {
+    display: inline;
+    font-family: JosefinSansLight;
+}
+
+/* Link do navbar */
+a.text_cad {
+    margin-inline-start: 25px;
+    --b: 0.1em;   /* A grossura da linha */
+    --c: #ffffff; /* A cor da linha*/
+    
+    color: #ffffff;
+    padding-block: var(--b);
+    color: #ffffff;
+    background: 
+    linear-gradient(var(--c) 50%,rgb(0, 0, 0) 0) 0% calc(100% - var(--_p,0%))/100% 200%,
+    linear-gradient(var(--c) 0 0) 0% var(--_p,0%)/var(--_p,0%) var(--b) no-repeat;
+    -webkit-background-clip: text,padding-box;
+    background-clip: text,padding-box;
+    transition: .3s var(--_s,0s) linear,background-size .3s calc(.3s - var(--_s,0s));
+}
+    .text_cad:hover {
+        --_p: 100%;
+        --_s: .3s;
+    }
+
+a.grease {
+    font-size: 20px;
+    margin-inline-start: 25px;
+    color: white;
+    font-family: JosefinSansRegular;
+}
+
+.icon_user {
+    height: 90%;
+    float: right;
+    margin-top: 3px;
+    position: absolute;
+    right: 30px;
+    top: 0;
+    background-color: white;
+    border-radius: 100px;
+}
+
+/* ------------------------------------ */
+
+/* MAIN */
+main {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/* Formatação de títulos*/
+p.title1 {
+    font-family: JosefinSansRegular;
+    font-size: 36px;
+    font-weight: 40px;
+    /*Animação*/
+    --b: 0.1em;   /* A grossura da linha */
+    --c: #6BA5F2; /* A cor da linha*/
+    
+    color: rgba(0, 0, 0, 0.493);
+    padding-block: var(--b);
+    background: 
+    linear-gradient(var(--c) 50%,rgb(0, 0, 0) 0) 0% calc(100% - var(--_p,0%))/100% 200%,
+    linear-gradient(var(--c) 0 0) 0% var(--_p,0%)/var(--_p,0%) var(--b) no-repeat;
+    -webkit-background-clip: text,padding-box;
+    background-clip: text,padding-box;
+    transition: .3s var(--_s,0s) linear,background-size .3s calc(.3s - var(--_s,0s));
+}
+    .title1:hover {
+        --_p: 100%;
+        --_s: .3s;
+    }
+
+
+
+/* Formatação de parágrafo */
+p.text {
+    margin: 8px;
+}
+
+
+/* Links gerais */
+a {
+    text-decoration: none;
+    color: #45CFE1;
+}
+
+.underline:hover {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+} 
+
+
+@media only screen and (max-width: 800px) {
+    body {
+        font-size: 15px;
+    }
+
+    p.title1 {
+        font-size: 30px;
+    }
+}
