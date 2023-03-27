@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+    <title>Cadastro</title>
+    
+    <link rel="stylesheet" href="estilos/base.css">
+    <link rel="stylesheet" href="estilos/form.css">
+
+    <script src="scripts/javascript/change_background.js"></script>
+    <script src="https://kit.fontawesome.com/55197c00fe.js" crossorigin="anonymous"></script>
+</head>
+<body onload="change_background()">
+
+    <div class="navbar">
+        <ul class="navitens">
+            <li><a href="#" class="text_cad">Sobre</a></li>
+            <li><a href="#" class="text_cad">Personagens</a></li>
+            <li><a href="#" class="grease">Grease</a></li>
+            <li><a href="#" class="text_cad">Cadastrar</a></li>
+            <li><a href="#" class="text_cad">Login</a></li>
+        </ul>
+        
+        <img id="icon_user" class="icon_user" src="" alt="">
+    </div>
+    
+    <main>
+        <div class="left"></div>
+
+        <div class="right">
+            <form action="scripts/php/cadastrar.php" method="post" autocomplete="off">
+                <p class="title1">Criar Conta</p>
+                <input class="input_form" type="text" name="nome" placeholder="Nome" minlength="5" required>
+                <input class="input_form" type="email" name="email" placeholder="Email" required>
+                <input class="input_form" type="password" name="senha" placeholder="Senha" required>
+                
+                <!-- <span id="msg_password"><i class="fa-solid fa-circle-exclamation"></i>Senha ruim parça.</span> -->
+                <!-- Aqui terá um span quando a senha for fraca -->
+
+                <input class="button_form" type="submit" value="Cadastrar">
+                
+                <p class="text">Já tem uma conta? <a href="#" class="underline">Login</a></p>
+            </form>    
+        </div>
+    
+    </main>
+
+</body>
+</html>
