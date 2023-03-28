@@ -92,9 +92,22 @@ body{
 
     .navbar-direita {
         position: absolute;
-        top: 0px;
+        top: 0px; 
+        float: right;
         right: 40px;
         text-align: right;
+    }
+
+    .duplo-li {
+        text-align: right;
+    }
+
+    .duplo-li a {
+        font-size: 0.9rem;
+    }
+
+    .img-user {
+        height: 2.5rem;
     }
 
 /* ------------------------------------ */
@@ -163,6 +176,4 @@ a {
     body {
         font-size: 15px; /* 15px */
     }
-
-    
 }
