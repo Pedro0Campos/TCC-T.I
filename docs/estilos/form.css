@@ -42,7 +42,7 @@ div.right form {
     width: var(--widthInput);
     max-width: var(--maxWidthInput);
     border: 0;
-    font-size: 18px;
+    font-size: 1rem;
 }
 
 
@@ -71,7 +71,6 @@ div.right form {
 
 .button_form {
     border: 0;
-    font-size: 18px;
     background: #6BA5F2;
     color: white;
     margin: 30px 0 10px 0;
@@ -111,10 +110,6 @@ div.right form {
         float: none;
         height: 100%;
         padding: 35px 0 20px 0;
-    }
-
-    .input_form, .button_form {
-        font-size: 16px;
     }
 
     :root {
