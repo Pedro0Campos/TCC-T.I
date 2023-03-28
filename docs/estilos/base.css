@@ -22,6 +22,7 @@
 :root {
     --alturaNAV: 10vh;
     --alturaItemNAV: 9vh;
+    /* --alturaItemNavUser: 4.5vh; */
 }
 
 
@@ -37,35 +38,38 @@ body{
 /* Formatação do navbar */
 .navbar {
     background: #000000;
-    /* background-color: transparent; */
     width: 100%;
-    text-align: center;
     height: var(--alturaNAV);
-    top: 0;
+    
+    font-family: JosefinSansLight;
+    color: white;
+    line-height: var(--alturaItemNAV);
+    
     position: fixed;
+    top: 0;
+    
+    display: inline;
+    align-items: center;
 }
 
 .navbar ul {
-    margin: 0;
-    padding: 0;
     text-align: center;
-    line-height: var(--alturaItemNAV);
-    /* margin-right: 50px; */
-    
 }
 
-.navitens li {
+.navlista li {
     display: inline;
-    font-family: JosefinSansLight;
+    margin-inline-start: 25px;
+}
+
+li {
+    list-style: none;
 }
 
 /* Link do navbar */
-a.text_cad {
-    margin-inline-start: 25px;
-    --b: 0.1em;   /* A grossura da linha */
-    --c: #ffffff; /* A cor da linha*/
+li a.navitens {
+    --b: 0.1em;     /*A grossura da linha*/
+    --c: #ffffff; /*A cor da linha*/
     
-    color: #ffffff;
     padding-block: var(--b);
     color: #ffffff;
     background: 
@@ -75,19 +79,24 @@ a.text_cad {
     background-clip: text,padding-box;
     transition: .3s var(--_s,0s) linear,background-size .3s calc(.3s - var(--_s,0s));
 }
-    .text_cad:hover {
+    .navitens:hover {
         --_p: 100%;
         --_s: .3s;
     }
 
-a.grease {
+li.grease {
     font-size: 20px;
-    margin-inline-start: 25px;
-    color: white;
     font-family: JosefinSansRegular;
+    cursor: default;
 }
 
-.icon_user {
+.navbar-direita {
+    position: absolute;
+    top: 0;
+    right: 40px;
+}
+
+/* .icon_user {
     height: 90%;
     float: right;
     margin-top: 3px;
@@ -96,7 +105,7 @@ a.grease {
     top: 0;
     background-color: white;
     border-radius: 100px;
-}
+} */
 
 /* ------------------------------------ */
 
