@@ -22,7 +22,7 @@
 :root {
     --alturaNAV: 10vh;
     --alturaItemNAV: 9vh;
-    /* --alturaItemNavUser: 4.5vh; */
+    --alturaItemNavDireita: 4.5vh;
 }
 
 
@@ -92,22 +92,13 @@ li.grease {
 
 .navbar-direita {
     position: absolute;
-    top: 0;
+    top: 0px;
     right: 40px;
+    text-align: right;
 }
 
-/* .icon_user {
-    height: 90%;
-    float: right;
-    margin-top: 3px;
-    position: absolute;
-    right: 30px;
-    top: 0;
-    background-color: white;
-    border-radius: 100px;
-} */
-
 /* ------------------------------------ */
+
 
 /* MAIN */
 main {
@@ -120,8 +111,8 @@ main {
 /* Formatação de títulos*/
 p.title1 {
     font-family: JosefinSansRegular;
-    font-size: 36px;
-    font-weight: 40px;
+    font-size: 36px; /* 36px */
+    font-weight: 40px; /* 40px */
     /*Animação*/
     --b: 0.1em;   /* A grossura da linha */
     --c: #6BA5F2; /* A cor da linha*/
@@ -162,10 +153,10 @@ a {
 
 @media only screen and (max-width: 800px) {
     body {
-        font-size: 15px;
+        font-size: 15px; /* 15px */
     }
 
     p.title1 {
-        font-size: 30px;
+        font-size: 30px; /* 30px */
     }
 }
