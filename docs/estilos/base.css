@@ -20,9 +20,7 @@
 }
 
 :root {
-    --alturaNAV: 10vh;
-    --alturaItemNAV: 9vh;
-    --alturaItemNavDireita: 4.5vh;
+    --alturaNAV: 4.5rem;
 }
 
 
@@ -32,6 +30,7 @@ body{
     color: rgba(0, 0, 0, 0.800);
     font-family: Inter;
     margin-top: var(--alturaNAV);
+    font-size: 18px;
 }
 
 
@@ -43,7 +42,6 @@ body{
     
     font-family: JosefinSansLight;
     color: white;
-    line-height: var(--alturaItemNAV);
     
     position: fixed;
     top: 0;
@@ -51,51 +49,53 @@ body{
     display: inline;
     align-items: center;
 }
-
-.navbar ul {
-    text-align: center;
-}
-
-.navlista li {
-    display: inline;
-    margin-inline-start: 25px;
-}
-
-li {
-    list-style: none;
-}
-
-/* Link do navbar */
-li a.navitens {
-    --b: 0.1em;     /*A grossura da linha*/
-    --c: #ffffff; /*A cor da linha*/
-    
-    padding-block: var(--b);
-    color: #ffffff;
-    background: 
-    linear-gradient(var(--c) 50%,rgb(0, 0, 0) 0) 0% calc(100% - var(--_p,0%))/100% 200%,
-    linear-gradient(var(--c) 0 0) 0% var(--_p,0%)/var(--_p,0%) var(--b) no-repeat;
-    -webkit-background-clip: text,padding-box;
-    background-clip: text,padding-box;
-    transition: .3s var(--_s,0s) linear,background-size .3s calc(.3s - var(--_s,0s));
-}
-    .navitens:hover {
-        --_p: 100%;
-        --_s: .3s;
+    /* LISTA DA NAV */
+    .navbar ul {
+        text-align: center;
+        height: var(--alturaNAV);
     }
+        /* ITEM DA LISTA DA NAV */
+        .navlista li {
+            display: inline;
+            margin-inline-start: 2rem;
+            /* margin-inline-end: 12.5px; */
+        }
 
-li.grease {
-    font-size: 20px;
-    font-family: JosefinSansRegular;
-    cursor: default;
-}
+        li {
+            list-style: none;
+        }
 
-.navbar-direita {
-    position: absolute;
-    top: 0px;
-    right: 40px;
-    text-align: right;
-}
+        /* Link do navbar */
+        li a.navitens {
+            --b: 0.1em;     /*A grossura da linha*/
+            --c: #ffffff; /*A cor da linha*/
+            
+            padding-block: var(--b);
+            color: #ffffff;
+            background: 
+            linear-gradient(var(--c) 50%,rgb(0, 0, 0) 0) 0% calc(100% - var(--_p,0%))/100% 200%,
+            linear-gradient(var(--c) 0 0) 0% var(--_p,0%)/var(--_p,0%) var(--b) no-repeat;
+            -webkit-background-clip: text,padding-box;
+            background-clip: text,padding-box;
+            transition: .3s var(--_s,0s) linear,background-size .3s calc(.3s - var(--_s,0s));
+        }
+            .navitens:hover {
+                --_p: 100%;
+                --_s: .3s;
+            }
+
+        li.grease {
+            font-size: 1.3rem; /* 20px*/
+            font-family: JosefinSansRegular;
+            cursor: default;
+        }
+
+    .navbar-direita {
+        position: absolute;
+        top: 0px;
+        right: 40px;
+        text-align: right;
+    }
 
 /* ------------------------------------ */
 
@@ -111,7 +111,7 @@ main {
 /* Formatação de títulos*/
 p.title1 {
     font-family: JosefinSansRegular;
-    font-size: 36px; /* 36px */
+    font-size: 2rem; /* 36px */
     font-weight: 40px; /* 40px */
     /*Animação*/
     --b: 0.1em;   /* A grossura da linha */
@@ -151,12 +151,18 @@ a {
 } 
 
 
+/* TAGS ÚTEIS */
+
+.flexCenterVH {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @media only screen and (max-width: 800px) {
     body {
         font-size: 15px; /* 15px */
     }
 
-    p.title1 {
-        font-size: 30px; /* 30px */
-    }
+    
 }
