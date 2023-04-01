@@ -87,7 +87,7 @@ body{
         }
 
     /* NAVBAR que fica à direita */
-    .navbar-direita {
+    .navlista-direita {
         position: absolute;
         top: 0px; 
         float: right;
@@ -97,7 +97,7 @@ body{
         line-height: 1.2rem;
     }
 
-    .navbar-direita li {
+    .navlista-direita li {
         margin-inline-start: 1.5rem;
     }
     
@@ -190,8 +190,14 @@ a {
 
 
 /* RESPONSIVIDADE */
-@media only screen and (max-width: 800px) {
-    body {
-        font-size: 15px; /* 15px */
+@media only screen and (max-width: 748px) {
+    /* Colocar a navbar para esquerda */
+    .navlista-esquerda {
+        float: left;
     }
+}
+
+/* Criar navbar em forma de menu mobile */
+@media only screen and (max-width: 564px) {
+    
 }
