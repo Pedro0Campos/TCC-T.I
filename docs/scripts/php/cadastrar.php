@@ -23,7 +23,7 @@
     // $enviarDados->execute();
 
     // Redirecionar para outra url
-    $url = '../../cadastro.html';
+    $url = '../../cadastro.php';
     header("Location: " . $url);
     die();
     
