@@ -23,7 +23,12 @@
     --alturaNAV: 4.5rem;
 }
 
-
+#circulo {
+    background: lightblue;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
 
 body{
     background-color: #FEFCF3;
