@@ -82,7 +82,7 @@
                 <span id="erro_email" class="msg_erro"></span>
                 
                 <input id="senha" class="input_form" type="password" name="senha" placeholder="Senha">
-                <i id="icon_eye" class="fa-solid fa-eye eye"></i>
+                <!-- <i id="icon_eye" class="fa-solid fa-eye eye"></i> -->
                 <span id="erro_senha" class="msg_erro"></span>
 
                 <input class="button_form" type="submit" value="Cadastrar">
