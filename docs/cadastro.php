@@ -1,45 +1,41 @@
 <?php
 
-$nome = $email = $senha = '';
-
-// Mensagens de erro
-$nomeErro = $emailErro = $senhaErro = '';
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    include('scripts/php/form.php');
-    
-    // Pegar e tratar os valores
-    $nome = input_post('nome');
-    $email = input_post('email');
-    $senha = input_post('senha');
-
+    $nome = $email = $senha = '';
     // Mensagens de erro
-    if (empty($nome)) {
-        $nomeErro = 'Nome é obrigatório.';
-    } else {
-        if (!preg_match("|^[\pL\s]+$|u", $nome)) {
-            $nomeErro = 'Apenas letras e espaços.';
-        }
-    }
-    if (empty($email)) {
-        $emailErro = 'Email é obrigatório.';
-    } else {
-        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            $emailErro = 'Email inválido.';
-        }
-    }
-    if (empty($senha)) {
-        $senhaErro = 'Senha é obrigatório.';
-    }
+    $nomeErro = $emailErro = $senhaErro = '';
 
-    echo "
-    <script>
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        include('scripts/php/form.php');
         
-    </script>
-    ";
-}
-?>
+        // Pegar e tratar os valores
+        $nome = input_post('nome');
+        $email = input_post('email');
+        $senha = input_post('senha');
 
+        // Mensagens de erro
+        if (empty($nome)) {
+            $nomeErro = 'Nome é obrigatório.';
+        } else {
+            if (!preg_match("|^[\pL\s]+$|u", $nome)) {
+                $nomeErro = 'Apenas letras e espaços.';
+            } else if (strlen($nome) < 3) {
+                $nomeErro = 'Nome inválido';
+            }
+        }
+        if (empty($email)) {
+            $emailErro = 'Email é obrigatório.';
+        } else {
+            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                $emailErro = 'Email inválido.';
+            }
+        }
+        if (empty($senha)) {
+            $senhaErro = 'Senha é obrigatório.';
+        }
+        
+        
+    }
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -86,6 +82,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <span id="erro_email" class="msg_erro"></span>
                 
                 <input id="senha" class="input_form" type="password" name="senha" placeholder="Senha">
+                <i id="icon_eye" class="fa-solid fa-eye eye"></i>
                 <span id="erro_senha" class="msg_erro"></span>
 
                 <input class="button_form" type="submit" value="Cadastrar">
@@ -97,6 +94,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </main>
 
     <?php
+
     echo "
         <script>
             // Mostrar os erros no formulário
@@ -115,8 +113,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 erro_senha.innerHTML = `<i class='fa-solid fa-circle-exclamation'></i>$senhaErro`
             }
 
+            // Colocar os valores no input
+            document.querySelector('#nome').value = '$nome';
+            document.querySelector('#email').value = '$email';
+            document.querySelector('#senha').value = '';
         </script>
     ";
+    
+
     ?>
 </body>
 </html>
