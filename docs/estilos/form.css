@@ -95,9 +95,10 @@ div.right form {
         margin-right: 5px;
     }
 
-    /* .input_form[type='password'] {
-        border-color: rgb(253, 31, 31);
-    } */
+i.eye {
+    position: relative;
+    
+}
 
 
 @media only screen and (max-width: 800px) {
