@@ -1,8 +1,11 @@
+.margin-box-title {
+    padding: 50px 0 0 30px;
+}
+
 .box-title {
-    margin: 50px 0 0 30px;
     font-size: 6rem;
     max-width: 9em;
-    max-height: 3em;
+    max-height: 2em;
     border: 0.5rem solid black;
     padding: 20px;
     color: rgba(0, 0, 0, 1.000);
@@ -11,4 +14,16 @@
 .box-title p.title1 {
     font-size: 0.6em;
     letter-spacing: 0.1em;
+}
+
+.background-title1 {
+    background: rgba(107, 165, 242, 0.500);
+    color: rgb(0, 16, 157);
+    padding: 7px;
+}
+
+section {
+    height: 92.36vh;
+    /* height: 100vh; */
+    background-color: rgb(255, 255, 255);
 }
