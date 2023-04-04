@@ -34,7 +34,6 @@ body{
     background-color: #FEFCF3;
     color: rgba(0, 0, 0, 0.800);
     font-family: Inter;
-    margin-top: var(--alturaNAV);
     font-size: 18px;
 }
 
@@ -49,10 +48,9 @@ body{
     font-family: JosefinSansLight;
     color: white;
     
-    position: fixed;
+    position: relative;
     top: 0;
     
-    display: inline;
     align-items: center;
 }
     /* LISTA DA NAV */
