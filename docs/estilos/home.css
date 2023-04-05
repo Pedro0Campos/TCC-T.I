@@ -3,27 +3,97 @@
 }
 
 .box-title {
+    /* Valores padrões */
     font-size: 6rem;
     max-width: 9em;
     max-height: 2em;
-    border: 0.5rem solid black;
     padding: 20px;
-    color: rgba(0, 0, 0, 1.000);
 }
 
-.box-title p.title1 {
-    font-size: 0.6em;
-    letter-spacing: 0.1em;
-}
+    .box-title p.title1 {
+        font-size: 0.6em;
+        letter-spacing: 0.1em;
+    }
 
-.background-title1 {
-    background: rgba(107, 165, 242, 0.500);
-    color: rgb(0, 16, 157);
-    padding: 7px;
-}
 
 section {
     height: 92.36vh;
-    /* height: 100vh; */
-    background-color: rgb(255, 255, 255);
 }
+
+/* Sessão clara - ímpar */
+.section1 {
+    background-color: #FEFCF3;
+    color: rgb(0, 0, 0);
+}
+
+    .section1 .box-title {
+        /* valores para sessão clara - ímpar */
+        border: 0.5rem solid rgb(0, 0, 0);
+    }
+
+    .span-title-section1 {
+        background: rgba(107, 165, 242, 0.500);
+        color: rgb(0, 16, 157);
+        padding: 7px;
+    }
+
+
+/* Sessão escura - par */
+.section2 {
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+}
+
+    .section2 .box-title {
+        /* valores para sessão clara - ímpar */
+        border: 0.5rem solid rgb(255, 255, 255);
+    }
+
+    .span-title-section2 {
+        color: #6405FF;
+    }
+
+
+.box-shadow-bottom {
+    background: linear-gradient(0deg, rgba(0,0,0,0.500) 0.4%, rgba(112,111,111,0.350) 12%, rgba(255,255,255,0) 37%);
+}
+
+
+/* RESPONSIVIDADE */
+/* Falta fazer para tela muito grande (ou adaptar) */
+@media only screen and (max-width: 1736px) {
+    .box-title {
+        font-size: 5rem;
+    }
+}
+
+@media only screen and (max-width: 1450px) {
+    .box-title {
+        font-size: 4.5rem;
+    }
+}
+
+@media only screen and (max-width: 1307px) {
+    .box-title {
+        font-size: 3.6rem;
+        max-height: 2.3em;
+    }
+}
+
+@media only screen and (max-width: 1051px) {
+    .box-title {
+        font-size: 3rem;
+    }
+}
+
+@media only screen and (min-height: 933px) {
+    section {
+        height: 95vh;
+    }
+}
+
+@media only screen and (min-height: 1500px) {
+    section {
+        height: 96vh;
+    }
+}   
