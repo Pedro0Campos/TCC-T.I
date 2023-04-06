@@ -145,6 +145,13 @@ p.title1 {
 
 }
 
+p.title2 {
+    font-family: JosefinSansRegular;
+    font-size: 1.5em; /* 36px */
+    font-weight: 40px; /* 40px */
+
+}
+
 .animation-title {
     /*Animação*/
     --b: 0.1em;   /* A grossura da linha */
@@ -171,6 +178,7 @@ p.title1 {
 p.text {
     margin: 8px;
 }
+
 /* Formatação de parágrafo */
 
 
@@ -191,6 +199,10 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.italic {
+    font-style: italic;
 }
 /* TAGS ÚTEIS */
 
