@@ -5,7 +5,7 @@
     --maxWidthInput: 450px
 }
 
-body {
+.overflow-hidden {
     overflow: hidden;
 }
 
@@ -14,10 +14,12 @@ div.left {
     height: 100vh;
     width: var(--widthLEFT);
     float: left;
-    background: no-repeat url(../imagens/cadastro/background4.png);
-    background-position-y: center;
-    background-size: cover;
 }
+    div.backg-image-logcad {
+        background: no-repeat url(../imagens/cadastro/background4.png);
+        background-position-y: center;
+        background-size: cover;
+    }
 
 /* DIV - DIREITA */
 div.right {
@@ -120,7 +122,7 @@ div.right form {
 }
 
 @media only screen and (max-height: 650px) {
-    body {
+    .overflow-hidden {
         overflow: auto;
     }
 }
