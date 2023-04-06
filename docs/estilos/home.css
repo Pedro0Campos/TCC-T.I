@@ -11,18 +11,27 @@
 
 .box-title {
     /* Valores padrões */
-    font-size: 6rem;
-    max-width: 9em;
-    max-height: 2.1em;
+    font-size: 2rem;
+    max-width: 14em;
+    max-height: 4em;
     padding: 20px;
 }
 
     .box-title p.title1 {
-        font-size: 0.6em;
+        font-size: 1em;
         letter-spacing: 0.1em;
-        line-height: 1.4em;
+        line-height: 1.3em;
     }
 
+    .box-title p.title2 {
+        font-size: 0.85em;
+        letter-spacing: 0.1em;
+        line-height: 1.1em;
+    }
+
+    .box-title-menor {
+        max-width: 10em;
+    }
 
 section {
     height: 92.36vh;
@@ -35,7 +44,7 @@ section {
     color: rgb(0, 0, 0);
 }
 
-    .section1 .box-title {
+    .sect1-border-box {
         /* valores para sessão clara - ímpar */
         border: 0.5rem solid rgb(0, 0, 0);
     }
@@ -45,8 +54,23 @@ section {
         padding: 7px;
     }
 
+    .sect1-second-color {
+        color: var(--sect1-second-color);
+    }
+
     .sect1-third-color {
         color: var(--sect1-third-color);
+    }
+
+    .sect1-button {
+        background: black;
+        font-size: 1rem;
+        padding: 1em 7em 1em 7em;
+        border-radius: 100px;
+    }
+
+    .sect1-button a {
+        color: white;
     }
 
 
@@ -56,7 +80,7 @@ section {
     color: rgb(255, 255, 255);
 }
 
-    .section2 .box-title {
+    .sect2-border-box {
         /* valores para sessão clara - ímpar */
         border: 0.5rem solid rgb(255, 255, 255);
     }
@@ -71,33 +95,14 @@ section {
 }
 
 
+div.left {
+    width: 50%;
+}
+div.right {
+    width: 50%;
+}
 /* RESPONSIVIDADE */
 /* Falta fazer para tela muito grande (ou adaptar) */
-/* @media only screen and (max-width: 1736px) {
-    .box-title {
-        font-size: 5rem;
-    }
-}
-
-@media only screen and (max-width: 1450px) {
-    .box-title {
-        font-size: 4.5rem;
-    }
-}
-
-@media only screen and (max-width: 1307px) {
-    .box-title {
-        font-size: 3.6rem;
-        max-height: 2.6em;
-    }
-}
-
-@media only screen and (max-width: 1051px) {
-    .box-title {
-        font-size: 3rem;
-    }
-} */
-
 @media only screen and (min-height: 933px) {
     section {
         height: 95vh;
