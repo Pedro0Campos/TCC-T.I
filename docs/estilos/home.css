@@ -1,4 +1,11 @@
-.margin-box-title {
+:root {
+    --sect1-second-color: rgb(107, 165, 242);
+    --sect1-second-color-50: rgb(107, 165, 242, 0.5);
+    --sect1-third-color: rgb(0, 16, 157);
+    --sect2-second-color: #6405FF;
+}
+
+.padding-box-title {
     padding: 50px 0 0 30px;
 }
 
@@ -6,18 +13,20 @@
     /* Valores padrões */
     font-size: 6rem;
     max-width: 9em;
-    max-height: 2em;
+    max-height: 2.1em;
     padding: 20px;
 }
 
     .box-title p.title1 {
         font-size: 0.6em;
         letter-spacing: 0.1em;
+        line-height: 1.4em;
     }
 
 
 section {
     height: 92.36vh;
+    /* height: 100vh; */
 }
 
 /* Sessão clara - ímpar */
@@ -31,10 +40,13 @@ section {
         border: 0.5rem solid rgb(0, 0, 0);
     }
 
-    .span-title-section1 {
-        background: rgba(107, 165, 242, 0.500);
-        color: rgb(0, 16, 157);
+    .sect1-backg-second-color-50 {
+        background: var(--sect1-second-color-50);
         padding: 7px;
+    }
+
+    .sect1-third-color {
+        color: var(--sect1-third-color);
     }
 
 
@@ -49,8 +61,8 @@ section {
         border: 0.5rem solid rgb(255, 255, 255);
     }
 
-    .span-title-section2 {
-        color: #6405FF;
+    .sect2-second-color {
+        color: var(--sect2-second-color);
     }
 
 
@@ -61,7 +73,7 @@ section {
 
 /* RESPONSIVIDADE */
 /* Falta fazer para tela muito grande (ou adaptar) */
-@media only screen and (max-width: 1736px) {
+/* @media only screen and (max-width: 1736px) {
     .box-title {
         font-size: 5rem;
     }
@@ -76,7 +88,7 @@ section {
 @media only screen and (max-width: 1307px) {
     .box-title {
         font-size: 3.6rem;
-        max-height: 2.3em;
+        max-height: 2.6em;
     }
 }
 
@@ -84,7 +96,7 @@ section {
     .box-title {
         font-size: 3rem;
     }
-}
+} */
 
 @media only screen and (min-height: 933px) {
     section {
