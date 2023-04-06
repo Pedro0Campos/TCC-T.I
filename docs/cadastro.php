@@ -55,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <script src="scripts/javascript/change_background.js"></script>
     <script src="https://kit.fontawesome.com/55197c00fe.js" crossorigin="anonymous"></script>
 </head>
-<body onload="change_background()">
+<body onload="change_background()" class="overflow-hidden">
 
     <div class="navbar">
         <ul class="navlista navlista-esquerda flexCenterVH">
@@ -72,7 +72,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
     
     <main>
-        <div class="left"></div>
+        <div class="left backg-image-logcad"></div>
 
         <div class="right">
             <!-- Retorna para o próprio link para criar a validação -->
