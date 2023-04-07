@@ -12,7 +12,6 @@
 }
 
 
-
 * {
     margin: 0;
     padding: 0;
@@ -23,12 +22,12 @@
     --alturaNAV: 4.5rem;
 }
 
-#circulo {
+/* #circulo {
     background: lightblue;
     border-radius: 50%;
     width: 100px;
     height: 100px;
-}
+} */
 
 body{
     background-color: #FEFCF3;
@@ -37,6 +36,7 @@ body{
     font-size: 18px;
     padding-top: var(--alturaNAV);
 }
+
 
 
 /* Formatação do navbar */
@@ -62,7 +62,9 @@ body{
         /* ITEM DA LISTA DA NAV */
         .navlista li {
             display: inline;
-            margin-inline-start: 2rem;
+            /* margin-inline-start: 2rem; */
+            margin-inline-start: 1rem;
+            margin-inline-end: 1rem;
         }
 
         /* Link do navbar */
@@ -125,6 +127,8 @@ body{
     }
 /* Formatação do navbar */
 
+
+
 /* ================================================== */
 
 
@@ -170,7 +174,6 @@ p.title2 {
         --_p: 100%;
         --_s: .3s;
     }
-
 /* Formatação de títulos*/
 
 
@@ -194,6 +197,15 @@ a {
 /* Formatação de LINK */
 
 
+
+/* Formatação de botão */
+button {
+    cursor: pointer;
+}
+/* Formatação de botão */
+
+
+
 /* TAGS ÚTEIS */
 .flexCenterVH {
     display: flex;
@@ -204,10 +216,17 @@ a {
 .italic {
     font-style: italic;
 }
+
+.wh100 {
+    height: 100%;
+    width: 100%;
+}
 /* TAGS ÚTEIS */
 
 
+
 /* ===================================================== */
+
 
 
 /* RESPONSIVIDADE */
