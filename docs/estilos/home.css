@@ -1,12 +1,30 @@
 :root {
-    --sect1-second-color: rgb(107, 165, 242);
-    --sect1-second-color-50: rgb(107, 165, 242, 0.5);
-    --sect1-third-color: rgb(0, 16, 157);
-    --sect2-second-color: #6405FF;
+    /* Sessão clara - ímpar */
+    --sect1-second-color: #6ba5f2;      /* nigth -> #6405FF*/
+    --sect1-second-color-50: #6ba5f280; /* nigth -> #6405FF50*/
+    --sect1-third-color: #00109d;       /* nigth -> #C6A4FF*/
+
+    /* Sessão escura - par */
+    --sect2-second-color: #6405FF;      /* nigth -> #C6A4FF*/
+}
+
+section {
+    height: 87.35vh;
+    /* height: 92.36vh; */
+    /* height: 100vh; */
+}
+
+#sect-first {
+    background-image: url('../imagens/home/greaser.png'), url('../imagens/home/ellipse.png');
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: 70vh, 80vh;
+    background-position: 95% 100%, 97% 23%;
 }
 
 .padding-box-title {
-    padding: 50px 0 0 30px;
+    padding-left: 4%;
+    padding-top: 3%;
 }
 
 .box-title {
@@ -33,10 +51,6 @@
         max-width: 10em;
     }
 
-section {
-    height: 92.36vh;
-    /* height: 100vh; */
-}
 
 /* Sessão clara - ímpar */
 .section1 {
@@ -66,6 +80,7 @@ section {
         background: black;
         font-size: 1rem;
         padding: 1em 7em 1em 7em;
+        border: none;
         border-radius: 100px;
     }
 
@@ -91,19 +106,14 @@ section {
 
 
 .box-shadow-bottom {
-    background: linear-gradient(0deg, rgba(0,0,0,0.500) 0.4%, rgba(112,111,111,0.350) 12%, rgba(255,255,255,0) 37%);
+    background: linear-gradient(0deg, rgba(0,0,0,0.500) 1%, rgba(112,111,111,0.350) 20%, rgba(255,255,255,0) 50%);
 }
 
 
-div.left {
-    width: 50%;
-}
-div.right {
-    width: 50%;
-}
 /* RESPONSIVIDADE */
+
 /* Falta fazer para tela muito grande (ou adaptar) */
-@media only screen and (min-height: 933px) {
+/* @media only screen and (min-height: 933px) {
     section {
         height: 95vh;
     }
@@ -113,4 +123,4 @@ div.right {
     section {
         height: 96vh;
     }
-}   
+}    */
