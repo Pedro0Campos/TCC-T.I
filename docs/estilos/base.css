@@ -12,7 +12,6 @@
 }
 
 
-
 * {
     margin: 0;
     padding: 0;
@@ -23,15 +22,21 @@
     --alturaNAV: 4.5rem;
 }
 
-
+/* #circulo {
+    background: lightblue;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+} */
 
 body{
     background-color: #FEFCF3;
     color: rgba(0, 0, 0, 0.800);
     font-family: Inter;
-    margin-top: var(--alturaNAV);
     font-size: 18px;
+    padding-top: var(--alturaNAV);
 }
+
 
 
 /* Formatação do navbar */
@@ -47,7 +52,6 @@ body{
     position: fixed;
     top: 0;
     
-    display: inline;
     align-items: center;
 }
     /* LISTA DA NAV */
@@ -58,7 +62,9 @@ body{
         /* ITEM DA LISTA DA NAV */
         .navlista li {
             display: inline;
-            margin-inline-start: 2rem;
+            /* margin-inline-start: 2rem; */
+            margin-inline-start: 1rem;
+            margin-inline-end: 1rem;
         }
 
         /* Link do navbar */
@@ -121,6 +127,8 @@ body{
     }
 /* Formatação do navbar */
 
+
+
 /* ================================================== */
 
 
@@ -138,6 +146,17 @@ p.title1 {
     font-family: JosefinSansRegular;
     font-size: 2rem; /* 36px */
     font-weight: 40px; /* 40px */
+
+}
+
+p.title2 {
+    font-family: JosefinSansRegular;
+    font-size: 1.5em; /* 36px */
+    font-weight: 40px; /* 40px */
+
+}
+
+.animation-title {
     /*Animação*/
     --b: 0.1em;   /* A grossura da linha */
     --c: #6BA5F2; /* A cor da linha*/
@@ -151,7 +170,7 @@ p.title1 {
     background-clip: text,padding-box;
     transition: .3s var(--_s,0s) linear,background-size .3s calc(.3s - var(--_s,0s));
 }
-    .title1:hover {
+    .animation-title:hover {
         --_p: 100%;
         --_s: .3s;
     }
@@ -162,6 +181,7 @@ p.title1 {
 p.text {
     margin: 8px;
 }
+
 /* Formatação de parágrafo */
 
 
@@ -177,16 +197,37 @@ a {
 /* Formatação de LINK */
 
 
+
+/* Formatação de botão */
+button {
+    cursor: pointer;
+    font-family: JosefinSansRegular;
+}
+/* Formatação de botão */
+
+
+
 /* TAGS ÚTEIS */
 .flexCenterVH {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+.italic {
+    font-style: italic;
+}
+
+.wh100 {
+    height: 100%;
+    width: 100%;
+}
 /* TAGS ÚTEIS */
 
 
+
 /* ===================================================== */
+
 
 
 /* RESPONSIVIDADE */

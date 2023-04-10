@@ -13,7 +13,7 @@
     <script src="scripts/javascript/change_background.js"></script>
     <script src="https://kit.fontawesome.com/55197c00fe.js" crossorigin="anonymous"></script>
 </head>
-<body onload="change_background()">
+<body onload="change_background()" class="overflow-hidden">
 
     <div class="navbar">
         <ul class="navlista navlista-esquerda flexCenterVH">
@@ -30,11 +30,13 @@
     </div>
     
     <main>
-        <div class="left"></div>
+        <div class="left backg-image-logcad"></div>
 
         <div class="right">
-            <form action="scripts/php/login.php" method="post" autocomplete="off">
-                <p class="title1">Login</p>
+            <form action="scripts/php/cadastrar.php" method="post" autocomplete="off">
+
+                <p class="title1 animation-title">Login</p>
+
                 <input class="input_form" type="email" name="email" placeholder="Email" required>
                 <input class="input_form" type="password" name="senha" placeholder="Senha" required>
                 

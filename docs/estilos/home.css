@@ -1,0 +1,152 @@
+:root {
+    /* Sessão clara - ímpar */
+    --sect1-second-color: #6ba5f2;      /* nigth -> #6405FF*/
+    --sect1-second-color-50: #6ba5f280; /* nigth -> #6405FF50*/
+    --sect1-third-color: #00109d;       /* nigth -> #C6A4FF*/
+
+    /* Sessão escura - par */
+    --sect2-second-color: #6BA5F2;      /* nigth -> #C6A4FF*/
+}
+
+section {
+    height: 85vh;
+    min-height: 450px;
+}
+
+#sect-first {
+    background-image: url('../imagens/home/greaser.png'), url('../imagens/home/ellipse.png');
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: 60vh, 75vh;
+    background-position: 95% 100%, 97% 23%;
+}
+
+.padding-box-title {
+    padding-left: 4%;
+    padding-top: 3%;
+}
+
+.box-title {
+    /* Valores padrões */
+    font-size: 2.8rem;
+    max-width: 14em;
+    max-height: 4em;
+    padding: 20px;
+}
+
+    .box-title p.title1 {
+        font-size: 1em;
+        letter-spacing: 0.1em;
+        line-height: 1.3em;
+    }
+
+    .box-title p.title2 {
+        font-size: 0.85em;
+        letter-spacing: 0.1em;
+        line-height: 1.1em;
+    }
+
+    .box-title-menor {
+        max-width: 10em;
+    }
+
+
+/* Sessão clara - ímpar */
+.section1 {
+    background-color: #FEFCF3;
+    color: rgb(0, 0, 0);
+}
+
+    .sect1-border-box {
+        /* valores para sessão clara - ímpar */
+        border: 0.5rem solid rgb(0, 0, 0);
+    }
+
+    .sect1-backg-second-color-50 {
+        background: var(--sect1-second-color-50);
+        padding: 7px;
+    }
+
+    .sect1-second-color {
+        color: var(--sect1-second-color);
+    }
+
+    .sect1-third-color {
+        color: var(--sect1-third-color);
+    }
+
+    .sect1-button {
+        background: black;
+        font-size: 1rem;
+        padding: 1em 8.9em 1em 8.9em;
+        border: none;
+        border-radius: 100px;
+    }
+
+    .sect1-button a {
+        color: white;
+    }
+
+
+/* Sessão escura - par */
+.section2 {
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+}
+
+    .sect2-border-box {
+        /* valores para sessão clara - ímpar */
+        border: 0.5rem solid rgb(255, 255, 255);
+    }
+
+    .sect2-second-color {
+        color: var(--sect2-second-color);
+    }
+
+
+.box-shadow-bottom {
+    background: linear-gradient(0deg, rgba(0,0,0,0.500) 1%, rgba(112,111,111,0.350) 20%, rgba(255,255,255,0) 50%);
+}
+
+
+/* RESPONSIVIDADE */
+
+@media only screen and (min-height: 521px) {
+    section {
+        height: 92vh;
+    }
+}
+
+@media only screen and (min-height: 916px) {
+    section {
+        height: 94vh;
+    }
+}
+
+@media only screen and (min-height: 1162px) {
+    section {
+        height: 96vh;
+    }
+}
+
+@media only screen and (max-width: 1168px) {
+    .box-title {
+        font-size: 2.6rem;
+    }
+}
+
+
+@media only screen and (max-width: 1141px) {
+    .box-title {
+        font-size: 2.3rem;
+    }
+
+    .sect1-button {
+        padding: 1em 8em 1em 8em;
+    }
+
+    #sect-first {
+        background-size: 60vh, 75vh;
+        background-position: 95% 100%, 97% 23%;
+    }
+}

@@ -51,7 +51,7 @@
     <script src="scripts/javascript/change_background.js"></script>
     <script src="https://kit.fontawesome.com/55197c00fe.js" crossorigin="anonymous"></script>
 </head>
-<body onload="change_background()">
+<body onload="change_background()" class="overflow-hidden">
 
     <div class="navbar">
         <ul class="navlista navlista-esquerda flexCenterVH">
@@ -68,12 +68,12 @@
     </div>
     
     <main>
-        <div class="left"></div>
+        <div class="left backg-image-logcad"></div>
 
         <div class="right">
             <!-- Retorna para o próprio link para criar a validação -->
             <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?>" method="post" autocomplete="off">
-                <p class="title1">Criar Conta</p>
+                <p class="title1 animation-title">Criar Conta</p>
 
                 <input id="nome" class="input_form" type="text" name="nome" placeholder="Nome" value="">
                 <span id="erro_nome" class="msg_erro"></span>
