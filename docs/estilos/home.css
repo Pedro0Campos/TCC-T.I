@@ -5,7 +5,7 @@
     --sect1-third-color: #00109d;       /* nigth -> #C6A4FF*/
 
     /* Sessão escura - par */
-    --sect2-second-color: #6405FF;      /* nigth -> #C6A4FF*/
+    --sect2-second-color: #6BA5F2;      /* nigth -> #C6A4FF*/
 }
 
 section {
@@ -19,7 +19,6 @@ section {
     background-attachment: scroll;
     background-size: 70vh, 80vh;
     background-position: 95% 100%, 97% 23%;
-    /* background-position: center; */
 }
 
 .padding-box-title {
