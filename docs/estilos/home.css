@@ -112,15 +112,15 @@ section {
 
 /* RESPONSIVIDADE */
 
-/* Falta fazer para tela muito grande (ou adaptar) */
 @media only screen and (min-height: 521px) {
     section {
         height: 92vh;
     }
 
-    #sect-first {
+    /* #sect-first {
         background-size: 65vh, 80vh;
-    }
+        background-position: 95% 100%, 97% 23%;
+    } */
 }
 
 @media only screen and (min-height: 916px) {
@@ -128,3 +128,27 @@ section {
         height: 94vh;
     }
 }
+
+@media only screen and (min-height: 1162px) {
+    section {
+        height: 96vh;
+    }
+}
+
+@media only screen and (min-width: 948px) {
+    .box-title {
+        font-size: 2.3rem;
+    }
+}
+
+@media only screen and (min-width: 1250px) {
+    .box-title {
+        font-size: 2.6rem;
+    }
+
+    #sect-first {
+        background-size: 73vh, 88vh;
+        background-position: 92.5% 100%, 97% 40%;
+    }
+}
+
