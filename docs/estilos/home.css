@@ -17,7 +17,7 @@ section {
     background-image: url('../imagens/home/greaser.png'), url('../imagens/home/ellipse.png');
     background-repeat: no-repeat;
     background-attachment: scroll;
-    background-size: 70vh, 80vh;
+    background-size: 60vh, 75vh;
     background-position: 95% 100%, 97% 23%;
 }
 
@@ -28,7 +28,7 @@ section {
 
 .box-title {
     /* Valores padrões */
-    font-size: 2rem;
+    font-size: 2.8rem;
     max-width: 14em;
     max-height: 4em;
     padding: 20px;
@@ -78,7 +78,7 @@ section {
     .sect1-button {
         background: black;
         font-size: 1rem;
-        padding: 1em 7em 1em 7em;
+        padding: 1em 8.9em 1em 8.9em;
         border: none;
         border-radius: 100px;
     }
@@ -115,11 +115,6 @@ section {
     section {
         height: 92vh;
     }
-
-    /* #sect-first {
-        background-size: 65vh, 80vh;
-        background-position: 95% 100%, 97% 23%;
-    } */
 }
 
 @media only screen and (min-height: 916px) {
@@ -134,20 +129,24 @@ section {
     }
 }
 
-@media only screen and (min-width: 948px) {
-    .box-title {
-        font-size: 2.3rem;
-    }
-}
-
-@media only screen and (min-width: 1250px) {
+@media only screen and (max-width: 1168px) {
     .box-title {
         font-size: 2.6rem;
     }
-
-    #sect-first {
-        background-size: 73vh, 88vh;
-        background-position: 92.5% 100%, 97% 40%;
-    }
 }
 
+
+@media only screen and (max-width: 1141px) {
+    .box-title {
+        font-size: 2.3rem;
+    }
+
+    .sect1-button {
+        padding: 1em 8em 1em 8em;
+    }
+
+    #sect-first {
+        background-size: 60vh, 75vh;
+        background-position: 95% 100%, 97% 23%;
+    }
+}
