@@ -13,7 +13,7 @@
 
         <input class="button_form" type="submit" value="Entrar">
         
-        <p class="text">Não tem uma conta? <a href="cadastro.php" class="underline">Cadastra-se</a></p>
+        <p class="text">Não tem uma conta? <a href="?pagina=cadastro" class="underline">Cadastra-se</a></p>
     </form>    
 </div>
 
