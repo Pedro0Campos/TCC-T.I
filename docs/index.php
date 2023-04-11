@@ -17,7 +17,7 @@
 </head>
 <body>
     <?php 
-        include('db/db.php');
+        include('database/db.php');
         include('navbar.php');
     ?>
 
