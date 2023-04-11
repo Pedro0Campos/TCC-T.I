@@ -18,3 +18,5 @@ function change_background() {
     div.style.backgroundPosition = 'center'
     div.style.backgroundSize = 'cover'
 }
+
+addEventListener('onload', change_background())

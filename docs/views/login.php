@@ -16,3 +16,5 @@
         <p class="text">Não tem uma conta? <a href="cadastro.php" class="underline">Cadastra-se</a></p>
     </form>    
 </div>
+
+<script src="scripts/javascript/change_background.js"></script>

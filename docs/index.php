@@ -12,11 +12,10 @@
     <link rel="stylesheet" href="estilos/home.css">
     <link rel="stylesheet" href="estilos/form.css">
 
-    <script src="scripts/javascript/change_background.js"></script>
     <script src="https://kit.fontawesome.com/55197c00fe.js" crossorigin="anonymous"></script>
 
 </head>
-<body onload="change_background()">
+<body>
     <?php 
         include('db/db.php');
         include('navbar.php');
