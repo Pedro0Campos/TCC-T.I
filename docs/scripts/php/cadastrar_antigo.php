@@ -3,10 +3,7 @@
     // Importar funções importantes
     include('scripts.php');
 
-    // Criar conexão com banco
-    $conn = conectar_bd('dbCoreo', '');
-    
-    // Definir as VARs
+    // Definir as variáveis iniciais
     $nome = input_post('nome');
     $email = input_post('email');
     $senha = criptografar(input_post('senha'));
@@ -23,7 +20,7 @@
     // $enviarDados->execute();
 
     // Redirecionar para outra url
-    $url = '../../cadastro.php';
+    $url = '../../index.php';
     header("Location: " . $url);
     die();
     

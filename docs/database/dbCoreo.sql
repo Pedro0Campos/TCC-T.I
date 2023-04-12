@@ -7,7 +7,7 @@ create table `Usuarios` (
 	nome varchar(50) not null,
     email varchar(60) not null,
     senha varchar(255) not null,
-    tipoUser int not null
+    tipoUser boolean not null
 );
 
 create table `Ensaios` (

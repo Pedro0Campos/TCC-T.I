@@ -11,14 +11,17 @@
     <link rel="stylesheet" href="estilos/base.css">
     <link rel="stylesheet" href="estilos/home.css">
     <link rel="stylesheet" href="estilos/form.css">
-
+    
     <script src="https://kit.fontawesome.com/55197c00fe.js" crossorigin="anonymous"></script>
-
+    
 </head>
 <body>
     <?php 
         include('database/db.php');
         include('navbar.php');
+        include('scripts/php/form.php');
+        include('scripts/php/cadastrar_user.php');  // Cadastrar um usuário no banco
+        include('scripts/php/consultar_user.php');  // Consultar um usuário no banco (verificar se já existe cadastro)
     ?>
 
     <!-- CONTEÚDO -->

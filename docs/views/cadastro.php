@@ -1,18 +1,16 @@
 <?php
-
-    $nome = $email = $senha = '';
-    // Mensagens de erro
-    $nomeErro = $emailErro = $senhaErro = '';
+    // Criação das variáveis
+    $nome = $email = $senha = '';  
+    $nomeErro = $emailErro = $senhaErro = '';  // Mensagens de erro
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        include('scripts/php/form.php');
-        
+
         // Pegar e tratar os valores
         $nome = input_post('nome');
         $email = input_post('email');
         $senha = input_post('senha');
 
-        // Mensagens de erro
+        // Tratamento do formulário e retorno de erros para o usuário
         if (empty($nome)) {
             $nomeErro = 'Nome é obrigatório.';
         } else {
@@ -33,9 +31,23 @@
             $senhaErro = 'Senha é obrigatório.';
         }
 
+
         // Verificar se pode fazer o cadastro
         if ($nomeErro == '' and $emailErro == '' and $senhaErro == '') {
-            echo "<script>alert('Fazer login')</script>";
+
+            // Verificar se já existe um cadastro com esse email
+            $condicao = "WHERE email = '$email'";
+            $consulta = consultar_user($condicao, $conexao_db);
+
+            if (mysqli_num_rows($consulta) > 0) {
+                $emailErro = 'Email já utilizado.';
+
+            } else {
+                // Código para inserir os valores no banco
+                cadastrar($nome, $email, $senha, $conexao_db);
+            }
+
+
         }
     }
 
