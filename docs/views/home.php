@@ -16,7 +16,7 @@
         </div>
 
         <div class="padding-box-title">
-            <button class="sect1-button"><a href="sobre.html">Sobre o musical</a></button>
+            <a href="?pagina=sobre"><button class="sect1-button">Sobre o musical</button></a>
         </div>
         
     </div>

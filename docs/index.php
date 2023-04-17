@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="estilos/base.css">
     <link rel="stylesheet" href="estilos/home.css">
     <link rel="stylesheet" href="estilos/form.css">
-    
+    <link rel="stylesheet" href="estilos/toggle.css">    
     <script src="https://kit.fontawesome.com/55197c00fe.js" crossorigin="anonymous"></script>
     
 </head>

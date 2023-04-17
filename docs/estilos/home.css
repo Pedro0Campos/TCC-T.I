@@ -77,14 +77,11 @@ section {
 
     .sect1-button {
         background: black;
+        color: white;
         font-size: 1rem;
         padding: 1em 8.9em 1em 8.9em;
         border: none;
         border-radius: 100px;
-    }
-
-    .sect1-button a {
-        color: white;
     }
 
 

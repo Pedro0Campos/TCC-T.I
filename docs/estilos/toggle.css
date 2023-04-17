@@ -1,0 +1,10 @@
+#toggle-darkmode {
+    display: none;
+}
+
+.ball {
+    width: 25px;
+    height: 25px;
+    background: white;
+    border-radius: 30px;
+}
