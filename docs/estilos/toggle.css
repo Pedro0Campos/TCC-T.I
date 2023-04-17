@@ -1,10 +1,47 @@
+#toggler {
+    display: inline-block;
+    border: 1px solid white;
+    border-radius: 50px;
+    height: 45%;
+    width: 70px;
+    cursor: pointer;
+    user-select: none;
+}
+
 #toggle-darkmode {
     display: none;
 }
 
+.sun, .moon, .star, .ball {
+    position: relative;
+    color: #f8f81b;
+    font-size: 18px;
+}
+
+.sun, .moon {
+    transform: translateY(-20%);
+}
+
+.sun {
+    transform: translate(-235%, -20%);
+}
+
+.moon {
+    transform: translate(120%, -20%);
+    /* transform: rotate(180deg); */
+}
+
 .ball {
+    display: inline-block;
     width: 25px;
     height: 25px;
-    background: white;
+    background: rgb(255, 255, 255);
     border-radius: 30px;
+    transform: translate(10%, 7%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 999999;
+}
+
+#toggle-darkmode:checked + .ball {
+    transform: translate(155%, 7%);
 }
