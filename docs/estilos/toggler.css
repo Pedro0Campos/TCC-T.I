@@ -15,36 +15,24 @@
 .sun, .moon, .star {
     position: absolute;
     color: #f8f81b;
+    transition: transform 0.2s ease-in-out;
 }
-
-.ball {
-    position: relative;
-}
-
 .sun {
     font-size: 22px;
     transform: translate(-190%, 16%);
 }
-
 .moon {
     font-size: 25px;
     transform: rotate(210deg) translate(-5%, -10%);
 }
-
-.star {
-    transition: display 1s ease-in-out;
-}
-
 .star1 {
     font-size: 5px;
     transform: translate(-220%, 50%);
 }
-
 .star2 {
     font-size: 3px;
     transform: translate(-100%, 280%);
 }
-
 .star3 {
     font-size: 6px;
     transform: translate(-220%, 280%);
@@ -52,12 +40,13 @@
 
 .ball {
     display: inline-block;
+    position: relative;
     width: 25px;
     height: 25px;
     background: rgb(255, 255, 255, 1);
     border-radius: 30px;
     transform: translate(-75%, 7%);
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-out;
     z-index: 999999;
 }
 
