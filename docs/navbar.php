@@ -7,9 +7,12 @@
                 <i class="fa-solid fa-moon moon"></i>
                 <i class="fa-solid fa-sun sun"></i>
             </label>
+            <!-- <i class="fa-solid fa-star star star1"></i> -->
+            <!-- <i class="fa-solid fa-star star star2"></i> -->
+            <!-- <i class="fa-solid fa-star star star3"></i> -->
+            <!-- <i class="fa-solid fa-cloud cloud cloud1"></i> -->
+            <!-- <i class="fa-solid fa-cloud cloud cloud2"></i> -->
 
-            <!-- <i class="fa-solid fa-star"></i> -->
-            <!-- <i class="fa-solid fa-cloud"></i> -->
         </li>
     </ul>
 

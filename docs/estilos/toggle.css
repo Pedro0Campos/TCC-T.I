@@ -12,36 +12,36 @@
     display: none;
 }
 
-.sun, .moon, .star, .ball {
-    position: relative;
+.sun, .moon, .star {
+    position: absolute;
     color: #f8f81b;
     font-size: 18px;
 }
 
-.sun, .moon {
-    transform: translateY(-20%);
+.ball {
+    position: relative;
 }
 
 .sun {
-    transform: translate(-235%, -20%);
+    transform: translate(-230%, 30%);
 }
 
 .moon {
-    transform: translate(120%, -20%);
-    /* transform: rotate(180deg); */
+    font-size: 25px;
+    transform: rotate(210deg) translate(-5%, -10%);
 }
 
 .ball {
     display: inline-block;
     width: 25px;
     height: 25px;
-    background: rgb(255, 255, 255);
+    background: rgb(255, 255, 255, 1.0);
     border-radius: 30px;
-    transform: translate(10%, 7%);
+    transform: translate(-75%, 7%);
     transition: transform 0.3s ease-in-out;
     z-index: 999999;
 }
 
 #toggle-darkmode:checked + .ball {
-    transform: translate(155%, 7%);
+    transform: translate(80%, 7%);
 }
