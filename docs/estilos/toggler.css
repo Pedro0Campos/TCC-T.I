@@ -8,14 +8,13 @@
     user-select: none;
 }
 
-#toggle-darkmode {
+#checkbox {
     display: none;
 }
 
 .sun, .moon, .star {
     position: absolute;
     color: #f8f81b;
-    font-size: 18px;
 }
 
 .ball {
@@ -32,17 +31,36 @@
     transform: rotate(210deg) translate(-5%, -10%);
 }
 
+.star {
+    transition: display 1s ease-in-out;
+}
+
+.star1 {
+    font-size: 5px;
+    transform: translate(-220%, 50%);
+}
+
+.star2 {
+    font-size: 3px;
+    transform: translate(-100%, 280%);
+}
+
+.star3 {
+    font-size: 6px;
+    transform: translate(-220%, 280%);
+}
+
 .ball {
     display: inline-block;
     width: 25px;
     height: 25px;
-    background: rgb(255, 255, 255, 0.5);
+    background: rgb(255, 255, 255, 1);
     border-radius: 30px;
     transform: translate(-75%, 7%);
     transition: transform 0.3s ease-in-out;
     z-index: 999999;
 }
 
-#toggle-darkmode:checked + .ball {
-    transform: translate(80%, 7%);
+#checkbox:checked + .ball {
+    transform: translate(80%, 7%);   
 }
