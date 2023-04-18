@@ -23,7 +23,8 @@
 }
 
 .sun {
-    transform: translate(-230%, 30%);
+    font-size: 22px;
+    transform: translate(-190%, 16%);
 }
 
 .moon {
@@ -35,7 +36,7 @@
     display: inline-block;
     width: 25px;
     height: 25px;
-    background: rgb(255, 255, 255, 1.0);
+    background: rgb(255, 255, 255, 0.5);
     border-radius: 30px;
     transform: translate(-75%, 7%);
     transition: transform 0.3s ease-in-out;
