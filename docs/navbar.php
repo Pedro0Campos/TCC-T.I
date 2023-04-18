@@ -9,9 +9,9 @@
                 <i class="fa-solid fa-star star star1"></i>
                 <i class="fa-solid fa-star star star2"></i>
                 <i class="fa-solid fa-star star star3"></i>
+                <i class="fa-solid fa-cloud cloud cloud1"></i>
+                <i class="fa-solid fa-cloud cloud cloud2"></i>
             </label>
-            <!-- <i class="fa-solid fa-cloud cloud cloud1"></i> -->
-            <!-- <i class="fa-solid fa-cloud cloud cloud2"></i> -->
             
         </li>
     </ul>

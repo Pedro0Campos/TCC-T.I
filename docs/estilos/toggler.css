@@ -12,15 +12,30 @@
     display: none;
 }
 
-.sun, .moon, .star {
+.sun, .moon, .star, .cloud {
     position: absolute;
-    color: #f8f81b;
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.25s ease-in-out;
 }
+.sun, .moon, .star {
+    color: #f8f81b;
+}
+
 .sun {
     font-size: 22px;
-    transform: translate(-190%, 16%);
+    transform: translate(-190%, 16%) scale(0);
 }
+.cloud {
+    position: absolute;
+}
+.cloud1 {
+    transform: translate(-170%, 70%)  scale(0);
+}
+.cloud2 {
+    font-size: 6px;
+    transform: translate(-240%, 90%)  scale(0);
+    transition: transform 0.25s ease-in-out;
+}
+
 .moon {
     font-size: 25px;
     transform: rotate(210deg) translate(-5%, -10%);
@@ -47,7 +62,7 @@
     border-radius: 30px;
     transform: translate(-75%, 7%);
     transition: transform 0.3s ease-out;
-    z-index: 999999;
+    z-index: 10;
 }
 
 #checkbox:checked + .ball {
