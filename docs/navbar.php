@@ -2,7 +2,7 @@
     <ul class="navlista toggle-button flexCenterVH">
         <li>
             <label for="checkbox" id="toggler">
-                <input type="checkbox" name="" id="checkbox" onchange="ocult_elements()">
+                <input type="checkbox" name="" id="checkbox" onchange="ocult_elements()" checked>
                 <span class="ball"></span>
                 <i class="fa-solid fa-moon moon"></i>
                 <i class="fa-solid fa-sun sun"></i>

@@ -14,7 +14,7 @@ section {
 }
 
 #sect-first {
-    background-image: url('../imagens/home/greaser.png'), url('../imagens/home/ellipse.png');
+    background-image: url('../imagens/home/greaser.png'), url('../imagens/home/ellipse-light.png');
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-size: 60vh, 75vh;
@@ -52,14 +52,23 @@ section {
 
 
 /* Sessão clara - ímpar */
-.section1 {
+.section1_light {
     background-color: #FEFCF3;
     color: rgb(0, 0, 0);
 }
+.section1_dark {
+    background-color: #121111;
+    color: white;
+}
 
-    .sect1-border-box {
+    .border-box_light {
         /* valores para sessão clara - ímpar */
         border: 0.5rem solid rgb(0, 0, 0);
+    }
+
+    .border-box_dark {
+        /* valores para sessão clara - ímpar */
+        border: 0.5rem solid rgb(255, 255, 255);
     }
 
     .sect1-backg-second-color-50 {
@@ -85,9 +94,15 @@ section {
     }
 
 
+
 /* Sessão escura - par */
-.section2 {
-    background-color: #000000;
+.section2_light {
+    background-color: #0C0C0C;
+    color: rgb(255, 255, 255);
+}
+
+.section2_dark {
+    background-color: #0C0C0C;
     color: rgb(255, 255, 255);
 }
 

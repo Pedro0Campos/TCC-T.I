@@ -1,11 +1,11 @@
-<section id="sect-first" class="section1">
+<section id="sect-first" class="section1 section1_light">
     
     <!-- Sombra - usando linear gradient -->
     <div class="box-shadow-bottom wh100">
 
         <div class="padding-box-title">
-            <div class="box-title sect1-border-box">
-                <p class="title1">Conheça tudo sobre o musical de <span class="sect1-backg-second-color-50 sect1-third-color">Grease</span></p>
+            <div class="box-title sect1-border-box border-box_light">
+                <p class="title1">Conheça tudo sobre o musical de <span class="sect1-title backg-title-light">Grease</span></p>
             </div>
         </div>
 
@@ -23,7 +23,7 @@
 
 </section>
 
-<section class="section2">
+<section class="section2 section2_light">
 
     <div class="padding-box-title">
         <div class="box-title sect2-border-box">

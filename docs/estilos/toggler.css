@@ -22,35 +22,35 @@
 
 .sun {
     font-size: 22px;
-    transform: translate(-190%, 16%) scale(0);
+    transform: translate(-190%, 16%) scale(1);
 }
 .cloud {
     position: absolute;
 }
 .cloud1 {
-    transform: translate(-170%, 70%)  scale(0);
+    transform: translate(-170%, 70%)  scale(1);
 }
 .cloud2 {
     font-size: 6px;
-    transform: translate(-240%, 90%)  scale(0);
+    transform: translate(-240%, 90%)  scale(1);
     transition: transform 0.25s ease-in-out;
 }
 
 .moon {
     font-size: 25px;
-    transform: rotate(210deg) translate(-5%, -10%);
+    transform: rotate(210deg) translate(-5%, -10%) scale(0);
 }
 .star1 {
     font-size: 5px;
-    transform: translate(-220%, 50%);
+    transform: translate(-220%, 50%) scale(0);
 }
 .star2 {
     font-size: 3px;
-    transform: translate(-100%, 280%);
+    transform: translate(-100%, 280%) scale(0);
 }
 .star3 {
     font-size: 6px;
-    transform: translate(-220%, 280%);
+    transform: translate(-220%, 280%) scale(0); 
 }
 
 .ball {
