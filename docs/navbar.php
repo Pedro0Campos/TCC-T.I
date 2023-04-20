@@ -24,8 +24,8 @@
     </ul>
     
     <ul class="navlista navlista-direita flexCenterVH">
-        <li><a href="login.html" class="navitens">Login</a></li>
-        <li><a href="cadastro.php" class="navitens">Cadastra-se</a></li>
+        <li><a href="?pagina=login" class="navitens">Login</a></li>
+        <li><a href="?pagina=cadastro" class="navitens">Cadastra-se</a></li>
         <!-- <li class="duplo-li">Olá Fulano!<br><a href="#" class="navitens">Sair?</a></li> -->
         <!-- <li><a href=""><img class="img-user" src="../docs/imagens/icon-user.png" alt=""></a></li> -->
     </ul>
