@@ -38,8 +38,13 @@ function ocult_elements() {
 
 function change_theme(theme) {
     let section1 = document.getElementsByClassName('section1')
-    let section2 = document.getElementsByClassName('section2')
     let sect1_border_box = document.getElementsByClassName('sect1-border-box')
+    let sect1_title1 = document.getElementsByClassName('sect1-title1')
+    let sect1_title_umaViagem = document.getElementsByClassName('sect1-title-umaViagem')
+    let sect1_button = document.getElementsByClassName('sect1-button')
+
+    let section2 = document.getElementsByClassName('section2')
+    let sect2_title2 = document.getElementsByClassName('sect2-title2')
     
 
     // Circulo de fundo
@@ -49,13 +54,41 @@ function change_theme(theme) {
     for (let i=0; i<section1.length; i++)  {
         section1[i].classList = `section1 section1_${theme}`
     }
-    //Section 2
-    for (let i=0; i<section2.length; i++)  {
-        section2[i].classList = `section2 section2_${theme}`
-    }
-
     // Section 1 border box
     for (let i=0; i<sect1_border_box.length; i++)  {
         sect1_border_box[i].classList = `box-title sect1-border-box border-box_${theme}`
     }
+    // Section 1 title 
+    for (let i=0; i<sect1_title1.length; i++)  {
+        sect1_title1[i].classList = `sect1-title1 backg-title_${theme}`
+    }
+    // Section 1 title uma viagem
+    for (let i=0; i<sect1_title_umaViagem.length; i++)  {
+        sect1_title_umaViagem[i].classList = `sect1-title-umaViagem umaViagem_${theme}`
+    }
+    // Section 1 button
+    for (let i=0; i<sect1_button.length; i++)  {
+        sect1_button[i].classList = `sect1-button button_${theme}`
+    }
+
+    //Section 2
+    for (let i=0; i<section2.length; i++)  {
+        section2[i].classList = `section2 section2_${theme}`
+    }
+    //Section 2 title 2
+    for (let i=0; i<sect2_title2.length; i++)  {
+        sect2_title2[i].classList = `sect2-title2 color-title_${theme}`
+    }
+
+    // Animação :D
+    animation()
+}
+
+function animation() {
+    document.getElementById('body').style.animation = 'fadeInAnimation ease 1s'
+    
+    const interval = setInterval(() => {
+        document.getElementById('body').style.animation = ''
+        clearInterval(interval)
+    }, 1000)
 }

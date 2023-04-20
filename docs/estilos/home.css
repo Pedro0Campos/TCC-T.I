@@ -1,11 +1,12 @@
 :root {
-    /* Sessão clara - ímpar */
-    --sect1-second-color: #6ba5f2;      /* nigth -> #6405FF*/
-    --sect1-second-color-50: #6ba5f280; /* nigth -> #6405FF50*/
-    --sect1-third-color: #00109d;       /* nigth -> #C6A4FF*/
+    --light-second-color: #6ba5f2;
+    --light-second-color-50: #6ba5f280;
+    --light-third-color: #00109d;
+    --dark-second-color: #A167FF;
+    --dark-second-color-50: #A167FF80;
+    --dark-third-color: #C6A4FF;
+    
 
-    /* Sessão escura - par */
-    --sect2-second-color: #6BA5F2;      /* nigth -> #C6A4FF*/
 }
 
 section {
@@ -17,18 +18,18 @@ section {
     background-image: url('../imagens/home/greaser.png'), url('../imagens/home/ellipse-light.png');
     background-repeat: no-repeat;
     background-attachment: scroll;
-    background-size: 60vh, 75vh;
-    background-position: 95% 100%, 97% 23%;
+    background-size: 43vw, 50vw;
+    background-position: 95% 105%, 97% 23%;  /* X Y*/
 }
 
 .padding-box-title {
     padding-left: 4%;
-    padding-top: 3%;
+    padding-top: 5%;
 }
 
 .box-title {
     /* Valores padrões */
-    font-size: 2.8rem;
+    font-size: 2rem;
     max-width: 14em;
     max-height: 4em;
     padding: 20px;
@@ -57,7 +58,7 @@ section {
     color: rgb(0, 0, 0);
 }
 .section1_dark {
-    background-color: #121111;
+    background-color: #050505;
     color: white;
 }
 
@@ -65,34 +66,44 @@ section {
         /* valores para sessão clara - ímpar */
         border: 0.5rem solid rgb(0, 0, 0);
     }
-
     .border-box_dark {
         /* valores para sessão clara - ímpar */
         border: 0.5rem solid rgb(255, 255, 255);
     }
 
-    .sect1-backg-second-color-50 {
-        background: var(--sect1-second-color-50);
+    .backg-title_light {
+        background-color: var(--light-second-color-50);
+        color: var(--light-third-color);
+        padding: 7px;
+    }
+    .backg-title_dark {
+        background-color: var(--dark-second-color-50);
+        color: var(--dark-third-color);
         padding: 7px;
     }
 
-    .sect1-second-color {
-        color: var(--sect1-second-color);
+    .umaViagem_light {
+        color: var(--light-second-color);
     }
-
-    .sect1-third-color {
-        color: var(--sect1-third-color);
+    .umaViagem_dark {
+        color: var(--dark-second-color);
     }
 
     .sect1-button {
-        background: black;
-        color: white;
         font-size: 1rem;
-        padding: 1em 8.9em 1em 8.9em;
+        padding: 1em 7.1em 1em 7.1em;
         border: none;
         border-radius: 100px;
     }
-
+    .button_light {
+        background: black;
+        color: white;
+    }
+    .button_dark {
+        background: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+    }
+    
 
 
 /* Sessão escura - par */
@@ -102,7 +113,7 @@ section {
 }
 
 .section2_dark {
-    background-color: #0C0C0C;
+    background-color: #000;
     color: rgb(255, 255, 255);
 }
 
@@ -111,13 +122,18 @@ section {
         border: 0.5rem solid rgb(255, 255, 255);
     }
 
-    .sect2-second-color {
-        color: var(--sect2-second-color);
+    .color-title_light {
+        color: var(--light-second-color);
+    }
+    .color-title_dark {
+        color: var(--dark-second-color);
     }
 
 
+
 .box-shadow-bottom {
-    background: linear-gradient(0deg, rgba(0,0,0,0.500) 1%, rgba(112,111,111,0.350) 20%, rgba(255,255,255,0) 50%);
+    background: transparent;
+    background: linear-gradient(180deg, rgba(255,255,255,0) 71%, rgba(12,12,12,0.24693627450980393) 83%, rgba(0,0,0,0.5186449579831933) 100%);
 }
 
 
@@ -141,14 +157,65 @@ section {
     }
 }
 
-@media only screen and (max-width: 1168px) {
+
+@media only screen and (min-width: 1000px) {
     .box-title {
-        font-size: 2.6rem;
+        font-size: 2.3rem;
+    }
+    #sect-first {
+        background-size: 45vw, 50vw;
+    }
+}
+@media only screen and (min-width: 1100px) {
+    .box-title {
+        font-size: 2.5rem;
+    }
+    #sect-first {
+        background-size: 37vw, 45vw;
+    }
+
+    .sect1-button {
+        font-size: 1.25rem;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .box-title {
+        font-size: 3.1rem;
+    }
+    #sect-first {
+        background-size: 35vw, 40vw;
+    }
+    
+    .sect1-button {
+        font-size: 1.25rem;
+    }
+    
+
+}
+
+@media only screen and (min-width: 1650px) {
+    .box-title {
+        font-size: 3.5rem;
+    }
+
+    .sect1-button {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (min-width: 1900px) {
+    .box-title {
+        font-size: 3.7rem;
+    }
+
+    .sect1-button {
+        font-size: 1.75rem;
     }
 }
 
 
-@media only screen and (max-width: 1141px) {
+/* @media only screen and (min-width: 1141px) {
     .box-title {
         font-size: 2.3rem;
     }
@@ -161,4 +228,4 @@ section {
         background-size: 60vh, 75vh;
         background-position: 95% 100%, 97% 23%;
     }
-}
+} */
