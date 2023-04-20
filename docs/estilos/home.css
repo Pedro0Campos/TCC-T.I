@@ -10,8 +10,8 @@
 }
 
 section {
-    height: 85vh;
-    min-height: 450px;
+    height: 92vh;
+    min-height: 618px;
 }
 
 #sect-first {
@@ -19,12 +19,12 @@ section {
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-size: 43vw, 50vw;
-    background-position: 95% 105%, 97% 23%;  /* X Y*/
+    background-position: 100% 100%, 97% 23%;  /* X Y*/
 }
 
 .padding-box-title {
     padding-left: 4%;
-    padding-top: 5%;
+    padding-top: 8vh;
 }
 
 .box-title {
@@ -139,24 +139,11 @@ section {
 
 /* RESPONSIVIDADE */
 
-@media only screen and (min-height: 521px) {
+@media only screen and (min-height: 632px) {
     section {
-        height: 92vh;
+        /* height: 92vh; */
     }
 }
-
-@media only screen and (min-height: 916px) {
-    section {
-        height: 94vh;
-    }
-}
-
-@media only screen and (min-height: 1162px) {
-    section {
-        height: 96vh;
-    }
-}
-
 
 @media only screen and (min-width: 1000px) {
     .box-title {
@@ -213,19 +200,3 @@ section {
         font-size: 1.75rem;
     }
 }
-
-
-/* @media only screen and (min-width: 1141px) {
-    .box-title {
-        font-size: 2.3rem;
-    }
-
-    .sect1-button {
-        padding: 1em 8em 1em 8em;
-    }
-
-    #sect-first {
-        background-size: 60vh, 75vh;
-        background-position: 95% 100%, 97% 23%;
-    }
-} */
