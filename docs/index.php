@@ -19,7 +19,7 @@
 </head>
 <body id="body" class="fade">
     <?php 
-        // include('database/db.php');
+        include('database/db.php');
         include('navbar.php');
         include('scripts/php/form.php');
         include('scripts/php/cadastrar_user.php');  // Cadastrar um usuário no banco
