@@ -1,22 +1,22 @@
-<section id="sect-first" class="section1 section1_light">
+<section id="sect-first" class="section-impar">
     
     <!-- Sombra - usando linear gradient -->
     <div class="box-shadow-bottom wh100">
 
         <div class="padding-box-title">
-            <div class="box-title sect1-border-box border-box_light">
+            <div class="box-title1 border-box">
                 <p class="title1">Conheça tudo sobre o musical de <span class="sect1-title1 backg-title_light">Grease</span></p>
             </div>
         </div>
 
         <div class="padding-box-title">
-            <div class="box-title box-title-menor">
+            <div class="box-title2 border-box">
                 <p class="title2"><span class="sect1-title-umaViagem umaViagem_light">“Uma viagem aos tempos da brilhantina”</span></p>
             </div>
         </div>
 
         <div class="padding-box-title">
-            <a href="?pagina=sobre"><button class="sect1-button button_light">Sobre o musical</button></a>
+            <a href="?pagina=sobre"><button>Sobre o musical</button></a>
         </div>
         
     </div>

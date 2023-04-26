@@ -17,99 +17,80 @@ section {
     background-position: 100% 100%, 97% 23%;  /* X Y*/
 }
 
+
+
 // Padding das caixas de título
 .padding-box-title {
     padding-left: 4%;
     padding-top: 8vh;
+
 }
 
 // Caixas de título
-.box-title {
+.box-title1 {
     /* Valores padrões */
     font-size: 2rem;
     max-width: 14em;
     max-height: 4em;
     padding: 20px;
-}
-
-    .box-title p.title1 {
+    
+    & p.title1 {
         font-size: 1em;
         letter-spacing: 0.1em;
         line-height: 1.3em;
     }
+}
 
-    .box-title p.title2 {
-        font-size: 0.85em;
+
+.box-title2 {
+    max-width: 10em;
+    font-size: 2rem;
+    
+    & p.title2 {
         letter-spacing: 0.1em;
         line-height: 1.1em;
     }
-
-    .box-title-menor {
-        max-width: 10em;
-    }
+}
 
 
 /* Sessão clara - ímpar */
-.section1_light {
+.section-impar {
     background-color: #FEFCF3;
     color: rgb(0, 0, 0);
 }
-.section1_dark {
-    background-color: #050505;
-    color: white;
-}
 
-    .border-box_light {
+    .border-box {
         /* valores para sessão clara - ímpar */
         border: 0.5rem solid rgb(0, 0, 0);
     }
-    .border-box_dark {
-        /* valores para sessão clara - ímpar */
-        border: 0.5rem solid rgb(255, 255, 255);
-    }
-
-    .backg-title_light {
-        background-color: config.$light-second-color-50;
-        color: config.$light-second-color-50;
-        padding: 7px;
-    }
-    .backg-title_dark {
+    
+    .backg-title {
         background-color: config.$light-second-color-50;
         color: config.$light-second-color-50;
         padding: 7px;
     }
 
-    .umaViagem_light {
+    .umaViagem {
         color: config.$light-second-color;
     }
-    .umaViagem_dark {
-        color: config.$light-second-color-50;
-    }
 
-    .sect1-button {
+    button {
         font-size: 1rem;
         padding: 1em 7.1em 1em 7.1em;
         border: none;
         border-radius: 100px;
-    }
-    .button_light {
-        background: black;
+        background-color: #000;
         color: white;
-    }
-    .button_dark {
-        background: rgb(255, 255, 255);
-        color: rgb(0, 0, 0);
-    }
-    
+    }    
 
 
 /* Sessão escura - par */
-.section2_light {
+.section2 {
     background-color: #000;
     color: rgb(255, 255, 255);
 }
 
-.section2_dark {
+.section2 {
     background-color: #000;
     color: rgb(255, 255, 255);
 }
@@ -119,10 +100,10 @@ section {
         border: 0.5rem solid rgb(255, 255, 255);
     }
 
-    .color-title_light {
+    .color-title {
         color: config.$light-second-color;
     }
-    .color-title_dark {
+    .color-title {
         color: config.$light-second-color-50;
     }
 
@@ -136,7 +117,7 @@ section {
 
 /* RESPONSIVIDADE */
 @media only screen and (min-width: 1000px) {
-    .box-title {
+    .box-title1 {
         font-size: 2.3rem;
     }
     #sect-first {
@@ -144,7 +125,7 @@ section {
     }
 }
 @media only screen and (min-width: 1100px) {
-    .box-title {
+    .box-title1 {
         font-size: 2.5rem;
     }
     #sect-first {
@@ -157,7 +138,7 @@ section {
 }
 
 @media only screen and (min-width: 1400px) {
-    .box-title {
+    .box-title1 {
         font-size: 3.1rem;
     }
     #sect-first {
@@ -172,7 +153,7 @@ section {
 }
 
 @media only screen and (min-width: 1650px) {
-    .box-title {
+    .box-title1 {
         font-size: 3.5rem;
     }
 
@@ -182,7 +163,7 @@ section {
 }
 
 @media only screen and (min-width: 1900px) {
-    .box-title {
+    .box-title1 {
         font-size: 3.7rem;
     }
 

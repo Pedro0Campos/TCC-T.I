@@ -36,13 +36,13 @@ main {
 
 p.title1 {
   font-family: JosefinSansRegular;
-  font-size: 2rem; /* 36px */
-  font-weight: 40px; /* 40px */
+  font-size: 2rem;
+  font-weight: 40px;
 }
 
 p.title2 {
   font-family: JosefinSansRegular;
-  font-size: 1.5em; /* 36px */
+  font-size: 1.5rem;
   font-weight: 40px; /* 40px */
 }
 

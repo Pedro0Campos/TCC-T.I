@@ -10,7 +10,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+ 
 // Bug -> body e o html fica com altura 0
 html, body {
     height: 100%;
@@ -39,14 +39,14 @@ main {
 // Título 1
 p.title1 {
     font-family: config.$JosefinSansRegular;
-    font-size: 2rem; /* 36px */
-    font-weight: 40px; /* 40px */
+    font-size: config.$font-size-title1;
+    font-weight: 40px;
 }
 
 // Título 2
 p.title2 {
     font-family: config.$JosefinSansRegular;
-    font-size: 1.5em; /* 36px */
+    font-size: config.$font-size-title2;
     font-weight: 40px; /* 40px */
 
 }
