@@ -76,7 +76,7 @@
     </form>
 </div>
 
-<script src="scripts/javascript/change_background.js"></script>
+<script src="javascript/change_background.js"></script>
 
 <?php
     echo "

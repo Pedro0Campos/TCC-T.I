@@ -1,32 +1,29 @@
-:root {
-    --light-second-color: #6ba5f2;
-    --light-second-color-50: #6ba5f280;
-    --light-third-color: #00109d;
-    --dark-second-color: #A167FF;
-    --dark-second-color-50: #A167FF80;
-    --dark-third-color: #C6A4FF;
-    
 
-}
+
+@use 'config';
+
 
 section {
     height: 92vh;
     min-height: 618px;
 }
 
+// Primeira sessão, onde tem a imagem do Grease e a Elipse
 #sect-first {
-    background-image: url('../imagens/home/greaser.png'), url('../imagens/home/ellipse-light.png');
+    background-image: url('../imgs/home/greaser.png'), url('../imgs/home/ellipse-light.png');
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-size: 43vw, 50vw;
     background-position: 100% 100%, 97% 23%;  /* X Y*/
 }
 
+// Padding das caixas de título
 .padding-box-title {
     padding-left: 4%;
     padding-top: 8vh;
 }
 
+// Caixas de título
 .box-title {
     /* Valores padrões */
     font-size: 2rem;
@@ -72,21 +69,21 @@ section {
     }
 
     .backg-title_light {
-        background-color: var(--light-second-color-50);
-        color: var(--light-third-color);
+        background-color: config.$light-second-color-50;
+        color: config.$light-second-color-50;
         padding: 7px;
     }
     .backg-title_dark {
-        background-color: var(--dark-second-color-50);
-        color: var(--dark-third-color);
+        background-color: config.$light-second-color-50;
+        color: config.$light-second-color-50;
         padding: 7px;
     }
 
     .umaViagem_light {
-        color: var(--light-second-color);
+        color: config.$light-second-color;
     }
     .umaViagem_dark {
-        color: var(--dark-second-color);
+        color: config.$light-second-color-50;
     }
 
     .sect1-button {
@@ -108,7 +105,7 @@ section {
 
 /* Sessão escura - par */
 .section2_light {
-    background-color: #0C0C0C;
+    background-color: #000;
     color: rgb(255, 255, 255);
 }
 
@@ -123,10 +120,10 @@ section {
     }
 
     .color-title_light {
-        color: var(--light-second-color);
+        color: config.$light-second-color;
     }
     .color-title_dark {
-        color: var(--dark-second-color);
+        color: config.$light-second-color-50;
     }
 
 
@@ -138,13 +135,6 @@ section {
 
 
 /* RESPONSIVIDADE */
-
-@media only screen and (min-height: 632px) {
-    section {
-        /* height: 92vh; */
-    }
-}
-
 @media only screen and (min-width: 1000px) {
     .box-title {
         font-size: 2.3rem;

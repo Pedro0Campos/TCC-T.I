@@ -1,5 +1,5 @@
 <?php
-    include('../docs/scripts/php/scripts.php');
+    include('../docs/php/scripts.php');
 
     conectar_bd('imagem')
     

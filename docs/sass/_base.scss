@@ -1,0 +1,160 @@
+// BASE -> Configurações, reset, título, texto, botões, scrollbar, classes úteis, animações
+
+
+@use 'config';
+
+
+// Resetando valores padrões
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+// Configurações do Body
+body{
+    background-color: #FEFCF3;
+    color: rgba(0, 0, 0, 0.800);
+    font-family: Inter;
+    font-size: 18px;
+    padding-top: config.$alturaNAV;
+}
+
+// MAIN 
+main {
+    width: 100%;
+    height: 100%;
+}
+
+
+// ===================================================
+// Títulos, textos e botões
+
+
+// Título 1
+p.title1 {
+    font-family: config.$JosefinSansRegular;
+    font-size: 2rem; /* 36px */
+    font-weight: 40px; /* 40px */
+}
+
+// Título 2
+p.title2 {
+    font-family: config.$JosefinSansRegular;
+    font-size: 1.5em; /* 36px */
+    font-weight: 40px; /* 40px */
+
+}
+
+// Formatação de parágrafo
+p.text {
+    margin: 8px;
+}
+
+
+// Formatação de LINK
+a {
+    text-decoration: none;
+    color: #45CFE1;
+}
+    .underline:hover {
+        text-decoration: underline;
+        text-underline-offset: 2px;
+    } 
+
+
+// Botão
+button {
+    cursor: pointer;
+    font-family: config.$JosefinSansRegular;
+}
+// ===================================================
+
+
+
+// ===================================================
+// Tags úteis
+
+// centralizar horizontalmente e verticalmente com Flex
+.flexCenterVH {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Itálico
+.italic {
+    font-style: italic;
+}
+
+// Altura e comprimento 100%
+.wh100 {
+    height: 100%;
+    width: 100%;
+}
+// ===================================================
+
+
+
+
+// ===================================================
+// Scrollbar
+
+// ::-webkit-scrollbar {
+//     width: 12.5px;
+//     height: 8px;
+//     background-color: white;
+// }
+
+// ::-webkit-scrollbar-thumb {
+//     background: rgb(187, 187, 187);
+//     border-radius: 30px;
+//     height: 50px;
+//     width: 50px;
+// }
+// ===================================================
+
+
+    
+// ===================================================
+// Animações
+
+// Animação de títulos - hover
+.animation-title {
+    /*Animação*/
+    --b: 0.1em;   /* A grossura da linha */
+    --c: #6BA5F2; /* A cor da linha*/
+    
+    color: rgba(0, 0, 0, 0.493);
+    padding-block: var(--b);
+    background: 
+    linear-gradient(var(--c) 50%,rgb(0, 0, 0) 0) 0% calc(100% - var(--_p,0%))/100% 200%,
+    linear-gradient(var(--c) 0 0) 0% var(--_p,0%)/var(--_p,0%) var(--b) no-repeat;
+    -webkit-background-clip: text,padding-box;
+    background-clip: text,padding-box;
+    transition: .3s var(--_s,0s) linear,background-size .3s calc(.3s - var(--_s,0s));
+}
+    .animation-title:hover {
+        --_p: 100%;
+        --_s: .3s;
+    }
+
+
+// Fade - transição
+.fade {
+    /* animation: fadeInAnimation ease 1s; */
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+        background-color: rgb(0, 0, 0);
+    }
+    100% {
+        opacity: 1;
+        background-color: rgb(0, 0, 0);
+    }
+}
+// ===================================================

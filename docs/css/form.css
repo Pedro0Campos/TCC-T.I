@@ -16,7 +16,7 @@ div.left {
     float: left;
 }
     div.backg-image-logcad {
-        background: no-repeat url(../imagens/cadastro/background4.png);
+        background: no-repeat url(../imgs/cadastro/background4.png);
         background-position-y: center;
         background-size: cover;
     }

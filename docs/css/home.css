@@ -1,0 +1,191 @@
+@charset "UTF-8";
+@font-face {
+  font-family: JosefinSansRegular;
+  src: url(../fonts/JosefinSans/JosefinSans-Regular.ttf);
+}
+@font-face {
+  font-family: JosefinSansLight;
+  src: url(../fonts/JosefinSans/JosefinSans-Light.ttf);
+}
+@font-face {
+  font-family: Inter;
+  src: url(../fonts/Inter/Inter-Regular.ttf);
+}
+section {
+  height: 92vh;
+  min-height: 618px;
+}
+
+#sect-first {
+  background-image: url("../imgs/home/greaser.png"), url("../imgs/home/ellipse-light.png");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: 43vw, 50vw;
+  background-position: 100% 100%, 97% 23%; /* X Y*/
+}
+
+.padding-box-title {
+  padding-left: 4%;
+  padding-top: 8vh;
+}
+
+.box-title {
+  /* Valores padrões */
+  font-size: 2rem;
+  max-width: 14em;
+  max-height: 4em;
+  padding: 20px;
+}
+
+.box-title p.title1 {
+  font-size: 1em;
+  letter-spacing: 0.1em;
+  line-height: 1.3em;
+}
+
+.box-title p.title2 {
+  font-size: 0.85em;
+  letter-spacing: 0.1em;
+  line-height: 1.1em;
+}
+
+.box-title-menor {
+  max-width: 10em;
+}
+
+/* Sessão clara - ímpar */
+.section1_light {
+  background-color: #FEFCF3;
+  color: rgb(0, 0, 0);
+}
+
+.section1_dark {
+  background-color: #050505;
+  color: white;
+}
+
+.border-box_light {
+  /* valores para sessão clara - ímpar */
+  border: 0.5rem solid rgb(0, 0, 0);
+}
+
+.border-box_dark {
+  /* valores para sessão clara - ímpar */
+  border: 0.5rem solid rgb(255, 255, 255);
+}
+
+.backg-title_light {
+  background-color: rgba(107, 165, 242, 0.5019607843);
+  color: rgba(107, 165, 242, 0.5019607843);
+  padding: 7px;
+}
+
+.backg-title_dark {
+  background-color: rgba(107, 165, 242, 0.5019607843);
+  color: rgba(107, 165, 242, 0.5019607843);
+  padding: 7px;
+}
+
+.umaViagem_light {
+  color: #6ba5f2;
+}
+
+.umaViagem_dark {
+  color: rgba(107, 165, 242, 0.5019607843);
+}
+
+.sect1-button {
+  font-size: 1rem;
+  padding: 1em 7.1em 1em 7.1em;
+  border: none;
+  border-radius: 100px;
+}
+
+.button_light {
+  background: black;
+  color: white;
+}
+
+.button_dark {
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+
+/* Sessão escura - par */
+.section2_light {
+  background-color: #000;
+  color: rgb(255, 255, 255);
+}
+
+.section2_dark {
+  background-color: #000;
+  color: rgb(255, 255, 255);
+}
+
+.sect2-border-box {
+  /* valores para sessão clara - ímpar */
+  border: 0.5rem solid rgb(255, 255, 255);
+}
+
+.color-title_light {
+  color: #6ba5f2;
+}
+
+.color-title_dark {
+  color: rgba(107, 165, 242, 0.5019607843);
+}
+
+.box-shadow-bottom {
+  background: transparent;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 71%, rgba(12, 12, 12, 0.2469362745) 83%, rgba(0, 0, 0, 0.518644958) 100%);
+}
+
+/* RESPONSIVIDADE */
+@media only screen and (min-width: 1000px) {
+  .box-title {
+    font-size: 2.3rem;
+  }
+  #sect-first {
+    background-size: 45vw, 50vw;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  .box-title {
+    font-size: 2.5rem;
+  }
+  #sect-first {
+    background-size: 37vw, 45vw;
+  }
+  .sect1-button {
+    font-size: 1.25rem;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .box-title {
+    font-size: 3.1rem;
+  }
+  #sect-first {
+    background-size: 35vw, 40vw;
+  }
+  .sect1-button {
+    font-size: 1.25rem;
+  }
+}
+@media only screen and (min-width: 1650px) {
+  .box-title {
+    font-size: 3.5rem;
+  }
+  .sect1-button {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (min-width: 1900px) {
+  .box-title {
+    font-size: 3.7rem;
+  }
+  .sect1-button {
+    font-size: 1.75rem;
+  }
+}
+
+/*# sourceMappingURL=home.css.map */

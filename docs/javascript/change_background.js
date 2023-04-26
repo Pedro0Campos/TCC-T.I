@@ -14,7 +14,7 @@ function change_background() {
     num = getNumRandom(1, 5)
 
     // Setar os atributos
-    div.style.background = `no-repeat url(imagens/cadastro/background${num}.png)`
+    div.style.background = `no-repeat url(imgs/cadastro/background${num}.png)`
     div.style.backgroundPosition = 'center'
     div.style.backgroundSize = 'cover'
 }

@@ -1,7 +1,7 @@
 <div class="left backg-image-logcad"></div>
 
 <div class="right">
-    <form action="scripts/php/cadastrar.php" method="post" autocomplete="off">
+    <form action="php/cadastrar.php" method="post" autocomplete="off">
 
         <p class="title1 animation-title">Login</p>
 
@@ -17,4 +17,4 @@
     </form>    
 </div>
 
-<script src="scripts/javascript/change_background.js"></script>
+<script src="javascript/change_background.js"></script>

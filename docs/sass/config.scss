@@ -1,0 +1,39 @@
+// ===================================================
+// Fontes
+
+@font-face {
+    font-family: JosefinSansRegular;
+    src: url(../fonts/JosefinSans/JosefinSans-Regular.ttf);
+}
+@font-face {
+font-family: JosefinSansLight;
+src: url(../fonts/JosefinSans/JosefinSans-Light.ttf);
+}
+@font-face {
+    font-family: Inter;
+    src: url(../fonts/Inter/Inter-Regular.ttf);
+}
+
+$JosefinSansRegular: JosefinSansRegular;
+$JosefinSansLight: JosefinSansLight;
+$Inter: Inter;
+
+// ===================================================
+
+
+// ===================================================
+// Cores 
+
+$light-second-color: #6ba5f2;
+$light-second-color-50: #6ba5f280;
+$light-third-color: #00109d;
+$dark-second-color: #A167FF;
+$dark-second-color-50: #A167FF80;
+$dark-third-color: #C6A4FF;
+// ===================================================
+
+
+// ===================================================
+// Navbar
+
+$alturaNAV: 4.5rem;
