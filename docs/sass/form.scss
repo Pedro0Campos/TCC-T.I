@@ -1,0 +1,133 @@
+
+
+@use 'config';
+
+
+/* DIV - ESQUERDA */
+div.left {
+    height: 100vh;
+    width: 55%;
+    float: left;
+}
+    div.backg-image-logcad {
+        background: no-repeat url(../imgs/cadastro/background4.png);
+        background-position-y: center;
+        background-size: cover;
+    }
+
+
+/* DIV - DIREITA */
+div.right {
+    margin: 0 auto;
+    height: 100vh;
+    width: 45%;
+    float: right;
+}
+
+div.right form {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.input_form, .button_form {
+    height: 60px;
+    min-height: 60px;
+    width: config.$widthInput;
+    max-width: config.$maxWidthInput;
+    border: 0;
+    font-size: 1rem;
+}
+
+
+.input_form {
+    border-bottom: 1px solid black;
+    margin-top: 40px;
+    background: 0;
+    color: #000000ad;
+}
+    ::-ms-reveal {
+        display: none;
+    }
+
+    .input_form::placeholder {
+        color: #00000093;
+    }
+
+    .input_form:focus {
+        outline: none;
+    } 
+
+    .input_form:hover{
+        transform: scale(1.02, 1.02);
+    }
+
+
+.button_form {
+    border: 0;
+    background: #6BA5F2;
+    color: white;
+    margin: 30px 0 10px 0;
+    border-radius: 4px;
+} 
+
+    .button_form:hover {
+        transform: scale(1.02, 1.02);
+        cursor: pointer;
+    }
+
+
+.msg_erro {
+    width: config.$widthInput;
+    max-width: config.$maxWidthInput;
+    text-align: left;
+    margin-top: 8px;
+    color: rgb(253, 31, 31);
+}
+    .msg_erro i {
+        color: rgb(255, 89, 89);
+        margin-right: 5px;
+    }
+
+i.eye {
+    position: relative;
+    
+}
+
+
+@media only screen and (max-width: 800px) {
+    div.left {
+        visibility: hidden;
+        display: none;
+    }
+
+    div.right {
+        float: none;
+        height: 100%;
+        padding: 35px 0 20px 0;
+    }
+
+}
+
+@media only screen and (min-height: 650px) {
+    body {
+        overflow: hidden;
+    }
+}
+
+@media only screen and (max-height: 500px) {
+    div.left {
+        visibility: hidden;
+        display: none;
+    }
+
+    div.right {
+        float: none;
+        width: 100%;
+        height: 100%;
+        padding: 35px 0 20px 0;
+    }
+}
