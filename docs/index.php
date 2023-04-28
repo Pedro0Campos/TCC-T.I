@@ -8,7 +8,7 @@
 	
     <title>Grease • 3º Info tarde 2023</title>
     
-    <link rel="stylesheet" href="css/_base.css">
+    <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/form.css">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/navbar.css">

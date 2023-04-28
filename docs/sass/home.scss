@@ -1,173 +1,107 @@
-
-
+// Importando as configurações (variáveis)
 @use 'config';
 
-
-section {
-    height: 92vh;
-    min-height: 618px;
-}
-
-// Primeira sessão, onde tem a imagem do Grease e a Elipse
-#sect-first {
-    background-image: url('../imgs/home/greaser.png'), url('../imgs/home/ellipse-light.png');
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-size: 43vw, 50vw;
-    background-position: 100% 100%, 97% 23%;  /* X Y*/
+:root{
+    --width-sandy-danny: 450px
 }
 
 
-
-// Padding das caixas de título
+// ===================================================
+// Caixas de texto
 .padding-box-title {
-    padding-left: 4%;
-    padding-top: 8vh;
-
-}
-
-// Caixas de título
-.box-title1 {
-    /* Valores padrões */
-    font-size: 2rem;
-    max-width: 14em;
-    max-height: 4em;
-    padding: 20px;
+    padding: 35px 35px 20px 35px;
+    max-width: 600px;
     
-    & p.title1 {
-        font-size: 1em;
-        letter-spacing: 0.1em;
-        line-height: 1.3em;
+    // Div dentro da padding-box-title -> todas as div.box-title
+    & div {
+        width: auto;
+        padding: 20px;
     }
-}
-
-
-.box-title2 {
-    max-width: 10em;
-    font-size: 2rem;
     
-    & p.title2 {
-        letter-spacing: 0.1em;
-        line-height: 1.1em;
+    .box-title1 {
+        max-width: $width-box-title1;
+        & h1 {
+            font-family: config.$JosefinSansMedium;
+            font-size: config.$font-size-box-title1;
+            letter-spacing: 0.15em;
+            line-height: 1.2em;
+            & span {
+                color: config.$third-color;
+                background-color: config.$second-color-50;
+                padding: 7px;
+            }
+        }
     }
-}
-
-
-/* Sessão clara - ímpar */
-.section-impar {
-    background-color: #FEFCF3;
-    color: rgb(0, 0, 0);
-}
-
+    
+    .box-title2 {
+        max-width: config.$width-box-title2;
+        & h2 {
+            font-size: config.$font-size-box-title1;
+            letter-spacing: 0.1em;
+            line-height: 1.2;
+        }
+    }
+    
+    .box-title3 {
+        max-width: config.$width-box-title3;
+        & h3 {
+            font-size: config.$font-size-box-title3;
+            font-family: config.$JosefinSansBoldItalic;
+            letter-spacing: 0.1em;
+            line-height: 1.1em;
+            & span {
+                color: config.$second-color;
+            }
+        }
+    }
+    
     .border-box {
         /* valores para sessão clara - ímpar */
-        border: 0.5rem solid rgb(0, 0, 0);
+        border: 7px solid config.$text-color;
     }
     
-    .backg-title {
-        background-color: config.$light-second-color-50;
-        color: config.$light-second-color-50;
-        padding: 7px;
-    }
-
-    .umaViagem {
-        color: config.$light-second-color;
-    }
-
-    button {
+    & button {
         font-size: 1rem;
         padding: 1em 7.1em 1em 7.1em;
         border: none;
         border-radius: 100px;
-        background-color: #000;
-        color: white;
-    }    
-
-
-/* Sessão escura - par */
-.section2 {
-    background-color: #000;
-    color: rgb(255, 255, 255);
+        background-color: config.$text-color;
+        color: config.$backg-color;
+    }
 }
+// ===================================================
 
-.section2 {
-    background-color: #000;
-    color: rgb(255, 255, 255);
+
+
+// ===================================================
+// Sessão
+section {
+    height: calc(100vh - config.$alturaNAV);
+
+    &:first-child {
+        .sandy-danny {
+            position: absolute;
+            width: var(--width-sandy-danny);
+            bottom: 0;
+            right: 0;
+            z-index: -1;
+        }
+    }
 }
-
-    .sect2-border-box {
-        /* valores para sessão clara - ímpar */
-        border: 0.5rem solid rgb(255, 255, 255);
-    }
-
-    .color-title {
-        color: config.$light-second-color;
-    }
-    .color-title {
-        color: config.$light-second-color-50;
-    }
+// ===================================================
 
 
 
-.box-shadow-bottom {
+.backgr-gradient {
     background: transparent;
     background: linear-gradient(180deg, rgba(255,255,255,0) 71%, rgba(12,12,12,0.24693627450980393) 83%, rgba(0,0,0,0.5186449579831933) 100%);
 }
 
-
+// ===================================================
 /* RESPONSIVIDADE */
-@media only screen and (min-width: 1000px) {
-    .box-title1 {
-        font-size: 2.3rem;
-    }
-    #sect-first {
-        background-size: 45vw, 50vw;
-    }
-}
-@media only screen and (min-width: 1100px) {
-    .box-title1 {
-        font-size: 2.5rem;
-    }
-    #sect-first {
-        background-size: 37vw, 45vw;
-    }
-
-    .sect1-button {
-        font-size: 1.25rem;
-    }
-}
-
-@media only screen and (min-width: 1400px) {
-    .box-title1 {
-        font-size: 3.1rem;
-    }
-    #sect-first {
-        background-size: 35vw, 40vw;
-    }
+@media only screen and (min-width: 1141px) {
     
-    .sect1-button {
-        font-size: 1.25rem;
-    }
-    
-
-}
-
-@media only screen and (min-width: 1650px) {
-    .box-title1 {
-        font-size: 3.5rem;
-    }
-
-    .sect1-button {
-        font-size: 1.5rem;
-    }
-}
-
-@media only screen and (min-width: 1900px) {
-    .box-title1 {
-        font-size: 3.7rem;
-    }
-
-    .sect1-button {
-        font-size: 1.75rem;
+    :root{
+        --width-sandy-danny: 500px
     }
 }

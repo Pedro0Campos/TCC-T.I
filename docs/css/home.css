@@ -1,161 +1,17 @@
-@charset "UTF-8";
-@font-face {
-  font-family: JosefinSansRegular;
-  src: url(../fonts/JosefinSans/JosefinSans-Regular.ttf);
-}
-@font-face {
-  font-family: JosefinSansLight;
-  src: url(../fonts/JosefinSans/JosefinSans-Light.ttf);
-}
-@font-face {
-  font-family: Inter;
-  src: url(../fonts/Inter/Inter-Regular.ttf);
-}
-section {
-  height: 92vh;
-  min-height: 618px;
-}
+/* Error: Undefined variable.
+ *    ,
+ * 22 |         max-width: $width-box-title1;
+ *    |                    ^^^^^^^^^^^^^^^^^
+ *    '
+ *   docs\sass\home.scss 22:20  root stylesheet */
 
-#sect-first {
-  background-image: url("../imgs/home/greaser.png"), url("../imgs/home/ellipse-light.png");
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-size: 43vw, 50vw;
-  background-position: 100% 100%, 97% 23%; /* X Y*/
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a    \2577 \a 22 \2502          max-width: $width-box-title1;\d\a    \2502                     ^^^^^^^^^^^^^^^^^\a    \2575 \a   docs\\sass\\home.scss 22:20  root stylesheet";
 }
-
-.padding-box-title {
-  padding-left: 4%;
-  padding-top: 8vh;
-}
-
-.box-title1 {
-  /* Valores padrões */
-  font-size: 2rem;
-  max-width: 14em;
-  max-height: 4em;
-  padding: 20px;
-}
-.box-title1 p.title1 {
-  font-size: 1em;
-  letter-spacing: 0.1em;
-  line-height: 1.3em;
-}
-
-.box-title2 {
-  max-width: 10em;
-  font-size: 2rem;
-}
-.box-title2 p.title2 {
-  letter-spacing: 0.1em;
-  line-height: 1.1em;
-}
-
-/* Sessão clara - ímpar */
-.section-impar {
-  background-color: #FEFCF3;
-  color: rgb(0, 0, 0);
-}
-
-.border-box {
-  /* valores para sessão clara - ímpar */
-  border: 0.5rem solid rgb(0, 0, 0);
-}
-
-.backg-title {
-  background-color: rgba(107, 165, 242, 0.5019607843);
-  color: rgba(107, 165, 242, 0.5019607843);
-  padding: 7px;
-}
-
-.umaViagem {
-  color: #6ba5f2;
-}
-
-button {
-  font-size: 1rem;
-  padding: 1em 7.1em 1em 7.1em;
-  border: none;
-  border-radius: 100px;
-  background-color: #000;
-  color: white;
-}
-
-/* Sessão escura - par */
-.section2 {
-  background-color: #000;
-  color: rgb(255, 255, 255);
-}
-
-.section2 {
-  background-color: #000;
-  color: rgb(255, 255, 255);
-}
-
-.sect2-border-box {
-  /* valores para sessão clara - ímpar */
-  border: 0.5rem solid rgb(255, 255, 255);
-}
-
-.color-title {
-  color: #6ba5f2;
-}
-
-.color-title {
-  color: rgba(107, 165, 242, 0.5019607843);
-}
-
-.box-shadow-bottom {
-  background: transparent;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 71%, rgba(12, 12, 12, 0.2469362745) 83%, rgba(0, 0, 0, 0.518644958) 100%);
-}
-
-/* RESPONSIVIDADE */
-@media only screen and (min-width: 1000px) {
-  .box-title1 {
-    font-size: 2.3rem;
-  }
-  #sect-first {
-    background-size: 45vw, 50vw;
-  }
-}
-@media only screen and (min-width: 1100px) {
-  .box-title1 {
-    font-size: 2.5rem;
-  }
-  #sect-first {
-    background-size: 37vw, 45vw;
-  }
-  .sect1-button {
-    font-size: 1.25rem;
-  }
-}
-@media only screen and (min-width: 1400px) {
-  .box-title1 {
-    font-size: 3.1rem;
-  }
-  #sect-first {
-    background-size: 35vw, 40vw;
-  }
-  .sect1-button {
-    font-size: 1.25rem;
-  }
-}
-@media only screen and (min-width: 1650px) {
-  .box-title1 {
-    font-size: 3.5rem;
-  }
-  .sect1-button {
-    font-size: 1.5rem;
-  }
-}
-@media only screen and (min-width: 1900px) {
-  .box-title1 {
-    font-size: 3.7rem;
-  }
-  .sect1-button {
-    font-size: 1.75rem;
-  }
-}
-
-/*# sourceMappingURL=home.css.map */

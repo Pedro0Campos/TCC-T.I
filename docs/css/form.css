@@ -3,8 +3,16 @@
   src: url(../fonts/JosefinSans/JosefinSans-Regular.ttf);
 }
 @font-face {
+  font-family: JosefinSansMedium;
+  src: url(../fonts/JosefinSans/JosefinSans-Medium.ttf);
+}
+@font-face {
   font-family: JosefinSansLight;
   src: url(../fonts/JosefinSans/JosefinSans-Light.ttf);
+}
+@font-face {
+  font-family: JosefinSansBoldItalic;
+  src: url(../fonts/JosefinSans/JosefinSans-BoldItalic.ttf);
 }
 @font-face {
   font-family: Inter;
@@ -46,7 +54,6 @@ div.right form {
   width: 70%;
   max-width: 450px;
   border: 0;
-  font-size: 1rem;
 }
 
 .input_form {
@@ -111,11 +118,6 @@ i.eye {
     float: none;
     height: 100%;
     padding: 35px 0 20px 0;
-  }
-}
-@media only screen and (min-height: 650px) {
-  body {
-    overflow: hidden;
   }
 }
 @media only screen and (max-height: 500px) {

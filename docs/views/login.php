@@ -3,7 +3,7 @@
 <div class="right">
     <form action="php/cadastrar.php" method="post" autocomplete="off">
 
-        <p class="title1 animation-title">Login</p>
+        <h2 class="animation-title">Login</h2>
 
         <input class="input_form" type="email" name="email" placeholder="Email" required>
         <input class="input_form" type="password" name="senha" placeholder="Senha" required>

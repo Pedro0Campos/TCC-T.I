@@ -18,8 +18,8 @@ html, body {
 
 // Configurações do Body
 body{
-    background-color: #FEFCF3;
-    color: rgba(0, 0, 0, 0.800);
+    background-color: config.$backg-color;
+    color: config.$text-color;
     font-family: Inter;
     font-size: 18px;
     padding-top: config.$alturaNAV;
@@ -36,24 +36,27 @@ main {
 // Títulos, textos e botões
 
 
-// Título 1
-p.title1 {
+// Títulos
+h1, h2, h3 {
+    font: inherit;
     font-family: config.$JosefinSansRegular;
+}
+h1 {
     font-size: config.$font-size-title1;
-    font-weight: 40px;
 }
 
-// Título 2
-p.title2 {
-    font-family: config.$JosefinSansRegular;
+h2 {
     font-size: config.$font-size-title2;
-    font-weight: 40px; /* 40px */
+}
 
+h3 {
+    font-size: config.$font-size-title3;
 }
 
 // Formatação de parágrafo
 p.text {
     margin: 8px;
+    font-size: config.$font-size-text;
 }
 
 
@@ -130,10 +133,10 @@ button {
     --b: 0.1em;   /* A grossura da linha */
     --c: #6BA5F2; /* A cor da linha*/
     
-    color: rgba(0, 0, 0, 0.493);
+    color: config.$text-color-80;
     padding-block: var(--b);
     background: 
-    linear-gradient(var(--c) 50%,rgb(0, 0, 0) 0) 0% calc(100% - var(--_p,0%))/100% 200%,
+    linear-gradient(var(--c) 50%, config.$text-color-80 0) 0% calc(100% - var(--_p,0%))/100% 200%,
     linear-gradient(var(--c) 0 0) 0% var(--_p,0%)/var(--_p,0%) var(--b) no-repeat;
     -webkit-background-clip: text,padding-box;
     background-clip: text,padding-box;

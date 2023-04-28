@@ -4,8 +4,16 @@
   src: url(../fonts/JosefinSans/JosefinSans-Regular.ttf);
 }
 @font-face {
+  font-family: JosefinSansMedium;
+  src: url(../fonts/JosefinSans/JosefinSans-Medium.ttf);
+}
+@font-face {
   font-family: JosefinSansLight;
   src: url(../fonts/JosefinSans/JosefinSans-Light.ttf);
+}
+@font-face {
+  font-family: JosefinSansBoldItalic;
+  src: url(../fonts/JosefinSans/JosefinSans-BoldItalic.ttf);
 }
 @font-face {
   font-family: Inter;
@@ -94,7 +102,5 @@ li#grease {
 .img-user {
   height: 2.5rem;
 }
-
-/* Formatação do navbar */
 
 /*# sourceMappingURL=navbar.css.map */

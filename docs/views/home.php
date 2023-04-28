@@ -1,33 +1,33 @@
-<section id="sect-first" class="section-impar">
-    
+<section class="section-impar">
     <!-- Sombra - usando linear gradient -->
-    <div class="box-shadow-bottom wh100">
-
+    <div class="backgr-gradient wh100">
         <div class="padding-box-title">
             <div class="box-title1 border-box">
-                <p class="title1">Conheça tudo sobre o musical de <span class="sect1-title1 backg-title_light">Grease</span></p>
+                <h1>Conheça tudo sobre o musical de <span>Grease</span></p>
             </div>
-        </div>
-
-        <div class="padding-box-title">
-            <div class="box-title2 border-box">
-                <p class="title2"><span class="sect1-title-umaViagem umaViagem_light">“Uma viagem aos tempos da brilhantina”</span></p>
-            </div>
-        </div>
-
-        <div class="padding-box-title">
-            <a href="?pagina=sobre"><button>Sobre o musical</button></a>
         </div>
         
+        <div class="padding-box-title">
+            <div class="box-title3">
+                <h3><span>“Uma viagem aos tempos da brilhantina”</span></h3>
+            </div>
+        </div>
+        
+        <div class="padding-box-title">
+            <div class="box-button">
+                <a href="?pagina=sobre"><button type="button">Sobre o musical</button></a>
+            </div>
+        </div>
+        
+        <img src="imgs/home/sanny-danny-light.png" alt="Sanddy e Danny - Grease" class="sandy-danny">
     </div>
-
 </section>
 
-<section class="section2 section2_light">
+<section class="section-par">
 
     <div class="padding-box-title">
         <div class="box-title sect2-border-box">
-            <p class="title2">Conheça as música que refletem os anos <span class="sect2-title2 color-title_light">50</span></p>
+            <h2>Conheça as música que refletem os anos <span class="sect2-title2 color-title_light">50</span></p>
         </div>
     </div>
 

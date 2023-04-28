@@ -4,8 +4,16 @@
   src: url(../fonts/JosefinSans/JosefinSans-Regular.ttf);
 }
 @font-face {
+  font-family: JosefinSansMedium;
+  src: url(../fonts/JosefinSans/JosefinSans-Medium.ttf);
+}
+@font-face {
   font-family: JosefinSansLight;
   src: url(../fonts/JosefinSans/JosefinSans-Light.ttf);
+}
+@font-face {
+  font-family: JosefinSansBoldItalic;
+  src: url(../fonts/JosefinSans/JosefinSans-BoldItalic.ttf);
 }
 @font-face {
   font-family: Inter;
@@ -23,7 +31,7 @@ html, body {
 
 body {
   background-color: #FEFCF3;
-  color: rgba(0, 0, 0, 0.8);
+  color: #000000;
   font-family: Inter;
   font-size: 18px;
   padding-top: 4.5rem;
@@ -34,20 +42,26 @@ main {
   min-height: 100%;
 }
 
-p.title1 {
+h1, h2, h3 {
+  font: inherit;
   font-family: JosefinSansRegular;
-  font-size: 2rem;
-  font-weight: 40px;
 }
 
-p.title2 {
-  font-family: JosefinSansRegular;
-  font-size: 1.5rem;
-  font-weight: 40px; /* 40px */
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.25em;
 }
 
 p.text {
   margin: 8px;
+  font-size: 1em;
 }
 
 a {
@@ -84,9 +98,9 @@ button {
   /*Animação*/
   --b: 0.1em; /* A grossura da linha */
   --c: #6BA5F2; /* A cor da linha*/
-  color: rgba(0, 0, 0, 0.493);
+  color: rgba(0, 0, 0, 0.8);
   padding-block: var(--b);
-  background: linear-gradient(var(--c) 50%, rgb(0, 0, 0) 0) 0% calc(100% - var(--_p, 0%))/100% 200%, linear-gradient(var(--c) 0 0) 0% var(--_p, 0%)/var(--_p, 0%) var(--b) no-repeat;
+  background: linear-gradient(var(--c) 50%, rgba(0, 0, 0, 0.8) 0) 0% calc(100% - var(--_p, 0%))/100% 200%, linear-gradient(var(--c) 0 0) 0% var(--_p, 0%)/var(--_p, 0%) var(--b) no-repeat;
   -webkit-background-clip: text, padding-box;
   background-clip: text, padding-box;
   transition: 0.3s var(--_s, 0s) linear, background-size 0.3s calc(0.3s - var(--_s, 0s));
@@ -114,4 +128,4 @@ button {
   }
 }
 
-/*# sourceMappingURL=_base.css.map */
+/*# sourceMappingURL=base.css.map */

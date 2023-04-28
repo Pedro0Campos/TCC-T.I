@@ -1,0 +1,69 @@
+@font-face {
+    font-family: JosefinSansRegular;
+    src: url(../fonts/JosefinSans/JosefinSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: JosefinSansMedium;
+    src: url(../fonts/JosefinSans/JosefinSans-Medium.ttf);
+}
+
+@font-face {
+    font-family: JosefinSansLight;
+    src: url(../fonts/JosefinSans/JosefinSans-Light.ttf);
+}
+
+@font-face {
+    font-family: JosefinSansBoldItalic;
+    src: url(../fonts/JosefinSans/JosefinSans-BoldItalic.ttf);
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(../fonts/Inter/Inter-Regular.ttf);
+}
+
+
+// Fontes
+$JosefinSansRegular: JosefinSansRegular;
+$JosefinSansMedium: JosefinSansMedium;
+$JosefinSansLight: JosefinSansLight;
+$JosefinSansBoldItalic: JosefinSansBoldItalic;
+$Inter: Inter;
+
+
+// Tamanho da fonte
+$font-size-title1: 2em;
+$font-size-title2: 1.5em;
+$font-size-title3: 1.25em;
+$font-size-text: 1em;
+
+
+// Cores 
+$backg-color: #FEFCF3;        // night: #121111
+$text-color: #000000;         // night: #FFFFFF
+$text-color-80: #000000cc;    // night: #FFFFFFcc
+$second-color: #6ba5f2;       // nigth: #A167FF
+$second-color-50: #6ba5f280;  // nigth: #A167FF80
+$third-color: #00109d;        // nigth: #C6A4FF
+
+
+// Navbar
+$alturaNAV: 4.5rem;
+
+
+// Formulário
+$widthInput: 70%;
+$maxWidthInput: 450px;
+
+
+// Box-title
+$width-box-title1: 500px;
+$font-size-box-title1: 2.2rem;
+$width-box-title2: 450px;
+$font-size-box-title2: 2rem;
+$width-box-title3: 300px;
+$font-size-box-title3: 1.6rem;
+$width-box-title-button: 360px;
+
+
