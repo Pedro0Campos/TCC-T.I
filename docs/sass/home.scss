@@ -2,19 +2,6 @@
 @use 'config';
 
 
-:root {
-    --width-box-title1: config.$width-box-title1;
-    --font-size-box-title1: config.$width-box-title-button;
-    --width-box-title2: config.$width-box-title-button;
-    --font-size-box-title2: config.$width-box-title-button;
-    --width-box-title3: config.$width-box-title-button;
-    --font-size-box-title3: config.$width-box-title-button;
-    --width-box-title-button: config.$width-box-title-button;
-    
-    --width-sandy-danny: config.$width-sandy-danny;
-}
-
-
 // ===================================================
 // Caixas de texto
 .padding-box-title {
@@ -29,43 +16,42 @@
     .box-title1 {
         max-width: var(--width-box-title1);
         & h1 {
+            font-size: var(--font-size-box-title1);
             font-family: config.$JosefinSansMedium;
-            font-size: config.$font-size-box-title1;
-            font-size: config.$font-size-box-title1;
             letter-spacing: 0.15em;
             line-height: 1.2em;
             & span {
-                color: config.$third-color;
-                background-color: config.$second-color-50;
+                color: var(--third-color);
+                background-color: var(--second-color-50);
                 padding: 7px;
             }
         }
     }
     
     .box-title2 {
-        max-width: config.$width-box-title2;
+        max-width: var(--width-box-title2);
         & h2 {
-            font-size: config.$font-size-box-title1;
+            font-size: var(--font-size-box-title1);
             letter-spacing: 0.1em;
             line-height: 1.2;
         }
     }
     
     .box-title3 {
-        max-width: config.$width-box-title3;
+        max-width: var(--width-box-title3);
         & h3 {
-            font-size: config.$font-size-box-title3;
+            font-size: var(--font-size-box-title3);
             font-family: config.$JosefinSansBoldItalic;
             letter-spacing: 0.1em;
             line-height: 1.1em;
             & span {
-                color: config.$second-color;
+                color: var(--second-color);
             }
         }
     }
     
     .border-box {
-        border: 7px solid config.$text-color;
+        border: 7px solid var(--text-color);
         
     }
     
@@ -74,8 +60,8 @@
         padding: 1em 7.1em 1em 7.1em;
         border: none;
         border-radius: 100px;
-        background-color: config.$text-color;
-        color: config.$backg-color;
+        background-color: var(--text-color);
+        color: var(--backg-color);
     }
 }
 // ===================================================
@@ -86,11 +72,11 @@
 // Sessão
 section {
     height: calc(100vh - config.$alturaNAV);
-
+    // min-height: 750px;
     &:first-child {
         .sandy-danny {
             position: absolute;
-            width: config.$width-sandy-danny;
+            height: var(--height-sandy-danny);
             bottom: 0;
             right: 0;
             z-index: -1;
@@ -99,8 +85,8 @@ section {
 
 
     &:nth-child(2n) {
-        background-color: config.$sect-par-backg-color;
-        color: config.$sect-par-text-color;
+        background-color: var(--sect-par-backg-color);
+        color: var(--sect-par-text-color);
 
         .border-box {
             
@@ -120,16 +106,3 @@ section {
 
 // ===================================================
 /* RESPONSIVIDADE */
-@media (min-width: 1141px) {
-    :root {
-        // --width-box-title1: 100px;
-        // --font-size-box-title1: config.$font-size-box-title1 * 2;
-        // --width-box-title2: config.$width-box-title2;
-        // --font-size-box-title2: config.$width-box-title-button;
-        // --width-box-title3: config.$width-box-title3;
-        // --font-size-box-title3: config.$width-box-title-button;
-        // --width-box-title-button: config.$width-box-title-button;
-        
-        // --width-sandy-danny: config.$width-sandy-danny;
-    }
-}

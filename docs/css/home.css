@@ -19,16 +19,64 @@
   src: url(../fonts/Inter/Inter-Regular.ttf);
 }
 :root {
-  --width-box-title1: config.$width-box-title1;
-  --font-size-box-title1: config.$width-box-title-button;
-  --width-box-title2: config.$width-box-title-button;
-  --font-size-box-title2: config.$width-box-title-button;
-  --width-box-title3: config.$width-box-title-button;
-  --font-size-box-title3: config.$width-box-title-button;
-  --width-box-title-button: config.$width-box-title-button;
-  --width-sandy-danny: config.$width-sandy-danny;
+  --width-box-title1: 500px;
+  --font-size-box-title1: 2.2rem;
+  --width-box-title2: 450px;
+  --font-size-box-title2: 2rem;
+  --width-box-title3: 300px;
+  --font-size-box-title3: 1.6rem;
+  --height-sandy-danny: 95vh;
+  --backg-color: #FEFCF3;
+  --sect-par-backg-color: #000;
+  --sect-par-text-color: #fff;
+  --text-color: #000000;
+  --text-color-80: #000000cc;
+  --second-color: #6ba5f2;
+  --second-color-50: #6ba5f280;
+  --third-color: #00109d;
 }
 
+.darkmode:root {
+  --backg-color: #121111;
+  --sect-par-backg-color: #000;
+  --sect-par-text-color: #fff;
+  --text-color: #FFFF;
+  --text-color-80: #FFFFFFcc;
+  --second-color: #A167FF;
+  --second-color-50: #A167FF80;
+  --third-color: #C6A4FF;
+}
+
+@media (min-width: 1141px) {
+  :root {
+    --width-box-title1: calc(500px * 1.2);
+    --font-size-box-title1: calc(2.2rem * 1.2);
+    --width-box-title2: calc(450px * 1.2);
+    --font-size-box-title2: calc(2rem * 1.2);
+    --width-box-title3: calc(300px * 1.2);
+    --font-size-box-title3: calc(1.6rem * 1.2);
+  }
+}
+@media (min-width: 1350px) {
+  :root {
+    --width-box-title1: calc(500px * 1.4);
+    --font-size-box-title1: calc(2.2rem * 1.4);
+    --width-box-title2: calc(450px * 1.4);
+    --font-size-box-title2: calc(2rem * 1.4);
+    --width-box-title3: calc(300px * 1.4);
+    --font-size-box-title3: calc(1.6rem * 1.4);
+  }
+}
+@media (min-width: 1600px) {
+  :root {
+    --width-box-title1: calc(500px * 1.6);
+    --font-size-box-title1: calc(2.2rem * 1.6);
+    --width-box-title2: calc(450px * 1.6);
+    --font-size-box-title2: calc(2rem * 1.6);
+    --width-box-title3: calc(300px * 1.6);
+    --font-size-box-title3: calc(1.6rem * 1.6);
+  }
+}
 .padding-box-title {
   padding: 35px 35px 10px 35px;
 }
@@ -40,47 +88,46 @@
   max-width: var(--width-box-title1);
 }
 .padding-box-title .box-title1 h1 {
+  font-size: var(--font-size-box-title1);
   font-family: JosefinSansMedium;
-  font-size: 2.2rem;
-  font-size: 2.2rem;
   letter-spacing: 0.15em;
   line-height: 1.2em;
 }
 .padding-box-title .box-title1 h1 span {
-  color: #00109d;
-  background-color: rgba(107, 165, 242, 0.5019607843);
+  color: var(--third-color);
+  background-color: var(--second-color-50);
   padding: 7px;
 }
 .padding-box-title .box-title2 {
-  max-width: 450px;
+  max-width: var(--width-box-title2);
 }
 .padding-box-title .box-title2 h2 {
-  font-size: 2.2rem;
+  font-size: var(--font-size-box-title1);
   letter-spacing: 0.1em;
   line-height: 1.2;
 }
 .padding-box-title .box-title3 {
-  max-width: 300px;
+  max-width: var(--width-box-title3);
 }
 .padding-box-title .box-title3 h3 {
-  font-size: 1.6rem;
+  font-size: var(--font-size-box-title3);
   font-family: JosefinSansBoldItalic;
   letter-spacing: 0.1em;
   line-height: 1.1em;
 }
 .padding-box-title .box-title3 h3 span {
-  color: #6ba5f2;
+  color: var(--second-color);
 }
 .padding-box-title .border-box {
-  border: 7px solid #000000;
+  border: 7px solid var(--text-color);
 }
 .padding-box-title button {
   font-size: 1rem;
   padding: 1em 7.1em 1em 7.1em;
   border: none;
   border-radius: 100px;
-  background-color: #000000;
-  color: #FEFCF3;
+  background-color: var(--text-color);
+  color: var(--backg-color);
 }
 
 section {
@@ -88,14 +135,14 @@ section {
 }
 section:first-child .sandy-danny {
   position: absolute;
-  width: 450px;
+  height: var(--height-sandy-danny);
   bottom: 0;
   right: 0;
   z-index: -1;
 }
 section:nth-child(2n) {
-  background-color: #000;
-  color: #fff;
+  background-color: var(--sect-par-backg-color);
+  color: var(--sect-par-text-color);
 }
 section:nth-child(2n) .border-box {
   border-color: rgb(255, 255, 255);

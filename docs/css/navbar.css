@@ -19,6 +19,65 @@
   font-family: Inter;
   src: url(../fonts/Inter/Inter-Regular.ttf);
 }
+:root {
+  --width-box-title1: 500px;
+  --font-size-box-title1: 2.2rem;
+  --width-box-title2: 450px;
+  --font-size-box-title2: 2rem;
+  --width-box-title3: 300px;
+  --font-size-box-title3: 1.6rem;
+  --height-sandy-danny: 95vh;
+  --backg-color: #FEFCF3;
+  --sect-par-backg-color: #000;
+  --sect-par-text-color: #fff;
+  --text-color: #000000;
+  --text-color-80: #000000cc;
+  --second-color: #6ba5f2;
+  --second-color-50: #6ba5f280;
+  --third-color: #00109d;
+}
+
+.darkmode:root {
+  --backg-color: #121111;
+  --sect-par-backg-color: #000;
+  --sect-par-text-color: #fff;
+  --text-color: #FFFF;
+  --text-color-80: #FFFFFFcc;
+  --second-color: #A167FF;
+  --second-color-50: #A167FF80;
+  --third-color: #C6A4FF;
+}
+
+@media (min-width: 1141px) {
+  :root {
+    --width-box-title1: calc(500px * 1.2);
+    --font-size-box-title1: calc(2.2rem * 1.2);
+    --width-box-title2: calc(450px * 1.2);
+    --font-size-box-title2: calc(2rem * 1.2);
+    --width-box-title3: calc(300px * 1.2);
+    --font-size-box-title3: calc(1.6rem * 1.2);
+  }
+}
+@media (min-width: 1350px) {
+  :root {
+    --width-box-title1: calc(500px * 1.4);
+    --font-size-box-title1: calc(2.2rem * 1.4);
+    --width-box-title2: calc(450px * 1.4);
+    --font-size-box-title2: calc(2rem * 1.4);
+    --width-box-title3: calc(300px * 1.4);
+    --font-size-box-title3: calc(1.6rem * 1.4);
+  }
+}
+@media (min-width: 1600px) {
+  :root {
+    --width-box-title1: calc(500px * 1.6);
+    --font-size-box-title1: calc(2.2rem * 1.6);
+    --width-box-title2: calc(450px * 1.6);
+    --font-size-box-title2: calc(2rem * 1.6);
+    --width-box-title3: calc(300px * 1.6);
+    --font-size-box-title3: calc(1.6rem * 1.6);
+  }
+}
 /* Formatação do navbar */
 .navbar {
   font-size: 1rem;

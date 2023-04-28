@@ -66,5 +66,5 @@
 }
 
 #checkbox:checked + .ball {
-    transform: translate(80%, 7%);   
+    transform: translate(75%, 7%);   
 }

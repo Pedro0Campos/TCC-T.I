@@ -20,7 +20,6 @@ function ocult_elements() {
         clouds[0].style.transform = 'translate(-170%, 70%) scale(1)'
         clouds[1].style.transform = 'translate(-240%, 90%) scale(1)'
 
-        change_theme('light')
     } else { // MODO ESCURO
         // habilitar decorações do toggler - escuro
         stars[0].style.transform = 'translate(-220%, 50%) scale(1) rotate(0deg)'
@@ -32,12 +31,14 @@ function ocult_elements() {
         sun[0].style.transform = 'translate(-190%, 16%) scale(0) '
         clouds[0].style.transform = 'translate(-170%, 70%) scale(0)'
         clouds[1].style.transform = 'translate(-240%, 90%) scale(0)'
-        change_theme('dark')
     }
+
+    change_theme()
 }
 
-function change_theme(theme) {
-    
+function change_theme() {
+    const HTML = document.querySelector('html')
+    HTML.classList.toggle('darkmode')
     // Animação :D
     // animation()
 }
