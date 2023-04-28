@@ -1,17 +1,95 @@
-/* Error: Undefined variable.
- *    ,
- * 22 |         max-width: $width-box-title1;
- *    |                    ^^^^^^^^^^^^^^^^^
- *    '
- *   docs\sass\home.scss 22:20  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a    \2577 \a 22 \2502          max-width: $width-box-title1;\d\a    \2502                     ^^^^^^^^^^^^^^^^^\a    \2575 \a   docs\\sass\\home.scss 22:20  root stylesheet";
+@charset "UTF-8";
+@font-face {
+  font-family: JosefinSansRegular;
+  src: url(../fonts/JosefinSans/JosefinSans-Regular.ttf);
 }
+@font-face {
+  font-family: JosefinSansMedium;
+  src: url(../fonts/JosefinSans/JosefinSans-Medium.ttf);
+}
+@font-face {
+  font-family: JosefinSansLight;
+  src: url(../fonts/JosefinSans/JosefinSans-Light.ttf);
+}
+@font-face {
+  font-family: JosefinSansBoldItalic;
+  src: url(../fonts/JosefinSans/JosefinSans-BoldItalic.ttf);
+}
+@font-face {
+  font-family: Inter;
+  src: url(../fonts/Inter/Inter-Regular.ttf);
+}
+.padding-box-title {
+  padding: 35px 35px 20px 35px;
+  max-width: 600px;
+}
+.padding-box-title div {
+  width: auto;
+  padding: 20px;
+}
+.padding-box-title .box-title1 {
+  max-width: 500px;
+}
+.padding-box-title .box-title1 h1 {
+  font-family: JosefinSansMedium;
+  font-size: 2.2rem;
+  letter-spacing: 0.15em;
+  line-height: 1.2em;
+}
+.padding-box-title .box-title1 h1 span {
+  color: #00109d;
+  background-color: rgba(107, 165, 242, 0.5019607843);
+  padding: 7px;
+}
+.padding-box-title .box-title2 {
+  max-width: 450px;
+}
+.padding-box-title .box-title2 h2 {
+  font-size: 2.2rem;
+  letter-spacing: 0.1em;
+  line-height: 1.2;
+}
+.padding-box-title .box-title3 {
+  max-width: 300px;
+}
+.padding-box-title .box-title3 h3 {
+  font-size: 1.6rem;
+  font-family: JosefinSansBoldItalic;
+  letter-spacing: 0.1em;
+  line-height: 1.1em;
+}
+.padding-box-title .box-title3 h3 span {
+  color: #6ba5f2;
+}
+.padding-box-title .border-box {
+  /* valores para sessão clara - ímpar */
+  border: 7px solid #000000;
+}
+.padding-box-title button {
+  font-size: 1rem;
+  padding: 1em 7.1em 1em 7.1em;
+  border: none;
+  border-radius: 100px;
+  background-color: #000000;
+  color: #FEFCF3;
+}
+
+section {
+  height: calc(100vh - 4.5rem);
+}
+section:first-child .sandy-danny {
+  position: absolute;
+  width: 450px;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.backgr-gradient {
+  background: transparent;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 71%, rgba(12, 12, 12, 0.2469362745) 83%, rgba(0, 0, 0, 0.518644958) 100%);
+}
+
+/* RESPONSIVIDADE */
+
+/*# sourceMappingURL=home.css.map */

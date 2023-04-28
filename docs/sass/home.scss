@@ -1,9 +1,17 @@
 // Importando as configurações (variáveis)
 @use 'config';
 
-:root{
-    --width-sandy-danny: 450px
-}
+    // Box-title
+    $width-box-title1: 500px;
+    $font-size-box-title1: 2.2rem;
+    $width-box-title2: 450px;
+    $font-size-box-title2: 2rem;
+    $width-box-title3: 300px;
+    $font-size-box-title3: 1.6rem;
+    $width-box-title-button: 360px;
+
+    $width-sandy-danny: 450px;
+
 
 
 // ===================================================
@@ -22,7 +30,7 @@
         max-width: $width-box-title1;
         & h1 {
             font-family: config.$JosefinSansMedium;
-            font-size: config.$font-size-box-title1;
+            font-size: $font-size-box-title1;
             letter-spacing: 0.15em;
             line-height: 1.2em;
             & span {
@@ -34,18 +42,18 @@
     }
     
     .box-title2 {
-        max-width: config.$width-box-title2;
+        max-width: $width-box-title2;
         & h2 {
-            font-size: config.$font-size-box-title1;
+            font-size: $font-size-box-title1;
             letter-spacing: 0.1em;
             line-height: 1.2;
         }
     }
     
     .box-title3 {
-        max-width: config.$width-box-title3;
+        max-width: $width-box-title3;
         & h3 {
-            font-size: config.$font-size-box-title3;
+            font-size: $font-size-box-title3;
             font-family: config.$JosefinSansBoldItalic;
             letter-spacing: 0.1em;
             line-height: 1.1em;
@@ -81,7 +89,7 @@ section {
     &:first-child {
         .sandy-danny {
             position: absolute;
-            width: var(--width-sandy-danny);
+            width: $width-sandy-danny;
             bottom: 0;
             right: 0;
             z-index: -1;
@@ -101,7 +109,4 @@ section {
 /* RESPONSIVIDADE */
 @media only screen and (min-width: 1141px) {
     
-    :root{
-        --width-sandy-danny: 500px
-    }
 }
