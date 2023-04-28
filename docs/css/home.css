@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: JosefinSansRegular;
   src: url(../fonts/JosefinSans/JosefinSans-Regular.ttf);
@@ -19,19 +18,30 @@
   font-family: Inter;
   src: url(../fonts/Inter/Inter-Regular.ttf);
 }
+:root {
+  --width-box-title1: config.$width-box-title1;
+  --font-size-box-title1: config.$width-box-title-button;
+  --width-box-title2: config.$width-box-title-button;
+  --font-size-box-title2: config.$width-box-title-button;
+  --width-box-title3: config.$width-box-title-button;
+  --font-size-box-title3: config.$width-box-title-button;
+  --width-box-title-button: config.$width-box-title-button;
+  --width-sandy-danny: config.$width-sandy-danny;
+}
+
 .padding-box-title {
-  padding: 35px 35px 20px 35px;
-  max-width: 600px;
+  padding: 35px 35px 10px 35px;
 }
 .padding-box-title div {
   width: auto;
   padding: 20px;
 }
 .padding-box-title .box-title1 {
-  max-width: 500px;
+  max-width: var(--width-box-title1);
 }
 .padding-box-title .box-title1 h1 {
   font-family: JosefinSansMedium;
+  font-size: 2.2rem;
   font-size: 2.2rem;
   letter-spacing: 0.15em;
   line-height: 1.2em;
@@ -62,7 +72,6 @@
   color: #6ba5f2;
 }
 .padding-box-title .border-box {
-  /* valores para sessão clara - ímpar */
   border: 7px solid #000000;
 }
 .padding-box-title button {
@@ -83,6 +92,13 @@ section:first-child .sandy-danny {
   bottom: 0;
   right: 0;
   z-index: -1;
+}
+section:nth-child(2n) {
+  background-color: #000;
+  color: #fff;
+}
+section:nth-child(2n) .border-box {
+  border-color: rgb(255, 255, 255);
 }
 
 .backgr-gradient {
