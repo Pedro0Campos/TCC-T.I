@@ -63,28 +63,32 @@ $maxWidthInput: 450px;
     --height-sandy-danny: 95vh;
 
     // Cores
-    --backg-color: #FEFCF3;        // night: #121111
+    --backg-color: #FEFCF3;
+    --text-color: #000000;
+    --text-color-50: #00000080;
+    --text-color-80: #000000cc;
+    --link-color: #45CFE1;
+
+    --second-color: #6ba5f2;
+    --second-color-50: #6ba5f280;
+    --third-color: #00109d;
+
     --sect-par-backg-color: #000;
-    --sect-par-text-color: #fff;
-    --text-color: #000000;         // night: #FFFF
-    --text-color-80: #000000cc;    // night: #FFFFFFcc
-    --second-color: #6ba5f2;       // nigth: #A167FF
-    --second-color-50: #6ba5f280;  // nigth: #A167FF80
-    --third-color: #00109d;        // nigth: #C6A4FF
+    --sect-par-text-color: #fff;   
 }
 
 
 // ===================================================
 // Darkmode
 .darkmode:root {
-    --backg-color: #121111;        // night: #121111
-    --sect-par-backg-color: #000;
-    --sect-par-text-color: #fff;
-    --text-color: #FFFF;         // night: #FFFF
-    --text-color-80: #FFFFFFcc;    // night: #FFFFFFcc
-    --second-color: #A167FF;       // nigth: #A167FF
-    --second-color-50: #A167FF80;  // nigth: #A167FF80
-    --third-color: #C6A4FF;        // nigth: #C6A4FF
+    --backg-color: #121111;
+    --text-color: #FEFCF3;
+    --text-color-50: #FFFFFF80;
+    --text-color-80: #FFFFFFcc;
+
+    --second-color: #A167FF;
+    --second-color-50: #A167FF80;
+    --third-color: #C6A4FF;
 }
 // ===================================================
 
