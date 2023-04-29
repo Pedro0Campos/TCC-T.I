@@ -1,17 +1,16 @@
 <?php
     /*
-        Esse script (cadastro.php) faz uma verificação do input pelo mesmo arquivo que está o formulário.
+        Esse script (login.php) faz uma verificação do input pelo mesmo arquivo que está o formulário.
 
         1. Define as variáveis para não dar problema de variáveis indefinidas
         
-        2. Verifica se o Request Method é Post. Se o usuário nem apertou do botão de cadastrar, não vai entrar no If
+        2. Verifica se o Request Method é Post. Se o usuário nem apertou do botão Entrar, não vai entrar no If
         
         3. Caso o método seja Post, começa a validação dos dados
-            - Nome: não pode estar vazio, ter mais que 3 caracteres, e apenas letras e espaços
-            - Senha: não pode estar vazia
-            - Email: precisa ser um email válido
+            - Email: precisa ser um email válido e estar cadastrado
+            - Senha: não pode estar vazia, e ser a mesma senha do cadastro
         
-        4. Se as variáveis de erros estão vazias (não deu erro), inicia o cadastro. Obs: só será feito se não foi feito um cadastro antes
+        4. Se as variáveis de erros estão vazias (não deu erro), inicia o login.
     */
 
     // Criação das variáveis
@@ -38,22 +37,26 @@
         }
 
 
-        // Verificar se pode fazer o cadastro
+        // Verificar se deu erro (de digitação)
         if ($emailErro == '' and $senhaErro == '') {
 
             // Verificar se existe um cadastro com esse email
             $condicao = "WHERE email = '$email'";
             $consulta = consultar_user($condicao, $conexao_db);
+            $cadastro = mysqli_fetch_row($consulta);
 
-            if (mysqli_num_rows($consulta) > 0) {
-                $emailErro = 'Email já utilizado.';
+            // Não existe um email cadastrado igual o que o usuário digitou
+            if (mysqli_num_rows($consulta) == 0) {
+                $emailErro = 'Email não cadastrado.';
 
             } else {
-                // Fzer login
-                
+                if (verificarSenha($senha, $cadastro[3])) {
+                    // Login
+                    
+                } else {
+                    $senhaErro = 'Senha inválida';
+                }
             }
-
-
         }
     }
 
@@ -68,14 +71,14 @@
 
         <h2 class="animation-title">Login</h2>
 
-        <input class="input_form" type="text" name="email" placeholder="Email">
+        <input class="input_form" type="text" name="email" placeholder="Email" value="<?php echo $email ?>">
         <?php
             if ($emailErro != '') {
                 echo "<span id='erro_email' class='msg_erro'><i class='fa-solid fa-circle-exclamation'></i> $emailErro </span>";
             }
          ?>
 
-        <input class="input_form" type="password" name="senha" placeholder="Senha">
+        <input class="input_form" type="password" name="senha" placeholder="Senha" value="<?php echo "" ?>">
         <?php
             if ($senhaErro != '') {
                 echo "<span id='erro_email' class='msg_erro'><i class='fa-solid fa-circle-exclamation'></i> $senhaErro </span>";
