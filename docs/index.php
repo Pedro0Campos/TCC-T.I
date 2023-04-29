@@ -23,8 +23,7 @@
         include('database/db.php');
         include('navbar.php');
         include('php/form.php');
-        include('php/cadastrar_user.php');  // Cadastrar um usuário no banco
-        include('php/consultar_user.php');  // Consultar um usuário no banco (verificar se já existe cadastro)
+        include('php/consultar_user.php');  // Consultar usuários no banco
     ?>
 
     <!-- CONTEÚDO -->
