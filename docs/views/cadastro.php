@@ -56,17 +56,18 @@
             $condicao = "WHERE email = '$email'";
             $consulta = consultar_user($condicao, $conexao_db);
 
+            // Verificar se existe algum email cadastrado
             if (mysqli_num_rows($consulta) > 0) {
                 $emailErro = 'Email já utilizado.';
 
+            } else {
+                // Código para inserir os valores no banco
+                cadastrar($nome, $email, $senha, $conexao_db);
+                
+                // Trocar de tela
+                header('Location:' . "?pagina=home");
+                die();
             }
-            // } else {
-            //     // Código para inserir os valores no banco
-            //     cadastrar($nome, $email, $senha, $conexao_db);
-            // }
-
-            header('Location:' . "?pagina=home");
-            die();
         }
     }
 
