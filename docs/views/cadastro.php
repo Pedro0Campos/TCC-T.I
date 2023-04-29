@@ -59,12 +59,14 @@
             if (mysqli_num_rows($consulta) > 0) {
                 $emailErro = 'Email já utilizado.';
 
-            } else {
-                // Código para inserir os valores no banco
-                cadastrar($nome, $email, $senha, $conexao_db);
             }
+            // } else {
+            //     // Código para inserir os valores no banco
+            //     cadastrar($nome, $email, $senha, $conexao_db);
+            // }
 
-
+            header('Location:' . "?pagina=home");
+            die();
         }
     }
 
@@ -78,15 +80,26 @@
     <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']). "?pagina=cadastro"?>" method="post" autocomplete="off">
         <h2 class="animation-title">Criar Conta</h2>
 
-        <input id="nome" class="input_form" type="text" name="nome" placeholder="Nome" value="">
-        <span id="erro_nome" class="msg_erro"></span>
+        <input id="nome" class="input_form" type="text" name="nome" placeholder="Nome" value="<?php echo $nome ?>">
+        <?php
+            if ($nomeErro != '') {
+                echo "<span id='erro_email' class='msg_erro'><i class='fa-solid fa-circle-exclamation'></i> $nomeErro </span>";
+            }
+         ?>
         
-        <input id="email" class="input_form" type="text" name="email" placeholder="Email">
-        <span id="erro_email" class="msg_erro"></span>
+        <input id="email" class="input_form" type="text" name="email" placeholder="Email" value="<?php echo $email ?>">
+        <?php
+            if ($emailErro != '') {
+                echo "<span id='erro_email' class='msg_erro'><i class='fa-solid fa-circle-exclamation'></i> $emailErro </span>";
+            }
+         ?>
         
-        <input id="senha" class="input_form" type="password" name="senha" placeholder="Senha">
-        <!-- <i id="icon_eye" class="fa-solid fa-eye eye"></i> -->
-        <span id="erro_senha" class="msg_erro"></span>
+        <input id="senha" class="input_form" type="password" name="senha" placeholder="Senha" value="<?php echo "" ?>">
+        <?php
+            if ($senhaErro != '') {
+                echo "<span id='erro_email' class='msg_erro'><i class='fa-solid fa-circle-exclamation'></i> $emailErro </span>";
+            }
+         ?>
 
         <input class="button_form" type="submit" value="Cadastrar">
         
@@ -95,30 +108,3 @@
 </div>
 
 <script src="javascript/change_background.js"></script>
-
-<?php
-    echo "
-        <script>
-            // Mostrar os erros no formulário
-            if ('$nomeErro' != '') {
-                let erro_nome = document.querySelector('#erro_nome')
-                erro_nome.innerHTML = `<i class='fa-solid fa-circle-exclamation'></i>$nomeErro`    
-            }
-
-            if ('$emailErro' != '') {
-                let erro_email = document.querySelector('#erro_email')
-                erro_email.innerHTML = `<i class='fa-solid fa-circle-exclamation'></i>$emailErro`
-            }
-
-            if ('$senhaErro' != '') {
-                let erro_senha = document.querySelector('#erro_senha')
-                erro_senha.innerHTML = `<i class='fa-solid fa-circle-exclamation'></i>$senhaErro`
-            }
-
-            // Colocar os valores no input
-            document.querySelector('#nome').value = '$nome';
-            document.querySelector('#email').value = '$email';
-            document.querySelector('#senha').value = '';
-        </script>
-    ";
-?>
