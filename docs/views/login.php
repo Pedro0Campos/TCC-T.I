@@ -53,6 +53,11 @@
                 if (verificarSenha($senha, $cadastro[3])) {
                     // Login
                     
+                    
+                    // Trocar de tela
+                    header('Location: '. "?pagina=home");
+                    die();
+
                 } else {
                     $senhaErro = 'Senha inválida';
                 }
