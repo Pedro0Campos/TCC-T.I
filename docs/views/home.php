@@ -1,4 +1,6 @@
 <section class="section-impar">
+    <img src="imgs/home/sandy-danny-light.png" alt="Sanddy e Danny - Grease" class="sandy-danny">
+    
     <!-- Sombra - usando linear gradient -->
     <div class="backgr-gradient wh100">
         <div class="padding-box-title">
@@ -14,10 +16,9 @@
         </div>
         
         <div class="padding-box-title">
-                <a href="?pagina=sobre"><button type="button">Sobre o musical</button></a>
+            <a href="?pagina=sobre"><button type="button">Sobre o musical</button></a>
         </div>
         
-        <img src="imgs/home/sandy-danny-light.png" alt="Sanddy e Danny - Grease" class="sandy-danny">
     </div>
 </section>
 

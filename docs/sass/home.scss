@@ -72,8 +72,13 @@
 // Sessão
 section {
     height: calc(100vh - config.$alturaNAV);
-    // min-height: 750px;
+
     &:first-child {
+        .backgr-gradient {
+            background: transparent;
+            background: linear-gradient(180deg, rgba(255,255,255,0) 71%, rgba(12,12,12,0.24693627450980393) 83%, rgba(0,0,0,0.5186449579831933) 100%);
+        }
+        
         .sandy-danny {
             position: absolute;
             height: var(--height-sandy-danny);
@@ -93,16 +98,10 @@ section {
             border-color: rgb(255, 255, 255);
         }
     }
-    
 }
 // ===================================================
 
 
-
-.backgr-gradient {
-    background: transparent;
-    background: linear-gradient(180deg, rgba(255,255,255,0) 71%, rgba(12,12,12,0.24693627450980393) 83%, rgba(0,0,0,0.5186449579831933) 100%);
-}
 
 // ===================================================
 /* RESPONSIVIDADE */

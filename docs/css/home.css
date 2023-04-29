@@ -133,6 +133,10 @@
 section {
   height: calc(100vh - 4.5rem);
 }
+section:first-child .backgr-gradient {
+  background: transparent;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 71%, rgba(12, 12, 12, 0.2469362745) 83%, rgba(0, 0, 0, 0.518644958) 100%);
+}
 section:first-child .sandy-danny {
   position: absolute;
   height: var(--height-sandy-danny);
@@ -146,11 +150,6 @@ section:nth-child(2n) {
 }
 section:nth-child(2n) .border-box {
   border-color: rgb(255, 255, 255);
-}
-
-.backgr-gradient {
-  background: transparent;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 71%, rgba(12, 12, 12, 0.2469362745) 83%, rgba(0, 0, 0, 0.518644958) 100%);
 }
 
 /* RESPONSIVIDADE */
