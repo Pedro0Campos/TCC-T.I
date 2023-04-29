@@ -14,12 +14,10 @@
         </div>
         
         <div class="padding-box-title">
-            <div class="box-button">
                 <a href="?pagina=sobre"><button type="button">Sobre o musical</button></a>
-            </div>
         </div>
         
-        <img src="imgs/home/sanny-danny-light.png" alt="Sanddy e Danny - Grease" class="sandy-danny">
+        <img src="imgs/home/sandy-danny-light.png" alt="Sanddy e Danny - Grease" class="sandy-danny">
     </div>
 </section>
 
