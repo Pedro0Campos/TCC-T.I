@@ -1,7 +1,7 @@
 <div class="left backg-image-logcad"></div>
 
 <div class="right">
-    <form action="php/cadastrar.php" method="post" autocomplete="off">
+    <form action="scripts/php/logar.php" method="post" autocomplete="off">
 
         <h2 class="animation-title">Login</h2>
 
