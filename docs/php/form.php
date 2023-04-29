@@ -10,7 +10,21 @@
         return $valor;
     }
 
-    function criptografar($senha) {
+    function criptografarSenha($senha) {
         return password_hash($senha, PASSWORD_DEFAULT);
+    }
+
+    function verificarSenha($senha, $hash) {
+        return password_verify($senha, $hash);
+    }
+
+    function cadastrar($nome, $email, $senha, $conexao_db) {
+        $senha = criptografarSenha($senha);
+        
+        $typeUser = 0;        
+        $stmt = $conexao_db->prepare("INSERT INTO usuarios (nome, email, senha, tipoUser) VALUES (?, ?, ?, ?)");
+        $stmt->bind_param('sssi', $nome, $email, $senha, $typeUser);
+
+        $stmt->execute();
     }
 ?>
