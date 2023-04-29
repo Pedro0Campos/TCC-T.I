@@ -63,7 +63,7 @@ p.text {
 // Formatação de LINK
 a {
     text-decoration: none;
-    color: #45CFE1;
+    color: var(--link-color);
 
     & .underline:hover {
         text-decoration: underline;
