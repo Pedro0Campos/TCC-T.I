@@ -38,7 +38,16 @@ function ocult_elements() {
 
 function change_theme() {
     const HTML = document.querySelector('html')
+    const SANDY_DANNY = document.querySelector('.sandy-danny')
+    
     HTML.classList.toggle('darkmode')
+
+    if (HTML.classList == 'darkmode') {
+        SANDY_DANNY.src = 'imgs/home/sandy-danny-dark.png'
+    } else {
+        SANDY_DANNY.src = 'imgs/home/sandy-danny-light.png'
+    }
+
     // Animação :D
     // animation()
 }
