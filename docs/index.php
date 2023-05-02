@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/toggler.css">
 
     <script src="https://kit.fontawesome.com/55197c00fe.js" crossorigin="anonymous"></script>
-    <script src="javascript/toggler.js"></script>
+    <script src="javascript/darkmode.js"></script>
     
 </head>
 <body class="fade">
