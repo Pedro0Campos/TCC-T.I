@@ -47,14 +47,7 @@ function change_theme() {
         sandy_danny.src = 'imgs/home/sandy-danny-light.png'
     }
 
-    // Animação :D
-    animation()
+    // https://codepen.io/atulraj89/pen/vYNZEGe
 }
 
-function animation() {
-    const body = document.querySelector('body')
-    
-    body.classList.add('fade')
-    // BODY.classList.remove('fade')
 
-}
