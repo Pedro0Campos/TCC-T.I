@@ -18,7 +18,7 @@
     <script src="javascript/toggler.js"></script>
     
 </head>
-<body id="body">
+<body>
     <?php 
         include('database/db.php');
         include('navbar.php');
@@ -26,9 +26,9 @@
         include('php/consultar_user.php');  // Consultar usuários no banco
     ?>
 
+    
     <!-- CONTEÚDO -->
     <main>
-        
         <?php
             if (isset($_GET['pagina'])) {
                 $pagina = $_GET['pagina'];
