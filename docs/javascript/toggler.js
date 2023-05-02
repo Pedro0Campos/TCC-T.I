@@ -1,4 +1,3 @@
-
 function ocult_elements() {
     let checkbox = document.querySelector('#checkbox')
     let stars = document.getElementsByClassName('star')
@@ -49,14 +48,13 @@ function change_theme() {
     }
 
     // Animação :D
-    // animation()
+    animation()
 }
 
 function animation() {
-    document.getElementById('body').style.animation = 'fadeInAnimation ease 1s'
+    const BODY = document.getElementById('body')
     
-    const interval = setInterval(() => {
-        document.getElementById('body').style.animation = ''
-        clearInterval(interval)
-    }, 1000)
+    BODY.classList.add('fade')
+    // BODY.classList.remove('fade')
+
 }

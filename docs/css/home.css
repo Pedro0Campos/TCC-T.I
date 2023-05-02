@@ -144,6 +144,10 @@ section:first-child .sandy-danny {
   bottom: 0;
   right: 0;
   z-index: -1;
+  opacity: 1;
+}
+section:first-child .hidden {
+  opacity: 0;
 }
 section:nth-child(2n) {
   background-color: var(--sect-par-backg-color);

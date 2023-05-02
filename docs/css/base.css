@@ -171,20 +171,7 @@ button {
 }
 
 .fade {
-  animation: fadeInAnimation ease 1s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-
-@keyframes fadeInAnimation {
-  0% {
-    opacity: 0;
-    background-color: var(--backg-color);
-  }
-  100% {
-    opacity: 1;
-    background-color: var(--backg-color);
-  }
+  transition: all 0.2s ease-in-out;
 }
 
 /*# sourceMappingURL=base.css.map */

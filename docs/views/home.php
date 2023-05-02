@@ -1,5 +1,5 @@
 <section class="section-impar">
-    <img src="imgs/home/sandy-danny-light.png" alt="Sanddy e Danny - Grease" class="sandy-danny">
+    <img src="imgs/home/sandy-danny-light.png" alt="Sanddy e Danny - Grease" class="sandy-danny hidden">
     
     <!-- Sombra - usando linear gradient -->
     <div class="backgr-gradient wh100">
