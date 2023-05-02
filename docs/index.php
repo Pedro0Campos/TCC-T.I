@@ -18,7 +18,7 @@
     <script src="javascript/toggler.js"></script>
     
 </head>
-<body>
+<body class="fade">
     <?php 
         include('database/db.php');
         include('navbar.php');
