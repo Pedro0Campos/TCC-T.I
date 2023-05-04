@@ -12,6 +12,13 @@
         width: auto;
         padding: 20px;
     }
+
+    &::after {
+        content: "";
+        background: linear-gradient(90deg,rgb(250,82,82) 0%,rgb(221,36,118) 100%);
+        height: 10px;
+        width: 30%;
+    }
     .box-title1 {
         max-width: var(--width-box-title1);
         & h1 {
@@ -30,9 +37,13 @@
     .box-title2 {
         max-width: var(--width-box-title2);
         & h2 {
-            font-size: var(--font-size-box-title1);
+            font-size: var(--font-size-box-title2);
             letter-spacing: 0.1em;
             line-height: 1.2;
+
+            & span {
+                color: var(--second-color)
+            }
         }
     }
     
