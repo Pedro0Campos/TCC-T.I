@@ -24,7 +24,7 @@
 
 <section class="section-par">
 
-    <div class="padding-box-title right-box">
+    <div class="padding-box-title right-bar">
         <div class="box-title2 border-box">
             <h2>Conheça as música que refletem os anos <span class="sect2-title2 color-title_light">50</span></p>
         </div>

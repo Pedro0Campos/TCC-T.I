@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Right bar</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgba(0, 0, 0, 0.8);
+        }
+        h2 {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        h2::after {
+            content: '';
+            width: 5px;
+            height: 2rem;
+            background: linear-gradient(90deg,rgb(250,82,82) 0%,rgb(221,36,118) 100%); 
+        }
+    </style>
+</head>
+<body>
+    <h2>Texto</h2>
+</body>
+</html>

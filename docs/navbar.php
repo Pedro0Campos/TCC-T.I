@@ -16,7 +16,7 @@
         </li>
     </ul>
     
-    <ul class="navlista navlista-esquerda flexCenterVH">
+    <ul class="navlista flexCenterVH">
         <li><a href="?pagina=home" class="navitens">Home</a></li>
         <li><a href="?pagina=sobre" class="navitens">Sobre</a></li>
         <li id="grease">Grease</li>
