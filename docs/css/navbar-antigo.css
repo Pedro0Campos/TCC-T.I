@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: JosefinSansRegular;
   src: url(../fonts/JosefinSans/JosefinSans-Regular.ttf);
@@ -78,46 +79,77 @@
     --font-size-box-title3: calc(1.6rem * 1.6);
   }
 }
+/* Formatação do navbar */
 .navbar {
-  position: fixed;
-  top: 0;
+  font-size: 1rem;
+  background: #000000;
   width: 100%;
   height: 4.5rem;
-  background-color: #000;
-  color: white;
   font-family: JosefinSansLight;
-  font-size: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
-}
-.navbar .navlista {
-  width: fit-content;
-  float: left;
-}
-.navbar .navlista a {
-  display: inline;
-  margin-left: 10px;
-  margin-right: 10px;
   color: white;
+  position: fixed;
+  top: 0;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  /* LISTA DA NAV */
+  /* TOGGLE - DARK MODE */
+  /* NAVBAR que fica à direita */
+  /* Duas linhas no LI */
+  /* Duas linhas no LI */
+  /* Formatar apenas o "Sair?" */
+  /* Formatar apenas o "Sair?" */
+  /* Foto do usuário no canto da NAV */
 }
-.navbar .navlista #grease {
+.navbar ul {
+  text-align: center;
+  height: 4.5rem;
+  /* ITEM DA LISTA DA NAV */
+  /* Link do navbar */
+}
+.navbar ul li {
+  display: inline;
+  margin-inline-start: 1rem;
+  margin-inline-end: 1rem;
+}
+.navbar ul li a.navitens {
+  --b: 0.1em; /*A grossura da linha*/
+  --c: #ffffff; /*A cor da linha*/
+  padding-block: var(--b);
+  color: #ffffff;
+  background: linear-gradient(var(--c) 50%, rgb(0, 0, 0) 0) 0% calc(100% - var(--_p, 0%))/100% 200%, linear-gradient(var(--c) 0 0) 0% var(--_p, 0%)/var(--_p, 0%) var(--b) no-repeat;
+  -webkit-background-clip: text, padding-box;
+  background-clip: text, padding-box;
+  transition: 0.3s var(--_s, 0s) linear, background-size 0.3s calc(0.3s - var(--_s, 0s));
+}
+.navbar ul .navitens:hover {
+  --_p: 100%;
+  --_s: .3s;
+}
+.navbar ul li#grease {
+  font-size: 1.3rem; /* 20px*/
   font-family: JosefinSansRegular;
-  font-size: 1.3rem;
   cursor: default;
 }
-.navbar .menu-icon {
-  position: absolute;
-  right: 10px;
-  color: white;
-  font-size: 1.5rem;
+.navbar .toggle-button {
+  float: left;
+  width: 150px;
 }
-.navbar:first-child {
-  padding-left: 20px;
+.navbar .navlista-direita {
+  font-size: 0.9rem;
+  line-height: 1.2rem;
 }
-.navbar:last-child {
-  padding-right: 20px;
+.navbar .navlista-direita li {
+  margin-inline-start: 1.5rem;
+}
+.navbar .duplo-li {
+  text-align: right;
+}
+.navbar .duplo-li a {
+  font-size: 0.9rem;
+}
+.navbar .img-user {
+  height: 2.5rem;
 }
 
-/*# sourceMappingURL=navbar.css.map */
+/*# sourceMappingURL=navbar-antigo.css.map */

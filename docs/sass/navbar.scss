@@ -1,92 +1,55 @@
-
-
 @use 'config';
 
 
-/* Formatação do navbar */
 .navbar {
-    font-size: 1rem;
-    background: #000000;
+    position: fixed;
+    top: 0;
     width: 100%;
     height: config.$alturaNAV;
-    font-family: config.$JosefinSansLight;
+    background-color: #000;
     color: white;
-    
-    position: fixed;
-    top: 0; 
-    
-    align-items: center;
+    font-family: config.$JosefinSansLight;
+    font-size: 1rem;
+
     display: flex;
+    align-items: center;
     justify-content: space-between;
-}
-    /* LISTA DA NAV */
-    .navbar ul {
-        text-align: center;
-        height: config.$alturaNAV;
-    }
-        /* ITEM DA LISTA DA NAV */
-        .navlista li {
+    flex-direction: row;
+    
+    .navlista {
+        width: fit-content;
+        float: left;
+        
+        & a {
             display: inline;
-            margin-inline-start: 1rem;
-            margin-inline-end: 1rem;
+            margin-left: 10px;
+            margin-right: 10px;
+            color: white;
         }
 
-        /* Link do navbar */
-        li a.navitens {
-            --b: 0.1em;     /*A grossura da linha*/
-            --c: #ffffff; /*A cor da linha*/
-            
-            padding-block: var(--b);
-            color: #ffffff;
-            background: 
-            linear-gradient(var(--c) 50%,rgb(0, 0, 0) 0) 0% calc(100% - var(--_p,0%))/100% 200%,
-            linear-gradient(var(--c) 0 0) 0% var(--_p,0%)/var(--_p,0%) var(--b) no-repeat;
-            -webkit-background-clip: text,padding-box;
-            background-clip: text,padding-box;
-            transition: .3s var(--_s,0s) linear,background-size .3s calc(.3s - var(--_s,0s));
-        }
-            .navitens:hover {
-                --_p: 100%;
-                --_s: .3s;
-            }
-
-        li#grease {
-            font-size: 1.3rem; /* 20px*/
+        #grease {
             font-family: JosefinSansRegular;
+            font-size: 1.3rem;
             cursor: default;
         }
-
-    /* TOGGLE - DARK MODE */
-    .toggle-button {
-        float: left;
-        width: 150px;
     }
 
-    /* NAVBAR que fica à direita */
-    .navlista-direita {
-        font-size: 0.9rem;
-        line-height: 1.2rem;
+    .menu-icon {
+        position: absolute;
+        right: 10px;
+        color: white;
+        font-size: 1.5rem;
     }
 
-    .navlista-direita li {
-        margin-inline-start: 1.5rem;
+    &:first-child {
+        padding-left: 20px;
     }
     
-    /* Duas linhas no LI */
-    .duplo-li {
-        text-align: right;
+    &:last-child {
+        padding-right: 20px;
     }
-    /* Duas linhas no LI */
-    
-    
-    /* Formatar apenas o "Sair?" */
-    .duplo-li a {
-        font-size: 0.9rem;
-    }
-    /* Formatar apenas o "Sair?" */
+}
 
-
-    /* Foto do usuário no canto da NAV */
-    .img-user {
-        height: 2.5rem;
-    }
+@media screen and (max-width: 700px) {
+    
+}

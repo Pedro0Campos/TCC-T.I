@@ -1,3 +1,4 @@
+
 #toggler {
     display: inline-block;
     border: 1px solid white;
@@ -26,6 +27,7 @@
 }
 .cloud {
     position: absolute;
+    color: white;
 }
 .cloud1 {
     transform: translate(-170%, 70%)  scale(1);
