@@ -92,10 +92,6 @@
   justify-content: space-between;
   flex-direction: row;
 }
-.navbar .navlista {
-  width: fit-content;
-  float: left;
-}
 .navbar .navlista a {
   display: inline;
   margin-left: 10px;
@@ -113,11 +109,48 @@
   color: white;
   font-size: 1.5rem;
 }
-.navbar:first-child {
+.navbar:nth-child(1) {
   padding-left: 20px;
-}
-.navbar:last-child {
   padding-right: 20px;
+}
+.navbar .container-icon-menu {
+  position: absolute;
+  display: block;
+  left: 20px;
+  display: none;
+  font-size: 22px;
+}
+
+@media only screen and (max-width: 750px) {
+  .navbar .navlista:not(:first-child) {
+    display: none;
+  }
+  .navbar .container-icon-menu {
+    position: absolute;
+    display: block;
+    left: 20px;
+  }
+  .navbar #toggler {
+    position: absolute;
+    display: block;
+    right: 20px;
+  }
+  .navbar.responsive {
+    overflow: scroll;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .navbar.responsive .navlista {
+    display: initial;
+  }
+  .navbar.responsive .navlista a {
+    display: block;
+  }
+  .navbar.responsive .container-icon-menu {
+    position: absolute;
+    display: block;
+    left: 20px;
+  }
 }
 
 /*# sourceMappingURL=navbar.css.map */

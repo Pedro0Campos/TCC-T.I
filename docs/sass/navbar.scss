@@ -17,10 +17,8 @@
     flex-direction: row;
     
     .navlista {
-        width: fit-content;
-        float: left;
         
-        & a {
+        a {
             display: inline;
             margin-left: 10px;
             margin-right: 10px;
@@ -41,15 +39,59 @@
         font-size: 1.5rem;
     }
 
-    &:first-child {
+    &:nth-child(1) {
         padding-left: 20px;
-    }
-    
-    &:last-child {
         padding-right: 20px;
+    }
+
+    .container-icon-menu {
+        position: absolute;
+        display: block;
+        left: 20px;
+        display: none;
+        font-size: 22px;
     }
 }
 
-@media screen and (max-width: 700px) {
+
+@media only screen and (max-width: 750px) {
+    .navbar {
+        
+        .navlista:not(:first-child) {
+            display: none;
+        }
+
+        .container-icon-menu {
+            position: absolute;
+            display: block;
+            left: 20px;
+        }
+        
+        #toggler {
+            position: absolute;
+            display: block;
+            right: 20px;
+        }
+    }
     
+    .navbar.responsive {
+        // height: auto;
+        overflow: scroll;
+        flex-direction: column;
+        // display: block;
+        justify-content: center;
+        .navlista {
+            display: initial;
+
+            a  {
+                display: block;
+            }
+        }
+
+        .container-icon-menu {
+            position: absolute;
+            display: block;
+            left: 20px;
+        }
+    }
 }

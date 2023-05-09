@@ -14,10 +14,10 @@
     <!-- <script src="javascript/darkmode.js"></script> -->
 </head>
 <body>
-    <div class="navbar">
-        <div class="navlista">
-            <label for="checkbox" id="toggler">
-                <input type="checkbox" name="" id="checkbox" onchange="ocdivt_elements()" checked>
+    <div class="navbar" id="navbar">
+        <div class="navlista" id="toggler">
+            <label for="checkbox">
+                <input type="checkbox" name="" id="checkbox" onchange="ocult_elements()" checked>
                 <span class="ball"></span>
                 <i class="fa-solid fa-moon moon"></i>
                 <i class="fa-solid fa-sun sun"></i>
@@ -44,10 +44,17 @@
             <!-- <a href=""><img class="img-user" src="../docs/imgs/icon-user.png" alt=""></a> -->
         </div>
 
-        <!-- <div class="container-menu-icon">
-            <i class="fa-solid fa-bars menu-icon"></i>
-        </div> -->
+        <div class="container-icon-menu" onclick="navbarResponsive()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
     </div>
+
+    <script>
+        function navbarResponsive(div) {
+            let navbar = document.querySelector('#navbar')
+            navbar.classList.toggle('responsive')
+        }
+    </script>
 
 </body>
 </html>
