@@ -107,14 +107,75 @@
   font-size: 1.3rem;
   cursor: default;
 }
-.navbar .menu-icon {
-  position: absolute;
-  right: 10px;
-  color: white;
-  font-size: 1.5rem;
-}
 .navbar .container-icon-menu {
   display: none;
+}
+.navbar #toggler {
+  border: 1px solid white;
+  border-radius: 50px;
+  height: 45%;
+  width: 70px;
+  cursor: pointer;
+  user-select: none;
+}
+.navbar #toggler label #checkbox {
+  display: none;
+}
+.navbar #toggler label .sun, .navbar #toggler label .moon, .navbar #toggler label .star, .navbar #toggler label .cloud {
+  position: absolute;
+  transition: all 0.25s ease-in-out;
+}
+.navbar #toggler label .sun, .navbar #toggler label .moon, .navbar #toggler label .star {
+  color: #f8f81b;
+}
+.navbar #toggler label .sun {
+  font-size: 22px;
+  transform: translate(-95%, 19%) scale(1);
+}
+.navbar #toggler label .sun.ativado {
+  transform: translate(-95%, 19%) scale(0);
+}
+.navbar #toggler label .cloud {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.112);
+}
+.navbar #toggler label .cloud1 {
+  transform: translate(0%, 70%) scale(1);
+}
+.navbar #toggler label .cloud2 {
+  font-size: 6px;
+  transform: translate(0%, 90%) scale(1);
+  transition: transform 0.25s ease-in-out;
+}
+.navbar #toggler label .moon {
+  font-size: 25px;
+  transform: rotate(210deg) translate(5%, -10%) scale(0);
+}
+.navbar #toggler label .star1 {
+  font-size: 5px;
+  transform: translate(0%, 50%) scale(0);
+}
+.navbar #toggler label .star2 {
+  font-size: 3px;
+  transform: translate(0%, 280%) scale(0);
+}
+.navbar #toggler label .star3 {
+  font-size: 6px;
+  transform: translate(0%, 280%) scale(0);
+}
+.navbar #toggler label .ball {
+  display: inline-block;
+  position: relative;
+  width: 25px;
+  height: 25px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  transform: translate(10%, 11%);
+  transition: transform 0.3s ease-out;
+  z-index: 10;
+}
+.navbar #toggler label #checkbox:checked + .ball {
+  transform: translate(162%, 11%);
 }
 
 .navbar-lateral {
@@ -123,7 +184,6 @@
   width: 350px;
   max-width: 100%;
   height: 100%;
-  display: initial;
   left: -350px;
   transition: left 0.4s ease-out;
 }
@@ -139,7 +199,6 @@
 
 .navbar-lateral.open {
   left: 0;
-  display: initial;
 }
 
 .overflow-hidden {
@@ -164,7 +223,7 @@
     position: absolute;
     display: initial;
     right: 20px;
-    font-size: 22px;
+    font-size: 1.4rem;
   }
 }
 
