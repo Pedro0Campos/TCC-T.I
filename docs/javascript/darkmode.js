@@ -11,16 +11,19 @@ function ocult_elements(checkbox) {
         element.classList.toggle('desativado')
     })
 
-    // change_theme()
+    change_theme()
 }
 
 function change_theme() {
+    const html = document.querySelector('html')
     const sandy_danny = document.querySelector('.sandy-danny')
     
     html.classList.toggle('darkmode')
-    if (html.classList == 'darkmode') {
-        sandy_danny.src = 'imgs/home/sandy-danny-dark.png'
-    } else {
-        sandy_danny.src = 'imgs/home/sandy-danny-light.png'
+    if (sandy_danny != null) {
+        if (html.classList == 'darkmode') {
+            sandy_danny.src = 'imgs/home/sandy-danny-dark.png'
+        } else {
+            sandy_danny.src = 'imgs/home/sandy-danny-light.png'
+        }
     }
 }

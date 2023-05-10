@@ -48,24 +48,26 @@
     </div>
   
 
-    <div class="navbar-lateral" id="navbar-lateral">
-        <div class="navlista">
-            <a class="animation-link" class="animation-link" href="?pagina=home">Home</a>
-            <a class="animation-link" href="?pagina=sobre">Sobre</a>
-            <a class="animation-link" href="?pagina=personagens">Personagens</a>
-        </div>
-
-        <div class="navlista ">
-            <a class="animation-link" href="?pagina=login" class="navitens">Login</a>
-            <a class="animation-link" href="?pagina=cadastro" class="navitens">Cadastra-se</a>
-            <!-- <a class="duplo-li">Olá Fulano!<br><a class="animation-link" href="#" class="navitens">Sair?</a> -->
-            <!-- <a class="animation-link" href=""><img class="img-user" src="../docs/imgs/icon-user.png" alt=""></a> -->
+    <div class="container-navbar-lateral">
+        <div class="navbar-lateral" id="navbar-lateral">
+            <div class="navlista">
+                <a class="animation-link" class="animation-link" href="?pagina=home">Home</a>
+                <a class="animation-link" href="?pagina=sobre">Sobre</a>
+                <a class="animation-link" href="?pagina=personagens">Personagens</a>
+            </div>
+     
+            <div class="navlista ">
+                <a class="animation-link" href="?pagina=login" class="navitens">Login</a>
+                <a class="animation-link" href="?pagina=cadastro" class="navitens">Cadastra-se</a>
+                <!-- <a class="duplo-li">Olá Fulano!<br><a class="animation-link" href="#" class="navitens">Sair?</a> -->
+                <!-- <a class="animation-link" href=""><img class="img-user" src="../docs/imgs/icon-user.png" alt=""></a> -->
+            </div>
         </div>
     </div>
 
     <script>
         function openNavLateral() {
-            document.querySelector('#navbar-lateral').classList.toggle('open')
+            document.querySelector('.container-navbar-lateral').classList.toggle('open')
             document.querySelector('body').classList.toggle('overflow-hidden')            
         }
     </script>
