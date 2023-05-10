@@ -11,11 +11,11 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/form.css">
     <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="css/navbar-antigo.css">
-    <link rel="stylesheet" href="css/toggler.css">
+    <link rel="stylesheet" href="css/navbar.css">
 
     <script src="https://kit.fontawesome.com/55197c00fe.js" crossorigin="anonymous"></script>
     <script src="javascript/darkmode.js"></script>
+    <script src="javascript/navbar.js"></script>
     
 </head>
 <body class="fade">
