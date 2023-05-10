@@ -7,7 +7,6 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="../docs/css/navbar.css">
-    <link rel="stylesheet" href="../docs/css/toggler.css">
     <link rel="stylesheet" href="../docs/css/base.css">
 
     <script src="https://kit.fontawesome.com/55197c00fe.js" crossorigin="anonymous"></script>
@@ -19,13 +18,13 @@
             <label for="checkbox">
                 <input type="checkbox" name="" id="checkbox" onchange="ocult_elements(this)" placeholder="modo escuro" checked>
                 <span class="ball"></span>
-                <i class="fa-solid fa-moon moon"></i>
-                <i class="fa-solid fa-sun sun"></i>
-                <i class="fa-solid fa-star star star1"></i>
-                <i class="fa-solid fa-star star star2"></i>
-                <i class="fa-solid fa-star star star3"></i>
-                <i class="fa-solid fa-cloud cloud cloud1"></i>
-                <i class="fa-solid fa-cloud cloud cloud2"></i>
+                <i class="fa-solid fa-moon moon desativado" id="moon"></i>
+                <i class="fa-solid fa-sun sun" id="sun"></i>
+                <i class="fa-solid fa-star star star1 desativado" id="star1"></i>
+                <i class="fa-solid fa-star star star2 desativado" id="star2"></i>
+                <i class="fa-solid fa-star star star3 desativado" id="star3"></i>
+                <i class="fa-solid fa-cloud cloud cloud1" id="cloud1"></i>
+                <i class="fa-solid fa-cloud cloud cloud2" id="cloud2"></i>
             </label> 
         </div>
         
@@ -65,81 +64,10 @@
     </div>
 
     <script>
-        const html = document.querySelector('html')
-
         function openNavLateral() {
             document.querySelector('#navbar-lateral').classList.toggle('open')
             document.querySelector('body').classList.toggle('overflow-hidden')            
         }
-
-        function ocult_elements(checkbox) {
-            // let sun = document.querySelector('.sun')
-            // let clouds = document.getElementsByClassName('cloud')
-            // clouds = Array.prototype.slice.call(clouds)
-            
-            // let moon = document.getElementsByClassName('moon')
-            // let stars = document.getElementsByClassName('star')
-            // stars = Array.prototype.slice.call(stars)
-            
-            let itens = [
-                document.querySelector('.sun'),
-                Array.prototype.slice.call(document.getElementsByClassName('cloud')),
-                document.querySelector('.moon'),
-                Array.prototype.slice.call(document.getElementsByClassName('star'))
-            ]
-
-            itens.forEach(element => {
-                if (element[1] === undefined) {
-                    console.log(element)
-                } else {
-                    element.forEach(subelement => {
-                        console.log(subelement)
-                    })
-                }
-                // if (element is array)
-                // element.classList.toggle('ativado')
-            })
-            // sun.classList.toggle('ativado')
-
-            if (checkbox.checked) { // MODO CLARO
-                // Desabilitar decorações do toggler - escuro
-                // stars[0].style.transform = 'translate(-220%, 50%) scale(0) rotate(180deg)'
-                // stars[1].style.transform = 'translate(-100%, 280%) scale(0) rotate(180deg)'
-                // stars[2].style.transform = 'translate(-220%, 280%) scale(0) rotate(180deg)'
-                // moon[0].style.transform = 'rotate(210deg) translate(-5%, -10%) scale(0)'
-                
-                // habilitar decorações do toggler - claro
-                // sun[0].style.transform = 'translate(-95%, 19%) scale(1)'
-                // clouds[0].style.transform = 'translate(-170%, 70%) scale(1)'
-                // clouds[1].style.transform = 'translate(-240%, 90%) scale(1)'
-                
-            } else { // MODO ESCURO
-                // habilitar decorações do toggler - escuro
-                // stars[0].style.transform = 'translate(-220%, 50%) scale(1) rotate(0deg)'
-                // stars[1].style.transform = 'translate(-100%, 280%) scale(1) rotate(0deg)'
-                // stars[2].style.transform = 'translate(-220%, 280%) scale(1) rotate(0deg)'
-                // moon[0].style.transform =     'rotate(210deg) translate(-5%, -10%)'
-                
-                // desabilitar decorações do toggler - claro
-                // sun[0].style.transform = 'translate(-95%, 19%) scale(0)'
-                // clouds[0].style.transform = 'translate(-170%, 70%) scale(0)'
-                // clouds[1].style.transform = 'translate(-240%, 90%) scale(0)'
-            }
-            
-            // change_theme()
-        }
-
-        function change_theme() {
-            const sandy_danny = document.querySelector('.sandy-danny')
-            
-            html.classList.toggle('darkmode')
-            if (html.classList == 'darkmode') {
-                sandy_danny.src = 'imgs/home/sandy-danny-dark.png'
-            } else {
-                sandy_danny.src = 'imgs/home/sandy-danny-light.png'
-            }
-        }
-
     </script>
 
 </body>

@@ -111,12 +111,19 @@
   display: none;
 }
 .navbar #toggler {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar #toggler label {
+  display: inline-block;
   border: 1px solid white;
   border-radius: 50px;
   height: 45%;
   width: 70px;
-  cursor: pointer;
   user-select: none;
+  cursor: pointer;
 }
 .navbar #toggler label #checkbox {
   display: none;
@@ -132,15 +139,18 @@
   font-size: 22px;
   transform: translate(-95%, 19%) scale(1);
 }
-.navbar #toggler label .sun.ativado {
+.navbar #toggler label .sun.desativado {
   transform: translate(-95%, 19%) scale(0);
 }
 .navbar #toggler label .cloud {
   position: absolute;
-  color: rgba(255, 255, 255, 0.112);
+  color: rgb(255, 255, 255);
 }
 .navbar #toggler label .cloud1 {
-  transform: translate(0%, 70%) scale(1);
+  transform: translate(-85%, 75%) scale(1);
+}
+.navbar #toggler label .cloud1.desativado {
+  transform: translate(-85%, 75%) scale(1);
 }
 .navbar #toggler label .cloud2 {
   font-size: 6px;
