@@ -78,6 +78,29 @@
     --font-size-box-title3: calc(1.6rem * 1.6);
   }
 }
+.itens-direita {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.itens-direita .duplo-li {
+  list-style: none;
+  text-align: left;
+  display: inline-block;
+}
+.itens-direita .duplo-li span, .itens-direita .duplo-li a {
+  display: block;
+  color: white;
+}
+.itens-direita .duplo-li a {
+  margin: 0;
+  font-size: 0.9rem;
+  width: fit-content;
+}
+.itens-direita .img-user {
+  height: 50px;
+}
+
 .navbar {
   position: fixed;
   top: 0;
@@ -96,110 +119,63 @@
   padding-left: 20px;
   padding-right: 20px;
 }
+.navbar .navlista #grease {
+  font-family: JosefinSansRegular;
+  font-size: 1.3rem;
+  cursor: default;
+}
 .navbar .navlista a {
   display: inline;
   margin-left: 10px;
   margin-right: 10px;
   color: white;
 }
-.navbar #grease {
-  font-family: JosefinSansRegular;
-  font-size: 1.3rem;
-  cursor: default;
+.navbar .itens-direita .duplo-li a {
+  margin: 0;
 }
 .navbar .container-icon-menu {
   display: none;
 }
-.navbar #toggler {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.navbar #toggler label {
-  display: inline-block;
-  border: 1px solid white;
-  border-radius: 50px;
-  height: 45%;
-  width: 70px;
-  user-select: none;
+.navbar .container-icon-menu .menu {
+  background-color: transparent;
+  border: none;
   cursor: pointer;
+  display: flex;
+  padding: 0;
+  transform: scale(0.5);
 }
-.navbar #toggler label #checkbox {
-  display: none;
+.navbar .container-icon-menu .line {
+  fill: none;
+  stroke: rgb(255, 255, 255);
+  stroke-width: 4;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1), stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.navbar #toggler label .sun, .navbar #toggler label .moon, .navbar #toggler label .star, .navbar #toggler label .cloud {
-  position: absolute;
-  transition: all 0.25s ease-in-out;
+.navbar .container-icon-menu .line1 {
+  stroke-dasharray: 60 207;
+  stroke-width: 4;
 }
-.navbar #toggler label .sun, .navbar #toggler label .moon, .navbar #toggler label .star {
-  color: #f8f81b;
+.navbar .container-icon-menu .line2 {
+  stroke-dasharray: 60 60;
+  stroke-width: 4;
 }
-.navbar #toggler label .sun {
-  font-size: 22px;
-  transform: translate(-95%, 19%) scale(1);
+.navbar .container-icon-menu .line3 {
+  stroke-dasharray: 60 207;
+  stroke-width: 4;
 }
-.navbar #toggler label .sun.desativado {
-  transform: translate(-95%, 19%) scale(0);
+.navbar .container-icon-menu .opened .line1 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 4;
 }
-.navbar #toggler label .cloud {
-  position: absolute;
-  color: rgb(255, 255, 255);
+.navbar .container-icon-menu .opened .line2 {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+  stroke-width: 4;
 }
-.navbar #toggler label .cloud1 {
-  transform: translate(-81%, 75%) scale(1);
-}
-.navbar #toggler label .cloud1.desativado {
-  transform: translate(-81%, 75%) scale(0) rotate(180deg);
-}
-.navbar #toggler label .cloud2 {
-  font-size: 6px;
-  transform: translate(0%, 45%) scale(1);
-}
-.navbar #toggler label .cloud2.desativado {
-  transform: translate(0%, 45%) scale(0) rotate(180deg);
-}
-.navbar #toggler label .moon {
-  font-size: 25px;
-  transform: rotate(210deg) translate(-105%, 30%) scale(1);
-}
-.navbar #toggler label .moon.desativado {
-  transform: rotate(210deg) translate(-105%, 30%) scale(0);
-}
-.navbar #toggler label .star1 {
-  font-size: 5px;
-  transform: translate(170%, 50%) scale(1);
-}
-.navbar #toggler label .star1.desativado {
-  transform: translate(170%, 50%) scale(0);
-}
-.navbar #toggler label .star2 {
-  font-size: 2px;
-  transform: translate(900%, 450%) scale(1);
-}
-.navbar #toggler label .star2.desativado {
-  transform: translate(900%, 450%) scale(0);
-}
-.navbar #toggler label .star3 {
-  font-size: 6px;
-  transform: translate(100%, 350%) scale(1);
-}
-.navbar #toggler label .star3.desativado {
-  transform: translate(100%, 350%) scale(0);
-}
-.navbar #toggler label .ball {
-  display: inline-block;
-  position: relative;
-  width: 25px;
-  height: 25px;
-  background: rgb(255, 255, 255);
-  border-radius: 30px;
-  transform: translate(10%, 11%);
-  transition: transform 0.3s ease-out;
-  z-index: 10;
-}
-.navbar #toggler label #checkbox:checked + .ball {
-  transform: translate(162%, 11%);
+.navbar .container-icon-menu .opened .line3 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 4;
 }
 
 .container-navbar-lateral {
@@ -218,13 +194,21 @@
   float: right;
 }
 .container-navbar-lateral .navbar-lateral .navlista {
-  margin: 10px 0 50px 20px;
+  margin: 10px 0 10px 20px;
 }
 .container-navbar-lateral .navbar-lateral .navlista a {
   display: block;
   width: fit-content;
   color: white;
   margin-bottom: 10px;
+}
+.container-navbar-lateral .navbar-lateral .itens-direita {
+  flex-direction: row-reverse;
+  justify-content: left;
+  gap: 20px;
+}
+.container-navbar-lateral .navbar-lateral .cadastro {
+  margin-top: 40px;
 }
 
 .container-navbar-lateral.open {

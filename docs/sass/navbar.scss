@@ -1,6 +1,30 @@
 @use 'config';
 
 
+.itens-direita {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .duplo-li {
+        list-style: none;
+        text-align: left;
+        display: inline-block;
+
+        span, a {
+            display: block;
+            color: white;
+        }
+        a {
+            margin: 0;
+            font-size: 0.9rem;
+            width: fit-content;
+        }
+    }
+    .img-user {
+        height: 50px;
+    }
+}
+
 // NAVBAR PRINCIPAL
 .navbar {
     position: fixed;
@@ -23,138 +47,83 @@
         padding-left: 20px;
         padding-right: 20px;
     }
+    
+    .navlista {
+        // TÍTULO 'GREASE'
+        #grease {
+            font-family: JosefinSansRegular;
+            font-size: 1.3rem;
+            cursor: default;
+        }
 
+        a {
+            display: inline;
+            margin-left: 10px;
+            margin-right: 10px;
+            color: white;
+        }
+    }
 
-    .navlista a {
-        display: inline;
-        margin-left: 10px;
-        margin-right: 10px;
-        color: white;
         
+    .itens-direita {
+        .duplo-li a {
+            margin: 0;
+        }
     }
 
-    // TÍTULO 'GREASE'
-    #grease {
-        font-family: JosefinSansRegular;
-        font-size: 1.3rem;
-        cursor: default;
-    }
 
     // CONTAINER DO ÍCONE DE MENU
     .container-icon-menu {
         display: none;
-    }
 
-
-    // TOGGLE - MODO ESCURO
-    #toggler {
-        // width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    
-        label {
-            display: inline-block;
-            border: 1px solid white;
-            border-radius: 50px;
-            height: 45%;
-            width: 70px;
-            user-select: none;
+          .menu {
+            background-color: transparent;
+            border: none;
             cursor: pointer;
-
-            #checkbox {
-                display: none;
-            }
-
-            .sun, .moon, .star, .cloud {
-                position: absolute;
-                transition: all 0.25s ease-in-out;
-            }
-
-            .sun, .moon, .star {
-                color: #f8f81b;
-            }
-
-            .sun {
-                font-size: 22px;
-                transform: translate(-95%, 19%) scale(1);
-            }
-            .sun.desativado {
-                transform: translate(-95%, 19%) scale(0);
-            }
-
-            .cloud {
-                position: absolute;
-                color: rgba(255, 255, 255, 1);
-            }
-
-            .cloud1 {
-                transform: translate(-81%, 75%)  scale(1);
-            }
-            .cloud1.desativado {
-                transform: translate(-81%, 75%)  scale(0) rotate(180deg);
-            }
-
-            .cloud2 {
-                font-size: 6px;
-                transform: translate(0%, 45%)  scale(1);
-            }
-            .cloud2.desativado {
-                transform: translate(0%, 45%)  scale(0) rotate(180deg);
-
-            }
+            display: flex;
+            padding: 0;
+            transform: scale(0.5);
+          }
+          .line {
+            fill: none;
+            stroke: rgb(255, 255, 255);
+            stroke-width: 4;
+            transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+              stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+          }
+          .line1 {
+            stroke-dasharray: 60 207;
+            stroke-width: 4;
             
-            .moon {
-                font-size: 25px;
-                transform: rotate(210deg) translate(-105%, 30%) scale(1);
-            }
-            .moon.desativado {
-                transform: rotate(210deg) translate(-105%, 30%) scale(0);
-            }
-
-            .star1 {
-                font-size: 5px;
-                transform: translate(170%, 50%) scale(1);
-            }
-            .star1.desativado {
-                transform: translate(170%, 50%) scale(0);
-            }
-
-            .star2 {
-                font-size: 2px;
-                transform: translate(900%, 450%) scale(1);
-            }
-            .star2.desativado {
-                transform: translate(900%, 450%) scale(0);
-            }
-
-            .star3 {
-                font-size: 6px;
-                transform: translate(100%, 350%) scale(1); 
-            }
-            .star3.desativado {
-                transform: translate(100%, 350%) scale(0); 
-            }
-
-            .ball {
-                display: inline-block;
-                position: relative;
-                width: 25px;
-                height: 25px;
-                background: rgb(255, 255, 255);
-                border-radius: 30px;
-                transform: translate(10%, 11%);
-                transition: transform 0.3s ease-out;
-                z-index: 10;
-            }
-            
-            #checkbox:checked + .ball {
-                transform: translate(162%, 11%);   
-            } 
-        }
+          }
+          .line2 {
+            stroke-dasharray: 60 60;
+            stroke-width: 4;
+          }
+          .line3 {
+            stroke-dasharray: 60 207;
+            stroke-width: 4;
+          }
+          .opened .line1 {
+            stroke-dasharray: 90 207;
+            stroke-dashoffset: -134;
+            stroke-width: 4;
+          }
+          .opened .line2 {
+            stroke-dasharray: 1 60;
+            stroke-dashoffset: -30;
+            stroke-width: 4;
+          }
+          .opened .line3 {
+            stroke-dasharray: 90 207;
+            stroke-dashoffset: -134;
+            stroke-width: 4;
+          }
+          
     }
 }
+
+
 
 // NAVBAR - LATERAR (SANDWICH)
 .container-navbar-lateral {
@@ -174,13 +143,23 @@
     
         // LISTA DE ITENS DA NAVBAR
         .navlista {
-            margin: 10px 0 50px 20px;
+            margin: 10px 0 10px 20px;
             a {
                 display: block;
                 width: fit-content;
                 color: white;
                 margin-bottom: 10px;
             }
+        }
+
+        .itens-direita {
+            flex-direction: row-reverse;
+            justify-content: left;
+            gap: 20px;
+        }
+
+        .cadastro {
+            margin-top: 40px;
         }
     }
 }
