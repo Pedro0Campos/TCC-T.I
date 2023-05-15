@@ -96,6 +96,7 @@
 // Sessão
 section {
     height: calc(100vh - config.$alturaNAV);
+    min-height: 500px;
 
     &:first-child {
         .backgr-gradient {
@@ -122,13 +123,16 @@ section {
             border-color: rgb(255, 255, 255);
         }
     }
-}
 
-.section2 {
-    background-image: url('../imgs/home/retro-line.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: right;
+    .retro-line {
+        // height: 100%;
+        // width: 100%;
+        // background-image: url('../imgs/home/retro-line.png');
+        // background-repeat: no-repeat;
+        // background-size: contain;
+        // background-position: right;
+        // background-origin: padding-box;
+    }
 }
 // ===================================================
 
@@ -137,6 +141,14 @@ section {
 // ===================================================
 /* RESPONSIVIDADE */
 @media only screen and (max-width: 893px) {
+    section:first-child {
+        .sandy-danny {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-height: 574px) {
     section:first-child {
         .sandy-danny {
             display: none;

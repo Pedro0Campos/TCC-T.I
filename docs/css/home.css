@@ -153,6 +153,7 @@
 
 section {
   height: calc(100vh - 4.5rem);
+  min-height: 500px;
 }
 section:first-child .backgr-gradient {
   background: transparent;
@@ -173,16 +174,13 @@ section:nth-child(2n) {
 section:nth-child(2n) .border-box {
   border-color: rgb(255, 255, 255);
 }
-
-.section2 {
-  background-image: url("../imgs/home/retro-line.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: right;
-}
-
 /* RESPONSIVIDADE */
 @media only screen and (max-width: 893px) {
+  section:first-child .sandy-danny {
+    display: none;
+  }
+}
+@media screen and (max-height: 574px) {
   section:first-child .sandy-danny {
     display: none;
   }
