@@ -8,13 +8,19 @@
 	
     <title>Grease • 3º Info tarde 2023</title>
     
+    <!--  -->
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/form.css">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/toggle.css">
 
+    <!-- AOS - Animation in scrool -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/55197c00fe.js" crossorigin="anonymous"></script>
+    
     <script src="javascript/darkmode.js"></script>
     <script src="javascript/navbar.js"></script>
     
@@ -30,6 +36,7 @@
     
     <!-- CONTEÚDO -->
     <main>
+        
         <?php
             if (isset($_GET['pagina'])) {
                 $pagina = $_GET['pagina'];
@@ -61,6 +68,16 @@
 
         ?>
     </main>
-
+    
+    <!-- AOS - Animation in scrool -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: false,
+            easing: "ease-in-back",
+            offSet: 200
+        })
+    </script>
 </body>
 </html>

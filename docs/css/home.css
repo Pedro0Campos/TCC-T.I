@@ -135,6 +135,14 @@
   border-radius: 100px;
   background-color: var(--text-color);
   color: var(--backg-color);
+  transition: all 0.2s ease-in-out;
+}
+.padding-box-title button:hover {
+  background-color: var(--second-color);
+  transform: scale(1.03);
+}
+.padding-box-title button:active {
+  transform: scale(0.98);
 }
 
 .right-bar::after {
@@ -152,7 +160,8 @@ section:first-child .backgr-gradient {
 }
 section:first-child .sandy-danny {
   position: absolute;
-  height: var(--height-sandy-danny);
+  width: 40vw;
+  min-width: 400px;
   bottom: 0;
   right: 0;
   z-index: -1;
@@ -165,6 +174,18 @@ section:nth-child(2n) .border-box {
   border-color: rgb(255, 255, 255);
 }
 
+.section2 {
+  background-image: url("../imgs/home/retro-line.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+}
+
 /* RESPONSIVIDADE */
+@media only screen and (max-width: 893px) {
+  section:first-child .sandy-danny {
+    display: none;
+  }
+}
 
 /*# sourceMappingURL=home.css.map */

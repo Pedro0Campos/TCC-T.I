@@ -103,10 +103,11 @@
 
 .navbar {
   position: fixed;
+  z-index: 1;
   top: 0;
   width: 100%;
   height: 4.5rem;
-  background-color: #000;
+  background: #000;
   color: white;
   font-family: JosefinSansLight;
   font-size: 1rem;
