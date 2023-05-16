@@ -23,13 +23,31 @@
 </section>
 
 <section class="section-par section2">
-    </div>
-    <div class="padding-box-title right-bar" data-aos="fade-down">
-        <div class="box-title2 border-box">
-            <h2>Conheça as música que refletem os anos <span class="sect2-title2 color-title_light">50</span></p>
+    
+    <div class="retro-line">
+        <div class="padding-box-title right-bar" data-aos="fade-down">
+            <div class="box-title2 border-box">
+                <h2>Conheça as música que refletem os anos <span class="sect2-title2 color-title_light">50</span></h2>
+            </div>
         </div>
+        
+        <div class="padding-box-title right-bar" data-aos="fade-down">
+            <div class="mais-tocadas">
+                <h3>Mais tocadas</h3>
+                <div class="item1">
+                    
+                </div>
+                <div class="item2">
+
+                </div>
+                <div class="item3">
+
+                </div>
+            </div>
+        </div>
+
+        
     </div>
-    <div class="retro-line" data-aos="fade-right">
         
 </section>
 

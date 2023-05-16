@@ -57,6 +57,15 @@
             }
         }
     }
+
+    .mais-tocadas {
+        max-width: var(--width-box-title3);
+
+        h3 {
+            text-transform: uppercase;
+            font-family: JosefinSansBold;
+        }
+    }
     
     .border-box {
         border: 7px solid var(--text-color); 
@@ -103,15 +112,15 @@ section {
             background: transparent;
             background: linear-gradient(180deg, rgba(255,255,255,0) 71%, rgba(12,12,12,0.24693627450980393) 83%, rgba(0,0,0,0.5186449579831933) 100%);
         }
-        
-        .sandy-danny {
-            position: absolute;
-            width: 40vw;
-            min-width: 400px;
-            bottom: 0;
-            right: 0;
-            z-index: -1;
-        }
+    }
+
+    .sandy-danny {
+        position: absolute;
+        width: 40vw;
+        min-width: 400px;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
     }
 
 
@@ -127,11 +136,15 @@ section {
     .retro-line {
         // height: 100%;
         // width: 100%;
-        // background-image: url('../imgs/home/retro-line.png');
-        // background-repeat: no-repeat;
-        // background-size: contain;
-        // background-position: right;
+        background-image: url('../imgs/home/retro-line.png');
+        background-repeat: no-repeat;
+        // background-size: 30%;
+        background-size: contain;
+        background-position: right;
         // background-origin: padding-box;
+        width: 100%;
+        height: 100%;
+
     }
 }
 // ===================================================

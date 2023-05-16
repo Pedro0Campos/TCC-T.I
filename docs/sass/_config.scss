@@ -14,6 +14,11 @@
 }
 
 @font-face {
+    font-family: JosefinSansBold;
+    src: url(../fonts/JosefinSans/JosefinSans-Bold.ttf);
+}
+
+@font-face {
     font-family: JosefinSansBoldItalic;
     src: url(../fonts/JosefinSans/JosefinSans-BoldItalic.ttf);
 }
@@ -28,6 +33,7 @@
 $JosefinSansRegular: JosefinSansRegular;
 $JosefinSansMedium: JosefinSansMedium;
 $JosefinSansLight: JosefinSansLight;
+$JosefinSansBold: JosefinSansBold;
 $JosefinSansBoldItalic: JosefinSansBoldItalic;
 $Inter: Inter;
 

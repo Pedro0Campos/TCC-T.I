@@ -12,6 +12,10 @@
   src: url(../fonts/JosefinSans/JosefinSans-Light.ttf);
 }
 @font-face {
+  font-family: JosefinSansBold;
+  src: url(../fonts/JosefinSans/JosefinSans-Bold.ttf);
+}
+@font-face {
   font-family: JosefinSansBoldItalic;
   src: url(../fonts/JosefinSans/JosefinSans-BoldItalic.ttf);
 }
