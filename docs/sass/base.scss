@@ -10,6 +10,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+li {
+    list-style: none;
+}
  
 // Bug -> body e o html fica com altura 0
 html, body {

@@ -149,11 +149,15 @@ div.right form {
   color: white;
   margin: 30px 0 10px 0;
   border-radius: 4px;
-}
-
-.button_form:hover {
-  transform: scale(1.02, 1.02);
+  transition: all 0.2s ease-in-out;
   cursor: pointer;
+}
+.button_form:hover {
+  background-color: var(--second-color);
+  transform: scale(1.03);
+}
+.button_form:active {
+  transform: scale(0.98);
 }
 
 .msg_erro {
@@ -181,8 +185,7 @@ i.eye {
   div.right {
     float: none;
     width: 100%;
-    height: 100%;
-    padding: 35px 0 20px 0;
+    padding: 0;
   }
 }
 @media only screen and (max-height: 500px) {

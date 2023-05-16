@@ -136,6 +136,11 @@
   text-transform: uppercase;
   font-family: JosefinSansBold;
 }
+.padding-box-title .mais-tocadas .item {
+  list-style: decimal;
+  padding: 10px;
+  border: 1px solid white;
+}
 .padding-box-title .border-box {
   border: 7px solid var(--text-color);
 }

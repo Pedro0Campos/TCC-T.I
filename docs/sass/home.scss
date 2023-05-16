@@ -65,6 +65,12 @@
             text-transform: uppercase;
             font-family: JosefinSansBold;
         }
+
+        .item {
+            list-style: decimal;
+            padding: 10px;
+            border: 1px solid white;
+        }
     }
     
     .border-box {

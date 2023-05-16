@@ -24,7 +24,7 @@
 
 <section class="section-par section2">
     
-    <div class="retro-line">
+    <div class="retro-line" data-aos="fade">
         <div class="padding-box-title right-bar" data-aos="fade-down">
             <div class="box-title2 border-box">
                 <h2>Conheça as música que refletem os anos <span class="sect2-title2 color-title_light">50</span></h2>
@@ -34,15 +34,9 @@
         <div class="padding-box-title right-bar" data-aos="fade-down">
             <div class="mais-tocadas">
                 <h3>Mais tocadas</h3>
-                <div class="item1">
-                    
-                </div>
-                <div class="item2">
-
-                </div>
-                <div class="item3">
-
-                </div>
+                <p class="item">Summer Nights - Grease</p>
+                <p class="item">Don’t be Cruel - Elvis Presley</p>
+                <p class="item">I Walk The pne - Johnny Cash</p>
             </div>
         </div>
 
