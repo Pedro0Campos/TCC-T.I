@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Splide</title>
+
+    <link rel="stylesheet" href="splide/dist/css/themes/splide-sea-green.min.css">
+
+    <script src="splide/dist/js/splide.min.js"></script>
+
+    <style>
+        .splide__slide {
+            background-color: rgba(255, 0, 0, 0.39);
+            height: 50px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        /* Add numbers to pagination buttons by CSS */
+        .splide__pagination {
+            counter-reset: pagination-num;
+        }
+
+        .splide__pagination__page:before {
+            counter-increment: pagination-num;
+            content: counter(pagination-num);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="splide" role="group" aria-label="Splide Basic HTML Example">
+        <div class="splide__track">
+            <ul class="splide__list">
+                <li class="splide__slide">Slide 01</li>
+                <li class="splide__slide">Slide 02</li>
+                <li class="splide__slide">Slide 03</li>
+            </ul>
+        </div>
+    </div>
+
+    <script type="module">
+
+
+
+        var splide = new Splide('.splide', {
+            type: 'loop',
+            drag: 'free',
+            perPage: 3,
+        });
+
+        splide.mount();
+    </script>
+</body>
+
+</html>
