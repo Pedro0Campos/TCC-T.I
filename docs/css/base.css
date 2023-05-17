@@ -30,6 +30,8 @@
   --font-size-box-title2: 2rem;
   --width-box-title3: 300px;
   --font-size-box-title3: 1.6rem;
+  --width-mais-tocadas: 440px;
+  --font-size-box-title3: 1.6rem;
   --height-sandy-danny: 95vh;
   --backg-color: #FEFCF3;
   --text-color: #000000;
@@ -87,10 +89,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-li {
-  list-style: none;
 }
 
 html, body {

@@ -29,6 +29,8 @@
   --font-size-box-title2: 2rem;
   --width-box-title3: 300px;
   --font-size-box-title3: 1.6rem;
+  --width-mais-tocadas: 440px;
+  --font-size-box-title3: 1.6rem;
   --height-sandy-danny: 95vh;
   --backg-color: #FEFCF3;
   --text-color: #000000;
@@ -84,11 +86,8 @@
 }
 .padding-box-title {
   padding: 35px 35px 10px 35px;
-  display: flex;
-  align-items: stretch;
-  gap: 20px;
 }
-.padding-box-title div {
+.padding-box-title .box-title1, .padding-box-title .box-title2, .padding-box-title .box-title3 {
   width: auto;
   padding: 20px;
 }
@@ -129,18 +128,6 @@
 .padding-box-title .box-title3 h3 span {
   color: var(--second-color);
 }
-.padding-box-title .mais-tocadas {
-  max-width: var(--width-box-title3);
-}
-.padding-box-title .mais-tocadas h3 {
-  text-transform: uppercase;
-  font-family: JosefinSansBold;
-}
-.padding-box-title .mais-tocadas .item {
-  list-style: decimal;
-  padding: 10px;
-  border: 1px solid white;
-}
 .padding-box-title .border-box {
   border: 7px solid var(--text-color);
 }
@@ -160,7 +147,35 @@
 .padding-box-title button:active {
   transform: scale(0.98);
 }
+.padding-box-title .mais-tocadas {
+  max-width: var(--width-mais-tocadas);
+}
+.padding-box-title .mais-tocadas h3 {
+  font-size: calc(var(--font-size-box-title3) * 0.75);
+  font-family: JosefinSansBold;
+  text-align: center;
+  letter-spacing: 0.1em;
+  padding-right: 27px;
+}
+.padding-box-title .mais-tocadas .container-itens {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.padding-box-title .mais-tocadas .container-itens .item {
+  font-family: JosefinSansRegular;
+  font-size: calc(var(--font-size-box-title3) * 0.6);
+  margin-top: 20px;
+  padding: 12.5px;
+  padding-right: 50px;
+  border: 1px solid white;
+  border-radius: 30px;
+}
 
+.right-bar {
+  display: flex;
+  gap: 20px;
+}
 .right-bar::after {
   content: "";
   width: 7px;
@@ -169,7 +184,7 @@
 
 section {
   height: calc(100vh - 4.5rem);
-  min-height: 500px;
+  min-height: 540px;
 }
 section:first-child .backgr-gradient {
   background: transparent;
@@ -199,13 +214,22 @@ section .retro-line {
   height: 100%;
 }
 
+.section2 {
+  min-height: 900px;
+}
+
 /* RESPONSIVIDADE */
-@media only screen and (max-width: 893px) {
-  section:first-child .sandy-danny {
+@media only screen and (max-width: 871px) {
+  section .sandy-danny {
     display: none;
   }
 }
-@media screen and (max-height: 574px) {
+@media only screen and (max-width: 903px) {
+  section .retro-line {
+    background: none;
+  }
+}
+@media screen and (max-height: 613px), (max-width: 30px) {
   section:first-child .sandy-danny {
     display: none;
   }

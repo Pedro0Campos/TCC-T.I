@@ -31,12 +31,17 @@
             </div>
         </div>
         
-        <div class="padding-box-title right-bar" data-aos="fade-down">
+        <div class="padding-box-title" data-aos="fade-down">
+
             <div class="mais-tocadas">
-                <h3>Mais tocadas</h3>
-                <p class="item">Summer Nights - Grease</p>
-                <p class="item">Don’t be Cruel - Elvis Presley</p>
-                <p class="item">I Walk The pne - Johnny Cash</p>
+                <h3>MAIS TOCADAS</h3>
+                <div class="right-bar">
+                    <div class="container-itens">
+                        <p class="item">1. Summer Nights - Grease</p>
+                        <p class="item">2. Don’t be Cruel - Elvis Presley</p>
+                        <p class="item">3. I Walk The pne - Johnny Cash</p>
+                    </div>
+                </div>
             </div>
         </div>
 
