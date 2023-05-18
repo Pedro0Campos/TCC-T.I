@@ -7,38 +7,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Splide</title>
 
-    <link rel="stylesheet" href="splide/dist/css/themes/splide-sea-green.min.css">
+    <link rel="stylesheet" href="splide/dist/css/splide.min.css">
 
     <script src="splide/dist/js/splide.min.js"></script>
 
     <style>
+        html, body {
+            height: 100%;
+        }
+        
+        body {
+            margin: 0;
+
+            background-color: black;
+            color: white;
+        }
+
+        /* Carrosel */
+        .splide {
+            transform: translateY(100%);
+        }
+
+        /* Todos os slides */
         .splide__slide {
-            background-color: rgba(255, 0, 0, 0.39);
-            height: 50px;
-            margin-left: 20px;
-            margin-right: 20px;
+            width: 80px;
+            background-color: white;
+            color: black;
+
+            /* Todos os slides vão ter 40% de opacidade */
+            opacity: 0.4;
         }
 
-        /* Add numbers to pagination buttons by CSS */
+        /* Os slides visiveis vão ter 100% de opacidade  */
+        .is-visible {
+            opacity: 1;
+        }
+
+        /* Botão das setas */
+        .splide__arrow {
+            opacity: 1;
+            background: transparent;
+        }
+
+        /* SVG das setas */
+        .splide__arrow svg {
+            fill: rgb(255, 255, 255);
+        }
+
+        /* Seta pra direita */
+        .splide__arrow--next {
+            top: 14px;
+            right: 10px;
+        }
+
+        /* Seta pra esquerda */
+        .splide__arrow--prev {
+            top: 14px;
+            right: 40px;
+            left: unset;
+        }
+
+        /* Tirar as bolinhas de paginação */
         .splide__pagination {
-            counter-reset: pagination-num;
-        }
-
-        .splide__pagination__page:before {
-            counter-increment: pagination-num;
-            content: counter(pagination-num);
+            display: none;
         }
     </style>
 </head>
 
 <body>
 
-    <div class="splide" role="group" aria-label="Splide Basic HTML Example">
+    <div class="splide" role="group" aria-labelledby="carousel-title">
+        <h2 id="carousel-title">Explorar </h2>
         <div class="splide__track">
             <ul class="splide__list">
                 <li class="splide__slide">Slide 01</li>
                 <li class="splide__slide">Slide 02</li>
                 <li class="splide__slide">Slide 03</li>
+                <li class="splide__slide">Slide 04</li>
+                <li class="splide__slide">Slide 05</li>
+                <li class="splide__slide">Slide 06</li>
+                <li class="splide__slide">Slide 07</li>
+                <li class="splide__slide">Slide 08</li>
+                <li class="splide__slide">Slide 09</li>
+                <li class="splide__slide">Slide 10</li>
+                <li class="splide__slide">Slide 11</li>
+                <li class="splide__slide">Slide 12</li>
             </ul>
         </div>
     </div>
@@ -48,9 +101,15 @@
 
 
         var splide = new Splide('.splide', {
-            type: 'loop',
-            drag: 'free',
-            perPage: 3,
+            type:   'loop',       // Fica em loop
+            height: 'auto',       // Altura do carrosel
+            width: '100%',        // Comprimento do carrosel
+            fixedWidth: '120px',   // Altura do slide
+            fixedHeight: '120px',  // Comprimendo do slide
+            focus:   0,           // Habilita uma classe para personalizar o elemento focado
+            gap: '20px',          // Espaçamento entre os slides
+            easing: 'ease-out'
+
         });
 
         splide.mount();
