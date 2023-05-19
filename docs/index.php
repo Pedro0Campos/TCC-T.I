@@ -8,21 +8,28 @@
 	
     <title>Grease • 3º Info tarde 2023</title>
     
-    <!--  -->
+    <!-- Estilos do site -->
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/form.css">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/toggle.css">
+    <link rel="stylesheet" href="css/carrosel.css">
+    
+    <!-- Scripts do site -->
+    <script src="javascript/darkmode.js"></script>
+    <script src="javascript/navbar.js"></script>
 
     <!-- AOS - Animation in scrool -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/55197c00fe.js" crossorigin="anonymous"></script>
-    
-    <script src="javascript/darkmode.js"></script>
-    <script src="javascript/navbar.js"></script>
+
+    <!-- SplideJs -->
+    <link rel="stylesheet" href="splide/dist/css/splide-core.min.css">
+
+    <script src="splide/dist/js/splide.min.js"></script>
     
 </head>
 <body class="fade">

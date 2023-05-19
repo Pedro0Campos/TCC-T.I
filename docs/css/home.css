@@ -131,7 +131,7 @@
 .padding-box-title .border-box {
   border: 7px solid var(--text-color);
 }
-.padding-box-title button {
+.padding-box-title .btn_home {
   font-size: 1rem;
   padding: 1em 7.1em 1em 7.1em;
   border: none;
@@ -140,11 +140,11 @@
   color: var(--backg-color);
   transition: all 0.2s ease-in-out;
 }
-.padding-box-title button:hover {
+.padding-box-title .btn_home:hover {
   background-color: var(--second-color);
   transform: scale(1.03);
 }
-.padding-box-title button:active {
+.padding-box-title .btn_home:active {
   transform: scale(0.98);
 }
 .padding-box-title .mais-tocadas {
