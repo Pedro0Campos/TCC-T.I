@@ -85,7 +85,7 @@
   }
 }
 .padding-box-title {
-  padding: 35px 35px 10px 35px;
+  padding: 35px 0 10px 35px;
 }
 .padding-box-title .box-title1, .padding-box-title .box-title2, .padding-box-title .box-title3 {
   width: auto;

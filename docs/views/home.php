@@ -32,7 +32,7 @@
         </div>
 
         <div class="padding-box-title">
-            <div id="carrosel-musica" class="carrosel-musica splide" role="group" aria-labelledby="carousel-title">
+            <div class="carrosel-musica splide" role="group" aria-labelledby="carousel-title">
                 <h2 id="carousel-title">Explorar </h2>
                 <div class="splide__track">
                     <ul class="splide__list">
@@ -104,7 +104,7 @@
 
 
 <script type="module">
-    var carrosel_musica = new Splide('#carrosel-musica', {
+    var carrosel_musica = new Splide('.carrosel-musica', {
         type:   'loop',       // Fica em loop
         height: 'auto',       // Altura do carrosel
         width: '100%',        // Comprimento do carrosel
