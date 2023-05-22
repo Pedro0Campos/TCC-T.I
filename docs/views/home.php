@@ -16,7 +16,7 @@
         </div>
         
         <div class="padding-box-title" data-aos="fade-right">
-            <a href="?pagina=sobre"><button class="btn_home" type="button">Sobre o musical</button></a>
+            <a href="?pagina=sobre" class="btn-home"><button type="button">Sobre o musical</button></a>
         </div>
         
     </div>

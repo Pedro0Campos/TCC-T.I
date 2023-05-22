@@ -83,7 +83,8 @@
             duration: 800,
             once: false,
             easing: "ease-in-back",
-            offSet: 200
+            offSet: 200,
+            anchorPlacement: "bottom"
         })
     </script>
 </body>
