@@ -34,6 +34,8 @@
         <div class="padding-box-title">
             <div class="carrosel-musica splide" role="group" aria-labelledby="carousel-title">
                 <h2 id="carousel-title">Explorar </h2>
+                <div class="opacity"></div>
+
                 <div class="splide__track">
                     <ul class="splide__list">
                         <div class="splide__slide">
@@ -94,7 +96,7 @@
                     <div class="container-itens">
                         <p class="item">1. Summer Nights - Grease</p>
                         <p class="item">2. Don’t be Cruel - Elvis Presley</p>
-                        <p class="item">3. I Walk The pne - Johnny Cash</p>
+                        <p class="item">3. I Walk The Line - Johnny Cash</p>
                     </div>
                 </div>
             </div>

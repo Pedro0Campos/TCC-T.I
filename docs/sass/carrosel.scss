@@ -11,9 +11,46 @@
         margin-bottom: 20px;
     }
 
-    // Cada elemento do slide
+    .opacity {
+        position: absolute;
+        z-index: 1;
+        top: 17%;
+        right: 0;
+        height: 190px;
+        width: 100px;
+        background-color: rgba(0, 0, 0, 0.6);
+        filter: blur(6px);
+        
+    }
+
+    // Cada elemento do slide (que estiverem desativados - sem a classe is-visible)
     .splide__slide {
-        margin-right: ;
+        background-color: transparent;
+        // color: rgba(255, 255, 255, 0);
+        // opacity: 0.4;
+        font-size: 14px;
+        width: 100%;
+        transition: transform ease-in-out 0.15s;
+        
+        &:hover {
+        transform: scale(1.03) translate(1.5px, 3px);
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .nome_musica {
+            margin-top: 0.5em;
+            font-family: config.$JosefinSansBold;
+            font-size: 1em;
+        }
+        
+        .autor_musica {
+            font-family: config.$JosefinSansRegular;
+            font-size: 0.9em;
+            margin-top: 0.3em;
+        }
     }
 
 

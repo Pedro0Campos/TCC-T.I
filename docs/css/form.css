@@ -120,6 +120,10 @@ div.right form {
   width: 70%;
   max-width: 450px;
   border: 0;
+  transition: all 0.2s ease-in-out;
+}
+.input_form:hover, .button_form:hover {
+  transform: scale(1.03);
 }
 
 .input_form {
@@ -151,12 +155,7 @@ div.right form {
   color: white;
   margin: 30px 0 10px 0;
   border-radius: 4px;
-  transition: all 0.2s ease-in-out;
   cursor: pointer;
-}
-.button_form:hover {
-  background-color: var(--second-color);
-  transform: scale(1.03);
 }
 .button_form:active {
   transform: scale(0.98);
