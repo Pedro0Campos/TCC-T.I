@@ -29,7 +29,7 @@
   --font-size-box-title2: 2rem;
   --width-box-title3: 300px;
   --font-size-box-title3: 1.6rem;
-  --width-mais-tocadas: 440px;
+  --width-mais-tocadas: 480px;
   --font-size-box-title3: 1.6rem;
   --height-sandy-danny: 95vh;
   --backg-color: #FEFCF3;
@@ -133,7 +133,8 @@
 }
 .padding-box-title .btn_home {
   font-size: 1rem;
-  padding: 1.2em 12.1em 1.2em 12.1em;
+  width: 300px;
+  height: 45px;
   border: none;
   border-radius: 100px;
   background-color: var(--text-color);
@@ -216,7 +217,7 @@ section .retro-line {
 }
 
 .section2 {
-  min-height: 800px;
+  min-height: 820px;
 }
 
 /* RESPONSIVIDADE */

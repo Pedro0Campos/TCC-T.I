@@ -31,7 +31,7 @@
             </div>
         </div>
 
-        <div class="padding-box-title">
+        <div class="padding-box-title" data-aos="fade-right">
             <div class="carrosel-musica splide" role="group" aria-labelledby="carousel-title">
                 <h2 id="carousel-title">Explorar </h2>
                 <div class="opacity"></div>
