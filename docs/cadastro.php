@@ -32,9 +32,10 @@
     
 </head>
 <body class="fade">
+
     <?php 
-        include('database/db.php');
         include('navbar.php');
+        include('database/db.php');
         include('php/form.php');
         include('php/consultar_user.php');  // Consultar usuários no banco
     ?>
@@ -56,6 +57,7 @@
                 
                 4. Se as variáveis de erros estão vazias (não deu erro), inicia o cadastro. Obs: só será feito se não foi feito um cadastro antes
             */
+            header('Location: index.php');
 
             // Criação das variáveis
             $nome = $email = $senha = '';
@@ -140,13 +142,13 @@
                 <input id="senha" class="input_form" type="password" name="senha" placeholder="Senha" value="<?php echo "" ?>">
                 <?php
                     if ($senhaErro != '') {
-                        echo "<span id='erro_email' class='msg_erro'><i class='fa-solid fa-circle-exclamation'></i> $emailErro </span>";
+                        echo "<span id='erro_email' class='msg_erro'><i class='fa-solid fa-circle-exclamation'></i> $senhaErro </span>";
                     }
                 ?>
 
                 <input class="button_form" type="submit" value="Cadastrar">
                 
-                <p class="text">Já tem uma conta? <a href="?pagina=login" class="underline">Login</a></p>
+                <p class="text">Já tem uma conta? <a href="login.php" class="underline">Login</a></p>
             </form>
         </div>
 
