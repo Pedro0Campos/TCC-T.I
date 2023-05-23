@@ -1,3 +1,12 @@
+<?php
+    if (isset($_GET['tema'])) {
+        $tema = $_GET['tema'];
+    }
+
+    echo $tema;
+    // setcookie('tema', 'darkmode', time() + (86400 * 30), '/');
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
