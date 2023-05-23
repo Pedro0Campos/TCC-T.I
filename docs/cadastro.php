@@ -57,7 +57,6 @@
                 
                 4. Se as variáveis de erros estão vazias (não deu erro), inicia o cadastro. Obs: só será feito se não foi feito um cadastro antes
             */
-            header('Location: index.php');
 
             // Criação das variáveis
             $nome = $email = $senha = '';
@@ -110,7 +109,7 @@
                         cadastrar($nome, $email, $senha, $conexao_db);
                         
                         // Trocar de tela
-                        header('Location: ../index.php');
+                        header('Location: index.php');
                         die();
                     }
                 }
