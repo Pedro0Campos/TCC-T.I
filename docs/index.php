@@ -39,7 +39,6 @@
         include('php/form.php');
         include('php/consultar_user.php');  // Consultar usuários no banco
     ?>
-
     
     <!-- CONTEÚDO -->
     <main>
@@ -83,8 +82,8 @@
             duration: 800,
             once: false,
             easing: "ease-in-back",
-            offSet: 200,
-            anchorPlacement: "bottom"
+            // offSet: 200,
+            delay: 0,
         })
     </script>
 </body>

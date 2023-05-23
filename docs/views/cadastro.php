@@ -65,7 +65,7 @@
                 cadastrar($nome, $email, $senha, $conexao_db);
                 
                 // Trocar de tela
-                header('Location:' . "?pagina=home");
+                header('Location: ../index.php');
                 die();
             }
         }

@@ -24,11 +24,11 @@
 }
 :root {
   --width-box-title1: 500px;
-  --font-size-box-title1: 2.2rem;
+  --font-size-box-title1: 1.8rem;
   --width-box-title2: 490px;
-  --font-size-box-title2: 2rem;
+  --font-size-box-title2: 1.7rem;
   --width-box-title3: 300px;
-  --font-size-box-title3: 1.6rem;
+  --font-size-box-title3: 1.1rem;
   --width-mais-tocadas: 480px;
   --font-size-box-title3: 1.6rem;
   --height-sandy-danny: 95vh;
@@ -54,13 +54,8 @@
   --third-color: #C6A4FF;
 }
 
-@media (max-width: 580px) {
-  :root {
-    --font-size-box-title1: 1.8rem;
-  }
-}
 .padding-box-title {
-  padding: 35px 0 10px 35px;
+  font-size: 18px;
 }
 .padding-box-title .box-title1, .padding-box-title .box-title2, .padding-box-title .box-title3 {
   width: 90%;
@@ -200,10 +195,22 @@ section .retro-line {
   min-height: 820px;
 }
 
+.flex-collumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-left: 20px;
+}
+
 /* RESPONSIVIDADE */
 @media only screen and (max-width: 871px) {
   section .sandy-danny {
     display: none;
+  }
+}
+@media only screen and (min-width: 700px) {
+  .flex-collumn {
+    justify-content: space-around;
   }
 }
 @media only screen and (max-width: 903px) {
@@ -217,11 +224,6 @@ section .retro-line {
   }
 }
 @media only screen and (max-width: 500px) {
-  .padding-box-title {
-    padding: 35px 0 0 0;
-    display: flex;
-    justify-content: center;
-  }
   .padding-box-title .splide {
     margin-left: 30px;
   }

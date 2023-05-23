@@ -58,13 +58,13 @@ $maxWidthInput: 450px;
 :root {
     // Box-title
     --width-box-title1: 500px;
-    --font-size-box-title1: 2.2rem;
+    --font-size-box-title1: 1.8rem;
 
     --width-box-title2: 490px;
-    --font-size-box-title2: 2rem;
+    --font-size-box-title2: 1.7rem;
 
     --width-box-title3: 300px;
-    --font-size-box-title3: 1.6rem;
+    --font-size-box-title3: 1.1rem;
     
     --width-mais-tocadas: 480px;
     --font-size-box-title3: 1.6rem;
@@ -107,7 +107,7 @@ $maxWidthInput: 450px;
 // Responsividade
 @media (max-width: 580px) {
     :root {
-        --font-size-box-title1: 1.8rem;
+        // --font-size-box-title1: 1.8rem;
     }
 }
 // @media (max-width: 510px) {

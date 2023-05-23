@@ -55,7 +55,7 @@
                     
                     
                     // Trocar de tela
-                    header('Location: '. "?pagina=home");
+                    header("Location: ../index.php");
                     die();
 
                 } else {

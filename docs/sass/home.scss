@@ -5,7 +5,8 @@
 // ===================================================
 // Caixas de texto
 .padding-box-title {
-    padding: 35px 0 10px 35px;
+    // padding: 35px 0 10px 35px;
+    font-size: 18px;
     
     // Div dentro da padding-box-title -> todas as div.box-title
     .box-title1, .box-title2, .box-title3 {
@@ -184,6 +185,13 @@ section {
 .section2 {
     min-height: 820px;
 }
+
+.flex-collumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 20px;
+}
 // ===================================================
 
 
@@ -195,6 +203,12 @@ section {
         .sandy-danny {
             display: none;
         }
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    .flex-collumn {
+        justify-content: space-around;
     }
 }
 
@@ -216,9 +230,6 @@ section {
 
 @media only screen and (max-width: 500px) {
     .padding-box-title {
-        padding: 35px 0 0 0;
-        display: flex;
-        justify-content: center;
         
         .splide {
             margin-left: 30px;
