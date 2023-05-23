@@ -1,0 +1,11 @@
+// Quando o usuário ativar o modo noturno
+setcookie('modoNoturno', 'ativado', time() + (86400 * 30), '/'); // Cookie expira em 30 dias
+
+// Verificar o valor do cookie
+$modoNoturnoAtivado = isset($_COOKIE['modoNoturno']) ? $_COOKIE['modoNoturno'] : 'desativado';
+
+// Aplicar o modo noturno se estiver ativado
+if ($modoNoturnoAtivado === 'ativado') {
+    // Aplicar o estilo de modo noturno à sua página
+    echo '<style> body { background-color: #000; color: #FFF; } </style>';
+}
