@@ -94,7 +94,7 @@
                             
                             
                             // Trocar de tela
-                            header("Location: ../index.php");
+                            header("Location: index.php");
                             die();
 
                         } else {
