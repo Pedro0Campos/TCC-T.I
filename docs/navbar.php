@@ -17,11 +17,20 @@
 
     <!-- ITENS NO MEIO -->
     <div class="navlista">
-        <a class="animation-link" href="?pagina=home">Home</a>
-        <a class="animation-link" href="?pagina=sobre">Sobre</a>
+        <a class="animation-link" href="index.php">Home</a>
         <a id="grease">Grease</a>
-        <a class="animation-link" href="?pagina=personagens">Personagens</a>
+        <a class="animation-link" href="sobre.php">Sobre</a>
     </div>
+    <!-- ITENS NO MEIO -->
+
+    <!-- ITENS NA DIREITA - Login e cadastro -->
+    <div class="navlista itens-direita">
+        <a class="animation-link" href="login.php" class="navitens">Login</a>
+        <a class="animation-link" href="cadastro.php" class="navitens">Cadastra-se</a>
+        <!-- <li class="duplo-li"><span>Olá Fulano!</span><a href="" class="animation-link">Sair?</a></li> -->
+        <!-- <a class="" href="?pagina=perfil-user"><img class="img-user" src="../docs/imgs/icon-user.png" alt=""></a> -->
+    </div>
+    <!-- ITENS NA DIREITA - Login e cadastro -->
 
     <!-- CONTAINER - ICON MENU -->
     <div class="container-icon-menu" onclick="openNavLateral()">
@@ -41,13 +50,12 @@
 <div class="container-navbar-lateral">
     <div class="navbar-lateral" id="navbar-lateral">
         <div class="navlista">
-            <a class="animation-link" class="animation-link" href="?pagina=home">Home</a>
-            <a class="animation-link" href="?pagina=sobre">Sobre</a>
-            <a class="animation-link" href="?pagina=personagens">Personagens</a>
+            <a class="animation-link" class="animation-link" href="index.php">Home</a>
+            <a class="animation-link" href="sobre.php">Sobre</a>
         </div>
         <div class="navlista itens-direita cadastro">
-            <a class="animation-link" href="?pagina=login" class="navitens">Login</a>
-            <a class="animation-link" href="?pagina=cadastro" class="navitens">Cadastra-se</a>
+            <a class="animation-link" href="login.php" class="navitens">Login</a>
+            <a class="animation-link" href="cadastro.php" class="navitens">Cadastra-se</a>
         </div>
     </div>
 </div>
