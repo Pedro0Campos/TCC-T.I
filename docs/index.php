@@ -3,7 +3,7 @@
         $tema = $_GET['tema'];
     }
 
-    echo $tema;
+    // echo $tema;
     // setcookie('tema', 'darkmode', time() + (86400 * 30), '/');
 ?>
 
@@ -29,6 +29,7 @@
     <!-- Scripts do site -->
     <script src="javascript/darkmode.js"></script>
     <script src="javascript/navbar.js"></script>
+    <script src="javascript/spotify.js"></script>
 
     <!-- AOS - Animation in scrool -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -42,7 +43,7 @@
     
 </head>
 <body class="fade">
-    <div class="music-player">
+    <div class="music-player ocult-player">
         <button onclick="musicPlayer()">Sair</button>
     </div>
 
@@ -189,20 +190,6 @@
             // offSet: 200,
             delay: 0,
         })
-    </script>
-
-    <script>
-        function musicPlayer() {
-            let music_player = document.querySelector(".music-player")
-            let body = document.querySelector('body')
-
-            console.log(music_player.classList[1]);
-            if (music_player.classList[1]) {
-
-            }
-
-        }
-
     </script>
 </body>
 </html>
