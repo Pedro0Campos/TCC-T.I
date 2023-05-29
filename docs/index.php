@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/toggle.css">
     <link rel="stylesheet" href="css/carrosel.css">
+    <link rel="stylesheet" href="css/spotify.css">
     
     <!-- Scripts do site -->
     <script src="javascript/darkmode.js"></script>
@@ -41,6 +42,10 @@
     
 </head>
 <body class="fade">
+    <div class="music-player">
+        <button onclick="musicPlayer()">Sair</button>
+    </div>
+
     <?php 
         include('database/db.php');
         include('navbar.php');
@@ -74,6 +79,7 @@
         </section>
 
         <section class="section-par section2">
+
             
             <div class="retro-line flex-collumn" data-aos="fade">
                 <div class="padding-box-title right-bar" data-aos="fade-down">
@@ -81,6 +87,7 @@
                         <h2>Conheça as música que refletem os anos <span class="sect2-title2 color-title_light">50</span></h2>
                     </div>
                 </div>
+                
 
                 <div class="padding-box-title" data-aos="fade-right">
                     <div class="carrosel-musica splide" role="group" aria-labelledby="carousel-title">
@@ -89,56 +96,57 @@
 
                         <div class="splide__track">
                             <ul class="splide__list">
-                                <div class="splide__slide">
+                                <div class="splide__slide" onclick="musicPlayer()">
                                     <img src="../docs/imgs/home/musicas/Summer_Nights-Grease.png" alt="">
                                     <p class="nome_musica">Summer Nights</p>
                                     <p class="autor_musica">Grease</p>
                                 </div>
 
-                                <div class="splide__slide">
+                                <div class="splide__slide" onclick="musicPlayer()">
                                     <img src="../docs/imgs/home/musicas/Greased_Lightnin-Grease.png" alt="">
                                     <p class="nome_musica">Greased Lightnin'</p>
                                     <p class="autor_musica">Grease</p>
                                 </div>
 
-                                <div class="splide__slide">
+                                <div class="splide__slide" onclick="musicPlayer()">
                                     <img src="../docs/imgs/home/musicas/The_Wonder_of_You-Elvis Presley.png" alt="">
                                     <p class="nome_musica">The Wonder of You</p>
                                     <p class="autor_musica">Elvis Presley</p>
                                 </div>
 
-                                <div class="splide__slide">
+                                <div class="splide__slide" onclick="musicPlayer()">
                                     <img src="../docs/imgs/home/musicas/Dont_be_Cruel-Elvis_Presley.png" alt="">
                                     <p class="nome_musica">Don't be Cruel</p>
                                     <p class="autor_musica">Elvis Presley</p>
                                 </div>
 
-                                <div class="splide__slide">
+                                <div class="splide__slide" onclick="musicPlayer()">
                                     <img src="../docs/imgs/home/musicas/I_Walk_the_Line-Johnny Cash.png" alt="">
                                     <p class="nome_musica">I Walk The Line</p>
                                     <p class="autor_musica">Johnny Cash</p>
                                 </div>
                                 
-                                <div class="splide__slide">
+                                <div class="splide__slide" onclick="musicPlayer()">
                                     <img src="../docs/imgs/home/musicas/Cross_Road_Blues-Robert_Johnson.png" alt="">
                                     <p class="nome_musica">Cross Road Blues</p>
                                     <p class="autor_musica">Robert Johnson</p>
                                 </div>
 
-                                <div class="splide__slide">
+                                <div class="splide__slide" onclick="musicPlayer()">
                                     <img src="../docs/imgs/home/musicas/Backwater_Blues-Bill_Broonzy.png" alt="">
                                     <p class="nome_musica">Backwater Blues</p>
                                     <p class="autor_musica">Bill Broonzy</p>
                                 </div>
-                                <div class="splide__slide">
+                                <div class="splide__slide" onclick="musicPlayer()">
                                     <img src="../docs/imgs/home/musicas/Sem_nome.png" alt="">
-                                    <p class="nome_musica">Here's Little Richard</p>
+                                    <p class="nome_musica">Tutti Frutti</p>
                                     <p class="autor_musica">Little Richard</p>
                                 </div>
                             </ul>
                         </div>
                     </div>
                 </div>
+
                 
                 <div class="padding-box-title" data-aos="fade-down">
                     <div class="mais-tocadas">
@@ -181,6 +189,20 @@
             // offSet: 200,
             delay: 0,
         })
+    </script>
+
+    <script>
+        function musicPlayer() {
+            let music_player = document.querySelector(".music-player")
+            let body = document.querySelector('body')
+
+            console.log(music_player.classList[1]);
+            if (music_player.classList[1]) {
+
+            }
+
+        }
+
     </script>
 </body>
 </html>
