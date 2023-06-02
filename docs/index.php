@@ -46,28 +46,24 @@
     
 </head>
 <body class="fade">
-    <div class="container-music-player ocult-player">
-        <button onclick="musicPlayer()">Sair</button>
-        
-        <div class="music-player">
-            <div class="close-container">
-                <div class="leftright"></div>
-                <div class="rightleft"></div>
-                <label class="close">close</label>
-            </div>
+    <div class="music-player ocult-player">
+        <div class="close-container" onclick="closeMusicPlayer()">
+            <div class="leftright"></div>
+            <div class="rightleft"></div>
+            <label class="close">close</label>
+        </div>
 
-            <div class="music-container">
-                <div class="box-music">
-                <img class="music-image" src="imgs/home/musicas/The_Wonder_of_You-Elvis Presley.png">
-                </div>
-                <p class="music-name">The Wonder of You</p>
-                <p class="autor-name">Elvis Presley</p>
+        <div class="music-container">
+            <div class="box-music">
+            <img class="music-image" src="imgs/home/musicas/The_Wonder_of_You-Elvis Presley.png">
             </div>
-            
-            <div class="option-bar">
-                <div class="lbox-music">       
-                <img class="music-image" src="imgs/home/musicas/The_Wonder_of_You-Elvis Presley.png">
-                </div>
+            <p class="music-name">The Wonder of You</p>
+            <p class="autor-name">Elvis Presley</p>
+        </div>
+        
+        <div class="option-bar">
+            <div class="lbox-music">       
+            <img class="music-image" src="imgs/home/musicas/The_Wonder_of_You-Elvis Presley.png">
             </div>
         </div>
     </div>
@@ -122,48 +118,48 @@
 
                         <div class="splide__track">
                             <ul class="splide__list">
-                                <div class="splide__slide track" onclick="musicPlayer()" data-spotify-id="spotify:track:2AVkArcfALVk2X8sfPRzya">
+                                <div class="splide__slide track" onclick="closeMusicPlayer()" data-spotify-id="spotify:track:2AVkArcfALVk2X8sfPRzya">
                                     <img src="../docs/imgs/home/musicas/Summer_Nights-Grease.png" alt="">
                                     <p class="nome_musica">Summer Nights</p>
                                     <p class="autor_musica">Grease</p>
                                 </div>
 
-                                <div class="splide__slide track" onclick="musicPlayer()" data-spotify-id="spotify:track:1XNE0QfNjdroSdosMIk8F6">
+                                <div class="splide__slide track" onclick="closeMusicPlayer()" data-spotify-id="spotify:track:1XNE0QfNjdroSdosMIk8F6">
                                     <img src="../docs/imgs/home/musicas/Greased_Lightnin-Grease.png" alt="">
                                     <p class="nome_musica">Greased Lightnin'</p>
                                     <p class="autor_musica">Grease</p>
                                 </div>
 
-                                <div class="splide__slide track" onclick="musicPlayer()" data-spotify-id="spotify:track:0LfJkvPNCNEMLpZJgDQiV1">
+                                <div class="splide__slide track" onclick="closeMusicPlayer()" data-spotify-id="spotify:track:0LfJkvPNCNEMLpZJgDQiV1">
                                     <img src="../docs/imgs/home/musicas/The_Wonder_of_You-Elvis Presley.png" alt="">
                                     <p class="nome_musica">The Wonder of You</p>
                                     <p class="autor_musica">Elvis Presley</p>
                                 </div>
 
-                                <div class="splide__slide track" onclick="musicPlayer()" data-spotify-id="spotify:track:1MUsWVRPLaC7ANKcEiMRCl">
+                                <div class="splide__slide track" onclick="closeMusicPlayer()" data-spotify-id="spotify:track:1MUsWVRPLaC7ANKcEiMRCl">
                                     <img src="../docs/imgs/home/musicas/Dont_be_Cruel-Elvis_Presley.png" alt="">
                                     <p class="nome_musica">Don't be Cruel</p>
                                     <p class="autor_musica">Elvis Presley</p>
                                 </div>
 
-                                <div class="splide__slide track" onclick="musicPlayer()" data-spotify-id="spotify:track:1TKPfF2fvn6gVLVfp3iG4j">
+                                <div class="splide__slide track" onclick="closeMusicPlayer()" data-spotify-id="spotify:track:1TKPfF2fvn6gVLVfp3iG4j">
                                     <img src="../docs/imgs/home/musicas/I_Walk_the_Line-Johnny Cash.png" alt="">
                                     <p class="nome_musica">I Walk The Line</p>
                                     <p class="autor_musica">Johnny Cash</p>
                                 </div>
                                 
-                                <div class="splide__slide track" onclick="musicPlayer()" data-spotify-id="spotify:track:1TrGdXSgiBm8W68D2K1COG">
+                                <div class="splide__slide track" onclick="closeMusicPlayer()" data-spotify-id="spotify:track:1TrGdXSgiBm8W68D2K1COG">
                                     <img src="../docs/imgs/home/musicas/Cross_Road_Blues-Robert_Johnson.png" alt="">
                                     <p class="nome_musica">Cross Road Blues</p>
                                     <p class="autor_musica">Robert Johnson</p>
                                 </div>
 
-                                <div class="splide__slide track" onclick="musicPlayer()" data-spotify-id="spotify:track:0xpQWNukc7m4arb007HOH3">
+                                <div class="splide__slide track" onclick="closeMusicPlayer()" data-spotify-id="spotify:track:0xpQWNukc7m4arb007HOH3">
                                     <img src="../docs/imgs/home/musicas/Backwater_Blues-Bill_Broonzy.png" alt="">
                                     <p class="nome_musica">Backwater Blues</p>
                                     <p class="autor_musica">Bill Broonzy</p>
                                 </div>
-                                <div class="splide__slide track" onclick="musicPlayer()" data-spotify-id="">
+                                <div class="splide__slide track" onclick="closeMusicPlayer()" data-spotify-id="">
                                     <img src="../docs/imgs/home/musicas/Tutti_Frutti-Little-Richard.png" alt="">
                                     <p class="nome_musica">Tutti Frutti</p>
                                     <p class="autor_musica">Little Richard</p>
@@ -188,21 +184,6 @@
                 </div>
             </div>       
         </section>
-
-
-        <script type="module">
-            var carrosel_musica = new Splide('.carrosel-musica', {
-                type:   'loop',       // Fica em loop
-                height: 'auto',       // Altura do carrosel
-                width: '100%',        // Comprimento do carrosel
-                fixedWidth: '120px',   // Altura do slide
-                gap: '20px',          // Espaçamento entre os slides
-                easing: 'ease-out'
-
-            });
-
-            carrosel_musica.mount();
-        </script>
     </main>
     
     <!-- AOS - Animation in scrool -->
@@ -216,5 +197,31 @@
             delay: 0,
         })
     </script>
+
+
+    <!-- Carrossel -->
+    <script type="module">
+        var carrosel_musica = new Splide('.carrosel-musica', {
+            type:   'loop',       // Fica em loop
+            height: 'auto',       // Altura do carrosel
+            width: '100%',        // Comprimento do carrosel
+            fixedWidth: '120px',   // Altura do slide
+            gap: '20px',          // Espaçamento entre os slides
+            easing: 'ease-out'
+            
+        });
+        
+        carrosel_musica.mount();
+    </script>
+    <!-- Carrossel -->
+
+    <!-- Music Player -->
+    <script>
+        function closeMusicPlayer() {
+            let player = document.querySelector('.music-player')
+            player.classList.toggle('ocult-player')
+        }
+    </script>
+    <!-- Music Player -->
 </body>
 </html>
