@@ -1,0 +1,6 @@
+// INSTALL
+npm install -g sass
+
+// RUN
+cd docs
+sass --watch sass:css
