@@ -50,7 +50,25 @@
         <button onclick="musicPlayer()">Sair</button>
         
         <div class="music-player">
+            <div class="close-container">
+                <div class="leftright"></div>
+                <div class="rightleft"></div>
+                <label class="close">close</label>
+            </div>
+
+            <div class="music-container">
+                <div class="box-music">
+                <img class="music-image" src="imgs/home/musicas/The_Wonder_of_You-Elvis Presley.png">
+                </div>
+                <p class="music-name">The Wonder of You</p>
+                <p class="autor-name">Elvis Presley</p>
+            </div>
             
+            <div class="option-bar">
+                <div class="lbox-music">       
+                <img class="music-image" src="imgs/home/musicas/The_Wonder_of_You-Elvis Presley.png">
+                </div>
+            </div>
         </div>
     </div>
 
