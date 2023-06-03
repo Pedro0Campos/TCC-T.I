@@ -1,139 +1,152 @@
+@use 'config';
+
 .music-player {
     position: fixed;
-    width: 100%;
-    height: 100%;
+    z-index: 4;
     left: 0;
     bottom: 0;
-    background: #CF0128;
-    z-index: 10;
     transition: bottom 0.2s ease;
-}
-
-// Botão X
-.close-container {
-    position: relative;
-    margin: auto;
-    width: 40px;
-    height: 40px;
-    margin-top: 15px;
-    margin-left: 20px;
-    cursor: pointer;
-}
-
-.leftright {
-    height: 4px;
-    width: 40px;
-    position: absolute;
-    margin-top: 24px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 2px;
-    transform: rotate(45deg);
-    transition: all 0.3s ease-in;
-}
-
-.rightleft {
-    height: 4px;
-    width: 40px;
-    position: absolute;
-    margin-top: 24px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 2px;
-    transform: rotate(-45deg);
-    transition: all 0.3s ease-in;
-}
-
-label {
-    color: white;
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 0.6em;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    transition: all 0.3s ease-in;
-    opacity: 0;
-}
-
-.close {
-    margin: 50px 0 0 -3px;
-    position: absolute;
-}
-
-.close-container {
-    height: 50px;
-    margin-bottom: 10px;
-}
-
-.close-container:hover .leftright {
-    transform: rotate(-45deg);
-    background-color: rgb(255, 255, 255);
-}
-
-.close-container:hover .rightleft {
-    transform: rotate(45deg);
-    background-color: rgb(255, 255, 255);
-}
-
-.close-container:hover label {
-    opacity: 1;
-}
-
-.music-container {
-    width: 90%;
-    max-width: 580px;
-    max-height: 580px;
-    height: 90%; 
-    margin: 0 auto;
-}
-
-.box-music {
     width: 100%;
     height: 100%;
-    border-radius: 11px;
-    background: #6C7A89;
-    box-shadow: 3px 3px 4px 1px rgba(0, 0, 0, 0.416);
-    margin: 0 auto;
-}
-
-.music-image {
-    height: 100%;
-    width: 100%;
-}
-
-.music-name {
-    font-family: JosefinSansMedium;
-    user-select: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: purple;
     color: white;
-    font-size: 25px;
-    margin-top: 20px;
-}
-
-.autor-name {
-    font-family: JosefinSansMedium;
     user-select: none;
-    color: rgba(255, 255, 255, 0.712);
-    margin-top: 5px;
+    overflow: auto;
+    
+    // botão close
+    .close-box {
+        width: 100%;
+        min-height: config.$height-close-box;
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        cursor: pointer;
+        margin-bottom: 20px;
+
+        // Um lado do X
+        .leftright {
+            height: 4px;
+            width: 40px;
+            position: absolute;
+            margin-top: 24px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 2px;
+            transform: rotate(45deg);
+            transition: all 0.3s ease-in;
+        }
+        
+        // Outro lado do X
+        .rightleft {
+            height: 4px;
+            width: 40px;
+            position: absolute;
+            margin-top: 24px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 2px;
+            transform: rotate(-45deg);
+            transition: all 0.3s ease-in;
+        }
+        
+        // Label com texto Close
+        .close {
+            color: white;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 0.6em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.3s ease-in;
+            opacity: 0;
+            margin: 50px 0 0 -3px;
+            position: absolute;
+        }
+    }
+
+
+    // Detalhes da musica -> foto, nome autor
+    .music-details {
+        font-size: 1.3rem;
+        // height: 60%;
+        margin: 0px 0 40px 0;
+        display: flex;
+        justify-content: center;
+
+        .container {
+            // Pra celular -> width
+            width: 90%;
+            max-width: 350px;
+
+            .music-image {
+                width: 100%;
+            }
+    
+            .music-name {
+                font-family: JosefinSansRegular;
+                font-size: 1em;
+                margin-top: 0.5em;
+            }
+            
+            .music-autor {
+                font-family: JosefinSansLight;
+                color: rgba(255, 255, 255, 0.8);
+                font-size: 0.8em;
+                margin-top: 0.3em;
+            }
+        }
+
+    }
+    
+    // Barras de opções -> Time, Volume, retroceder ou avançar
+    .option-bar {
+        min-height: config.$height-option-bar;
+        background-color: rgba(255, 255, 255, 0.145);
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        
+        .lbox-music {
+            display: none;
+            padding-left: 15px;
+            height: 80%;
+            border-radius: 4px;
+
+            img {
+                height: 100%;
+            }
+        }
+    }
 }
 
-.option-bar {
-    position: absolute;
-    width: 100%;
-    height: 120px;
-    background-color: rgba(255, 255, 255, 0.145);
-    bottom: 0;
-}
 
-.lbox-music {
-    width: 80px;
-    height: 80px;
-    border-radius: 4px;
-    margin-top: 20px;
-    margin-left: 30px;
-}
-
-
+// CLasses para ser colocadas via JS
+// Serve para deixar a div oculta
 .ocult-player {
     bottom: -100% !important;
 }
-
+// Desabilita o Scroll -> Body
 .disable-scroll {
     overflow: hidden;
+}
+
+
+@media only screen and (min-width: 768px) {
+    .close-container:hover .leftright {
+        transform: rotate(-45deg);
+        background-color: rgb(255, 255, 255);
+    }
+    
+    .close-container:hover .rightleft {
+        transform: rotate(45deg);
+        background-color: rgb(255, 255, 255);
+    }
+    
+    .close-container:hover label {
+        opacity: 1;
+    }
+
+    .lbox-music {
+        display: block !important;
+    }
 }

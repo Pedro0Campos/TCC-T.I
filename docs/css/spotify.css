@@ -1,25 +1,85 @@
+@font-face {
+  font-family: JosefinSansRegular;
+  src: url(../fonts/JosefinSans/JosefinSans-Regular.ttf);
+}
+@font-face {
+  font-family: JosefinSansMedium;
+  src: url(../fonts/JosefinSans/JosefinSans-Medium.ttf);
+}
+@font-face {
+  font-family: JosefinSansLight;
+  src: url(../fonts/JosefinSans/JosefinSans-Light.ttf);
+}
+@font-face {
+  font-family: JosefinSansBold;
+  src: url(../fonts/JosefinSans/JosefinSans-Bold.ttf);
+}
+@font-face {
+  font-family: JosefinSansBoldItalic;
+  src: url(../fonts/JosefinSans/JosefinSans-BoldItalic.ttf);
+}
+@font-face {
+  font-family: Inter;
+  src: url(../fonts/Inter/Inter-Regular.ttf);
+}
+:root {
+  --width-box-title1: 500px;
+  --font-size-box-title1: 1.8rem;
+  --width-box-title2: 490px;
+  --font-size-box-title2: 1.7rem;
+  --width-box-title3: 300px;
+  --font-size-box-title3: 1.1rem;
+  --width-mais-tocadas: 480px;
+  --font-size-box-title3: 1.6rem;
+  --height-sandy-danny: 95vh;
+  --backg-color: #FEFCF3;
+  --text-color: #000000;
+  --text-color-50: #00000080;
+  --text-color-80: #000000cc;
+  --link-color: #45CFE1;
+  --second-color: #6ba5f2;
+  --second-color-50: #6ba5f280;
+  --third-color: #00109d;
+  --sect-par-backg-color: #000;
+  --sect-par-text-color: #fff;
+}
+
+.darkmode:root {
+  --backg-color: #121111;
+  --text-color: #FEFCF3;
+  --text-color-50: #FFFFFF80;
+  --text-color-80: #FFFFFFcc;
+  --second-color: #A167FF;
+  --second-color-50: #A167FF80;
+  --third-color: #C6A4FF;
+}
+
 .music-player {
   position: fixed;
-  width: 100%;
-  height: 100%;
+  z-index: 4;
   left: 0;
   bottom: 0;
-  background: #CF0128;
-  z-index: 10;
   transition: bottom 0.2s ease;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: purple;
+  color: white;
+  user-select: none;
+  overflow: auto;
 }
-
-.close-container {
-  position: relative;
-  margin: auto;
-  width: 40px;
-  height: 40px;
-  margin-top: 15px;
-  margin-left: 20px;
+.music-player .close-box {
+  width: 100%;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
   cursor: pointer;
+  margin-bottom: 20px;
 }
-
-.leftright {
+.music-player .close-box .leftright {
   height: 4px;
   width: 40px;
   position: absolute;
@@ -29,8 +89,7 @@
   transform: rotate(45deg);
   transition: all 0.3s ease-in;
 }
-
-.rightleft {
+.music-player .close-box .rightleft {
   height: 4px;
   width: 40px;
   position: absolute;
@@ -40,8 +99,7 @@
   transform: rotate(-45deg);
   transition: all 0.3s ease-in;
 }
-
-label {
+.music-player .close-box .close {
   color: white;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 0.6em;
@@ -49,83 +107,48 @@ label {
   letter-spacing: 2px;
   transition: all 0.3s ease-in;
   opacity: 0;
-}
-
-.close {
   margin: 50px 0 0 -3px;
   position: absolute;
 }
-
-.close-container {
-  height: 50px;
-  margin-bottom: 10px;
+.music-player .music-details {
+  font-size: 1.3rem;
+  margin: 0px 0 40px 0;
+  display: flex;
+  justify-content: center;
 }
-
-.close-container:hover .leftright {
-  transform: rotate(-45deg);
-  background-color: rgb(255, 255, 255);
-}
-
-.close-container:hover .rightleft {
-  transform: rotate(45deg);
-  background-color: rgb(255, 255, 255);
-}
-
-.close-container:hover label {
-  opacity: 1;
-}
-
-.music-container {
+.music-player .music-details .container {
   width: 90%;
-  max-width: 580px;
-  max-height: 580px;
-  height: 90%;
-  margin: 0 auto;
+  max-width: 350px;
 }
-
-.box-music {
-  width: 100%;
-  height: 100%;
-  border-radius: 11px;
-  background: #6C7A89;
-  box-shadow: 3px 3px 4px 1px rgba(0, 0, 0, 0.416);
-  margin: 0 auto;
-}
-
-.music-image {
-  height: 100%;
+.music-player .music-details .container .music-image {
   width: 100%;
 }
-
-.music-name {
-  font-family: JosefinSansMedium;
-  user-select: none;
-  color: white;
-  font-size: 25px;
-  margin-top: 20px;
+.music-player .music-details .container .music-name {
+  font-family: JosefinSansRegular;
+  font-size: 1em;
+  margin-top: 0.5em;
 }
-
-.autor-name {
-  font-family: JosefinSansMedium;
-  user-select: none;
-  color: rgba(255, 255, 255, 0.712);
-  margin-top: 5px;
+.music-player .music-details .container .music-autor {
+  font-family: JosefinSansLight;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.8em;
+  margin-top: 0.3em;
 }
-
-.option-bar {
-  position: absolute;
-  width: 100%;
-  height: 120px;
+.music-player .option-bar {
+  min-height: 140px;
   background-color: rgba(255, 255, 255, 0.145);
-  bottom: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
 }
-
-.lbox-music {
-  width: 80px;
-  height: 80px;
+.music-player .option-bar .lbox-music {
+  display: none;
+  padding-left: 15px;
+  height: 80%;
   border-radius: 4px;
-  margin-top: 20px;
-  margin-left: 30px;
+}
+.music-player .option-bar .lbox-music img {
+  height: 100%;
 }
 
 .ocult-player {
@@ -134,6 +157,23 @@ label {
 
 .disable-scroll {
   overflow: hidden;
+}
+
+@media only screen and (min-width: 768px) {
+  .close-container:hover .leftright {
+    transform: rotate(-45deg);
+    background-color: rgb(255, 255, 255);
+  }
+  .close-container:hover .rightleft {
+    transform: rotate(45deg);
+    background-color: rgb(255, 255, 255);
+  }
+  .close-container:hover label {
+    opacity: 1;
+  }
+  .lbox-music {
+    display: block !important;
+  }
 }
 
 /*# sourceMappingURL=spotify.css.map */

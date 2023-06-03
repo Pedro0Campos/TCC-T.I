@@ -1,22 +1,23 @@
 <?php
-    if (isset($_GET['tema'])) {
-        $tema = $_GET['tema'];
-    }
+if (isset($_GET['tema'])) {
+    $tema = $_GET['tema'];
+}
 
-    // echo $tema;
-    // setcookie('tema', 'darkmode', time() + (86400 * 30), '/');
+// echo $tema;
+// setcookie('tema', 'darkmode', time() + (86400 * 30), '/');
 ?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
+
     <title>Grease • 3º Info tarde 2023</title>
-    
+
     <!-- Estilos do site -->
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/form.css">
@@ -25,11 +26,11 @@
     <link rel="stylesheet" href="css/toggle.css">
     <link rel="stylesheet" href="css/carrosel.css">
     <link rel="stylesheet" href="css/spotify.css">
-    
+
     <!-- Scripts do site -->
-    <script src="javascript/darkmode.js"></script>
-    <script src="javascript/navbar.js"></script>
-    <script src="javascript/spotify.js"></script>
+    <script src="js/darkmode.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/spotify.js"></script>
 
     <!-- AOS - Animation in scrool -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -42,44 +43,45 @@
     <script src="splide/js/splide.min.js"></script>
 
     <!-- Spotify -->
-    <script src="https://open.spotify.com/embed-podcast/iframe-api/v1" async></script>
-    
+
 </head>
+
 <body class="fade">
+    <!-- <div class="music-player ocult-player"> -->
     <div class="music-player ocult-player">
-        <div class="close-container" onclick="closeMusicPlayer()">
+        <div class="close-box" onclick="closeMusicPlayer()">
             <div class="leftright"></div>
             <div class="rightleft"></div>
             <label class="close">close</label>
         </div>
 
-        <div class="music-container">
-            <div class="box-music">
-            <img class="music-image" src="imgs/home/musicas/The_Wonder_of_You-Elvis Presley.png">
+        <div class="music-details">
+            <div class="container">
+                <img class="music-image" src="imgs/home/musicas/The_Wonder_of_You-Elvis Presley.png">
+                <p class="music-name">The Wonder of You</p>
+                <p class="music-autor">Elvis Presley</p>
             </div>
-            <p class="music-name">The Wonder of You</p>
-            <p class="autor-name">Elvis Presley</p>
         </div>
-        
+
         <div class="option-bar">
-            <div class="lbox-music">       
-            <img class="music-image" src="imgs/home/musicas/The_Wonder_of_You-Elvis Presley.png">
+            <div class="lbox-music">
+                <img class="music-image" src="imgs/home/musicas/The_Wonder_of_You-Elvis Presley.png">
             </div>
         </div>
     </div>
 
-    <?php 
-        include('database/db.php');
-        include('navbar.php');
-        include('php/form.php');
-        include('php/consultar_user.php');  // Consultar usuários no banco
-    ?>
-    
+    <?php
+    // include('database/db.php');
+    include('navbar.php');
+    // include('php/form.php');
+    // include('php/consultar_user.php');  // Consultar usuários no banco
+    ?> 
+
     <!-- CONTEÚDO -->
     <main>
         <section class="section-impar">
             <img src="imgs/home/sandy-danny-light.png" alt="Sanddy e Danny - Grease" class="sandy-danny" data-aos="fade-up">
-            
+
             <!-- Sombra - usando linear gradient -->
             <div class="backgr-gradient wh100 flex-collumn">
                 <div class="padding-box-title" data-aos="fade-right">
@@ -87,29 +89,29 @@
                         <h1>Conheça tudo sobre o musical de <span>Grease</span></p>
                     </div>
                 </div>
-                
+
                 <div class="padding-box-title" data-aos="fade-right">
                     <div class="box-title3">
                         <h3><span>“Uma viagem aos tempos da brilhantina”</span></h3>
                     </div>
                 </div>
-                
+
                 <div class="padding-box-title" data-aos="fade-right">
                     <a href="sobre.php" class="btn-home"><button type="button">Sobre o musical</button></a>
-                </div>    
+                </div>
             </div>
         </section>
 
         <section class="section-par section2">
 
-            
+
             <div class="retro-line flex-collumn" data-aos="fade">
                 <div class="padding-box-title right-bar" data-aos="fade-down">
                     <div class="box-title2 border-box">
                         <h2>Conheça as música que refletem os anos <span class="sect2-title2 color-title_light">50</span></h2>
                     </div>
                 </div>
-                
+
 
                 <div class="padding-box-title" data-aos="fade-right">
                     <div class="carrosel-musica splide" role="group" aria-labelledby="carousel-title">
@@ -147,7 +149,7 @@
                                     <p class="nome_musica">I Walk The Line</p>
                                     <p class="autor_musica">Johnny Cash</p>
                                 </div>
-                                
+
                                 <div class="splide__slide track" onclick="closeMusicPlayer()" data-spotify-id="spotify:track:1TrGdXSgiBm8W68D2K1COG">
                                     <img src="../docs/imgs/home/musicas/Cross_Road_Blues-Robert_Johnson.png" alt="">
                                     <p class="nome_musica">Cross Road Blues</p>
@@ -169,7 +171,7 @@
                     </div>
                 </div>
 
-                
+
                 <div class="padding-box-title" data-aos="fade-down">
                     <div class="mais-tocadas">
                         <h3>MAIS TOCADAS</h3>
@@ -182,10 +184,10 @@
                         </div>
                     </div>
                 </div>
-            </div>       
+            </div>
         </section>
     </main>
-    
+
     <!-- AOS - Animation in scrool -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
@@ -202,15 +204,15 @@
     <!-- Carrossel -->
     <script type="module">
         var carrosel_musica = new Splide('.carrosel-musica', {
-            type:   'loop',       // Fica em loop
-            height: 'auto',       // Altura do carrosel
-            width: '100%',        // Comprimento do carrosel
-            fixedWidth: '120px',   // Altura do slide
-            gap: '20px',          // Espaçamento entre os slides
+            type: 'loop', // Fica em loop
+            height: 'auto', // Altura do carrosel
+            width: '100%', // Comprimento do carrosel
+            fixedWidth: '120px', // Altura do slide
+            gap: '20px', // Espaçamento entre os slides
             easing: 'ease-out'
-            
+
         });
-        
+
         carrosel_musica.mount();
     </script>
     <!-- Carrossel -->
@@ -218,10 +220,12 @@
     <!-- Music Player -->
     <script>
         function closeMusicPlayer() {
-            let player = document.querySelector('.music-player')
-            player.classList.toggle('ocult-player')
+            document.querySelector('.music-player').classList.toggle('ocult-player')
+            document.querySelector('body').classList.toggle('disable-scroll')
+            
         }
     </script>
     <!-- Music Player -->
 </body>
+
 </html>

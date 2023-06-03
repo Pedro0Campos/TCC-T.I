@@ -17,8 +17,8 @@
     <link rel="stylesheet" href="css/carrosel.css">
     
     <!-- Scripts do site -->
-    <script src="javascript/darkmode.js"></script>
-    <script src="javascript/navbar.js"></script>
+    <script src="js/darkmode.js"></script>
+    <script src="js/navbar.js"></script>
 
     <!-- AOS - Animation in scrool -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
