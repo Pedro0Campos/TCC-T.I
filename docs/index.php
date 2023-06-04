@@ -30,7 +30,6 @@ if (isset($_GET['tema'])) {
     <!-- Scripts do site -->
     <script src="js/darkmode.js"></script>
     <script src="js/navbar.js"></script>
-    <script src="js/spotify.js"></script>
 
     <!-- AOS - Animation in scrool -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -47,8 +46,8 @@ if (isset($_GET['tema'])) {
 </head>
 
 <body class="fade">
-    <!-- <div class="music-player ocult-player"> -->
     <div class="music-player ocult-player">
+    <!-- <div class="music-player"> -->
         <div class="close-box" onclick="closeMusicPlayer()">
             <div class="leftright"></div>
             <div class="rightleft"></div>
@@ -198,34 +197,16 @@ if (isset($_GET['tema'])) {
             // offSet: 200,
             delay: 0,
         })
-    </script>
+        </script>
+    <!-- AOS - Animation in scrool -->
 
 
     <!-- Carrossel -->
-    <script type="module">
-        var carrosel_musica = new Splide('.carrosel-musica', {
-            type: 'loop', // Fica em loop
-            height: 'auto', // Altura do carrosel
-            width: '100%', // Comprimento do carrosel
-            fixedWidth: '120px', // Altura do slide
-            gap: '20px', // Espaçamento entre os slides
-            easing: 'ease-out'
-
-        });
-
-        carrosel_musica.mount();
-    </script>
-    <!-- Carrossel -->
+    <script src="js/carrossel.js" type="module"></script>
 
     <!-- Music Player -->
-    <script>
-        function closeMusicPlayer() {
-            document.querySelector('.music-player').classList.toggle('ocult-player')
-            document.querySelector('body').classList.toggle('disable-scroll')
-            
-        }
-    </script>
-    <!-- Music Player -->
+    <script src="js/music_player.js"></script>
+
 </body>
 
 </html>

@@ -1,4 +1,4 @@
-const APIController = (function() {
+const APIController = function() {
     
     const clientId = 'fd4be54080ee4115861e784b43e2a245';
     const clientSecret = 'f837cdb68e5a449289847f077530f712';
@@ -6,6 +6,7 @@ const APIController = (function() {
     // private methods
     const _getToken = async () => {
 
+        // Solicitação - consulta na API
         const result = await fetch('https://accounts.spotify.com/api/token', {
             method: 'POST',
             headers: {
@@ -42,17 +43,18 @@ const APIController = (function() {
         const data = await result.json();
         return data.playlists.items;
     }
-
+    
     const _getTracks = async (token, tracksEndPoint) => {
-
+        
         const limit = 10;
-
+        
         const result = await fetch(`${tracksEndPoint}?limit=${limit}`, {
             method: 'GET',
             headers: { 'Authorization' : 'Bearer ' + token}
         });
-
+        
         const data = await result.json();
+        console.log(data);
         return data.items;
     }
 
@@ -84,7 +86,7 @@ const APIController = (function() {
             return _getTrack(token, trackEndPoint);
         }
     }
-})();
+}();
 
 
 // UI Module
@@ -192,7 +194,7 @@ const APPController = (function(UICtrl, APICtrl) {
     // get genres on page load
     const loadGenres = async () => {
         //get the token
-        const token = await APICtrl.getToken();           
+        const token = await APICtrl.getToken();
         //store the token onto the page
         UICtrl.storeToken(token);
         //get the genres
@@ -232,8 +234,8 @@ const APPController = (function(UICtrl, APICtrl) {
         // get track endpoint based on the selected playlist
         // const tracksEndPoint = playlistSelect.options[playlistSelect.selectedIndex].value;
         const tracksEndPoint = 'https://api.spotify.com/v1/playlists/6Y4gxcRkQu0TIpjqlJAG1r/tracks'
-        console.log(tracksEndPoint); // https://api.spotify.com/v1/playlists/37i9dQZF1DWY9crkqLGj4o/tracks
-        //O que eu quero: https://open.spotify.com/playlist/6Y4gxcRkQu0TIpjqlJAG1r?si=d040fd40f0ef4c57
+        // console.log(tracksEndPoint); // https://api.spotify.com/v1/playlists/37i9dQZF1DWY9crkqLGj4o/tracks
+        //O que eu quero: https://open.spotify.com/playlist/6Y4gxcRkQu0TIpjqlJAG1r
         
         
         // get the list of tracks
