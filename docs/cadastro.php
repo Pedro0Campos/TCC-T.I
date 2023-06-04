@@ -25,10 +25,6 @@
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/55197c00fe.js" crossorigin="anonymous"></script>
-
-    <!-- SplideJs -->
-    <link rel="stylesheet" href="splide/dist/css/splide.min.css">
-    <script src="splide/dist/js/splide.min.js"></script>
     
 </head>
 <body class="fade">

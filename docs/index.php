@@ -39,21 +39,20 @@ if (isset($_GET['tema'])) {
 
     <!-- SplideJs -->
     <link rel="stylesheet" href="splide/css/splide.min.css">
-    <script src="splide/js/splide.min.js"></script>
-
+    
     <!-- Spotify -->
 
 </head>
 
 <body class="fade">
-    <div class="music-player ocult-player">
-    <!-- <div class="music-player"> -->
+    <div class="music-player ocult-player" id="music-player">
+    <!-- <div class="music-player" id="music-player"> -->
         <div class="close-box" onclick="closeMusicPlayer()">
             <div class="leftright"></div>
             <div class="rightleft"></div>
             <label class="close">close</label>
         </div>
-
+        
         <div class="music-details">
             <div class="container">
                 <img class="music-image" src="imgs/home/musicas/The_Wonder_of_You-Elvis Presley.png">
@@ -61,132 +60,138 @@ if (isset($_GET['tema'])) {
                 <p class="music-autor">Elvis Presley</p>
             </div>
         </div>
-
+        
         <div class="option-bar">
             <div class="lbox-music">
                 <img class="music-image" src="imgs/home/musicas/The_Wonder_of_You-Elvis Presley.png">
             </div>
         </div>
     </div>
+    <input id="hidden_token" type="text" value="" style="display: none; visibility: hidden;">
 
     <?php
     // include('database/db.php');
     include('navbar.php');
     // include('php/form.php');
     // include('php/consultar_user.php');  // Consultar usuários no banco
-    ?> 
+    ?>
 
-    <!-- CONTEÚDO -->
-    <main>
-        <section class="section-impar">
-            <img src="imgs/home/sandy-danny-light.png" alt="Sanddy e Danny - Grease" class="sandy-danny" data-aos="fade-up">
-
-            <!-- Sombra - usando linear gradient -->
-            <div class="backgr-gradient wh100 flex-collumn">
-                <div class="padding-box-title" data-aos="fade-right">
-                    <div class="box-title1 border-box">
-                        <h1>Conheça tudo sobre o musical de <span>Grease</span></p>
-                    </div>
-                </div>
-
-                <div class="padding-box-title" data-aos="fade-right">
-                    <div class="box-title3">
-                        <h3><span>“Uma viagem aos tempos da brilhantina”</span></h3>
-                    </div>
-                </div>
-
-                <div class="padding-box-title" data-aos="fade-right">
-                    <a href="sobre.php" class="btn-home"><button type="button">Sobre o musical</button></a>
-                </div>
-            </div>
-        </section>
-
-        <section class="section-par section2">
-
-
-            <div class="retro-line flex-collumn" data-aos="fade">
-                <div class="padding-box-title right-bar" data-aos="fade-down">
-                    <div class="box-title2 border-box">
-                        <h2>Conheça as música que refletem os anos <span class="sect2-title2 color-title_light">50</span></h2>
-                    </div>
-                </div>
-
-
-                <div class="padding-box-title" data-aos="fade-right">
-                    <div class="carrosel-musica splide" role="group" aria-labelledby="carousel-title">
-                        <h2 id="carousel-title">Explorar </h2>
-                        <div class="opacity"></div>
-
-                        <div class="splide__track">
-                            <ul class="splide__list">
-                                <div class="splide__slide track" onclick="closeMusicPlayer()" data-spotify-id="spotify:track:2AVkArcfALVk2X8sfPRzya">
-                                    <img src="../docs/imgs/home/musicas/Summer_Nights-Grease.png" alt="">
-                                    <p class="nome_musica">Summer Nights</p>
-                                    <p class="autor_musica">Grease</p>
-                                </div>
-
-                                <div class="splide__slide track" onclick="closeMusicPlayer()" data-spotify-id="spotify:track:1XNE0QfNjdroSdosMIk8F6">
-                                    <img src="../docs/imgs/home/musicas/Greased_Lightnin-Grease.png" alt="">
-                                    <p class="nome_musica">Greased Lightnin'</p>
-                                    <p class="autor_musica">Grease</p>
-                                </div>
-
-                                <div class="splide__slide track" onclick="closeMusicPlayer()" data-spotify-id="spotify:track:0LfJkvPNCNEMLpZJgDQiV1">
-                                    <img src="../docs/imgs/home/musicas/The_Wonder_of_You-Elvis Presley.png" alt="">
-                                    <p class="nome_musica">The Wonder of You</p>
-                                    <p class="autor_musica">Elvis Presley</p>
-                                </div>
-
-                                <div class="splide__slide track" onclick="closeMusicPlayer()" data-spotify-id="spotify:track:1MUsWVRPLaC7ANKcEiMRCl">
-                                    <img src="../docs/imgs/home/musicas/Dont_be_Cruel-Elvis_Presley.png" alt="">
-                                    <p class="nome_musica">Don't be Cruel</p>
-                                    <p class="autor_musica">Elvis Presley</p>
-                                </div>
-
-                                <div class="splide__slide track" onclick="closeMusicPlayer()" data-spotify-id="spotify:track:1TKPfF2fvn6gVLVfp3iG4j">
-                                    <img src="../docs/imgs/home/musicas/I_Walk_the_Line-Johnny Cash.png" alt="">
-                                    <p class="nome_musica">I Walk The Line</p>
-                                    <p class="autor_musica">Johnny Cash</p>
-                                </div>
-
-                                <div class="splide__slide track" onclick="closeMusicPlayer()" data-spotify-id="spotify:track:1TrGdXSgiBm8W68D2K1COG">
-                                    <img src="../docs/imgs/home/musicas/Cross_Road_Blues-Robert_Johnson.png" alt="">
-                                    <p class="nome_musica">Cross Road Blues</p>
-                                    <p class="autor_musica">Robert Johnson</p>
-                                </div>
-
-                                <div class="splide__slide track" onclick="closeMusicPlayer()" data-spotify-id="spotify:track:0xpQWNukc7m4arb007HOH3">
-                                    <img src="../docs/imgs/home/musicas/Backwater_Blues-Bill_Broonzy.png" alt="">
-                                    <p class="nome_musica">Backwater Blues</p>
-                                    <p class="autor_musica">Bill Broonzy</p>
-                                </div>
-                                <div class="splide__slide track" onclick="closeMusicPlayer()" data-spotify-id="">
-                                    <img src="../docs/imgs/home/musicas/Tutti_Frutti-Little-Richard.png" alt="">
-                                    <p class="nome_musica">Tutti Frutti</p>
-                                    <p class="autor_musica">Little Richard</p>
-                                </div>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="padding-box-title" data-aos="fade-down">
-                    <div class="mais-tocadas">
-                        <h3>MAIS TOCADAS</h3>
-                        <div class="right-bar">
-                            <div class="container-itens">
-                                <p class="item">1. Summer Nights - Grease</p>
+<!-- CONTEÚDO -->
+<main>
+    <section class="section-impar">
+        <img src="imgs/home/sandy-danny-light.png" alt="Sanddy e Danny - Grease" class="sandy-danny" data-aos="fade-up">
+        
+        <!-- Sombra - usando linear gradient -->
+        <div class="backgr-gradient wh100 flex-collumn">
+            <div class="padding-box-title" data-aos="fade-right">
+                <div class="box-title1 border-box">
+                    <h1>Conheça tudo sobre o musical de <span>Grease</span></p>
+                </div> <!-- .box-title1 -->
+            </div> <!-- .padding-box-title -->
+            
+            <div class="padding-box-title" data-aos="fade-right">
+                <div class="box-title3">
+                    <h3><span>“Uma viagem aos tempos da brilhantina”</span></h3>
+                </div> <!-- .box-title3 -->
+            </div> <!-- .padding-box-title -->
+            
+            <div class="padding-box-title" data-aos="fade-right">
+                <a href="sobre.php" class="btn-home"><button type="button">Sobre o musical</button></a>
+            </div> <!-- .padding-box-title -->
+        </div> <!-- .backgr-gradient wh100 flex-collumn -->
+        
+    </section> <!-- .section-impar -->
+    
+    <section class="section-par section2">
+        
+        <div class="retro-line flex-collumn" data-aos="fade">
+            <div class="padding-box-title right-bar" data-aos="fade-down">
+                <div class="box-title2 border-box">
+                    <h2>Conheça as música que refletem os anos <span class="sect2-title2 color-title_light">50</span></h2>
+                </div> <!-- .box-title2 border-box -->
+            </div> <!-- .padding-box-title right-bar -->
+            
+            <div class="padding-box-title" data-aos="fade-right">
+                <div class="carrosel-musica splide" role="group" aria-labelledby="carousel-title">
+                    <h2 id="carousel-title">Explorar </h2>
+                    
+                    <!-- Caixa com opacidade (no final) para criar efeito de continuidade -->
+                    <div class="opacity"></div>
+                    
+                    <div class="splide__track">
+                        <ul class="splide__list" id="splide__list">
+                            <!-- 
+                            <div class="splide__slide track" onclick="closeMusicPlayer()" data-spotify-id="spotify:track:2AVkArcfALVk2X8sfPRzya">
+                                <img src="../docs/imgs/home/musicas/Summer_Nights-Grease.png" alt="">
+                                <p class="nome_musica">Summer Nights</p>
+                                <p class="autor_musica">Grease</p>
+                            </div>
+                            
+                            <div class="splide__slide track" onclick="closeMusicPlayer()" data-spotify-id="spotify:track:1XNE0QfNjdroSdosMIk8F6">
+                                <img src="../docs/imgs/home/musicas/Greased_Lightnin-Grease.png" alt="">
+                                <p class="nome_musica">Greased Lightnin'</p>
+                                <p class="autor_musica">Grease</p>
+                            </div>
+                            
+                            <div class="splide__slide track" onclick="closeMusicPlayer()" data-spotify-id="spotify:track:0LfJkvPNCNEMLpZJgDQiV1">
+                                <img src="../docs/imgs/home/musicas/The_Wonder_of_You-Elvis Presley.png" alt="">
+                                <p class="nome_musica">The Wonder of You</p>
+                                <p class="autor_musica">Elvis Presley</p>
+                            </div>
+                            
+                            <div class="splide__slide track" onclick="closeMusicPlayer()" data-spotify-id="spotify:track:1MUsWVRPLaC7ANKcEiMRCl">
+                                <img src="../docs/imgs/home/musicas/Dont_be_Cruel-Elvis_Presley.png" alt="">
+                                <p class="nome_musica">Don't be Cruel</p>
+                                <p class="autor_musica">Elvis Presley</p>
+                            </div>
+                            
+                            <div class="splide__slide track" onclick="closeMusicPlayer()" data-spotify-id="spotify:track:1TKPfF2fvn6gVLVfp3iG4j">
+                                <img src="../docs/imgs/home/musicas/I_Walk_the_Line-Johnny Cash.png" alt="">
+                                <p class="nome_musica">I Walk The Line</p>
+                                <p class="autor_musica">Johnny Cash</p>
+                            </div>
+                                
+                            <div class="splide__slide track" onclick="closeMusicPlayer()" data-spotify-id="spotify:track:1TrGdXSgiBm8W68D2K1COG">
+                                <img src="../docs/imgs/home/musicas/Cross_Road_Blues-Robert_Johnson.png" alt="">
+                                <p class="nome_musica">Cross Road Blues</p>
+                                <p class="autor_musica">Robert Johnson</p>
+                            </div>
+                            
+                            <div class="splide__slide track" onclick="closeMusicPlayer()" data-spotify-id="spotify:track:0xpQWNukc7m4arb007HOH3">
+                                <img src="../docs/imgs/home/musicas/Backwater_Blues-Bill_Broonzy.png" alt="">
+                                <p class="nome_musica">Backwater Blues</p>
+                                <p class="autor_musica">Bill Broonzy</p>
+                            </div>
+                            
+                            <div class="splide__slide track" onclick="closeMusicPlayer()" data-spotify-id="">
+                                <img src="../docs/imgs/home/musicas/Tutti_Frutti-Little-Richard.png" alt="">
+                                <p class="nome_musica">Tutti Frutti</p>
+                                <p class="autor_musica">Little Richard</p>
+                            </div>
+                            -->
+                        </ul> <!-- .splide__list#splide__list-->
+                    </div> <!-- .splide__track -->
+                </div> <!-- .carrosel-musica splide -->
+            </div> <!-- .padding-box-title -->
+            
+            
+            <div class="padding-box-title" data-aos="fade-down">
+                <div class="mais-tocadas">
+                    <h3>MAIS TOCADAS</h3>
+                    <div class="right-bar">
+                        <div class="container-itens">
+                            <p class="item">1. Summer Nights - Grease</p>
                                 <p class="item">2. Don’t be Cruel - Elvis Presley</p>
                                 <p class="item">3. I Walk The Line - Johnny Cash</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+                            </div> <!-- .container-itens -->
+                        </div> <!-- .right-bar -->
+                    </div> <!-- .mais-tocadas -->
+                </div> <!-- .padding-box-title -->
+                
+            </div> <!-- .retro-line flex-collumn -->
+        </section> <!-- .section-par section2 -->
     </main>
-
+    
     <!-- AOS - Animation in scrool -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
@@ -199,14 +204,13 @@ if (isset($_GET['tema'])) {
         })
         </script>
     <!-- AOS - Animation in scrool -->
-
-
-    <!-- Carrossel -->
-    <script src="js/carrossel.js" type="module"></script>
-
+    
     <!-- Music Player -->
     <script src="js/music_player.js"></script>
-
+    
+    <!-- Carrossel -->
+    <script src="splide/js/splide.min.js"></script>
+    
 </body>
 
 </html>

@@ -54,7 +54,6 @@ const APIController = function() {
         });
         
         const data = await result.json();
-        console.log(data);
         return data.items;
     }
 
@@ -139,7 +138,6 @@ const UIController = (function() {
             const detailDiv = document.querySelector(DOMElements.divSongDetail);
             // any time user clicks a new song, we need to clear out the song detail div
             detailDiv.innerHTML = '';
-            console.log(time);
             const html = 
             `
             <div class="row col-sm-12 px-0">
@@ -248,6 +246,7 @@ const APPController = (function(UICtrl, APICtrl) {
     // create song selection click event listener
     DOMInputs.tracks.addEventListener('click', async (e) => {
         // prevent page reset
+        console.log(e);
         e.preventDefault();
         UICtrl.resetTrackDetail();
         // get the token
