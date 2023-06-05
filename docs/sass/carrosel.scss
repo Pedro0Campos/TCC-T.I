@@ -82,4 +82,139 @@
     .splide__pagination {
         display: none;
     }
+
+    //carrossel da home
+
+    @font-face {
+        font-family: JosefinsSansRegular;
+        src: url(../docs/fonts/JosefinSans/JosefinSans-Regular.ttf);
+    }
+    @font-face {
+        font-family: JosefinsSansBold;
+        src: url(../docs/fonts/JosefinSans/JosefinSans-Bold.ttf);
+    }
+
+
+    html, body {
+        height: 100%;
+    }
+
+
+
+    * {
+        margin: 0;
+    }
+    
+    body {
+        background-color: black;
+        color: white;
+        
+    }
+
+
+
+    /* Carrosel */
+    .splide {
+        transform: translateY(90%);
+        margin-left: 50px;
+    }
+
+
+
+    /* Título do carrosel */
+    #carousel-title {
+        font-family: JosefinsSansRegular;
+        font-weight: normal;
+        letter-spacing: 3px;
+        text-decoration: underline;
+        text-underline-offset: 4.5px;
+        margin-bottom: 20px;
+    }
+
+
+
+
+    /* Todos os slides */
+    .splide__slide {
+        background-color: transparent;
+        color: rgba(255, 255, 255, 0);
+
+
+
+        /* Todos os slides vão ter 40% de opacidade */
+        opacity: 0.4;
+
+
+
+        font-size: 14px;
+    }
+
+
+
+    /* Os slides visiveis vão ter 100% de opacidade  */
+    .is-visible {
+        opacity: 1;
+        color: white;
+    }
+    .is-visible .autor_musica {
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+
+
+
+    /* CONTEUDO DO SLIDE */
+    .splide__slide img {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+    .nome_musica {
+        font-family: JosefinsSansBold;
+    }
+    .autor_musica {
+        font-family: JosefinsSansRegular;
+        margin-top: 2px;
+        font-size: 0.9em;
+    }
+    /* CONTEUDO DO SLIDE */
+
+
+
+
+    /* Botão das setas */
+    .splide__arrow {
+        opacity: 1;
+        background: transparent;
+    }
+
+
+
+    /* SVG das setas */
+    .splide__arrow svg {
+        fill: rgb(255, 255, 255);
+    }
+
+
+
+    /* Seta pra direita */
+    .splide__arrow--next {
+        top: 14px;
+        right: 10px;
+    }
+
+
+
+    /* Seta pra esquerda */
+    .splide__arrow--prev {
+        top: 14px;
+        right: 40px;
+        left: unset;
+    }
+
+
+
+    /* Tirar as bolinhas de paginação */
+    .splide__pagination {
+        display: none;
+    }
 }
