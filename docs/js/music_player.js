@@ -23,8 +23,8 @@ const APIController = function() {
         return data.access_token;
     }
 
-    const _getTracks = async (token, tracksEndPoint, limit=10) => {  // Pegar uma playlist
-        const result = await fetch(`${tracksEndPoint}?limit=${limit}`, {
+    const _getTracks = async (token, tracksEndPoint) => {  // Pegar uma playlist
+        const result = await fetch(`${tracksEndPoint}`, {
             method: 'GET',
             headers: { 'Authorization' : 'Bearer ' + token}
         })
@@ -33,7 +33,7 @@ const APIController = function() {
         return data.items
     }
 
-    const _getTrack = async (token, trackEndPoint) => {  // Pegar uma playlist
+    const _getTrack = async(token, trackEndPoint) => {  // Pegar uma playlist
         const result = await fetch(`${trackEndPoint}`, {
             method: 'GET',
             headers: { 'Authorization' : 'Bearer ' + token}
@@ -47,8 +47,8 @@ const APIController = function() {
         getToken() {
             return _getToken()
         },
-        getTracks(token, tracksEndPoint, limit) {
-            return _getTracks(token, tracksEndPoint, limit)
+        getTracks(token, tracksEndPoint) {
+            return _getTracks(token, tracksEndPoint)
         },
         getTrack(token, tracksEndPoint) {
             return _getTrack(token, tracksEndPoint)
@@ -112,12 +112,9 @@ const UIController = (function() {
                 <div class="lbox-music">
                     <img class="music-image" src="${smallImage}">
                 </div>
-
-                <p>Botões e barra de progresso</p>
             </div>
             `
             musicPlayer.innerHTML = html
-
         },
 
         storeToken(value) {
@@ -136,24 +133,23 @@ const UIController = (function() {
 
 const APPController = (function(UICtrl, APICtrl) {
     const saidaDados = UICtrl.saidaDados()
-
+    
     // Exibir lista de músicas no carrosel
     const loadPlaylist = async () => {
         const token = await APICtrl.getToken()
-            UIController.storeToken(token)
-        const limit = 15
+        UIController.storeToken(token)
         const tracksEndPoint = 'https://api.spotify.com/v1/playlists/6mTECqYM6NmLD3RRUVbuuj/tracks'
 
-        const tracks = await APICtrl.getTracks(token, tracksEndPoint, limit)
-        
+        const tracks = await APICtrl.getTracks(token, tracksEndPoint)
+        // console.log(tracks);
         // Adicionar itens no carrosel
-        tracks.forEach(element => {
+        tracks.forEach((value, index) => {
             UICtrl.createSplideListTrack(
-                // id, image, title, artist
-                element.track.href,
-                element.track.album.images[0].url,
-                element.track.name,
-                element.track.artists[0].name,
+                // index, image, title, artist
+                index,
+                value.track.album.images[0].url,
+                value.track.name,
+                value.track.artists[0].name,
             )
         })
 
@@ -169,27 +165,26 @@ const APPController = (function(UICtrl, APICtrl) {
         })
 
         carrosel_musica.mount();
+
+        // Abrir o MusicPLayer ao clicar nos elementos
+        saidaDados.carrosel.addEventListener('click', closeMusicPlayer) 
+        
+        // Criar conteudo do MusicPlayer
+        saidaDados.carrosel.addEventListener('click', async (e) => {
+            const index = e.target.id
+            const track = tracks[index].track
+            
+            UICtrl.createContentMusicPlayer(
+                // bigImagem, smallImage, title, autor
+                track.album.images[0].url,
+                track.album.images[2].url,
+                track.name,
+                track.artists[0].name,
+            )
+        })
     }
-
-    // Abrir o MusicPLayer ao clicar nos elementos
-    saidaDados.carrosel.addEventListener('click', closeMusicPlayer) 
     
-    // Criar conteudo do MusicPlayer
-    saidaDados.carrosel.addEventListener('click', async (e) => {
-        const token = UICtrl.getStoredToken().token
-        const trackEndPoint = e.target.id
-
-        const track = await APICtrl.getTrack(token, trackEndPoint)
-        UICtrl.createContentMusicPlayer(
-            // bigImagem, smallImage, title, autor
-            track.album.images[0].url,
-            track.album.images[2].url,
-            track.name,
-            track.artists[0].name,
-        )
-    })
-
-    
+       
     return {
         init() {
             loadPlaylist()
@@ -199,3 +194,4 @@ const APPController = (function(UICtrl, APICtrl) {
 })(UIController, APIController)
 
 APPController.init()
+

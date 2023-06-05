@@ -40,8 +40,6 @@ if (isset($_GET['tema'])) {
     <!-- SplideJs -->
     <link rel="stylesheet" href="splide/css/splide.min.css">
     
-    <!-- Spotify -->
-
 </head>
 
 <body class="fade">
@@ -52,7 +50,7 @@ if (isset($_GET['tema'])) {
             <div class="rightleft"></div>
             <label class="close">close</label>
         </div>
-        
+               
         <div class="music-details">
             <div class="container">
                 <img class="music-image" src="imgs/home/musicas/The_Wonder_of_You-Elvis Presley.png">
@@ -66,6 +64,7 @@ if (isset($_GET['tema'])) {
                 <img class="music-image" src="imgs/home/musicas/The_Wonder_of_You-Elvis Presley.png">
             </div>
         </div>
+       
     </div>
     <input id="hidden_token" type="text" value="" style="display: none; visibility: hidden;">
 
@@ -207,7 +206,7 @@ if (isset($_GET['tema'])) {
     
     <!-- Music Player -->
     <script src="js/music_player.js"></script>
-    
+
     <!-- Carrossel -->
     <script src="splide/js/splide.min.js"></script>
     
