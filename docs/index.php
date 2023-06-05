@@ -184,7 +184,7 @@ if (isset($_GET['tema'])) {
             </div> <!-- .padding-box-title -->
         </div> <!-- .retro-line flex-collumn -->
     </section> <!-- .section-par section2 -->
-<!--     
+    
     <section class="section-impar">       
         <div class="flex-collumn">
             <div class="splide carroselPersonagens" role="group" aria-labelledby="carousel-title">
