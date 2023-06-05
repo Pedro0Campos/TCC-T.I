@@ -118,4 +118,58 @@
   display: none;
 }
 
+.carrosel-personagens {
+  /* Título do carrosel */
+  /* Todos os slides */
+  /* Os slides visiveis vão ter 100% de opacidade  */
+  /* CONTEUDO DO SLIDE */
+  /* Botão das setas */
+  /* SVG das setas */
+  /* Seta pra direita */
+  /* Seta pra esquerda */
+  /* Tirar as bolinhas de paginação */
+}
+.carrosel-personagens #carousel-title {
+  font-family: JosefinsSansRegular;
+  font-weight: normal;
+  letter-spacing: 3px;
+  text-decoration: underline;
+  text-underline-offset: 4.5px;
+  margin-bottom: 20px;
+}
+.carrosel-personagens .splide__slide {
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0);
+  /* Todos os slides vão ter 40% de opacidade */
+  opacity: 0.4;
+  font-size: 14px;
+}
+.carrosel-personagens .is-visible {
+  opacity: 1;
+  color: white;
+}
+.carrosel-personagens .splide__slide img {
+  width: 100%;
+  margin-bottom: 8px;
+}
+.carrosel-personagens .splide__arrow {
+  opacity: 1;
+  background: transparent;
+}
+.carrosel-personagens .splide__arrow svg {
+  fill: rgb(255, 255, 255);
+}
+.carrosel-personagens .splide__arrow--next {
+  top: 14px;
+  right: 10px;
+}
+.carrosel-personagens .splide__arrow--prev {
+  top: 14px;
+  right: 40px;
+  left: unset;
+}
+.carrosel-personagens .splide__pagination {
+  display: none;
+}
+
 /*# sourceMappingURL=carrosel.css.map */

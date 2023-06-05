@@ -121,49 +121,49 @@ if (isset($_GET['tema'])) {
                         <ul class="splide__list" id="splide__list">
                             <!-- 
                             <div class="splide__slide track" onclick="closeMusicPlayer()" data-spotify-id="spotify:track:2AVkArcfALVk2X8sfPRzya">
-                                <img src="../docs/imgs/home/musicas/Summer_Nights-Grease.png" alt="">
+                                <img src="imgs/home/musicas/Summer_Nights-Grease.png" alt="">
                                 <p class="nome_musica">Summer Nights</p>
                                 <p class="autor_musica">Grease</p>
                             </div>
                             
                             <div class="splide__slide track" onclick="closeMusicPlayer()" data-spotify-id="spotify:track:1XNE0QfNjdroSdosMIk8F6">
-                                <img src="../docs/imgs/home/musicas/Greased_Lightnin-Grease.png" alt="">
+                                <img src="imgs/home/musicas/Greased_Lightnin-Grease.png" alt="">
                                 <p class="nome_musica">Greased Lightnin'</p>
                                 <p class="autor_musica">Grease</p>
                             </div>
                             
                             <div class="splide__slide track" onclick="closeMusicPlayer()" data-spotify-id="spotify:track:0LfJkvPNCNEMLpZJgDQiV1">
-                                <img src="../docs/imgs/home/musicas/The_Wonder_of_You-Elvis Presley.png" alt="">
+                                <img src="imgs/home/musicas/The_Wonder_of_You-Elvis Presley.png" alt="">
                                 <p class="nome_musica">The Wonder of You</p>
                                 <p class="autor_musica">Elvis Presley</p>
                             </div>
                             
                             <div class="splide__slide track" onclick="closeMusicPlayer()" data-spotify-id="spotify:track:1MUsWVRPLaC7ANKcEiMRCl">
-                                <img src="../docs/imgs/home/musicas/Dont_be_Cruel-Elvis_Presley.png" alt="">
+                                <img src="imgs/home/musicas/Dont_be_Cruel-Elvis_Presley.png" alt="">
                                 <p class="nome_musica">Don't be Cruel</p>
                                 <p class="autor_musica">Elvis Presley</p>
                             </div>
                             
                             <div class="splide__slide track" onclick="closeMusicPlayer()" data-spotify-id="spotify:track:1TKPfF2fvn6gVLVfp3iG4j">
-                                <img src="../docs/imgs/home/musicas/I_Walk_the_Line-Johnny Cash.png" alt="">
+                                <img src="imgs/home/musicas/I_Walk_the_Line-Johnny Cash.png" alt="">
                                 <p class="nome_musica">I Walk The Line</p>
                                 <p class="autor_musica">Johnny Cash</p>
                             </div>
                                 
                             <div class="splide__slide track" onclick="closeMusicPlayer()" data-spotify-id="spotify:track:1TrGdXSgiBm8W68D2K1COG">
-                                <img src="../docs/imgs/home/musicas/Cross_Road_Blues-Robert_Johnson.png" alt="">
+                                <img src="imgs/home/musicas/Cross_Road_Blues-Robert_Johnson.png" alt="">
                                 <p class="nome_musica">Cross Road Blues</p>
                                 <p class="autor_musica">Robert Johnson</p>
                             </div>
                             
                             <div class="splide__slide track" onclick="closeMusicPlayer()" data-spotify-id="spotify:track:0xpQWNukc7m4arb007HOH3">
-                                <img src="../docs/imgs/home/musicas/Backwater_Blues-Bill_Broonzy.png" alt="">
+                                <img src="imgs/home/musicas/Backwater_Blues-Bill_Broonzy.png" alt="">
                                 <p class="nome_musica">Backwater Blues</p>
                                 <p class="autor_musica">Bill Broonzy</p>
                             </div>
                             
                             <div class="splide__slide track" onclick="closeMusicPlayer()" data-spotify-id="">
-                                <img src="../docs/imgs/home/musicas/Tutti_Frutti-Little-Richard.png" alt="">
+                                <img src="imgs/home/musicas/Tutti_Frutti-Little-Richard.png" alt="">
                                 <p class="nome_musica">Tutti Frutti</p>
                                 <p class="autor_musica">Little Richard</p>
                             </div>
@@ -191,64 +191,64 @@ if (isset($_GET['tema'])) {
     
     <section class="section-impar">       
         <div class="flex-collumn">
-            <div class="splide carroselPersonagens" role="group" aria-labelledby="carousel-title">
+            <div class="splide carrosel-personagens" role="group" aria-labelledby="carousel-title">
                 <h2 id="carousel-title">Explorar </h2>
                 <div class="splide__track">
                     <ul class="splide__list">
                         <div class="splide__slide">
-                            <img src="../docs/imgs/home/1.png" alt="">
+                            <img src="imgs/home/1.png" alt="">
                             <p class="nome_musica">Sandy Olsson</p>
                         
                         </div>
 
                         <div class="splide__slide">
-                            <img src="../docs/imgs/home/2.png" alt="">
+                            <img src="imgs/home/2.png" alt="">
                             <p class="nome_musica">Danny Zuko</p>
                         
                         </div>
     
                         <div class="splide__slide">
-                            <img src="../docs/imgs/home/3.png" alt="">
+                            <img src="imgs/home/3.png" alt="">
                             <p class="nome_musica">Betty Rizzo</p>
                     
                         </div>
     
                         <div class="splide__slide">
-                            <img src="../docs/imgs/home/4.png" alt="">
+                            <img src="imgs/home/4.png" alt="">
                             <p class="nome_musica">Marty Marachino</p>
                     
                         </div>
     
                         <div class="splide__slide">
-                            <img src="../docs/imgs/home/5.png" alt="">
+                            <img src="imgs/home/5.png" alt="">
                             <p class="nome_musica">Kenickie Willians</p>
                         
                         </div>
                         
                         <div class="splide__slide">
-                            <img src="../docs/imgs/home/6.png" alt="">
+                            <img src="imgs/home/6.png" alt="">
                             <p class="nome_musica">Frenchy Palardino</p>
                     
                         </div>
     
         
                         <div class="splide__slide">
-                            <img src="../docs/imgs/home/7.png" alt="">
+                            <img src="imgs/home/7.png" alt="">
                             <p class="nome_musica">Putzie</p>
                         
                         </div>
                         <div class="splide__slide">
-                            <img src="../docs/imgs/home/8.png" alt="">
+                            <img src="imgs/home/8.png" alt="">
                             <p class="nome_musica">Sonny Lattiery</p>
                         
                         </div>
                         <div class="splide__slide">
-                            <img src="../docs/imgs/home/9.png" alt="">
+                            <img src="imgs/home/9.png" alt="">
                             <p class="nome_musica">Doody</p>
                         
                         </div>
                         <div class="splide__slide">
-                            <img src="../docs/imgs/home/10.png" alt="">
+                            <img src="imgs/home/10.png" alt="">
                             <p class="nome_musica">Jan Martin</p>
                         </div>
                     </ul>
@@ -256,17 +256,16 @@ if (isset($_GET['tema'])) {
             </div>
         </div> 
         
-    </section> .section-impar -->
+    </section> <!--.section-impar -->
 
  
 
     <script type="module">
-        var carros = new Splide('.carroselPersonagens', {
+        var carroselPersonagens = new Splide('.carrosel-personagens', {
             type:   'loop',       // Fica em loop
             height: 'auto',       // Altura do carrosel
             width: '100%',        // Comprimento do carrosel
             fixedWidth: '120px',  // Altura do slide
-            autoHeight: true,     // Comprimendo do slide
             focus:   0,           // Habilita uma classe para personalizar o elemento focado
             gap: '20px',          // Espaçamento entre os slides
             easing: 'ease-out'
@@ -277,7 +276,7 @@ if (isset($_GET['tema'])) {
 
  
 
-        carros.mount();
+        carroselPersonagens.mount();
     </script>
     </main>
     
