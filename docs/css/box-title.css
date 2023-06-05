@@ -1,0 +1,162 @@
+@font-face {
+  font-family: JosefinSansRegular;
+  src: url(../fonts/JosefinSans/JosefinSans-Regular.ttf);
+}
+@font-face {
+  font-family: JosefinSansMedium;
+  src: url(../fonts/JosefinSans/JosefinSans-Medium.ttf);
+}
+@font-face {
+  font-family: JosefinSansLight;
+  src: url(../fonts/JosefinSans/JosefinSans-Light.ttf);
+}
+@font-face {
+  font-family: JosefinSansBold;
+  src: url(../fonts/JosefinSans/JosefinSans-Bold.ttf);
+}
+@font-face {
+  font-family: JosefinSansBoldItalic;
+  src: url(../fonts/JosefinSans/JosefinSans-BoldItalic.ttf);
+}
+@font-face {
+  font-family: Inter;
+  src: url(../fonts/Inter/Inter-Regular.ttf);
+}
+:root {
+  --width-box-title1: 500px;
+  --font-size-box-title1: 1.8rem;
+  --width-box-title2: 490px;
+  --font-size-box-title2: 1.7rem;
+  --width-box-title3: 300px;
+  --font-size-box-title3: 1.1rem;
+  --width-mais-tocadas: 480px;
+  --font-size-box-title3: 1.6rem;
+  --height-sandy-danny: 95vh;
+  --backg-color: #FEFCF3;
+  --text-color: #000000;
+  --text-color-50: #00000080;
+  --text-color-80: #000000cc;
+  --link-color: #45CFE1;
+  --second-color: #6ba5f2;
+  --second-color-50: #6ba5f280;
+  --third-color: #00109d;
+  --sect-par-backg-color: #000;
+  --sect-par-text-color: #fff;
+}
+
+.darkmode:root {
+  --backg-color: #121111;
+  --text-color: #FEFCF3;
+  --text-color-50: #FFFFFF80;
+  --text-color-80: #FFFFFFcc;
+  --second-color: #A167FF;
+  --second-color-50: #A167FF80;
+  --third-color: #C6A4FF;
+}
+
+.padding-box-title {
+  font-size: 18px;
+}
+.padding-box-title .box-title1, .padding-box-title .box-title2, .padding-box-title .box-title3 {
+  width: 90%;
+  padding: 20px;
+}
+.padding-box-title .box-title1 {
+  max-width: 500px;
+}
+.padding-box-title .box-title1 h1 {
+  font-size: var(--font-size-box-title1);
+  font-family: JosefinSansMedium;
+  letter-spacing: 0.15em;
+  line-height: 1.2em;
+}
+.padding-box-title .box-title1 h1 span {
+  color: var(--third-color);
+  background-color: var(--second-color-50);
+  padding: 7px;
+}
+.padding-box-title .box-title2 {
+  max-width: 480px;
+}
+.padding-box-title .box-title2 h2 {
+  font-size: var(--font-size-box-title2);
+  letter-spacing: 0.1em;
+  line-height: 1.2;
+}
+.padding-box-title .box-title2 h2 span {
+  color: var(--second-color);
+}
+.padding-box-title .box-title3 {
+  max-width: 350px;
+}
+.padding-box-title .box-title3 h3 {
+  font-size: var(--font-size-box-title3);
+  font-family: JosefinSansBoldItalic;
+  letter-spacing: 0.1em;
+  line-height: 1.1em;
+}
+.padding-box-title .box-title3 h3 span {
+  color: var(--second-color);
+}
+.padding-box-title .border-box {
+  border: 7px solid var(--text-color);
+}
+.padding-box-title .btn-home {
+  transition: all 0.2s ease-in-out;
+  width: 80%;
+}
+.padding-box-title .btn-home button {
+  font-size: 1rem;
+  width: 100%;
+  max-width: 350px;
+  height: 45px;
+  border: none;
+  border-radius: 100px;
+  background-color: var(--text-color);
+  color: var(--backg-color);
+}
+.padding-box-title .btn-home:hover {
+  background-color: var(--second-color);
+  transform: scale(1.03);
+}
+.padding-box-title .btn-home:active {
+  transform: scale(0.98);
+}
+.padding-box-title .mais-tocadas {
+  max-width: var(--width-mais-tocadas);
+  width: 80%;
+}
+.padding-box-title .mais-tocadas h3 {
+  font-size: calc(var(--font-size-box-title3) * 0.75);
+  font-family: JosefinSansBold;
+  text-align: center;
+  letter-spacing: 0.1em;
+  padding-right: 27px;
+}
+.padding-box-title .mais-tocadas .container-itens {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.padding-box-title .mais-tocadas .container-itens .item {
+  font-family: JosefinSansRegular;
+  font-size: calc(var(--font-size-box-title3) * 0.6);
+  margin-top: 20px;
+  padding: 12.5px;
+  padding-right: 50px;
+  border: 1px solid white;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.right-bar {
+  display: flex;
+  gap: 20px;
+}
+.right-bar::after {
+  content: "";
+  width: 7px;
+  background-color: var(--second-color);
+}
+
+/*# sourceMappingURL=box-title.css.map */
