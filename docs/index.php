@@ -54,15 +54,11 @@ if (isset($_GET['tema'])) {
                
         <div class="music-details">
             <div class="container">
-                <img class="music-image" src="imgs/home/musicas/The_Wonder_of_You-Elvis Presley.png">
-                <p class="music-name">The Wonder of You</p>
-                <p class="music-autor">Elvis Presley</p>
             </div>
         </div>
         
         <div class="option-bar">
             <div class="lbox-music">
-                <img class="music-image" src="imgs/home/musicas/The_Wonder_of_You-Elvis Presley.png">
             </div>
         </div>
        
@@ -95,7 +91,7 @@ if (isset($_GET['tema'])) {
                 </div> <!-- .box-title3 -->
             </div> <!-- .padding-box-title -->
             
-            <div class="padding-box-title" data-aos="fade-right">
+            <div class="padding-box-title" data-aos="fade-right" data-aos-anchor-placement="top-bottom">
                 <a href="sobre.php" class="btn-home"><button type="button">Sobre o musical</button></a>
             </div> <!-- .padding-box-title -->
         </div> <!-- .backgr-gradient wh100 flex-collumn -->
