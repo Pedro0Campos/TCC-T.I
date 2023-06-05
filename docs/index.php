@@ -180,15 +180,105 @@ if (isset($_GET['tema'])) {
                     <div class="right-bar">
                         <div class="container-itens">
                             <p class="item">1. Summer Nights - Grease</p>
-                                <p class="item">2. Don’t be Cruel - Elvis Presley</p>
-                                <p class="item">3. I Walk The Line - Johnny Cash</p>
-                            </div> <!-- .container-itens -->
-                        </div> <!-- .right-bar -->
-                    </div> <!-- .mais-tocadas -->
-                </div> <!-- .padding-box-title -->
-                
-            </div> <!-- .retro-line flex-collumn -->
-        </section> <!-- .section-par section2 -->
+                            <p class="item">2. Don’t be Cruel - Elvis Presley</p>
+                            <p class="item">3. I Walk The Line - Johnny Cash</p>
+                        </div> <!-- .container-itens -->
+                    </div> <!-- .right-bar -->
+                </div> <!-- .mais-tocadas -->
+            </div> <!-- .padding-box-title -->
+        </div> <!-- .retro-line flex-collumn -->
+    </section> <!-- .section-par section2 -->
+<!--     
+    <section class="section-impar">       
+        <div class="flex-collumn">
+            <div class="splide carroselPersonagens" role="group" aria-labelledby="carousel-title">
+                <h2 id="carousel-title">Explorar </h2>
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <div class="splide__slide">
+                            <img src="../docs/imgs/home/1.png" alt="">
+                            <p class="nome_musica">Sandy Olsson</p>
+                        
+                        </div>
+
+                        <div class="splide__slide">
+                            <img src="../docs/imgs/home/2.png" alt="">
+                            <p class="nome_musica">Danny Zuko</p>
+                        
+                        </div>
+    
+                        <div class="splide__slide">
+                            <img src="../docs/imgs/home/3.png" alt="">
+                            <p class="nome_musica">Betty Rizzo</p>
+                    
+                        </div>
+    
+                        <div class="splide__slide">
+                            <img src="../docs/imgs/home/4.png" alt="">
+                            <p class="nome_musica">Marty Marachino</p>
+                    
+                        </div>
+    
+                        <div class="splide__slide">
+                            <img src="../docs/imgs/home/5.png" alt="">
+                            <p class="nome_musica">Kenickie Willians</p>
+                        
+                        </div>
+                        
+                        <div class="splide__slide">
+                            <img src="../docs/imgs/home/6.png" alt="">
+                            <p class="nome_musica">Frenchy Palardino</p>
+                    
+                        </div>
+    
+        
+                        <div class="splide__slide">
+                            <img src="../docs/imgs/home/7.png" alt="">
+                            <p class="nome_musica">Putzie</p>
+                        
+                        </div>
+                        <div class="splide__slide">
+                            <img src="../docs/imgs/home/8.png" alt="">
+                            <p class="nome_musica">Sonny Lattiery</p>
+                        
+                        </div>
+                        <div class="splide__slide">
+                            <img src="../docs/imgs/home/9.png" alt="">
+                            <p class="nome_musica">Doody</p>
+                        
+                        </div>
+                        <div class="splide__slide">
+                            <img src="../docs/imgs/home/10.png" alt="">
+                            <p class="nome_musica">Jan Martin</p>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div> 
+        
+    </section> .section-impar -->
+
+ 
+
+    <script type="module">
+        var carros = new Splide('.carroselPersonagens', {
+            type:   'loop',       // Fica em loop
+            height: 'auto',       // Altura do carrosel
+            width: '100%',        // Comprimento do carrosel
+            fixedWidth: '120px',  // Altura do slide
+            autoHeight: true,     // Comprimendo do slide
+            focus:   0,           // Habilita uma classe para personalizar o elemento focado
+            gap: '20px',          // Espaçamento entre os slides
+            easing: 'ease-out'
+
+ 
+
+        });
+
+ 
+
+        carros.mount();
+    </script>
     </main>
     
     <!-- AOS - Animation in scrool -->
