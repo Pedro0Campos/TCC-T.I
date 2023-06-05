@@ -205,11 +205,19 @@ if (isset($_GET['tema'])) {
     <!-- AOS - Animation in scrool -->
     
     <!-- Music Player -->
-    <script src="js/music_player.js"></script>
+    <script src="js/music_player.js" type="module"></script>
+    <script>
+        function closeMusicPlayer() {
+            document.querySelector('.music-player').classList.toggle('ocult-player')
+            document.querySelector('body').classList.toggle('disable-scroll')
+        }
+    </script>
 
     <!-- Carrossel -->
     <script src="splide/js/splide.min.js"></script>
     
+    <!-- Color Thief -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
 </body>
 
 </html>

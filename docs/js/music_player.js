@@ -1,8 +1,3 @@
-function closeMusicPlayer() {
-    document.querySelector('.music-player').classList.toggle('ocult-player')
-    document.querySelector('body').classList.toggle('disable-scroll')
-}
-
 // Interações com a API
 const APIController = function() {
     // ids para conexão com a API
@@ -91,8 +86,9 @@ const UIController = (function() {
             carrosel.insertAdjacentHTML('beforeend', html)
         },
 
-        createContentMusicPlayer(bigImagem, smallImage, title, artist) {
+        createContentMusicPlayer(bigImagem, smallImage, title, artist, colorBackg='#121212') {
             const musicPlayer = this.saidaDados().musicPlayer
+            musicPlayer.style.backgroundColor = colorBackg;
             const html = `
             <div class="close-box" onclick="closeMusicPlayer()">
                 <div class="leftright"></div>
@@ -102,7 +98,7 @@ const UIController = (function() {
             
             <div class="music-details">
                 <div class="container">
-                    <img class="music-image" src="${bigImagem}">
+                    <img id="music-image" class="music-image" src="${bigImagem}">
                     <p class="music-name">${title}</p>
                     <p class="music-autor">${artist}</p>
                 </div>
