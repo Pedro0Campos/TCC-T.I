@@ -2,6 +2,142 @@
 @use 'config';
 
 
+// ===================================================
+// Caixas de texto
+.padding-box-title {
+    // padding: 35px 0 10px 35px;
+    font-size: 18px;
+    
+    // Div dentro da padding-box-title -> todas as div.box-title
+    .box-title1, .box-title2, .box-title3 {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .box-title1 {
+        // max-width: var(--width-box-title1);
+        max-width: 500px;
+
+        & h1 {
+            font-size: var(--font-size-box-title1);
+            font-family: config.$JosefinSansMedium;
+            letter-spacing: 0.15em;
+            line-height: 1.2em;
+            & span {
+                color: var(--third-color);
+                background-color: var(--second-color-50);
+                padding: 7px;
+            }
+        }
+    }
+    
+    .box-title2 {
+        // max-width: var(--width-box-title2);
+        max-width: 480px;
+
+        & h2 {
+            font-size: var(--font-size-box-title2);
+            letter-spacing: 0.1em;
+            line-height: 1.2;
+
+            & span {
+                color: var(--second-color)
+            }
+        }
+    }
+    
+    .box-title3 {
+        // max-width: var(--width-box-title3);
+        max-width: 350px;
+
+        & h3 {
+            font-size: var(--font-size-box-title3);
+            font-family: config.$JosefinSansBoldItalic;
+            letter-spacing: 0.1em;
+            line-height: 1.1em;
+            & span {
+                color: var(--second-color);
+            }
+        }
+    }
+    
+    .border-box {
+        border: 7px solid var(--text-color); 
+    }
+    
+    .btn-home {
+        transition: all 0.2s ease-in-out;
+        width: 80%;
+        
+        button {
+            font-size: 1rem;
+            width: 100%;
+            max-width: 350px;
+            height: 45px;
+            // padding: 1.2em 12.1em 1.2em 12.1em;
+            border: none;
+            border-radius: 100px;
+            background-color: var(--text-color);
+            color: var(--backg-color);
+        }
+
+        &:hover {
+            background-color: var(--second-color);
+            transform: scale(1.03);
+        }
+
+        &:active {
+            transform: scale(0.98);
+        }
+    }
+
+
+    .mais-tocadas {
+        max-width: var(--width-mais-tocadas);
+        width: 80%;
+
+        h3 {
+            font-size: calc(var(--font-size-box-title3) * 0.75);
+            font-family: JosefinSansBold;
+            text-align: center;
+            letter-spacing: 0.1em;  
+            padding-right: 27px;
+        }
+
+        .container-itens {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+
+            .item {
+                font-family: JosefinSansRegular;
+                font-size: calc(var(--font-size-box-title3) * 0.6);
+                margin-top: 20px;
+                padding: 12.5px ;
+                padding-right: 50px;
+                border: 1px solid white;
+                border-radius: 30px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
+.right-bar {
+    display: flex;
+    gap: 20px;
+
+    &::after {
+        content: '';
+        width: 7px;
+        background-color: var(--second-color);
+    }
+}
+// Caixas de texto
+// ===================================================
+
+
 
 // ===================================================
 // Sessão
