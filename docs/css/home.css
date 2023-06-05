@@ -102,7 +102,6 @@
   border: 7px solid var(--text-color);
 }
 .padding-box-title .btn-home {
-  transition: all 0.2s ease-in-out;
   width: 80%;
 }
 .padding-box-title .btn-home button {
@@ -114,12 +113,13 @@
   border-radius: 100px;
   background-color: var(--text-color);
   color: var(--backg-color);
+  transition: all 0.2s ease-in-out;
+  user-select: none;
 }
-.padding-box-title .btn-home:hover {
-  background-color: var(--second-color);
+.padding-box-title .btn-home button:hover {
   transform: scale(1.03);
 }
-.padding-box-title .btn-home:active {
+.padding-box-title .btn-home button:active {
   transform: scale(0.98);
 }
 .padding-box-title .mais-tocadas {

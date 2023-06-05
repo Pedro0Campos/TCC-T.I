@@ -5,7 +5,7 @@
 // ===================================================
 // Caixas de texto
 .padding-box-title {
-    // padding: 35px 0 10px 35px;
+    
     font-size: 18px;
     
     // Div dentro da padding-box-title -> todas as div.box-title
@@ -66,7 +66,6 @@
     }
     
     .btn-home {
-        transition: all 0.2s ease-in-out;
         width: 80%;
         
         button {
@@ -79,16 +78,18 @@
             border-radius: 100px;
             background-color: var(--text-color);
             color: var(--backg-color);
+            transition: all 0.2s ease-in-out;
+            user-select: none;
+            
+            &:hover {
+                transform: scale(1.03);
+            }
+    
+            &:active {
+                transform: scale(0.98);
+            }
         }
-
-        &:hover {
-            background-color: var(--second-color);
-            transform: scale(1.03);
-        }
-
-        &:active {
-            transform: scale(0.98);
-        }
+        
     }
 
 
