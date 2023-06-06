@@ -16,7 +16,7 @@
         top: 17%;
         right: 0;
         height: 190px;
-        width: 100px;
+        width: 110px;
         background-color: rgba(0, 0, 0, 0.6);
         filter: blur(6px);
     }
@@ -29,6 +29,12 @@
         font-size: 14px;
         width: 100%;
         transition: transform ease-in-out 0.15s;
+        
+        .wait_api {
+            width: 100%;
+            aspect-ratio: 1/1;
+            background-color: rgb(50, 50, 50);
+        }
 
         &:hover {
             transform: scale(1.03) translate(1.5px, 3px);

@@ -25,7 +25,7 @@ if (isset($_GET['tema'])) {
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/toggle.css">
     <link rel="stylesheet" href="css/carrosel.css">
-    <link rel="stylesheet" href="css/spotify.css">
+    <link rel="stylesheet" href="css/music-player.css">
 
     <!-- Scripts do site -->
     <script src="js/darkmode.js"></script>
@@ -53,7 +53,8 @@ if (isset($_GET['tema'])) {
                
         <div class="music-details">
             <div class="container">
-                <img class="music-image" src="imgs/home/musicas/The_Wonder_of_You-Elvis Presley.png">
+                <div class="music-image wait-api"></div>
+                <!-- <img class="music-image" src="imgs/home/musicas/The_Wonder_of_You-Elvis Presley.png"> -->
                 <p class="music-name">The Wonder of You</p>
                 <p class="music-autor">Elvis Presley</p>
             </div>
@@ -94,7 +95,7 @@ if (isset($_GET['tema'])) {
                 </div> <!-- .box-title3 -->
             </div> <!-- .padding-box-title -->
             
-            <div class="padding-box-title" data-aos="fade-right">
+            <div class="padding-box-title" data-aos="fade-right" data-aos-anchor-placement="top-bottom">
                 <a href="sobre.php" class="btn-home"><button type="button">Sobre o musical</button></a>
             </div> <!-- .padding-box-title -->
         </div> <!-- .backgr-gradient wh100 flex-collumn -->
@@ -119,62 +120,18 @@ if (isset($_GET['tema'])) {
                     
                     <div class="splide__track">
                         <ul class="splide__list" id="splide__list">
-                            <!-- 
+                            
                             <div class="splide__slide track" onclick="closeMusicPlayer()" data-spotify-id="spotify:track:2AVkArcfALVk2X8sfPRzya">
-                                <img src="imgs/home/musicas/Summer_Nights-Grease.png" alt="">
-                                <p class="nome_musica">Summer Nights</p>
-                                <p class="autor_musica">Grease</p>
+                                <div class="wait_api"></div>
                             </div>
-                            
-                            <div class="splide__slide track" onclick="closeMusicPlayer()" data-spotify-id="spotify:track:1XNE0QfNjdroSdosMIk8F6">
-                                <img src="imgs/home/musicas/Greased_Lightnin-Grease.png" alt="">
-                                <p class="nome_musica">Greased Lightnin'</p>
-                                <p class="autor_musica">Grease</p>
-                            </div>
-                            
-                            <div class="splide__slide track" onclick="closeMusicPlayer()" data-spotify-id="spotify:track:0LfJkvPNCNEMLpZJgDQiV1">
-                                <img src="imgs/home/musicas/The_Wonder_of_You-Elvis Presley.png" alt="">
-                                <p class="nome_musica">The Wonder of You</p>
-                                <p class="autor_musica">Elvis Presley</p>
-                            </div>
-                            
-                            <div class="splide__slide track" onclick="closeMusicPlayer()" data-spotify-id="spotify:track:1MUsWVRPLaC7ANKcEiMRCl">
-                                <img src="imgs/home/musicas/Dont_be_Cruel-Elvis_Presley.png" alt="">
-                                <p class="nome_musica">Don't be Cruel</p>
-                                <p class="autor_musica">Elvis Presley</p>
-                            </div>
-                            
-                            <div class="splide__slide track" onclick="closeMusicPlayer()" data-spotify-id="spotify:track:1TKPfF2fvn6gVLVfp3iG4j">
-                                <img src="imgs/home/musicas/I_Walk_the_Line-Johnny Cash.png" alt="">
-                                <p class="nome_musica">I Walk The Line</p>
-                                <p class="autor_musica">Johnny Cash</p>
-                            </div>
-                                
-                            <div class="splide__slide track" onclick="closeMusicPlayer()" data-spotify-id="spotify:track:1TrGdXSgiBm8W68D2K1COG">
-                                <img src="imgs/home/musicas/Cross_Road_Blues-Robert_Johnson.png" alt="">
-                                <p class="nome_musica">Cross Road Blues</p>
-                                <p class="autor_musica">Robert Johnson</p>
-                            </div>
-                            
-                            <div class="splide__slide track" onclick="closeMusicPlayer()" data-spotify-id="spotify:track:0xpQWNukc7m4arb007HOH3">
-                                <img src="imgs/home/musicas/Backwater_Blues-Bill_Broonzy.png" alt="">
-                                <p class="nome_musica">Backwater Blues</p>
-                                <p class="autor_musica">Bill Broonzy</p>
-                            </div>
-                            
-                            <div class="splide__slide track" onclick="closeMusicPlayer()" data-spotify-id="">
-                                <img src="imgs/home/musicas/Tutti_Frutti-Little-Richard.png" alt="">
-                                <p class="nome_musica">Tutti Frutti</p>
-                                <p class="autor_musica">Little Richard</p>
-                            </div>
-                            -->
+                           
                         </ul> <!-- .splide__list#splide__list-->
                     </div> <!-- .splide__track -->
                 </div> <!-- .carrosel-musica splide -->
             </div> <!-- .padding-box-title -->
             
             
-            <div class="padding-box-title" data-aos="fade-down">
+            <div class="padding-box-title" data-aos="fade-right">
                 <div class="mais-tocadas">
                     <h3>MAIS TOCADAS</h3>
                     <div class="right-bar">

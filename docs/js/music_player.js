@@ -137,8 +137,9 @@ const APPController = (function(UICtrl, APICtrl) {
         const tracksEndPoint = 'https://api.spotify.com/v1/playlists/6mTECqYM6NmLD3RRUVbuuj/tracks'
 
         const tracks = await APICtrl.getTracks(token, tracksEndPoint)
-        // console.log(tracks);
+
         // Adicionar itens no carrosel
+        UICtrl.saidaDados().carrosel.innerHTML = ''
         tracks.forEach((value, index) => {
             UICtrl.createSplideListTrack(
                 // index, image, title, artist
@@ -169,7 +170,7 @@ const APPController = (function(UICtrl, APICtrl) {
         saidaDados.carrosel.addEventListener('click', async (e) => {
             const index = e.target.id
             const track = tracks[index].track
-            
+            console.log(track);
             UICtrl.createContentMusicPlayer(
                 // bigImagem, smallImage, title, autor
                 track.album.images[0].url,
@@ -190,4 +191,3 @@ const APPController = (function(UICtrl, APICtrl) {
 })(UIController, APIController)
 
 APPController.init()
-
