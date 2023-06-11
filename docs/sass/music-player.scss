@@ -112,13 +112,17 @@
         flex-direction: row;
         align-items: center;
         justify-content: center;
+
+        i {
+            font-size: 17px;
+        }
         
         .lbox-music {
             display: none;
             height: 80px;
             aspect-ratio: 1/1;
             position: absolute;
-            left: 10px;
+            left: 20px;
 
             .music-image {
                 width: 100%;
@@ -126,7 +130,44 @@
             }
         }
 
+        .barra-tempo {
+            #controle-deslizante {
+                background-color: red;
+                
+                // // Thumb
+                // &::-webkit-slider-thumb {
+                //     appearance: none;
+                //     border: 1px solid red;
+                //     background-color: red;
+                // }
+                
+                // &::-ms-thumb {
+                //     border: 1px solid red;
+                //     background-color: red;
 
+                // }
+
+
+                // // Track
+                // &::-webkit-slider-runnable-track {
+
+                // }
+
+                // &::-ms-track {
+
+                // }
+                
+            }
+            
+            #tempo-total {
+                font-size: 16px;
+            }
+        }
+
+        .options-right {
+            position: absolute;
+            right: 30px;
+        }
     }
 }
 

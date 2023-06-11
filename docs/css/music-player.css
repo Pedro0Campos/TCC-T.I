@@ -148,16 +148,29 @@
   align-items: center;
   justify-content: center;
 }
+.music-player .option-bar i {
+  font-size: 17px;
+}
 .music-player .option-bar .lbox-music {
   display: none;
   height: 80px;
   aspect-ratio: 1/1;
   position: absolute;
-  left: 10px;
+  left: 20px;
 }
 .music-player .option-bar .lbox-music .music-image {
   width: 100%;
   height: 100%;
+}
+.music-player .option-bar .barra-tempo #controle-deslizante {
+  background-color: red;
+}
+.music-player .option-bar .barra-tempo #tempo-total {
+  font-size: 16px;
+}
+.music-player .option-bar .options-right {
+  position: absolute;
+  right: 30px;
 }
 
 .ocult-player {

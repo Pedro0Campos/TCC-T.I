@@ -43,8 +43,8 @@ if (isset($_GET['tema'])) {
 </head>
 
 <body class="fade">
-    <div class="music-player ocult-player" id="music-player">
-    <!-- <div class="music-player" id="music-player"> -->
+    <!-- <div class="music-player ocult-player" id="music-player"> -->
+    <div class="music-player" id="music-player">
         <div class="close-box" onclick="closeMusicPlayer()">
             <div class="leftright"></div>
             <div class="rightleft"></div>
@@ -53,9 +53,8 @@ if (isset($_GET['tema'])) {
                
         <div class="music-details">
             <div class="container">
-                <div class="music-image wait-api">
-                </div>
-                    <!-- <img class="music-image" src="imgs/home/musicas/The_Wonder_of_You-Elvis Presley.png"> -->
+                <div class="music-image wait-api"></div>
+                <!-- <img class="music-image" src="imgs/home/musicas/The_Wonder_of_You-Elvis Presley.png"> -->
                 <p class="music-name">The Wonder of You</p>
                 <p class="music-autor">Elvis Presley</p>
             </div>
@@ -66,6 +65,29 @@ if (isset($_GET['tema'])) {
                 <div class="music-image wait-api"></div>
                 <!-- <img class="music-image" src="imgs/home/musicas/The_Wonder_of_You-Elvis Presley.png"> -->
             </div>
+
+            <audio src="" preload="metadata"></audio>
+
+            <div class="barra-tempo">
+                <i class="fa-solid fa-backward-fast"></i>
+                <i class="fa-solid fa-play"></i>
+                <i class="fa-solid fa-forward-fast"></i>
+                <input type="range" id="controle-deslizante" max="100" value="0">
+                <span id="tempo-total">1:00</span>
+            </div>
+
+            <div class="options-right">
+                <i class="fa-solid fa-repeat"></i>
+                <i class="fa-solid fa-rotate-left"></i>
+                <i class="fa-solid fa-volume-high"></i>
+            </div>
+            <!-- 
+                variantes do volume:
+                    >70 <i class="fa-solid fa-volume-high"></i>
+                    >30 <i class="fa-sharp fa-solid fa-volume"></i>
+                    >0  <i class="fa-solid fa-volume-low"></i>
+                    =0  <i class="fa-solid fa-volume-xmark"></i>
+                -->
         </div>
        
     </div>
