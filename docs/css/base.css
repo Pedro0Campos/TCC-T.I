@@ -43,6 +43,7 @@
   --third-color: #00109d;
   --sect-par-backg-color: #000;
   --sect-par-text-color: #fff;
+  --wait: rgb(50, 50, 50);
 }
 
 .darkmode:root {

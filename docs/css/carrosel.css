@@ -43,6 +43,7 @@
   --third-color: #00109d;
   --sect-par-backg-color: #000;
   --sect-par-text-color: #fff;
+  --wait: rgb(50, 50, 50);
 }
 
 .darkmode:root {
@@ -85,7 +86,7 @@
 .carrosel-musica .splide__slide .wait_api {
   width: 100%;
   aspect-ratio: 1/1;
-  background-color: rgb(50, 50, 50);
+  background-color: var(--wait);
 }
 .carrosel-musica .splide__slide:hover {
   transform: scale(1.03) translate(1.5px, 3px);

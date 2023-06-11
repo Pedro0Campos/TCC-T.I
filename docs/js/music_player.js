@@ -86,9 +86,16 @@ const UIController = (function() {
             carrosel.insertAdjacentHTML('beforeend', html)
         },
 
-        createContentMusicPlayer(bigImagem, smallImage, title, artist, colorBackg='#121212') {
+        createContentMusicPlayer(bigImagem, smallImage, title, artist, index) {
+            const listTrack = [
+                {background: "121212", src: "music/Skrillex-Breakn_A_Sweat.mp3"}
+            ]
+            const track = listTrack[0]
+
             const musicPlayer = this.saidaDados().musicPlayer
-            musicPlayer.style.backgroundColor = colorBackg;
+            musicPlayer.style.backgroundColor = track.background;
+
+
             const html = `
             <div class="close-box" onclick="closeMusicPlayer()">
                 <div class="leftright"></div>
@@ -108,6 +115,11 @@ const UIController = (function() {
                 <div class="lbox-music">
                     <img class="music-image" src="${smallImage}">
                 </div>
+
+                <audio controls autoplay preload="none" loop>
+                    <source src="${track.src}" type="audio/mpeg">
+                    Seu navegador não suporta o reprodutor de música.
+                </audio>
             </div>
             `
             musicPlayer.innerHTML = html
@@ -170,13 +182,14 @@ const APPController = (function(UICtrl, APICtrl) {
         saidaDados.carrosel.addEventListener('click', async (e) => {
             const index = e.target.id
             const track = tracks[index].track
-            console.log(track);
+
             UICtrl.createContentMusicPlayer(
-                // bigImagem, smallImage, title, autor
+                // bigImagem, smallImage, title, autor, index
                 track.album.images[0].url,
-                track.album.images[2].url,
+                track.album.images[1].url,
                 track.name,
                 track.artists[0].name,
+                index
             )
         })
     }

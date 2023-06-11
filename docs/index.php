@@ -53,8 +53,9 @@ if (isset($_GET['tema'])) {
                
         <div class="music-details">
             <div class="container">
-                <div class="music-image wait-api"></div>
-                <!-- <img class="music-image" src="imgs/home/musicas/The_Wonder_of_You-Elvis Presley.png"> -->
+                <div class="music-image wait-api">
+                </div>
+                    <!-- <img class="music-image" src="imgs/home/musicas/The_Wonder_of_You-Elvis Presley.png"> -->
                 <p class="music-name">The Wonder of You</p>
                 <p class="music-autor">Elvis Presley</p>
             </div>
@@ -62,7 +63,8 @@ if (isset($_GET['tema'])) {
         
         <div class="option-bar">
             <div class="lbox-music">
-                <img class="music-image" src="imgs/home/musicas/The_Wonder_of_You-Elvis Presley.png">
+                <div class="music-image wait-api"></div>
+                <!-- <img class="music-image" src="imgs/home/musicas/The_Wonder_of_You-Elvis Presley.png"> -->
             </div>
         </div>
        
