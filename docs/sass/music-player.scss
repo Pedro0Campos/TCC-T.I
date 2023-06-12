@@ -109,64 +109,121 @@
         height: 100px;
         background-color: rgb(0, 0, 0, 0.6);
         display: flex;
-        flex-direction: row;
+        justify-content: space-between;
         align-items: center;
-        justify-content: center;
 
         i {
             font-size: 17px;
         }
         
         .lbox-music {
-            display: none;
             height: 80px;
+            // width: 20%;
             aspect-ratio: 1/1;
-            position: absolute;
-            left: 20px;
-
+            
             .music-image {
-                width: 100%;
                 height: 100%;
+                aspect-ratio: 1/1;
             }
         }
 
         .barra-tempo {
-            #controle-deslizante {
-                background-color: red;
+            // width: 60%;
+
+            input[type="range"] {
+                appearance: none;
+                background-color: transparent;
                 
-                // // Thumb
-                // &::-webkit-slider-thumb {
-                //     appearance: none;
-                //     border: 1px solid red;
-                //     background-color: red;
-                // }
+                // Track - webkit
+                &::-webkit-slider-runnable-track {
+                    background-color: transparent;
+                }
+                // Track - moz
+                &::-moz-range-track {
+                    background-color: transparent;
+                }
+                // Track - ms
+                &::-ms-track {
+                    width: 100%;
+                    height: 3px;
+                    cursor: pointer;
+                    background: transparent;
+                    border: solid transparent;
+                    color: transparent;
+                }
+
+
+                // Thumb - webkit
+                &::-webkit-slider-thumb {
+                    appearance: none;
+                    position: relative;
+                    height: 15px;
+                    width: 15px;
+                    border-radius: 50%;
+                    background-color: #fff;
+                    cursor: pointer;
+                }
+                &:active::-webkit-slider-thumb {
+                    transform: scale(1.2);
+                }
                 
-                // &::-ms-thumb {
-                //     border: 1px solid red;
-                //     background-color: red;
-
-                // }
-
-
-                // // Track
-                // &::-webkit-slider-runnable-track {
-
-                // }
-
-                // &::-ms-track {
-
-                // }
+                // Thumb - moz
+                &::-moz-range-thumb {
+                    appearance: none;
+                    position: relative;
+                    height: 15px;
+                    width: 15px;
+                    border-radius: 50%;
+                    background-color: #fff;
+                    cursor: pointer;
+                }
+                &:active::-moz-range-thumb {
+                    transform: scale(1.2)
+                }
                 
+                // Thumb - ms
+                &::-ms-thumb {
+                    appearance: none;
+                    position: relative;
+                    height: 15px;
+                    width: 15px;
+                    border-radius: 50%;
+                    background-color: #fff;
+                    cursor: pointer;
+                }
+                &:active::-ms-thumb {
+                    transform: scale(1.2);
+                }
+                
+                // Progress - moz
+                &::-moz-range-progress {
+                    background-color: #007db5;
+                }
+
+                // Focus outer - moz
+                &::-moz-focus-outer {
+                    border: 0;
+                }
+
+                // Fill lower - ms
+                &::-ms-fill-lower {
+                        background-color: #007db5;
+                    }
+                // Fill upper - ms
+                &::-ms-fill-upper {
+                        background: linear-gradient(to right, rgba(0, 125, 181, 0.6) 0%, rgba(0, 125, 181, 0.2) 0%);
+                }
+
             }
             
             #tempo-total {
                 font-size: 16px;
+                line-height: 100%;
             }
         }
 
         .options-right {
-            position: absolute;
-            right: 30px;
+            // width: 20%;
         }
     }
 }
