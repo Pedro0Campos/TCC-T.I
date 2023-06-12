@@ -147,67 +147,71 @@ if (isset($_GET['tema'])) {
     </section> <!-- .section-par section2 -->
     
     <section class="section-impar">       
-        <div class="flex-collumn">
+        <div class="flex-collumn"> <br>
+            <div class="backgr-gradient wh100 flex-collumn">
+            <div class="padding-box-title right-bar" data-aos="fade-right">
+                <div class="box-title2 border-box">
+                    <h2>Personagens <span class="sect2-title2 color-title_light">incríveis</span> merecem todo o reconhecimento</h2>
+                </div> <!-- .box-title2 border-box -->
+            </div>
+
+            <div class="padding-box-title" data-aos="fade-right">
+            <a class="btn-home"><button type="button" id = >Conheça os perosnagens</button></a>
+            </div> <!-- .padding-box-title -->
+            </div> <!-- .backgr-gradient wh100 flex-collumn -->
+
             <div class="splide carrosel-personagens" role="group" aria-labelledby="carousel-title">
-                <h2 id="carousel-title">Explorar </h2>
+                <h2 id="carousel-title"></h2>
                 <div class="splide__track">
                     <ul class="splide__list">
                         <div class="splide__slide">
                             <img src="imgs/home/1.png" alt="">
-                            <p class="nome_musica">Sandy Olsson</p>
-                        
+                            <!--<p class="nome_musica">Sandy Olsson</p>-->
                         </div>
 
                         <div class="splide__slide">
                             <img src="imgs/home/2.png" alt="">
-                            <p class="nome_musica">Danny Zuko</p>
-                        
+                            <!--<p class="nome_musica">Danny Zuko</p>-->
                         </div>
     
                         <div class="splide__slide">
                             <img src="imgs/home/3.png" alt="">
-                            <p class="nome_musica">Betty Rizzo</p>
-                    
+                            <!--<p class="nome_musica">Betty Rizzo</p>-->
                         </div>
     
                         <div class="splide__slide">
                             <img src="imgs/home/4.png" alt="">
-                            <p class="nome_musica">Marty Marachino</p>
-                    
+                          <!--  <p class="nome_musica">Marty Marachino</p>-->
                         </div>
     
                         <div class="splide__slide">
                             <img src="imgs/home/5.png" alt="">
-                            <p class="nome_musica">Kenickie Willians</p>
-                        
+                          <!--  <p class="nome_musica">Kenickie Willians</p>-->
                         </div>
                         
                         <div class="splide__slide">
                             <img src="imgs/home/6.png" alt="">
-                            <p class="nome_musica">Frenchy Palardino</p>
-                    
+                          <!--  <p class="nome_musica">Frenchy Palardino</p>-->
                         </div>
     
         
                         <div class="splide__slide">
                             <img src="imgs/home/7.png" alt="">
-                            <p class="nome_musica">Putzie</p>
-                        
+                          <!--  <p class="nome_musica">Putzie</p>-->
                         </div>
                         <div class="splide__slide">
                             <img src="imgs/home/8.png" alt="">
-                            <p class="nome_musica">Sonny Lattiery</p>
-                        
+                            <!-- <p class="nome_musica">Sonny Lattiery</p>-->
                         </div>
                         <div class="splide__slide">
                             <img src="imgs/home/9.png" alt="">
-                            <p class="nome_musica">Doody</p>
-                        
+                           <!--  <p class="nome_musica">Doody</p>-->
                         </div>
                         <div class="splide__slide">
                             <img src="imgs/home/10.png" alt="">
-                            <p class="nome_musica">Jan Martin</p>
+                           <!--  <p class="nome_musica">Jan Martin</p>-->
                         </div>
+
                     </ul>
                 </div>
             </div>
