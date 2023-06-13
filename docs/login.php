@@ -106,9 +106,9 @@
 
         ?>
 
-        <div class="left backg-image-logcad" data-aos="fade" data-aos-duration="500"></div>
+        <div class="form-left backg-image-logcad" data-aos="fade" data-aos-duration="500"></div>
 
-        <div class="right" data-aos="fade-down">
+        <div class="form-right" data-aos="fade-down">
 
             <!-- Retorna para o próprio link para criar a validação -->
             <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']). "?pagina=login"?>" method="post" autocomplete="off">
