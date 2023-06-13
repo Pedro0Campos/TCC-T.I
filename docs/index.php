@@ -43,8 +43,8 @@ if (isset($_GET['tema'])) {
 </head>
 
 <body class="fade">
-    <!-- <div class="music-player ocult-player" id="music-player"> -->
-    <div class="music-player" id="music-player">
+    <div class="music-player ocult-player" id="music-player">
+    <!-- <div class="music-player" id="music-player"> -->
         <div class="close-box" onclick="closeMusicPlayer()">
             <div class="leftright"></div>
             <div class="rightleft"></div>
@@ -286,7 +286,8 @@ if (isset($_GET['tema'])) {
     <!-- AOS - Animation in scrool -->
     
     <!-- Music Player -->
-    <script src="js/music_player.js" type="module"></script>
+    <script src="js/api-spotify.js" type="module"></script>
+    <script src="js/music_player.js"></script>
     <script>
         function closeMusicPlayer() {
             document.querySelector('.music-player').classList.toggle('ocult-player')

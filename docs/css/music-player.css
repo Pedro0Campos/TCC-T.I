@@ -79,7 +79,6 @@
   display: flex;
   align-items: center;
   padding-left: 20px;
-  cursor: pointer;
   margin-bottom: 20px;
 }
 .music-player .close-box .leftright {
@@ -91,6 +90,7 @@
   border-radius: 2px;
   transform: rotate(45deg);
   transition: all 0.3s ease-in;
+  cursor: pointer;
 }
 .music-player .close-box .rightleft {
   height: 4px;
@@ -101,6 +101,7 @@
   border-radius: 2px;
   transform: rotate(-45deg);
   transition: all 0.3s ease-in;
+  cursor: pointer;
 }
 .music-player .close-box .close {
   color: white;
@@ -109,7 +110,7 @@
   text-transform: uppercase;
   letter-spacing: 2px;
   transition: all 0.3s ease-in;
-  opacity: 0;
+  display: none;
   margin: 50px 0 0 -3px;
   position: absolute;
 }
@@ -279,7 +280,7 @@
     background-color: rgb(255, 255, 255);
   }
   .close-container:hover label {
-    opacity: 1;
+    display: block;
   }
   .lbox-music {
     display: block !important;

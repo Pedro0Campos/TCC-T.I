@@ -26,7 +26,6 @@
         display: flex;
         align-items: center;
         padding-left: 20px;
-        cursor: pointer;
         margin-bottom: 20px;
 
         // Um lado do X
@@ -39,6 +38,7 @@
             border-radius: 2px;
             transform: rotate(45deg);
             transition: all 0.3s ease-in;
+            cursor: pointer;
         }
         
         // Outro lado do X
@@ -51,6 +51,7 @@
             border-radius: 2px;
             transform: rotate(-45deg);
             transition: all 0.3s ease-in;
+            cursor: pointer;
         }
         
         // Label com texto Close
@@ -61,7 +62,7 @@
             text-transform: uppercase;
             letter-spacing: 2px;
             transition: all 0.3s ease-in;
-            opacity: 0;
+            display: none;
             margin: 50px 0 0 -3px;
             position: absolute;
         }
@@ -284,7 +285,7 @@
     }
     
     .close-container:hover label {
-        opacity: 1;
+        display: block;
     }
 
     .lbox-music {
