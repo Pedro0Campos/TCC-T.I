@@ -56,7 +56,7 @@
 }
 
 /* DIV - ESQUERDA */
-div.left {
+div.form-left {
   height: 100vh;
   width: 55%;
   float: left;
@@ -69,7 +69,7 @@ div.backg-image-logcad {
 }
 
 /* DIV - DIREITA */
-div.right {
+div.form-right {
   margin: 0 auto;
   height: 100vh;
   width: 45%;
@@ -150,22 +150,22 @@ i.eye {
 }
 
 @media only screen and (max-width: 800px) {
-  div.left {
+  div.form-left {
     visibility: hidden;
     display: none;
   }
-  div.right {
+  div.form-right {
     float: none;
     width: 100%;
     padding: 0;
   }
 }
 @media only screen and (max-height: 500px) {
-  div.left {
+  div.form-left {
     visibility: hidden;
     display: none;
   }
-  div.right {
+  div.form-right {
     float: none;
     width: 100%;
     height: 100%;
