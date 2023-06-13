@@ -60,26 +60,33 @@ if (isset($_GET['tema'])) {
             </div>
         </div>
         
-        <div class="option-bar">
+        <div class="option-bar flexCenterVH">
             <div class="lbox-music">
                 <div class="music-image wait-api"></div>
                 <!-- <img class="music-image" src="imgs/home/musicas/The_Wonder_of_You-Elvis Presley.png"> -->
             </div>
 
-            <audio src="" preload="metadata"></audio>
+            <div class="barra-tempo flexCenterVH">
+                <div class="icons">
+                    <div class="left flexCenterVH">
+                        <i id="backward" class="fa-solid fa-backward-fast backward"></i>
+                        <i id="play-pause" class="fa-solid fa-play"></i>
+                        <i id="forward" class="fa-solid fa-forward-fast"></i>  
+                    </div>
 
-            <div class="barra-tempo">
-                <i class="fa-solid fa-backward-fast"></i>
-                <i class="fa-solid fa-play"></i>
-                <i class="fa-solid fa-forward-fast"></i>
-                <input type="range" id="controle-deslizante" max="100" value="0">
-                <span id="tempo-total">1:00</span>
-            </div>
+                    <div class="right">
+                        <i id="repeat" class="fa-solid fa-repeat"></i>
+                        <i id="reload" class="fa-solid fa-rotate-left"></i>
+                        <i id="volume" class="fa-solid fa-volume-high"></i>
+                    </div>
+                </div>
 
-            <div class="options-right">
-                <i class="fa-solid fa-repeat"></i>
-                <i class="fa-solid fa-rotate-left"></i>
-                <i class="fa-solid fa-volume-high"></i>
+                <div class="barra">
+                    <audio src="" preload="metadata"></audio>
+                    <input id="controle-deslizante" type="range" max="100" value="0">
+                    <span id="tempo-atual">0:00</span>
+                    <span id="tempo-total">1:00</span>
+                </div>
             </div>
             <!-- 
                 variantes do volume:
@@ -87,7 +94,11 @@ if (isset($_GET['tema'])) {
                     >30 <i class="fa-sharp fa-solid fa-volume"></i>
                     >0  <i class="fa-solid fa-volume-low"></i>
                     =0  <i class="fa-solid fa-volume-xmark"></i>
-                -->
+
+                variantes do pause:
+                    > <i class="fa-solid fa-play"></i>
+                    > <i class="fa-solid fa-pause"></i>
+            -->
         </div>
        
     </div>
