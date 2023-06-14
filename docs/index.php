@@ -43,8 +43,8 @@ if (isset($_GET['tema'])) {
 </head>
 
 <body class="fade">
-    <div class="music-player ocult-player" id="music-player">
-    <!-- <div class="music-player" id="music-player"> -->
+    <!-- <div class="music-player ocult-player" id="music-player"> -->
+    <div class="music-player" id="music-player">
         <div class="close-box" onclick="closeMusicPlayer()">
             <div class="leftright"></div>
             <div class="rightleft"></div>
@@ -70,7 +70,7 @@ if (isset($_GET['tema'])) {
                 <div class="icons">
                     <div class="left flexCenterVH">
                         <i id="backward" class="fa-solid fa-backward-fast backward"></i>
-                        <i id="play-pause" class="fa-solid fa-play"></i>
+                        <i id="play-pause" onclick="Play_pause()" class="fa-solid fa-play"></i>
                         <i id="forward" class="fa-solid fa-forward-fast"></i>  
                     </div>
 
@@ -82,7 +82,7 @@ if (isset($_GET['tema'])) {
                 </div>
 
                 <div class="barra">
-                    <audio src="" preload="metadata"></audio>
+                    <audio id="audio" src="music/Grease-Summer-Nights.mp3" preload="metadata"></audio>
                     <input id="controle-deslizante" type="range" max="100" value="0">
                     <span id="tempo-atual">0:00</span>
                     <span id="tempo-total">1:00</span>
@@ -157,7 +157,7 @@ if (isset($_GET['tema'])) {
                         <ul class="splide__list" id="splide__list">
                             
                             <div class="splide__slide track" onclick="closeMusicPlayer()" data-spotify-id="spotify:track:2AVkArcfALVk2X8sfPRzya">
-                                <div class="wait_api"></div>
+                                <div id="0" class="wait_api"></div>
                             </div>
                            
                         </ul> <!-- .splide__list#splide__list-->

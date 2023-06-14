@@ -2,20 +2,48 @@
 // Music Player
 // ================================
 
-const MP_DOMElements = {
-    backward: document.querySelector('#backward'),
-    play_pause: document.querySelector('#play_pause'),
-    forward: document.querySelector('#forward'),
-    repeat: document.querySelector('#repeat'),
-    reload: document.querySelector('#reload'),
-    volume: document.querySelector('#volume'),
+const DOMElements = {
+    audio: '#audio',
+    backward: '#backward',
+    play_pause: '#play-pause',
+    forward: '#forward',
+    repeat: '#repeat',
+    reload: '#reload',
+    volume: '#volume',
+    controle_deslizante: '#controle-deslizante',
 }
 
-const play_pause = function(icon) {
-    if (icon.classList == 'fa-solid fa-pause') {
-        icon.classList = 'fa-solid fa-play'
-    } else {
-        icon.classList = 'fa-solid fa-pause'
+const saidaDados = function () {
+    return {
+        audio: document.querySelector(DOMElements.audio),
+        backward: document.querySelector(DOMElements.backward),
+        play_pause: document.querySelector(DOMElements.play_pause),
+        forward: document.querySelector(DOMElements.forward),
+        repeat: document.querySelector(DOMElements.repeat),
+        reload: document.querySelector(DOMElements.reload),
+        volume: document.querySelector(DOMElements.volume),
+        controle_deslizante: document.querySelector(DOMElements.controle_deslizante),
     }
-    
+}
+
+function Play_pause() {
+    const icon = saidaDados().play_pause
+
+    if (icon.className == 'fa-solid fa-play') {
+        icon.className = 'fa-solid fa-pause'
+        play()
+    } else {
+        icon.className = 'fa-solid fa-play'
+        pause()
+    }
+}
+
+function play() {
+    const audio = saidaDados().audio
+    console.log(audio);
+    audio.play()
+}
+function pause() {
+    audio.pause()
+    // DOMElements.audio
 }

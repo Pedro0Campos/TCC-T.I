@@ -148,7 +148,7 @@ const UIController = (function() {
             musicPlayer.style.background = musica.background
 
             const html = `
-            <div class="close-box" onclick="closeMusicPlayer()">
+            <div class="close-box" onclick="{closeMusicPlayer(), pause()}">
                 <div class="leftright"></div>
                 <div class="rightleft"></div>
                 <label class="close">close</label>
@@ -171,7 +171,7 @@ const UIController = (function() {
                     <div class="icons">
                         <div class="left flexCenterVH">
                             <i id="backward" class="fa-solid fa-backward-fast backward"></i>
-                            <i id="play-pause" onclick="play_pause(this)" class="fa-solid fa-pause"></i>
+                            <i id="play-pause" onclick="Play_pause()" class="fa-solid fa-pause"></i>
                             <i id="forward" class="fa-solid fa-forward-fast"></i>  
                         </div>
 
@@ -183,8 +183,7 @@ const UIController = (function() {
                     </div>
 
                     <div class="barra">
-                        <!-- <audio src="${musica.src}" preload="metadata" autoplay></audio> -->
-                        <audio src="${musica.src}" preload="metadata"></audio>
+                        <audio id="audio" src="${musica.src}" preload="metadata" autoplay></audio>
                         <input id="controle-deslizante" type="range" max="100" value="0">
                         <span id="tempo-atual">0:00</span>
                         <span id="tempo-total">1:00</span>
