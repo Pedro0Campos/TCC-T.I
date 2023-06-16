@@ -186,22 +186,31 @@
 }
 .music-player .option-bar .barra-tempo .barra input[type=range] {
   appearance: none;
-  background-color: rgb(255, 255, 255);
+  position: relative;
+  background-color: rgb(78, 78, 78);
   height: 4px;
   width: 100%;
+  max-width: 100%;
   margin: 10px 0 10px 0;
+  cursor: pointer;
 }
 .music-player .option-bar .barra-tempo .barra input[type=range]::-webkit-slider-runnable-track {
   height: 4px;
+  width: 100%;
   background-color: transparent;
+  cursor: pointer;
 }
 .music-player .option-bar .barra-tempo .barra input[type=range]::-moz-range-track {
   height: 4px;
+  width: 100%;
   background-color: transparent;
+  cursor: pointer;
 }
 .music-player .option-bar .barra-tempo .barra input[type=range]::-ms-track {
   height: 4px;
+  width: 100%;
   background-color: transparent;
+  cursor: pointer;
 }
 .music-player .option-bar .barra-tempo .barra input[type=range]::-webkit-slider-thumb {
   appearance: none;
@@ -216,6 +225,7 @@
 .music-player .option-bar .barra-tempo .barra input[type=range]:active::-webkit-slider-thumb {
   height: 10px;
   width: 10px;
+  cursor: pointer;
 }
 .music-player .option-bar .barra-tempo .barra input[type=range]::-moz-range-thumb {
   appearance: none;
@@ -230,6 +240,7 @@
 .music-player .option-bar .barra-tempo .barra input[type=range]:active::-moz-range-thumb {
   height: 10px;
   width: 10px;
+  cursor: pointer;
 }
 .music-player .option-bar .barra-tempo .barra input[type=range]::-ms-thumb {
   appearance: none;
@@ -242,11 +253,40 @@
   cursor: pointer;
 }
 .music-player .option-bar .barra-tempo .barra input[type=range]:active::-ms-thumb {
+  cursor: pointer;
   height: 10px;
   width: 10px;
 }
+.music-player .option-bar .barra-tempo .barra input[type=range]::-moz-range-progress {
+  background: rgb(255, 35, 35);
+  cursor: pointer;
+}
 .music-player .option-bar .barra-tempo .barra input[type=range]::-moz-focus-outer {
   border: 0;
+}
+.music-player .option-bar .barra-tempo .barra input[type=range]::-ms-fill-lower {
+  cursor: pointer;
+  background: white;
+}
+.music-player .option-bar .barra-tempo .barra input[type=range]::-ms-fill-upper {
+  cursor: pointer;
+  background: linear-gradient(to right, rgba(150, 150, 150, 0.6) var(--buffered-width), rgba(123, 123, 123, 0.2) var(--buffered-width));
+}
+.music-player .option-bar .barra-tempo .barra input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  cursor: pointer;
+  background: linear-gradient(to right, rgba(150, 150, 150, 0.6) var(--buffered-width), rgba(123, 123, 123, 0.2) var(--buffered-width));
+}
+.music-player .option-bar .barra-tempo .barra input[type=range]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 4px;
+  width: var(--seek-before-width);
+  background: rgb(255, 255, 255);
+}
+.music-player .option-bar .barra-tempo .barra input[type=range]:active::before {
+  background: var(--second-color);
 }
 .music-player .option-bar .barra-tempo .barra #tempo-atual {
   line-height: 100%;

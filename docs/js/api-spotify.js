@@ -1,4 +1,6 @@
 
+
+
 // ================================
 // API SPOTIFY
 // ================================
@@ -145,7 +147,9 @@ const UIController = (function() {
             const musica = listaMusicas[index]
             
             const musicPlayer = this.saidaDados().musicPlayer
-            musicPlayer.style.background = musica.background
+            musicPlayer.style.setProperty('background', musica.background)
+            // musicPlayer.style.setProperty('--buffered-width', '50%') 
+            // musicPlayer.style.setProperty('--seek-before-width', '25%') 
 
             const html = `
             <div class="close-box" onclick="{closeMusicPlayer(), pause()}">
@@ -171,7 +175,7 @@ const UIController = (function() {
                     <div class="icons">
                         <div class="left flexCenterVH">
                             <i id="backward" class="fa-solid fa-backward-fast backward"></i>
-                            <i id="play-pause" onclick="Play_pause()" class="fa-solid fa-pause"></i>
+                            <i id="play-pause" class="fa-solid fa-pause"></i>
                             <i id="forward" class="fa-solid fa-forward-fast"></i>  
                         </div>
 
@@ -186,7 +190,7 @@ const UIController = (function() {
                         <audio id="audio" src="${musica.src}" preload="metadata" autoplay></audio>
                         <input id="controle-deslizante" type="range" max="100" value="0">
                         <span id="tempo-atual">0:00</span>
-                        <span id="tempo-total">1:00</span>
+                        <span id="tempo-total">0:00</span>
                     </div>
                 </div>
                 <!-- 
@@ -203,10 +207,77 @@ const UIController = (function() {
             </div>
             `
             musicPlayer.innerHTML = html
+            
 
 
+            // PLAYER =========================================
+            const audio = document.querySelector("#audio")
+            const backward = document.querySelector("#backward")
+            const play_pause = document.querySelector("#play-pause")
+            const forward = document.querySelector("#forward")
+            const repeat = document.querySelector("#repeat")
+            const reload = document.querySelector("#reload")
+            const volume = document.querySelector("#volume")
+            const controle_deslizante = document.querySelector("#controle-deslizante")
+            const tempo_atual = document.querySelector("#tempo-atual")
+            const tempo_total = document.querySelector("#tempo-total")
+            let raf = null;
 
-            // Fazer o player tocar música
+            play_pause.addEventListener('click', () => {
+                if (play_pause.className == 'fa-solid fa-play') {
+                    play_pause.className = 'fa-solid fa-pause'
+                    // requestAnimationFrame(whilePlaying)
+                    requestAnimationFrame(whilePlaying)
+                    play()
+                } else {
+                    play_pause.className = 'fa-solid fa-play'
+                    cancelAnimationFrame(raf)
+                    pause()
+                    cancelAnimationFrame
+                }
+            })
+
+            controle_deslizante.addEventListener('input', (e) => {
+                showRangeProgress(e.target)
+            })
+            
+
+            if (audio.readyState > 0) {
+                displayDuration();
+                setSliderMax();
+            } else {
+                audio.addEventListener('loadedmetadata', () => {
+                    displayDuration();
+                    setSliderMax();
+                })
+            }
+
+            // audio.addEventListener('progress', whilePlaying);
+
+            controle_deslizante.addEventListener('input', () => {
+                tempo_atual.textContent = calculateTime(controle_deslizante.value);
+                if(!audio.paused) {
+                    // cancelAnimationFrame(raf);
+                }
+            });
+
+            controle_deslizante.addEventListener('change', () => {
+                audio.currentTime = controle_deslizante.value;
+                if(!audio.paused) {
+                    requestAnimationFrame(whilePlaying);
+                }
+            });
+
+            audio.addEventListener('progress', whilePlaying)
+
+            // volumeSlider.addEventListener('input', (e) => {
+            //     const value = e.target.value;
+
+            //     outputContainer.textContent = value;
+            //     audio.volume = value / 100;
+            // });
+
+
         },
 
         storeToken(value) {

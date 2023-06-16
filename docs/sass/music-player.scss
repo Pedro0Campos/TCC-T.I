@@ -159,25 +159,34 @@
 
                 input[type="range"] {
                     appearance: none;
-                    background-color: rgb(255, 255, 255); // Cor da barra
+                    position: relative;
+                    background-color: rgb(78, 78, 78); // Cor da barra
                     height: 4px;
                     width: 100%;
+                    max-width: 100%;
                     margin: 10px 0 10px 0;
+                    cursor: pointer;
                     
                     // Track - webkit
                     &::-webkit-slider-runnable-track {
                         height: 4px;
+                        width: 100%;
                         background-color: transparent;
+                        cursor: pointer;
                     }
                     // Track - moz
                     &::-moz-range-track {
                         height: 4px;
+                        width: 100%;
                         background-color: transparent;
+                        cursor: pointer;
                     }
                     // Track - ms
                     &::-ms-track {
                         height: 4px;
+                        width: 100%;
                         background-color: transparent;
+                        cursor: pointer;
                     }
     
     
@@ -196,6 +205,7 @@
                     &:active::-webkit-slider-thumb {
                         height: 10px;
                         width: 10px;
+                        cursor: pointer;
                     }
                     
                     // Thumb - moz
@@ -212,6 +222,7 @@
                     &:active::-moz-range-thumb {
                         height: 10px;
                         width: 10px;
+                        cursor: pointer;
                     }
                     
                     // Thumb - ms
@@ -226,34 +237,52 @@
                         cursor: pointer;
                     }
                     &:active::-ms-thumb {
+                        cursor: pointer;
                         height: 10px;
                         width: 10px;
                     }
-
+                    
                     
                     // Progress - moz
                     &::-moz-range-progress {
-                        
+                        background: rgb(255, 35, 35);
+                        cursor: pointer;
                     }
-    
+                    
                     // Focus outer - moz
                     &::-moz-focus-outer {
                         border: 0;
-                        
                     }
     
                     // Fill lower - ms
                     &::-ms-fill-lower {
-                        
+                        cursor: pointer;
+                        background: white;
                     }
                     // Fill upper - ms
                     &::-ms-fill-upper {
-                        
+                        cursor: pointer;
+                        background: linear-gradient(to right, rgba(150, 150, 150, 0.6) var(--buffered-width), rgba(123, 123, 123, 0.2) var(--buffered-width));
                     }
 
                     // Buffered
                     &::-webkit-slider-runnable-track {
+                        width: 100%;
+                        cursor: pointer;
+                        background: linear-gradient(to right, rgba(150, 150, 150, 0.6) var(--buffered-width), rgba(123, 123, 123, 0.2) var(--buffered-width));
+                    }
 
+                    // Tempo atual
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        height: 4px;
+                        width: var(--seek-before-width);
+                        background: rgba(255, 255, 255);
+                    }
+                    &:active::before {
+                        background: var(--second-color);
                     }
     
                 }

@@ -43,8 +43,8 @@ if (isset($_GET['tema'])) {
 </head>
 
 <body class="fade">
-    <!-- <div class="music-player ocult-player" id="music-player"> -->
-    <div class="music-player" id="music-player">
+    <div class="music-player ocult-player" id="music-player">
+    <!-- <div class="music-player" id="music-player" style="--buffered-width: 50%; --seek-before-width: 25%"> -->
         <div class="close-box" onclick="closeMusicPlayer()">
             <div class="leftright"></div>
             <div class="rightleft"></div>
@@ -67,7 +67,7 @@ if (isset($_GET['tema'])) {
             </div>
 
             <div class="barra-tempo flexCenterVH">
-                <div class="icons">
+                <!-- <div class="icons">
                     <div class="left flexCenterVH">
                         <i id="backward" class="fa-solid fa-backward-fast backward"></i>
                         <i id="play-pause" onclick="Play_pause()" class="fa-solid fa-play"></i>
@@ -86,7 +86,7 @@ if (isset($_GET['tema'])) {
                     <input id="controle-deslizante" type="range" max="100" value="0">
                     <span id="tempo-atual">0:00</span>
                     <span id="tempo-total">1:00</span>
-                </div>
+                </div> -->
             </div>
             <!-- 
                 variantes do volume:
