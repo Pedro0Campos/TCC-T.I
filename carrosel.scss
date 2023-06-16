@@ -1,0 +1,320 @@
+@use "config";
+
+.carrosel-musica {
+    margin: 15px 0px 15px 0;
+
+    #carousel-title {
+        letter-spacing: 3px;
+        text-decoration: underline;
+        text-underline-offset: 5px;
+        margin-bottom: 20px;
+    }
+
+    .opacity {
+        position: absolute;
+        z-index: 1;
+        top: 17%;
+        right: 0;
+        height: 190px;
+        width: 110px;
+        background-color: rgba(0, 0, 0, 0.6);
+        filter: blur(6px);
+    }
+
+    // Cada elemento do slide (que estiverem desativados - sem a classe is-visible)
+    .splide__slide {
+        background-color: transparent;
+        // color: rgba(255, 255, 255, 0);
+        // opacity: 0.4;
+        font-size: 14px;
+        width: 100%;
+        transition: transform ease-in-out 0.15s;
+        
+        .wait_api {
+            width: 100%;
+            aspect-ratio: 1/1;
+            background-color: rgb(50, 50, 50);
+        }
+
+        &:hover {
+            transform: scale(1.03) translate(1.5px, 3px);
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .nome_musica {
+            margin-top: 0.5em;
+            font-family: config.$JosefinSansBold;
+            font-size: 1em;
+        }
+
+        .autor_musica {
+            font-family: config.$JosefinSansRegular;
+            font-size: 0.9em;
+            margin-top: 0.3em;
+        }
+    }
+
+    /* Botão das setas */
+    .splide__arrow {
+        background: transparent;
+        opacity: 1;
+    }
+
+    // SVG das setas
+    .splide__arrow svg {
+        fill: rgb(255, 255, 255);
+    }
+
+    /* Seta pra direita */
+    .splide__arrow--next {
+        top: 14px;
+        right: 10px;
+    }
+
+    // Seta pra esquerda
+    .splide__arrow--prev {
+        top: 14px;
+        right: 40px;
+        left: unset;
+    }
+
+    // Tirar as bolinhas de paginação
+    .splide__pagination {
+        display: none;
+    }
+
+}
+
+
+//Parte dos personagens
+//abaixo o carrossel
+
+.carrosel-personagens {
+    // margin-left: 50px;
+    display: none;
+
+    /* Título do carrosel */
+    #carousel-title {
+        font-family: JosefinsSansRegular;
+        font-weight: normal;
+        letter-spacing: 3px;
+        text-decoration: underline;
+        text-underline-offset: 4.5px;
+        margin-bottom: 20px;
+    }
+
+    /* Todos os slides */
+    .splide__slide {
+        background-color: transparent;
+        color: rgba(255, 255, 255, 0);
+
+        /* Todos os slides vão ter 40% de opacidade */
+        opacity: 0.4;
+
+        font-size: 14px;
+    }
+
+    /* Os slides visiveis vão ter 100% de opacidade  */
+    .is-visible {
+        opacity: 1;
+        color: white;
+    }
+
+    /* CONTEUDO DO SLIDE */
+    .splide__slide img {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+
+    /* Botão das setas */
+    .splide__arrow {
+        opacity: 1;
+        background: transparent;
+    }
+
+    /* SVG das setas */
+    .splide__arrow svg {
+        fill: rgb(255, 255, 255);
+    }
+
+    /* Seta pra direita */
+    .splide__arrow--next {
+        top: 14px;
+        right: 10px;
+    }
+
+    /* Seta pra esquerda */
+    .splide__arrow--prev {
+        top: 14px;
+        right: 40px;
+        left: unset;
+    }
+
+    /* Tirar as bolinhas de paginação */
+    .splide__pagination {
+        display: none;
+    }
+}
+
+//aqui é o modelo da pagina e do botão
+.btnretro {
+    color: white;
+    background: rgb(2,0,36);
+    padding-left:20px;
+    padding-right: 20px;
+    border:none;
+    border-radius: 100px;
+    height: 60px;
+    width: 400px;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
+}
+
+.btnretro:hover {
+    transform: scale(1.03);
+}
+
+.btnretro:active {
+    transform: scale(0.98);
+}
+
+.btnretro {
+    background: rgb(2,0,36);
+    background: linear-gradient(75deg,
+    rgba(2,0,36,1) 0%,
+    rgba(0,0,0,1) 77%,
+    rgba(156,41,61,1) 77%,
+    rgba(156,41,61,1) 83%,
+    rgba(247,158,82,1) 83%,
+    rgba(247,158,82,1) 89%,
+    rgba(59,164,172,1) 89%,
+    rgba(59,164,172,1) 94%,
+    rgba(39,61,98,1) 94%);
+}
+/*aqui é o carrossel personagens
+
+.splide__slideP {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 0 10px;
+  }
+  
+  .splide__slide img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+  }
+  .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  
+    .popup-content {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+  
+  /* Estilo do botão de fechar o popup 
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  */
+  .splide__slideP {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 0 10px;
+  }
+  
+  .splide__slide img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+  }
+  
+  .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .popup-content {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+  
+  /* Estilo do botão de fechar o popup */
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
