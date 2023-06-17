@@ -1,6 +1,4 @@
-
-
-
+raf = 10
 // ================================
 // API SPOTIFY
 // ================================
@@ -187,7 +185,7 @@ const UIController = (function() {
                     </div>
 
                     <div class="barra">
-                        <audio id="audio" src="${musica.src}" preload="metadata" autoplay></audio>
+                        <audio id="audio" src="${musica.src}" preload="metadata" autoplay loop></audio>
                         <input id="controle-deslizante" type="range" max="100" value="0">
                         <span id="tempo-atual">0:00</span>
                         <span id="tempo-total">0:00</span>
@@ -207,10 +205,9 @@ const UIController = (function() {
             </div>
             `
             musicPlayer.innerHTML = html
-            
 
 
-            // PLAYER =========================================
+            // PLAYER EVENTS ==============================
             const audio = document.querySelector("#audio")
             const backward = document.querySelector("#backward")
             const play_pause = document.querySelector("#play-pause")
@@ -221,19 +218,19 @@ const UIController = (function() {
             const controle_deslizante = document.querySelector("#controle-deslizante")
             const tempo_atual = document.querySelector("#tempo-atual")
             const tempo_total = document.querySelector("#tempo-total")
-            let raf = null;
-
+            let playState = 'play'
+            
             play_pause.addEventListener('click', () => {
                 if (play_pause.className == 'fa-solid fa-play') {
                     play_pause.className = 'fa-solid fa-pause'
-                    // requestAnimationFrame(whilePlaying)
                     requestAnimationFrame(whilePlaying)
+                    playState = 'pause'
                     play()
                 } else {
                     play_pause.className = 'fa-solid fa-play'
                     cancelAnimationFrame(raf)
+                    playState = 'play'
                     pause()
-                    cancelAnimationFrame
                 }
             })
 
@@ -252,20 +249,18 @@ const UIController = (function() {
                 })
             }
 
-            // audio.addEventListener('progress', whilePlaying);
-
             controle_deslizante.addEventListener('input', () => {
                 tempo_atual.textContent = calculateTime(controle_deslizante.value);
                 if(!audio.paused) {
-                    // cancelAnimationFrame(raf);
+                    cancelAnimationFrame(raf);
                 }
             });
 
             controle_deslizante.addEventListener('change', () => {
                 audio.currentTime = controle_deslizante.value;
-                if(!audio.paused) {
-                    requestAnimationFrame(whilePlaying);
-                }
+                requestAnimationFrame(whilePlaying);
+                // if(!audio.paused) {
+                // }
             });
 
             audio.addEventListener('progress', whilePlaying)
@@ -277,7 +272,62 @@ const UIController = (function() {
             //     audio.volume = value / 100;
             // });
 
-
+            console.log(bigImagem, smallImage);
+            if('mediaSession' in navigator) {
+                navigator.mediaSession.metadata = new MediaMetadata({
+                    title: title,
+                    artist: artist,
+                    artwork: [
+                        { src: smallImage, sizes: '300x300', type: 'image/png' },
+                        { src: bigImagem, sizes: '640x640', type: 'image/png' },
+                    ]
+                });
+                navigator.mediaSession.setActionHandler('play', () => {
+                    if(playState === 'play') {
+                        audio.play();
+                        requestAnimationFrame(whilePlaying);
+                        playState = 'pause';
+                    } else {
+                        audio.pause();
+                        cancelAnimationFrame(raf);
+                        playState = 'play';
+                    }
+                });
+                navigator.mediaSession.setActionHandler('pause', () => {
+                    if(playState === 'play') {
+                        audio.play();
+                        requestAnimationFrame(whilePlaying);
+                        playState = 'pause';
+                    } else {
+                        audio.pause();
+                        cancelAnimationFrame(raf);
+                        playState = 'play';
+                    }
+                });
+                navigator.mediaSession.setActionHandler('seekbackward', (details) => {
+                    audio.currentTime = audio.currentTime - (details.seekOffset || 10);
+                });
+                navigator.mediaSession.setActionHandler('seekforward', (details) => {
+                    audio.currentTime = audio.currentTime + (details.seekOffset || 10);
+                });
+                navigator.mediaSession.setActionHandler('seekto', (details) => {
+                    if (details.fastSeek && 'fastSeek' in audio) {
+                      audio.fastSeek(details.seekTime);
+                      return;
+                    }
+                    audio.currentTime = details.seekTime;
+                });
+                navigator.mediaSession.setActionHandler('stop', () => {
+                    audio.currentTime = 0;
+                    controle_deslizante.value = 0;
+                    musicPlayer.style.setProperty('--seek-before-width', '0%');
+                    tempo_atual.textContent = '0:00';
+                    if(playState === 'pause') {
+                        cancelAnimationFrame(raf);
+                        playState = 'play';
+                    }
+                });
+            }
         },
 
         storeToken(value) {

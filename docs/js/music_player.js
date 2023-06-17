@@ -1,4 +1,3 @@
-
 // ================================
 // Music Player
 // ================================
@@ -32,14 +31,7 @@ const saidaDados = function () {
         tempo_total: document.querySelector(DOMElements.tempo_total),
     }
 }
-let raf = null
-
-function play() {
-    saidaDados().audio.play()
-}
-function pause() {
-    saidaDados().audio.pause()
-}
+raf = null
 
 // Progresso do input
 const showRangeProgress = (rangeInput) => {
@@ -87,14 +79,14 @@ function whilePlaying () {
 //     }
 // }
 
-// function play() {
-//     const audio = saidaDados().audio
-//     audio.play()
-// }
-// function pause() {
-//     const audio = saidaDados().audio
-//     audio.pause()
-// }
+function play() {
+    const audio = saidaDados().audio
+    audio.play()
+}
+function pause() {
+    const audio = saidaDados().audio
+    audio.pause()
+}
 
 // muteIconContainer.addEventListener('click', () => {
 //     if(muteState === 'unmute') {
@@ -104,8 +96,3 @@ function whilePlaying () {
 //     }
 // });
 
-
-
-
-
-// // Funcionalidade do Player

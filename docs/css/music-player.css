@@ -167,6 +167,7 @@
 }
 .music-player .option-bar .barra-tempo .icons i {
   margin: 0 5px 0 5px;
+  cursor: pointer;
 }
 .music-player .option-bar .barra-tempo .icons .left {
   float: left;
@@ -187,7 +188,7 @@
 .music-player .option-bar .barra-tempo .barra input[type=range] {
   appearance: none;
   position: relative;
-  background-color: rgb(78, 78, 78);
+  background-color: rgba(150, 150, 150, 0.8);
   height: 4px;
   width: 100%;
   max-width: 100%;

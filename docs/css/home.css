@@ -201,6 +201,7 @@ section .retro-line {
   flex-direction: column;
   justify-content: space-evenly;
   padding-left: 20px;
+  padding-right: 20px;
 }
 
 /* RESPONSIVIDADE */
@@ -222,11 +223,6 @@ section .retro-line {
 @media screen and (max-height: 613px), (max-width: 30px) {
   section:first-child .sandy-danny {
     display: none;
-  }
-}
-@media only screen and (max-width: 500px) {
-  .padding-box-title .splide {
-    margin-left: 30px;
   }
 }
 

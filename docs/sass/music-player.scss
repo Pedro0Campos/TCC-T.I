@@ -135,6 +135,7 @@
                 
                 i {
                     margin: 0 5px 0 5px;
+                    cursor: pointer;
                 }
 
                 .left {
@@ -160,7 +161,7 @@
                 input[type="range"] {
                     appearance: none;
                     position: relative;
-                    background-color: rgb(78, 78, 78); // Cor da barra
+                    background-color: rgba(150, 150, 150, 0.8); // Cor da barra
                     height: 4px;
                     width: 100%;
                     max-width: 100%;
