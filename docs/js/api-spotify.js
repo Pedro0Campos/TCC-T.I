@@ -95,51 +95,51 @@ const UIController = (function() {
             const listaMusicas = [
                 {
                     background: "#224938", 
-                    src: "music/Grease-Summer-Nights.mp3"
+                    src: "musics/Grease-Summer-Nights.mp3"
                 },
                 {
                     background: "#224938", 
-                    src: "music/Grease-Greased-Lightnin.mp3"
+                    src: "musics/Grease-Greased-Lightnin.mp3"
                 },
                 {
                     background: "#121212", 
-                    src: "music/Elvis-Presley-Wonder-of-You.mp3"
+                    src: "musics/Elvis-Presley-Wonder-of-You.mp3"
                 },
                 {
                     background: "#121212", 
-                    src: "music/Elvis-Presley-Dont-be-Cruel.mp3"
+                    src: "musics/Elvis-Presley-Dont-be-Cruel.mp3"
                 },
                 {
                     background: "#121212", 
-                    src: "music/Johnny-Cash-I-walk-the-Line.mp3"
+                    src: "musics/Johnny-Cash-I-walk-the-Line.mp3"
                 },
                 {
                     background: "#8e251d", 
-                    src: "music/Robert-Johnson-Cross-road-Blues.mp3"
+                    src: "musics/Robert-Johnson-Cross-road-Blues.mp3"
                 },
                 {
                     background: "#808467", 
-                    src: "music/BB-Backwater-Blues.mp3"
+                    src: "musics/BB-Backwater-Blues.mp3"
                 },
                 {
                     background: "#e8af4c", 
-                    src: "music/Little-Richard-Tutti-Frutti.mp3"
+                    src: "musics/Little-Richard-Tutti-Frutti.mp3"
                 },
                 {
                     background: "#121212", 
-                    src: "music/The-Temptations-My Girl.mp3"
+                    src: "musics/The-Temptations-My Girl.mp3"
                 },
                 {
                     background: "#cc4531", 
-                    src: "music/Elvis-Presley-Heartbreak-Hotel.mp3"
+                    src: "musics/Elvis-Presley-Heartbreak-Hotel.mp3"
                 },
                 {
                     background: "#411720", 
-                    src: "music/Elvis-Presley-Suspicious-Minds.mp3"
+                    src: "musics/Elvis-Presley-Suspicious-Minds.mp3"
                 },
                 {
                     background: "#db5697", 
-                    src: "music/Celly-Campello-Estupido-Cupido.mp3"
+                    src: "musics/Celly-Campello-Estupido-Cupido.mp3"
                 },
             ]
             const musica = listaMusicas[index]
