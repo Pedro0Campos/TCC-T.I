@@ -1,4 +1,4 @@
-raf = 10
+
 // ================================
 // API SPOTIFY
 // ================================
@@ -62,7 +62,7 @@ const APIController = function() {
 const UIController = (function() {
     const DOMElements = {
         // body: 'body',
-        splideList: '#splide__list',
+        splideList: '#splide__list_MUSICAS',
         musicPlayer: '#music-player',
         token: '#hidden_token'
     }
@@ -264,6 +264,7 @@ const UIController = (function() {
             const tempo_atual = document.querySelector("#tempo-atual")
             const tempo_total = document.querySelector("#tempo-total")
             let playState = 'play'
+            let raf = null
             
             // play / pause
             play_pause.addEventListener('click', () => {
@@ -409,50 +410,34 @@ const APPController = (function(UICtrl, APICtrl) {
         const tracksEndPoint = 'https://api.spotify.com/v1/playlists/6mTECqYM6NmLD3RRUVbuuj/tracks'
 
         const tracks = await APICtrl.getTracks(token, tracksEndPoint)
-
+        
         // Adicionar itens no carrosel
-        UICtrl.saidaDados().carrosel.innerHTML = ''
-        let musicas = []
-        tracks.forEach((value, index) => {
-            UICtrl.createSplideListTrack(
-                // index, image, title, artist
-                index,
-                value.track.album.images[0].url,
-                value.track.name,
-                value.track.artists[0].name,
-            )
-        })
+        // UICtrl.saidaDados().carrosel.innerHTML = ''
+        // tracks.forEach((value, index) => {
+        //     console.log(value.track.name);
+        // })
 
-        // Criar o carrosel
-        const carrosel_musica = new Splide('.carrosel-musica', {
-            type: 'loop', // Fica em loop
-            height: 'auto', // Altura do carrosel
-            width: '100%', // Comprimento do carrosel
-            fixedWidth: '120px', // Altura do slide
-            fixedHeight: '190px',
-            gap: '20px', // Espaçamento entre os slides
-            easing: 'ease-out'
-        })
+        // // Criar o carrosel
+        // const carrosel_musica = new Splide('.carrosel-musica', {
+        //     type: 'loop', // Fica em loop
+        //     height: 'auto', // Altura do carrosel
+        //     width: '100%', // Comprimento do carrosel
+        //     fixedWidth: '120px', // Altura do slide
+        //     fixedHeight: '190px',
+        //     gap: '20px', // Espaçamento entre os slides
+        //     easing: 'ease-out'
+        // })
 
-        carrosel_musica.mount();
+        // carrosel_musica.mount();
 
         // Abrir o MusicPLayer ao clicar nos elementos
-        saidaDados.carrosel.addEventListener('click', closeMusicPlayer) 
+        // saidaDados.carrosel.addEventListener('click', closeMusicPlayer) 
         
         // Criar conteudo do MusicPlayer
-        saidaDados.carrosel.addEventListener('click', async (e) => {
-            const index = e.target.id
-            const track = tracks[index].track
-
-            UICtrl.createContentMusicPlayer(
-                // bigImagem, smallImage, title, artist, index
-                track.album.images[0].url,
-                track.album.images[1].url,
-                track.name,
-                track.artists[0].name,
-                index
-            )
-        })
+        // console.log(saidaDados);
+        // saidaDados.carrosel.addEventListener('click', async (e) => {
+            // console.log('teste', e.target);
+        // })
     }
     
        
