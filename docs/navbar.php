@@ -18,7 +18,7 @@
         <!-- ITENS NO MEIO -->
         <div class="navlista">
             <a class="animation-link" href="index.php">Home</a>
-            <a id="grease">Grease</a>
+            <a id="grease" href="index.php" >Grease</a>
             <a class="animation-link" href="sobre.php">Sobre</a>
         </div>
         <!-- ITENS NO MEIO -->
