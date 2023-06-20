@@ -199,10 +199,11 @@ backward.addEventListener('click', () => {
     if (index <= 0) {
         index = 11
     }
-    
+
     // Atualizar conteúdo
     musica = musicas[index]
     updateContent(musica)
+    play_pause.className = 'fa-solid fa-pause'
 })
 // Forward
 forward.addEventListener('click', () => {
@@ -214,6 +215,7 @@ forward.addEventListener('click', () => {
     // Atualizar conteúdo
     musica = musicas[index]
     updateContent(musica)
+    play_pause.className = 'fa-solid fa-pause'
 })
 
 // volume 
