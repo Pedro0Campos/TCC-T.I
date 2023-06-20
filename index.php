@@ -156,9 +156,9 @@ if (isset($_GET['tema'])) {
             </div>
 
             <div class="padding-box-title" data-aos="fade-right">
-            <button onclick="openPopup()" class="btnretro" >
-                    <p id="perso">Conheça os personagens</p>
-            </button>
+              <button onclick="openPopup()" class="btnretro" >
+                <p id="perso">Conheça os personagens</p>
+              </button>
             </div> <!-- .padding-box-title -->
             </div> <!-- .backgr-gradient wh100 flex-collumn -->
 

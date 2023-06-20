@@ -114,7 +114,6 @@ if (isset($_GET['tema'])) {
             <div class="padding-box-title" data-aos="fade-right">
                 <div class="carrosel-musica splide" role="group" aria-labelledby="carousel-title">
                     <h2 id="carousel-title">Explorar </h2>
-                    
                     <!-- Caixa com opacidade (no final) para criar efeito de continuidade -->
                     <div class="opacity"></div>
                     
@@ -124,7 +123,6 @@ if (isset($_GET['tema'])) {
                             <div class="splide__slide track" onclick="closeMusicPlayer()" data-spotify-id="spotify:track:2AVkArcfALVk2X8sfPRzya">
                                 <div class="wait_api"></div>
                             </div>
-                           
                         </ul> <!-- .splide__list#splide__list-->
                     </div> <!-- .splide__track -->
                 </div> <!-- .carrosel-musica splide -->
@@ -147,8 +145,7 @@ if (isset($_GET['tema'])) {
     </section> <!-- .section-par section2 -->
     
     <section class="section-impar">       
-        <div class="flex-collumn"> <br>
-            <div class="backgr-gradient wh100 flex-collumn">
+        <div class="flex-collumn">
             <div class="padding-box-title right-bar" data-aos="fade-right">
                 <div class="box-title2 border-box">
                     <h2>Personagens <span class="sect2-title2 color-title_light">incríveis</span> merecem todo o reconhecimento</h2>
@@ -156,9 +153,8 @@ if (isset($_GET['tema'])) {
             </div>
 
             <div class="padding-box-title" data-aos="fade-right">
-            <a class="btn-home"><button type="button" id = >Conheça os perosnagens</button></a>
+                <a class="btn-home"><button type="button" id = >Conheça os personagens</button></a>
             </div> <!-- .padding-box-title -->
-            </div> <!-- .backgr-gradient wh100 flex-collumn -->
 
             <div class="splide carrosel-personagens" role="group" aria-labelledby="carousel-title">
                 <h2 id="carousel-title"></h2>
@@ -215,7 +211,7 @@ if (isset($_GET['tema'])) {
                     </ul>
                 </div>
             </div>
-        </div> 
+        </div> <!-- .flex_collumn -->
         
     </section> <!--.section-impar -->
 

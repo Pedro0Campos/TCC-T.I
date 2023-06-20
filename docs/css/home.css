@@ -200,6 +200,7 @@ section .retro-line {
   flex-direction: column;
   justify-content: space-evenly;
   padding-left: 20px;
+  height: 100%;
 }
 
 /* RESPONSIVIDADE */
