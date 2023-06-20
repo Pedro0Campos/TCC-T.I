@@ -6,96 +6,96 @@ function getMusics() {
         {
             "nome": "Summer Nights - From “Grease”",
             "artista": "John Travolta",
-            "imagem1": "https://i.scdn.co/image/ab67616d0000b273b68df485f3304211904548a8",
-            "imagem2": "https://i.scdn.co/image/ab67616d00001e02b68df485f3304211904548a8",
+            "largeImage": "https://i.scdn.co/image/ab67616d0000b273b68df485f3304211904548a8",
+            "smallImage": "https://i.scdn.co/image/ab67616d00001e02b68df485f3304211904548a8",
             "background": "#224938",
             "src": "musics/Grease-Summer-Nights.mp3"
         },
         {
             "nome": "Greased Lightnin' - From “Grease”",
             "artista": "John Travolta",
-            "imagem1": "https://i.scdn.co/image/ab67616d0000b273b68df485f3304211904548a8",
-            "imagem2": "https://i.scdn.co/image/ab67616d00001e02b68df485f3304211904548a8",
+            "largeImage": "https://i.scdn.co/image/ab67616d0000b273b68df485f3304211904548a8",
+            "smallImage": "https://i.scdn.co/image/ab67616d00001e02b68df485f3304211904548a8",
             "background": "#224938",
             "src": "musics/Grease-Greased-Lightnin.mp3"
         },
         {
             "nome": "The Wonder of You",
             "artista": "Elvis Presley",
-            "imagem1": "https://i.scdn.co/image/ab67616d0000b2738194c9102e2703a6620d3c95",
-            "imagem2": "https://i.scdn.co/image/ab67616d00001e028194c9102e2703a6620d3c95",
+            "largeImage": "https://i.scdn.co/image/ab67616d0000b2738194c9102e2703a6620d3c95",
+            "smallImage": "https://i.scdn.co/image/ab67616d00001e028194c9102e2703a6620d3c95",
             "background": "#121212",
             "src": "musics/Elvis-Presley-Wonder-of-You.mp3"
         },
         {
             "nome": "Don't Be Cruel",
             "artista": "Elvis Presley",
-            "imagem1": "https://i.scdn.co/image/ab67616d0000b27352cbfb62c42adc19d5637843",
-            "imagem2": "https://i.scdn.co/image/ab67616d00001e0252cbfb62c42adc19d5637843",
+            "largeImage": "https://i.scdn.co/image/ab67616d0000b27352cbfb62c42adc19d5637843",
+            "smallImage": "https://i.scdn.co/image/ab67616d00001e0252cbfb62c42adc19d5637843",
             "background": "#121212",
             "src": "musics/Elvis-Presley-Dont-be-Cruel.mp3"
         },
         {
             "nome": "I Walk the Line",
             "artista": "Johnny Cash",
-            "imagem1": "https://i.scdn.co/image/ab67616d0000b273dae15486c855937fffee71d4",
-            "imagem2": "https://i.scdn.co/image/ab67616d00001e02dae15486c855937fffee71d4",
+            "largeImage": "https://i.scdn.co/image/ab67616d0000b273dae15486c855937fffee71d4",
+            "smallImage": "https://i.scdn.co/image/ab67616d00001e02dae15486c855937fffee71d4",
             "background": "#121212",
             "src": "musics/Johnny-Cash-I-walk-the-Line.mp3"
         },
         {
             "nome": "Cross Road Blues",
             "artista": "Robert Johnson",
-            "imagem1": "https://i.scdn.co/image/ab67616d0000b27312549da864353c084cf0faa6",
-            "imagem2": "https://i.scdn.co/image/ab67616d00001e0212549da864353c084cf0faa6",
+            "largeImage": "https://i.scdn.co/image/ab67616d0000b27312549da864353c084cf0faa6",
+            "smallImage": "https://i.scdn.co/image/ab67616d00001e0212549da864353c084cf0faa6",
             "background": "#8e251d",
             "src": "musics/Robert-Johnson-Cross-road-Blues.mp3"
         },
         {
             "nome": "Backwater Blues",
             "artista": "Big Bill Broonzy",
-            "imagem1": "https://i.scdn.co/image/ab67616d0000b2734c3ac2e9cfd3098f12902728",
-            "imagem2": "https://i.scdn.co/image/ab67616d00001e024c3ac2e9cfd3098f12902728",
+            "largeImage": "https://i.scdn.co/image/ab67616d0000b2734c3ac2e9cfd3098f12902728",
+            "smallImage": "https://i.scdn.co/image/ab67616d00001e024c3ac2e9cfd3098f12902728",
             "background": "#808467",
             "src": "musics/BB-Backwater-Blues.mp3"
         },
         {
             "nome": "Tutti Frutti",
             "artista": "Little Richard",
-            "imagem1": "https://i.scdn.co/image/ab67616d0000b2738a22827b01e5d68d3736d58b",
-            "imagem2": "https://i.scdn.co/image/ab67616d00001e028a22827b01e5d68d3736d58b",
+            "largeImage": "https://i.scdn.co/image/ab67616d0000b2738a22827b01e5d68d3736d58b",
+            "smallImage": "https://i.scdn.co/image/ab67616d00001e028a22827b01e5d68d3736d58b",
             "background": "#e8af4c",
             "src": "musics/Little-Richard-Tutti-Frutti.mp3"
         },
         {
             "nome": "My Girl",
             "artista": "The Temptations",
-            "imagem1": "https://i.scdn.co/image/ab67616d0000b2731a5b6271ae1c8497df20916e",
-            "imagem2": "https://i.scdn.co/image/ab67616d00001e021a5b6271ae1c8497df20916e",
+            "largeImage": "https://i.scdn.co/image/ab67616d0000b2731a5b6271ae1c8497df20916e",
+            "smallImage": "https://i.scdn.co/image/ab67616d00001e021a5b6271ae1c8497df20916e",
             "background": "#121212",
             "src": "musics/The-Temptations-My Girl.mp3"
         },
         {
             "nome": "Heartbreak Hotel",
             "artista": "Elvis Presley",
-            "imagem1": "https://i.scdn.co/image/ab67616d0000b27320ee3e86e17f17239bef1f76",
-            "imagem2": "https://i.scdn.co/image/ab67616d00001e0220ee3e86e17f17239bef1f76",
+            "largeImage": "https://i.scdn.co/image/ab67616d0000b27320ee3e86e17f17239bef1f76",
+            "smallImage": "https://i.scdn.co/image/ab67616d00001e0220ee3e86e17f17239bef1f76",
             "background": "#cc4531",
             "src": "musics/Elvis-Presley-Heartbreak-Hotel.mp3"
         },
         {
             "nome": "Suspicious Minds",
             "artista": "Elvis Presley",
-            "imagem1": "https://i.scdn.co/image/ab67616d0000b273fdc0aa7765f3197ac9179ec7",
-            "imagem2": "https://i.scdn.co/image/ab67616d00001e02fdc0aa7765f3197ac9179ec7",
+            "largeImage": "https://i.scdn.co/image/ab67616d0000b273fdc0aa7765f3197ac9179ec7",
+            "smallImage": "https://i.scdn.co/image/ab67616d00001e02fdc0aa7765f3197ac9179ec7",
             "background": "#411720",
             "src": "musics/Elvis-Presley-Suspicious-Minds.mp3"
         },
         {
             "nome": "Estúpido Cupido",
             "artista": "Celly Campello",
-            "imagem1": "https://i.scdn.co/image/ab67616d0000b273a8c4aa43fde3c0e97cd0dd35",
-            "imagem2": "https://i.scdn.co/image/ab67616d00001e02a8c4aa43fde3c0e97cd0dd35",
+            "largeImage": "https://i.scdn.co/image/ab67616d0000b273a8c4aa43fde3c0e97cd0dd35",
+            "smallImage": "https://i.scdn.co/image/ab67616d00001e02a8c4aa43fde3c0e97cd0dd35",
             "background": "#db5697",
             "src": "musics/Celly-Campello-Estupido-Cupido.mp3"
         }
@@ -104,14 +104,16 @@ function getMusics() {
     return listaMusicas
 }
 
-
 // ================================
 // Music Player
 // ================================
 
 // VARs 
 // ================================
+
+// Container
 let music_player = document.querySelector("#music-player")
+// Icons
 let audio = document.querySelector("#audio")
 let play_pause = document.querySelector("#play-pause")
 let backward = document.querySelector("#backward")
@@ -119,26 +121,55 @@ let forward = document.querySelector("#forward")
 let repeat = document.querySelector("#repeat")
 let reload = document.querySelector("#reload")
 let volume = document.querySelector("#volume")
+// Inputs - output
 let controle_deslizante = document.querySelector("#controle-deslizante")
 let tempo_atual = document.querySelector("#tempo-atual")
 let tempo_total = document.querySelector("#tempo-total")
+// Carrossel
 let splideList = document.querySelector('#splide__list_MUSICAS')
+// Musica
 let musicas = getMusics();
+// Estágios
 let playState = 'play'
 let raf = null
-console.log(audio);
+let musica = musicas[0]
+// ================================
 
-// Open / Close menu
+
+
+// EVENTS - FUNCTIONS
+// ================================
+
+// Open / Close Music Player
+// --------------------------------
 function openCloseMusicPlayer() {
     document.querySelector('.music-player').classList.toggle('ocult-player')
     document.querySelector('body').classList.toggle('disable-scroll')
 }
 
-// EVENTS - FUNCTIONS
-// ================================
-splideList.addEventListener('click', () => {
+// Clicar em uma música
+splideList.addEventListener('click', (e) => {
     openCloseMusicPlayer()
+    musica = musicas[e.target.id]
+
+    updateContent(musica)
 })
+// --------------------------------
+
+// Atualizar conteúdo
+function updateContent(musica) {
+    document.querySelector('#music-name').innerHTML = musica.nome 
+    document.querySelector('#music-artist').innerHTML = musica.artista
+    document.querySelector('#music-image-large').src = musica.largeImage
+    document.querySelector('#music-image-small').src = musica.smallImage
+    music_player.style.background = musica.background 
+    audio.src = musica.src
+}
+
+
+
+// Icons
+// --------------------------------
 
 // play / pause
 play_pause.addEventListener('click', () => {
@@ -162,18 +193,48 @@ function pause() {
 }
 
 
+// Backward
+backward.addEventListener('click', () => {
+    let index = musicas.indexOf(musica) - 1
+    if (index <= 0) {
+        index = 11
+    }
+    
+    // Atualizar conteúdo
+    musica = musicas[index]
+    updateContent(musica)
+})
 // Forward
-let index_forward = Number(index) + 1
-if (index_forward >= listaMusicas.length) {
-    index_forward = 0
-}
 forward.addEventListener('click', () => {
-    console.log(APPController);
+    let index = musicas.indexOf(musica) + 1
+    if (index >= musicas.length) {
+        index = 0
+    }
+
+    // Atualizar conteúdo
+    musica = musicas[index]
+    updateContent(musica)
 })
 
+// volume 
+// volumeSlider.ad1dEventListener('input', (e) => {
+    //     const value = e.target.value;
+    
+    //     outputContainer.textContent = value;
+//     audio.volume = value / 100;
+// });
+// --------------------------------
 
-// Controle deslizante
+// Progresso do input
+const showRangeProgress = (rangeInput) => {
+    if(rangeInput === controle_deslizante) {
+        music_player.style.setProperty('--seek-before-width', rangeInput.value / rangeInput.max * 100 + '%');
+    }
+}
+
+// Controle deslizante 
 controle_deslizante.addEventListener('input', (e) => {
+    // -> mostrar o tempo da música ao mover o input
     showRangeProgress(e.target)
     tempo_atual.textContent = calculateTime(controle_deslizante.value);
     if(!audio.paused) {
@@ -181,11 +242,10 @@ controle_deslizante.addEventListener('input', (e) => {
     }
 })
 controle_deslizante.addEventListener('change', () => {
+    // -> definir o tempo da música ao soltar o input
     audio.currentTime = controle_deslizante.value;
     requestAnimationFrame(whilePlaying);
-    // if(!audio.paused) {
-    // }
-});
+})
 
 
 // Audio
@@ -200,81 +260,7 @@ if (audio.readyState > 0) {
     })
 }
 
-// volume 
-// volumeSlider.ad1dEventListener('input', (e) => {
-//     const value = e.target.value;
 
-//     outputContainer.textContent = value;
-//     audio.volume = value / 100;
-// });
-
-// Media Session
-if('mediaSession' in navigator) {
-    navigator.mediaSession.metadata = new MediaMetadata({
-        title: title,
-        artist: artist,
-        artwork: [
-            { src: smallImage, sizes: '300x300', type: 'image/png' },
-            { src: bigImagem, sizes: '640x640', type: 'image/png' },
-        ]
-    });
-    navigator.mediaSession.setActionHandler('play', () => {
-        if(playState === 'play') {
-            audio.play();
-            requestAnimationFrame(whilePlaying);
-            playState = 'pause';
-        } else {
-            audio.pause();
-            cancelAnimationFrame(raf);
-            playState = 'play';
-        }
-    });
-    navigator.mediaSession.setActionHandler('pause', () => {
-        if(playState === 'play') {
-            audio.play();
-            requestAnimationFrame(whilePlaying);
-            playState = 'pause';
-        } else {
-            audio.pause();
-            cancelAnimationFrame(raf);
-            playState = 'play';
-        }
-    });
-    navigator.mediaSession.setActionHandler('seekbackward', (details) => {
-        audio.currentTime = audio.currentTime - (details.seekOffset || 10);
-    });
-    navigator.mediaSession.setActionHandler('seekforward', (details) => {
-        audio.currentTime = audio.currentTime + (details.seekOffset || 10);
-    });
-    navigator.mediaSession.setActionHandler('seekto', (details) => {
-        if (details.fastSeek && 'fastSeek' in audio) {
-          audio.fastSeek(details.seekTime);
-          return;
-        }
-        audio.currentTime = details.seekTime;
-    });
-    navigator.mediaSession.setActionHandler('stop', () => {
-        audio.currentTime = 0;
-        controle_deslizante.value = 0;
-        musicPlayer.style.setProperty('--seek-before-width', '0%');
-        tempo_atual.textContent = '0:00';
-        if(playState === 'pause') {
-            cancelAnimationFrame(raf);
-            playState = 'play';
-        }
-    });
-}
-
-
-// Progresso do input
-const showRangeProgress = (rangeInput) => {
-    if(rangeInput === controle_deslizante) {
-        music_player.style.setProperty('--seek-before-width', rangeInput.value / rangeInput.max * 100 + '%');
-    }
-}
-
-
-// Funcionalidade do player
 const calculateTime = (secs) => {
     const minutes = Math.floor(secs / 60);
     const seconds = Math.floor(secs % 60);
@@ -297,22 +283,62 @@ function whilePlaying () {
     raf = requestAnimationFrame(whilePlaying)
 }
 
-// function Play_pause() {
-//     const icon = play_pause
-//     console.log(icon);
-//     if (icon.className == 'fa-solid fa-play') {
-//         icon.className = 'fa-solid fa-pause'
-//         play()
-//     } else {
-//         icon.className = 'fa-solid fa-play'
-//         pause()
-//     }
-// }
-
-// muteIconContainer.addEventListener('click', () => {
-//     if(muteState === 'unmute') {
-//         muteState = 'mute';
-//     } else {
-//         muteState = 'unmute';
-//     }
-// });
+// Media Session
+// --------------------------------
+// if('mediaSession' in navigator) {
+//         navigator.mediaSession.metadata = new MediaMetadata({
+//                 title: title,
+//                 artist: artist,
+//                 artwork: [
+//                         { src: smallImage, sizes: '300x300', type: 'image/png' },
+//             { src: bigImagem, sizes: '640x640', type: 'image/png' },
+//         ]
+//     });
+//     navigator.mediaSession.setActionHandler('play', () => {
+//             if(playState === 'play') {
+//                     audio.play();
+//                     requestAnimationFrame(whilePlaying);
+//                     playState = 'pause';
+//                 } else {
+//                         audio.pause();
+//                         cancelAnimationFrame(raf);
+//                         playState = 'play';
+//                     }
+//                 });
+//                 navigator.mediaSession.setActionHandler('pause', () => {
+//                         if(playState === 'play') {
+//                                 audio.play();
+//                                 requestAnimationFrame(whilePlaying);
+//                                 playState = 'pause';
+//                             } else {
+//                                     audio.pause();
+//                                     cancelAnimationFrame(raf);
+//                                     playState = 'play';
+//                                 }
+//                             });
+//                             navigator.mediaSession.setActionHandler('seekbackward', (details) => {
+//         audio.currentTime = audio.currentTime - (details.seekOffset || 10);
+//     });
+//     navigator.mediaSession.setActionHandler('seekforward', (details) => {
+//             audio.currentTime = audio.currentTime + (details.seekOffset || 10);
+//         });
+//         navigator.mediaSession.setActionHandler('seekto', (details) => {
+//                 if (details.fastSeek && 'fastSeek' in audio) {
+//                       audio.fastSeek(details.seekTime);
+//                       return;
+//                     }
+//                     audio.currentTime = details.seekTime;
+//                 });
+//                 navigator.mediaSession.setActionHandler('stop', () => {
+//                         audio.currentTime = 0;
+//                         controle_deslizante.value = 0;
+//                         musicPlayer.style.setProperty('--seek-before-width', '0%');
+//                         tempo_atual.textContent = '0:00';
+//                         if(playState === 'pause') {
+//                                 cancelAnimationFrame(raf);
+//                                 playState = 'play';
+//                             }
+//                         });
+//                     }
+// --------------------------------
+// ================================

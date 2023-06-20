@@ -43,8 +43,8 @@ if (isset($_GET['tema'])) {
 </head>
 
 <body class="fade">
-    <div class="music-player ocult-player" id="music-player">
-    <!-- <div class="music-player" id="music-player"> -->
+    <div class="music-player" id="music-player">
+    <!-- <div class="music-player ocult-player" id="music-player"> -->
         <div class="close-box" onclick="{openCloseMusicPlayer(), pause()}">
             <div class="leftright"></div>
             <div class="rightleft"></div>
@@ -53,17 +53,16 @@ if (isset($_GET['tema'])) {
         
         <div class="music-details">
             <div class="container">
-                <img id="music-image" class="music-image" src="">
-                <p class="music-name">${title}</p>
-                <p class="music-autor">${artist}</p>
+                <img id="music-image-large" class="music-image" src="">
+                <p id="music-name" class="music-name">${title}</p>
+                <p id="music-artist" class="music-autor">${artist}</p>
             </div>
         </div>
 
         <div class="option-bar flexCenterVH">
             <div class="lbox-music">
-                <img class="music-image" src="">
+                <img class="music-image" src="" id="music-image-small">
             </div>
-
             <div class="barra-tempo flexCenterVH">
                 <div class="icons">
                     <!-- 
@@ -91,7 +90,7 @@ if (isset($_GET['tema'])) {
                 </div>
 
                 <div class="barra">
-                    <audio id="audio" src="" preload="metadata" autoplay loop></audio>
+                    <audio id="audio" src="musics/Grease-Summer-Nights.mp3" preload="metadata" autoplay loop></audio>
                     <input id="controle-deslizante" type="range" max="100" value="0">
                     <span id="tempo-atual">0:00</span>
                     <span id="tempo-total">0:00</span>
@@ -100,13 +99,8 @@ if (isset($_GET['tema'])) {
         </div>            
     </div>
 
-    <input id="hidden_token" type="text" value="" style="display: none; visibility: hidden;">
-
     <?php
-    // include('database/db.php');
     include('navbar.php');
-    // include('php/form.php');
-    // include('php/consultar_user.php');  // Consultar usuários no banco
     ?>
 
 <!-- CONTEÚDO -->
@@ -261,7 +255,7 @@ if (isset($_GET['tema'])) {
 
         carroselPersonagens.mount();
     </script>
-    </main>
+</main>
     
     <!-- AOS - Animation in scrool -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

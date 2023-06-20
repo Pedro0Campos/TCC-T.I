@@ -13,7 +13,7 @@ let musicas = getMusics()
 musicas.forEach((e, i) => {
     splideList.innerHTML += `
     <div class="splide__slide track">
-        <img id="${i}" src="${e.imagem2}" alt="Foto do Album do(a) ${e.artista}"/>
+        <img id="${i}" src="${e.smallImage}" alt="Foto do Album do(a) ${e.artista}"/>
         <p class="nome_musica">${e.nome}</p>
         <p class="autor_musica">${e.artista}</p>
     </div>
