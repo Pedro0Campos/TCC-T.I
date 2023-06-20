@@ -8,7 +8,7 @@ function getNumRandom(min, max) {
 
 function change_background() {
     // Definir a variável
-    let div = document.querySelector('div.left')
+    let div = document.querySelector('div#form-left')
 
     // Gerar um número de 1 a 4
     num = getNumRandom(1, 5)

@@ -106,7 +106,7 @@
 
         ?>
 
-        <div class="form-left backg-image-logcad" data-aos="fade" data-aos-duration="500"></div>
+        <div id="form-left" class="form-left backg-image-logcad" data-aos="fade" data-aos-duration="500"></div>
 
         <div class="form-right" data-aos="fade-down">
 
