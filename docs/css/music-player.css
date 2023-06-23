@@ -163,18 +163,18 @@
 }
 .music-player .option-bar .barra-tempo .icons {
   width: 100%;
-  font-size: 16px;
+  font-size: 18px;
 }
 .music-player .option-bar .barra-tempo .icons i {
   margin: 0 5px 0 5px;
   cursor: pointer;
 }
+.music-player .option-bar .barra-tempo .icons .active {
+  color: var(--second-color);
+}
 .music-player .option-bar .barra-tempo .icons .left {
   float: left;
   margin-left: 25px;
-}
-.music-player .option-bar .barra-tempo .icons .left #play-pause {
-  font-size: 1.4em;
 }
 .music-player .option-bar .barra-tempo .icons .right {
   float: right;

@@ -118,8 +118,8 @@ let audio = document.querySelector("#audio")
 let play_pause = document.querySelector("#play-pause")
 let backward = document.querySelector("#backward")
 let forward = document.querySelector("#forward")
+let shuffle = document.querySelector("#shuffle")
 let repeat = document.querySelector("#repeat")
-let reload = document.querySelector("#reload")
 let volume = document.querySelector("#volume")
 // Inputs - output
 let controle_deslizante = document.querySelector("#controle-deslizante")
@@ -145,6 +145,7 @@ let musica = musicas[0]
 function openCloseMusicPlayer() {
     document.querySelector('.music-player').classList.toggle('ocult-player')
     document.querySelector('body').classList.toggle('disable-scroll')
+    play_pause.className = 'fa-solid fa-pause'
 }
 
 // Clicar em uma música
@@ -167,9 +168,23 @@ function updateContent(musica) {
 }
 
 
-
 // Icons
 // --------------------------------
+
+// Ativar icon
+function ativar(icon) {
+    if (icon.className.includes('active')) {
+        icon.classList.remove('active')
+        
+        // Está desativado
+        return false
+    } else {
+        icon.classList.add('active')
+
+        // Está desativado
+        return true 
+    }
+}
 
 // play / pause
 play_pause.addEventListener('click', () => {
@@ -192,11 +207,10 @@ function pause() {
     audio.pause()
 }
 
-
 // Backward
 backward.addEventListener('click', () => {
     let index = musicas.indexOf(musica) - 1
-    if (index <= 0) {
+    if (index < 0) {
         index = 11
     }
 
@@ -205,6 +219,7 @@ backward.addEventListener('click', () => {
     updateContent(musica)
     play_pause.className = 'fa-solid fa-pause'
 })
+
 // Forward
 forward.addEventListener('click', () => {
     let index = musicas.indexOf(musica) + 1
@@ -218,6 +233,29 @@ forward.addEventListener('click', () => {
     play_pause.className = 'fa-solid fa-pause'
 })
 
+// Shuffle
+function embaralhar(array) {
+    for (let j, x, i = array.length; i; j = Math.floor(Math.random() * i), x = array[--i], array[i] = array[j], array[j] = x);
+    return array;
+}
+shuffle.addEventListener('click', (e) => {
+    let resposta = ativar(e.target)
+    
+    if (resposta) {
+        embaralhar(musicas)
+    } else {
+        musicas = getMusics()
+    } 
+})
+
+// Repeat
+repeat.addEventListener('click', (e) => {
+    ativar(e.target)
+})
+
+
+
+
 // volume 
 // volumeSlider.ad1dEventListener('input', (e) => {
     //     const value = e.target.value;
@@ -225,6 +263,9 @@ forward.addEventListener('click', () => {
     //     outputContainer.textContent = value;
 //     audio.volume = value / 100;
 // });
+
+// Audio
+audio.addEventListener('progress', whilePlaying)
 // --------------------------------
 
 // Progresso do input
@@ -249,9 +290,6 @@ controle_deslizante.addEventListener('change', () => {
     requestAnimationFrame(whilePlaying);
 })
 
-
-// Audio
-audio.addEventListener('progress', whilePlaying)
 if (audio.readyState > 0) {
     displayDuration();
     setSliderMax();
@@ -261,7 +299,6 @@ if (audio.readyState > 0) {
         setSliderMax();
     })
 }
-
 
 const calculateTime = (secs) => {
     const minutes = Math.floor(secs / 60);

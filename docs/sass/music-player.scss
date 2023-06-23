@@ -131,25 +131,27 @@
 
             .icons {
                 width: 100%;
-                font-size: 16px;
+                font-size: 18px;
                 
                 i {
                     margin: 0 5px 0 5px;
                     cursor: pointer;
                 }
 
+                .active {
+                    color: var(--second-color);
+                }
+                
+                
                 .left {
                     float: left;
                     margin-left: 25px;
-
-                    #play-pause {
-                        font-size: 1.4em;
-                    }
                 }
-                
+
                 .right {
                     float: right;
                     margin-right: 25px;
+
                 }
             }
 

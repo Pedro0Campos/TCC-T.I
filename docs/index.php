@@ -53,15 +53,15 @@ if (isset($_GET['tema'])) {
         
         <div class="music-details">
             <div class="container">
-                <img id="music-image-large" class="music-image" src="">
-                <p id="music-name" class="music-name">${title}</p>
-                <p id="music-artist" class="music-autor">${artist}</p>
+                <img id="music-image-large" class="music-image" src="https://i.scdn.co/image/ab67616d0000b273b68df485f3304211904548a8">
+                <p id="music-name" class="music-name">Summer Nights - From “Grease”</p>
+                <p id="music-artist" class="music-autor">John Travolta</p>
             </div>
         </div>
 
         <div class="option-bar flexCenterVH">
             <div class="lbox-music">
-                <img class="music-image" src="" id="music-image-small">
+                <img id="music-image-small" class="music-image" src="https://i.scdn.co/image/ab67616d00001e02b68df485f3304211904548a8">
             </div>
             <div class="barra-tempo flexCenterVH">
                 <div class="icons">
@@ -83,8 +83,8 @@ if (isset($_GET['tema'])) {
                     </div>
 
                     <div class="right">
+                        <i id="shuffle" class="fa-solid fa-shuffle"></i>
                         <i id="repeat" class="fa-solid fa-repeat"></i>
-                        <i id="reload" class="fa-solid fa-rotate-left"></i>
                         <i id="volume" class="fa-solid fa-volume-high"></i>
                     </div>
                 </div>
