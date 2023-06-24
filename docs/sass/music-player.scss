@@ -121,13 +121,121 @@
             }
         }
         
-        .barra-tempo {
+        .barra-player {
             width: 100%;
             height: 100%;
             margin-left: 30px;
             margin-right: 30px;
             flex-direction: column;
             
+            input[type="range"] {                
+                // Track - webkit
+                &::-webkit-slider-runnable-track {
+                    height: 4px;
+                    width: 100%;
+                    background-color: transparent;
+                    cursor: pointer;
+                }
+                // Track - moz
+                &::-moz-range-track {
+                    height: 4px;
+                    width: 100%;
+                    background-color: transparent;
+                    cursor: pointer;
+                }
+                // Track - ms
+                &::-ms-track {
+                    height: 4px;
+                    width: 100%;
+                    background-color: transparent;
+                    cursor: pointer;
+                }
+
+
+                // Bolinha
+                // Thumb - webkit
+                &::-webkit-slider-thumb {
+                    appearance: none;
+                    position: relative;
+                    bottom: 2.5px;
+                    height: 0px;
+                    width: 0px;
+                    border-radius: 50%;
+                    background-color: #fff;
+                    cursor: pointer;
+                }
+                &:active::-webkit-slider-thumb {
+                    height: 10px;
+                    width: 10px;
+                    cursor: pointer;
+                }
+                
+                // Thumb - moz
+                &::-moz-range-thumb {
+                    appearance: none;
+                    position: relative;
+                    bottom: 2.5px;
+                    height: 0px;
+                    width: 0px;
+                    border-radius: 50%;
+                    background-color: #fff;
+                    cursor: pointer;
+                }
+                &:active::-moz-range-thumb {
+                    height: 10px;
+                    width: 10px;
+                    cursor: pointer;
+                }
+                
+                // Thumb - ms
+                &::-ms-thumb {
+                    appearance: none;
+                    position: relative;
+                    bottom: 2.5px;
+                    height: 0px;
+                    width: 0px;
+                    border-radius: 50%;
+                    background-color: #fff;
+                    cursor: pointer;
+                }
+                &:active::-ms-thumb {
+                    cursor: pointer;
+                    height: 10px;
+                    width: 10px;
+                }
+                
+                
+                // Progress - moz
+                &::-moz-range-progress {
+                    background: rgb(253, 253, 253);
+                    cursor: pointer;
+                }
+                
+                // Focus outer - moz
+                &::-moz-focus-outer {
+                    border: 0;
+                }
+
+                // Fill lower - ms
+                &::-ms-fill-lower {
+                    cursor: pointer;
+                    background: white;
+                }
+
+                // Tempo atual
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    height: 4px;
+                    width: var(--seek-before-width);
+                    background: rgba(255, 255, 255);
+                }
+                &:active::before {
+                    background: var(--second-color);
+                }
+
+            }
 
             .icons {
                 width: 100%;
@@ -136,6 +244,11 @@
                 i {
                     margin: 0 5px 0 5px;
                     cursor: pointer;
+                }
+                #volume:hover {
+                    input {
+                        // display: block !important;
+                    }
                 }
 
                 .active {
@@ -151,7 +264,7 @@
                 .right {
                     float: right;
                     margin-right: 25px;
-
+                    position: relative;
                 }
             }
 
@@ -160,7 +273,7 @@
                 width: 100%;
                 font-size: 13px;
 
-                input[type="range"] {
+                input {
                     appearance: none;
                     position: relative;
                     background-color: rgba(150, 150, 150, 0.8); // Cor da barra
@@ -169,125 +282,6 @@
                     max-width: 100%;
                     margin: 10px 0 10px 0;
                     cursor: pointer;
-                    
-                    // Track - webkit
-                    &::-webkit-slider-runnable-track {
-                        height: 4px;
-                        width: 100%;
-                        background-color: transparent;
-                        cursor: pointer;
-                    }
-                    // Track - moz
-                    &::-moz-range-track {
-                        height: 4px;
-                        width: 100%;
-                        background-color: transparent;
-                        cursor: pointer;
-                    }
-                    // Track - ms
-                    &::-ms-track {
-                        height: 4px;
-                        width: 100%;
-                        background-color: transparent;
-                        cursor: pointer;
-                    }
-    
-    
-                    // Bolinha
-                    // Thumb - webkit
-                    &::-webkit-slider-thumb {
-                        appearance: none;
-                        position: relative;
-                        bottom: 2.5px;
-                        height: 0px;
-                        width: 0px;
-                        border-radius: 50%;
-                        background-color: #fff;
-                        cursor: pointer;
-                    }
-                    &:active::-webkit-slider-thumb {
-                        height: 10px;
-                        width: 10px;
-                        cursor: pointer;
-                    }
-                    
-                    // Thumb - moz
-                    &::-moz-range-thumb {
-                        appearance: none;
-                        position: relative;
-                        bottom: 2.5px;
-                        height: 0px;
-                        width: 0px;
-                        border-radius: 50%;
-                        background-color: #fff;
-                        cursor: pointer;
-                    }
-                    &:active::-moz-range-thumb {
-                        height: 10px;
-                        width: 10px;
-                        cursor: pointer;
-                    }
-                    
-                    // Thumb - ms
-                    &::-ms-thumb {
-                        appearance: none;
-                        position: relative;
-                        bottom: 2.5px;
-                        height: 0px;
-                        width: 0px;
-                        border-radius: 50%;
-                        background-color: #fff;
-                        cursor: pointer;
-                    }
-                    &:active::-ms-thumb {
-                        cursor: pointer;
-                        height: 10px;
-                        width: 10px;
-                    }
-                    
-                    
-                    // Progress - moz
-                    &::-moz-range-progress {
-                        background: rgb(255, 35, 35);
-                        cursor: pointer;
-                    }
-                    
-                    // Focus outer - moz
-                    &::-moz-focus-outer {
-                        border: 0;
-                    }
-    
-                    // Fill lower - ms
-                    &::-ms-fill-lower {
-                        cursor: pointer;
-                        background: white;
-                    }
-                    // Fill upper - ms
-                    &::-ms-fill-upper {
-                        cursor: pointer;
-                        background: linear-gradient(to right, rgba(150, 150, 150, 0.6) var(--buffered-width), rgba(123, 123, 123, 0.2) var(--buffered-width));
-                    }
-
-                    // Buffered
-                    &::-webkit-slider-runnable-track {
-                        width: 100%;
-                        cursor: pointer;
-                        background: linear-gradient(to right, rgba(150, 150, 150, 0.6) var(--buffered-width), rgba(123, 123, 123, 0.2) var(--buffered-width));
-                    }
-
-                    // Tempo atual
-                    &::before {
-                        content: '';
-                        position: absolute;
-                        top: 0;
-                        height: 4px;
-                        width: var(--seek-before-width);
-                        background: rgba(255, 255, 255);
-                    }
-                    &:active::before {
-                        background: var(--second-color);
-                    }
-    
                 }
 
                 #tempo-atual {

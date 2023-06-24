@@ -269,8 +269,12 @@ const everything = function(element) {
     }
 
     const showRangeProgress = (rangeInput) => {
-        if(rangeInput === seekSlider) audioPlayerContainer.style.setProperty('--seek-before-width', rangeInput.value / rangeInput.max * 100 + '%');
-        else audioPlayerContainer.style.setProperty('--volume-before-width', rangeInput.value / rangeInput.max * 100 + '%');
+        let value = rangeInput.value / rangeInput.max * 100 + '%'
+        if (rangeInput === seekSlider) {
+            audioPlayerContainer.style.setProperty('--seek-before-width', value);
+        } else {
+            audioPlayerContainer.style.setProperty('--volume-before-width', value);
+        }
     }
 
     const calculateTime = (secs) => {
@@ -349,10 +353,10 @@ const everything = function(element) {
     });
 
     volumeSlider.addEventListener('input', (e) => {
-        const value = e.target.value;
-        showRangeProgress(e.target);
-        outputContainer.textContent = value;
-        audio.volume = value / 100;
+        // const value = e.target.value;
+        // showRangeProgress(e.target);
+        // outputContainer.textContent = value;
+        // audio.volume = value / 100;
     });
 
     if('mediaSession' in navigator) {

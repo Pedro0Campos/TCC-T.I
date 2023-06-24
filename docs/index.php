@@ -63,7 +63,7 @@ if (isset($_GET['tema'])) {
             <div class="lbox-music">
                 <img id="music-image-small" class="music-image" src="https://i.scdn.co/image/ab67616d00001e02b68df485f3304211904548a8">
             </div>
-            <div class="barra-tempo flexCenterVH">
+            <div class="barra-player flexCenterVH">
                 <div class="icons">
                     <!-- 
                     variantes do volume:
