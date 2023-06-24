@@ -90,7 +90,7 @@ if (isset($_GET['tema'])) {
                 </div>
 
                 <div class="barra">
-                    <audio id="audio" src="musics/Grease-Summer-Nights.mp3" preload="metadata" autoplay loop></audio>
+                    <audio id="audio" src="musics/Grease-Summer-Nights.mp3" preload="metadata" autoplay></audio>
                     <input id="controle-deslizante" type="range" max="100" value="0">
                     <span id="tempo-atual">0:00</span>
                     <span id="tempo-total">0:00</span>

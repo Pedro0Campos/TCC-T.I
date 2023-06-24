@@ -117,7 +117,7 @@ let music_player = document.querySelector("#music-player")
 // Icons
 let backward = document.querySelector("#backward")
 let play_pause = document.querySelector("#play-pause")
-let forward = document.querySelector("#forward")
+let forward_icon = document.querySelector("#forward")
 let shuffle = document.querySelector("#shuffle")
 let repeat = document.querySelector("#repeat")
 let volume = document.querySelector("#volume")
@@ -136,6 +136,7 @@ let musicas = getMusics();
 
 // Estágios
 let playState = 'play'
+let loopState = 'false'
 let raf = null
 let musica = musicas[0]
 // ================================
@@ -213,6 +214,7 @@ function pause() {
     audio.pause()
 }
 
+
 // Backward
 backward.addEventListener('click', () => {
     let index = musicas.indexOf(musica) - 1
@@ -226,8 +228,9 @@ backward.addEventListener('click', () => {
     play_pause.className = 'fa-solid fa-pause'
 })
 
+
 // Forward
-forward.addEventListener('click', () => {
+function forward() {
     let index = musicas.indexOf(musica) + 1
     if (index >= musicas.length) {
         index = 0
@@ -237,7 +240,8 @@ forward.addEventListener('click', () => {
     musica = musicas[index]
     updateContent(musica)
     play_pause.className = 'fa-solid fa-pause'
-})
+}
+forward_icon.addEventListener('click', forward)
 
 
 // Shuffle
@@ -245,8 +249,8 @@ function embaralhar(array) {
     for (let j, x, i = array.length; i; j = Math.floor(Math.random() * i), x = array[--i], array[i] = array[j], array[j] = x);
     return array;
 }
-shuffle.addEventListener('click', (e) => {
-    let resposta = ativar(e.target)
+shuffle.addEventListener('click', () => {
+    let resposta = ativar(shuffle)
     
     if (resposta) {
         embaralhar(musicas)
@@ -257,15 +261,21 @@ shuffle.addEventListener('click', (e) => {
 
 
 // Repeat
-repeat.addEventListener('click', (e) => {
-    ativar(e.target)
+repeat.addEventListener('click', () => {
+    let resposta = ativar(repeat)
     
+    if (resposta) {
+        audio.setAttribute('loop', 'true')
+        loopState = true
+    } else {
+        audio.removeAttribute('loop')
+        loopState = false
+    }
 })
 
+
 // Volume
-estadios_volume = [
-    
-]
+estadios_volume = []
 volume.addEventListener('click', () => {
     console.log(volume);
 
@@ -289,11 +299,7 @@ audio.addEventListener('pause', () => {
 // Progresso do input
 const showRangeProgress = (rangeInput) => {
     let value = rangeInput.value / rangeInput.max * 100 + '%'
-    if (rangeInput === controle_deslizante) {
-        music_player.style.setProperty('--seek-before-width', value);
-    } else {
-        music_player.style.setProperty('--volume-before-width', value);
-    }
+    music_player.style.setProperty('--seek-before-width', value);
 }
 
 // Controle deslizante - tempo da musica
@@ -311,7 +317,6 @@ controle_deslizante.addEventListener('change', () => {
     requestAnimationFrame(whilePlaying);
 })
 
-// Controle deslizante - volume
 
 // --------------------------------
 if (audio.readyState > 0) {
@@ -339,11 +344,16 @@ const setSliderMax = () => {
     controle_deslizante.max = Math.floor(audio.duration);
 }
 
+
 function whilePlaying () {
     controle_deslizante.value = Math.floor(audio.currentTime);
     tempo_atual.textContent = calculateTime(controle_deslizante.value);
     music_player.style.setProperty('--seek-before-width', `${controle_deslizante.value / controle_deslizante.max * 100}%`);
     raf = requestAnimationFrame(whilePlaying)
+
+    if (audio.currentTime == audio.duration && loopState == false) {
+        forward()
+    }
 }
 
 // Media Session
