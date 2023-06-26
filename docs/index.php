@@ -43,8 +43,8 @@ if (isset($_GET['tema'])) {
 </head>
 
 <body class="fade">
-    <!-- <div class="music-player" id="music-player"> -->
-    <div class="music-player ocult-player" id="music-player">
+    <div class="music-player" id="music-player">
+    <!-- <div class="music-player ocult-player" id="music-player"> -->
         <div class="close-box" onclick="{openCloseMusicPlayer(), pause()}">
             <div class="leftright"></div>
             <div class="rightleft"></div>
@@ -77,14 +77,14 @@ if (isset($_GET['tema'])) {
                         > <i class="fa-solid fa-pause"></i>
                     -->
                     <div class="left flexCenterVH">
-                        <i id="backward" class="fa-solid fa-backward-fast backward" title="Anterior (right)"></i>
-                        <i id="play-pause" class="fa-solid fa-pause"></i>
-                        <i id="forward" class="fa-solid fa-forward-fast"></i>  
+                        <i id="backward" class="fa-solid fa-backward-fast backward" title="Anterior (j)"></i>
+                        <i id="play-pause" class="fa-solid fa-pause" title="Reproduzir (k)"></i>
+                        <i id="forward" class="fa-solid fa-forward-fast" title="Próximo (l)"></i>  
                     </div>
 
                     <div class="right">
-                        <i id="shuffle" class="fa-solid fa-shuffle"></i>
-                        <i id="repeat" class="fa-solid fa-repeat"></i>
+                        <i id="shuffle" class="fa-solid fa-shuffle" title="Aleatório (a)"></i>
+                        <i id="repeat" class="fa-solid fa-repeat" title="Repetir (r)"></i>
                         <!-- <i id="volume" class="fa-solid fa-volume-high"></i> -->
                     </div>
                 </div>
