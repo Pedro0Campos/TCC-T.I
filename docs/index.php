@@ -30,7 +30,7 @@ if (isset($_GET['tema'])) {
     <!-- Scripts do site -->
     <script src="js/darkmode.js"></script>
     <script src="js/navbar.js"></script>
-    <script src="js/pop_up.js"></script>
+    <script src="js/carroselpopup.js"></script>
 
     <!-- AOS - Animation in scrool -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -157,55 +157,55 @@ if (isset($_GET['tema'])) {
                 <button onclick="openPopup()" class="btnretro btn-home">Conheça os personagens</button>
             </div> <!-- .padding-box-title -->
 
-            <div class="splide carrosel-personagens" role="group" aria-labelledby="carousel-title">
+            <div class="splide carrosel-personagens" role="group" aria-labelledby="carousel-title" id="popup">
                 <h2 id="carousel-title"></h2>
                 <div class="splide__track">
                     <ul class="splide__list">
                         <div class="splide__slide">
-                            <img src="imgs/home/1.png" alt="">
+                            <img src="imgs/home/PopUpSandy.png" alt="">
                             <!--<p class="nome_musica">Sandy Olsson</p>-->
                         </div>
 
                         <div class="splide__slide">
-                            <img src="imgs/home/2.png" alt="">
+                            <img src="imgs/home/PopUpDanny.png" alt="">
                             <!--<p class="nome_musica">Danny Zuko</p>-->
                         </div>
     
                         <div class="splide__slide">
-                            <img src="imgs/home/3.png" alt="">
+                            <img src="imgs/home/PopUpJan.png" alt="">
                             <!--<p class="nome_musica">Betty Rizzo</p>-->
                         </div>
     
                         <div class="splide__slide">
-                            <img src="imgs/home/4.png" alt="">
+                            <img src="imgs/home/PopUpPutzie.png" alt="">
                           <!--  <p class="nome_musica">Marty Marachino</p>-->
                         </div>
     
                         <div class="splide__slide">
-                            <img src="imgs/home/5.png" alt="">
+                            <img src="imgs/home/PopUpFrenchy.png" alt="">
                           <!--  <p class="nome_musica">Kenickie Willians</p>-->
                         </div>
                         
                         <div class="splide__slide">
-                            <img src="imgs/home/6.png" alt="">
+                            <img src="imgs/home/PopUpDoody.png" alt="">
                           <!--  <p class="nome_musica">Frenchy Palardino</p>-->
                         </div>
     
         
                         <div class="splide__slide">
-                            <img src="imgs/home/7.png" alt="">
+                            <img src="imgs/home/PopUpRizzo.png" alt="">
                           <!--  <p class="nome_musica">Putzie</p>-->
                         </div>
                         <div class="splide__slide">
-                            <img src="imgs/home/8.png" alt="">
+                            <img src="imgs/home/PopUpKenickie.png" alt="">
                             <!-- <p class="nome_musica">Sonny Lattiery</p>-->
                         </div>
                         <div class="splide__slide">
-                            <img src="imgs/home/9.png" alt="">
+                            <img src="imgs/home/PopUpMarty.png" alt="">
                            <!--  <p class="nome_musica">Doody</p>-->
                         </div>
                         <div class="splide__slide">
-                            <img src="imgs/home/10.png" alt="">
+                            <img src="imgs/home/PopUpSonny.png" alt="">
                            <!--  <p class="nome_musica">Jan Martin</p>-->
                         </div>
 
@@ -219,14 +219,15 @@ if (isset($_GET['tema'])) {
  
 
     <script type="module">
-        var carroselPersonagens = new Splide('.carrosel-personagens', {
+        var carroselPopup = new Splide('.carrosel-personagens', {
             type:   'loop',       // Fica em loop
             height: 'auto',       // Altura do carrosel
             width: '100%',        // Comprimento do carrosel
-            fixedWidth: '120px',  // Altura do slide
+            fixedWidth: '400px',  // Altura do slide
             focus:   0,           // Habilita uma classe para personalizar o elemento focado
             gap: '20px',          // Espaçamento entre os slides
-            easing: 'ease-out'
+            easing: 'ease-out',
+            padding: '5rem',
 
  
 
@@ -234,7 +235,7 @@ if (isset($_GET['tema'])) {
 
  
 
-        carroselPersonagens.mount();
+        carroselPopup.mount();
     </script>
     </main>
     
