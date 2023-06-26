@@ -43,8 +43,8 @@ if (isset($_GET['tema'])) {
 </head>
 
 <body class="fade">
-    <div class="music-player" id="music-player">
-    <!-- <div class="music-player ocult-player" id="music-player"> -->
+    <!-- <div class="music-player" id="music-player"> -->
+    <div class="music-player ocult-player" id="music-player">
         <div class="close-box" onclick="{openCloseMusicPlayer(), pause()}">
             <div class="leftright"></div>
             <div class="rightleft"></div>
@@ -77,7 +77,7 @@ if (isset($_GET['tema'])) {
                         > <i class="fa-solid fa-pause"></i>
                     -->
                     <div class="left flexCenterVH">
-                        <i id="backward" class="fa-solid fa-backward-fast backward"></i>
+                        <i id="backward" class="fa-solid fa-backward-fast backward" title="Anterior (right)"></i>
                         <i id="play-pause" class="fa-solid fa-pause"></i>
                         <i id="forward" class="fa-solid fa-forward-fast"></i>  
                     </div>
@@ -85,12 +85,12 @@ if (isset($_GET['tema'])) {
                     <div class="right">
                         <i id="shuffle" class="fa-solid fa-shuffle"></i>
                         <i id="repeat" class="fa-solid fa-repeat"></i>
-                        <i id="volume" class="fa-solid fa-volume-high"></i>
+                        <!-- <i id="volume" class="fa-solid fa-volume-high"></i> -->
                     </div>
                 </div>
 
                 <div class="barra">
-                    <audio id="audio" src="musics/Grease-Summer-Nights.mp3" preload="metadata" autoplay></audio>
+                    <audio id="audio" src="musics/Grease-Summer-Nights.mp3" preload="metadata"></audio>
                     <input id="controle-deslizante" type="range" max="100" value="0">
                     <span id="tempo-atual">0:00</span>
                     <span id="tempo-total">0:00</span>
@@ -105,6 +105,7 @@ if (isset($_GET['tema'])) {
 
 <!-- CONTEÚDO -->
 <main>
+    <!-- Sessão 1 -->
     <section class="section-impar">
         <img src="imgs/home/sandy-danny-light.png" alt="Sanddy e Danny - Grease" class="sandy-danny" data-aos="fade-up">
         
@@ -127,6 +128,9 @@ if (isset($_GET['tema'])) {
         </div> <!-- .wh100 flex-collumn -->
     </section> <!-- .section-impar -->
     
+
+
+    <!-- Sessão 2 -->
     <section class="section-par section2">
         
         <div class="retro-line flex-collumn" data-aos="fade">
@@ -146,7 +150,7 @@ if (isset($_GET['tema'])) {
                     <div class="splide__track">
                         <ul class="splide__list" id="splide__list_MUSICAS">
                             
-                            <div class="splide__slide track" onclick="closeMusicPlayer()" data-spotify-id="spotify:track:2AVkArcfALVk2X8sfPRzya">
+                            <div class="splide__slide track" onclick="closeMusicPlayer()">
                                 <div id="0" class="wait_api"></div>
                             </div>
                            
@@ -160,10 +164,10 @@ if (isset($_GET['tema'])) {
                 <div class="mais-tocadas">
                     <h3>MAIS TOCADAS</h3>
                     <div class="right-bar">
-                        <div class="container-itens">
-                            <p class="item">1. Summer Nights - Grease</p>
-                            <p class="item">2. Don’t be Cruel - Elvis Presley</p>
-                            <p class="item">3. I Walk The Line - Johnny Cash</p>
+                        <div class="container-itens" id="itens-mais-tocadas">
+                            <p class="item" id="0">1. Summer Nights - Grease</p>
+                            <p class="item" id="3">2. Don’t be Cruel - Elvis Presley</p>
+                            <p class="item" id="4">3. I Walk The Line - Johnny Cash</p>
                         </div> <!-- .container-itens -->
                     </div> <!-- .right-bar -->
                 </div> <!-- .mais-tocadas -->
@@ -171,6 +175,9 @@ if (isset($_GET['tema'])) {
         </div> <!-- .retro-line flex-collumn -->
     </section> <!-- .section-par section2 -->
     
+
+
+    <!-- Sessão 3 -->
     <section class="section-impar">       
         <div class="flex-collumn">
             <div class="splide carrosel-personagens" role="group" aria-labelledby="carousel-title">

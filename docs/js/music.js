@@ -127,9 +127,9 @@ let controle_deslizante = document.querySelector("#controle-deslizante")
 let tempo_atual = document.querySelector("#tempo-atual")
 let tempo_total = document.querySelector("#tempo-total")
 
-// Carrossel
+// Carrossel e mais tocadas
 let splideList = document.querySelector('#splide__list_MUSICAS')
-
+let mais_tocadas = document.querySelector('#itens-mais-tocadas')
 // Musica
 let audio = document.querySelector("#audio")
 let musicas = getMusics();
@@ -161,7 +161,17 @@ splideList.addEventListener('click', (e) => {
     musica = musicas[e.target.id]
 
     updateContent(musica)
+    play()
 })
+mais_tocadas.addEventListener('click', (e) => {
+    openCloseMusicPlayer()
+    musica = musicas[e.target.id]
+    
+    updateContent(musica)
+    play()
+})
+
+
 // --------------------------------
 
 // Atualizar conteúdo
@@ -275,11 +285,11 @@ repeat.addEventListener('click', () => {
 
 
 // Volume
-estadios_volume = []
-volume.addEventListener('click', () => {
-    console.log(volume);
+// estadios_volume = []
+// volume.addEventListener('click', () => {
+//     console.log(volume);
 
-})
+// })
 // --------------------------------
 
 
