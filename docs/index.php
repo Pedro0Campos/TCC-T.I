@@ -153,12 +153,10 @@ if (isset($_GET['tema'])) {
                             <div class="splide__slide track" onclick="closeMusicPlayer()">
                                 <div id="0" class="wait_api"></div>
                             </div>
-                           
                         </ul> <!-- .splide__list#splide__list-->
                     </div> <!-- .splide__track -->
                 </div> <!-- .carrosel-musica splide -->
             </div> <!-- .padding-box-title -->
-            
             
             <div class="padding-box-title" data-aos="fade-right">
                 <div class="mais-tocadas">
