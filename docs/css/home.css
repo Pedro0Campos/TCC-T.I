@@ -122,6 +122,28 @@
 .padding-box-title .btn-home:active {
   transform: scale(0.98);
 }
+.padding-box-title .btnretro {
+  color: white;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(75deg, rgb(2, 0, 36) 0%, rgb(0, 0, 0) 77%, rgb(156, 41, 61) 77%, rgb(156, 41, 61) 83%, rgb(247, 158, 82) 83%, rgb(247, 158, 82) 89%, rgb(59, 164, 172) 89%, rgb(59, 164, 172) 94%, rgb(39, 61, 98) 94%);
+  padding-left: 20px;
+  padding-right: 20px;
+  border: none;
+  border-radius: 100px;
+  height: 60px;
+  width: 400px;
+  font-size: 15px;
+  margin-top: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
+}
+.padding-box-title .btnretro:hover {
+  transform: scale(1.03);
+}
+.padding-box-title .btnretro:active {
+  transform: scale(0.98);
+}
 .padding-box-title .mais-tocadas {
   max-width: var(--width-mais-tocadas);
   width: 80%;

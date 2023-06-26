@@ -92,6 +92,40 @@
     }
 
 
+    .btnretro {
+        color: white;
+        background: rgb(2,0,36);
+        background: linear-gradient(75deg,
+        rgba(2,0,36,1) 0%,
+        rgba(0,0,0,1) 77%,
+        rgba(156,41,61,1) 77%,
+        rgba(156,41,61,1) 83%,
+        rgba(247,158,82,1) 83%,
+        rgba(247,158,82,1) 89%,
+        rgba(59,164,172,1) 89%,
+        rgba(59,164,172,1) 94%,
+        rgba(39,61,98,1) 94%);
+        
+        padding-left:20px;
+        padding-right: 20px;
+        border:none;
+        border-radius: 100px;
+        height: 60px;
+        width: 400px;
+        font-size: 15px;
+        margin-top: 10px;
+        margin-left: 10px;
+        cursor: pointer;
+        transition: ease-in-out 0.3s;
+    }
+    .btnretro:hover {
+        transform: scale(1.03);
+    }
+    .btnretro:active {
+        transform: scale(0.98);
+    }
+
+
     .mais-tocadas {
         max-width: var(--width-mais-tocadas);
         width: 80%;

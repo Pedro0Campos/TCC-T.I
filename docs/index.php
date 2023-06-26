@@ -30,6 +30,7 @@ if (isset($_GET['tema'])) {
     <!-- Scripts do site -->
     <script src="js/darkmode.js"></script>
     <script src="js/navbar.js"></script>
+    <script src="js/pop_up.js"></script>
 
     <!-- AOS - Animation in scrool -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -153,7 +154,7 @@ if (isset($_GET['tema'])) {
             </div>
 
             <div class="padding-box-title" data-aos="fade-right">
-                <a class="btn-home"><button type="button" id = >Conheça os personagens</button></a>
+                <button onclick="openPopup()" class="btnretro btn-home">Conheça os personagens</button>
             </div> <!-- .padding-box-title -->
 
             <div class="splide carrosel-personagens" role="group" aria-labelledby="carousel-title">
