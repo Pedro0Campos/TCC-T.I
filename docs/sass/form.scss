@@ -1,113 +1,101 @@
-
-
 @use 'config';
 
 
 /* DIV - ESQUERDA */
 
 div.form-left {
-    height: 100vh;
-    width: 55%;
+    height: 100%;
+    width: 45%;
     float: left;
-}
-    div.backg-image-logcad {
+
+    .backg-image-logcad {
         background: no-repeat url(../imgs/cadastro/background4.png);
         background-position-y: center;
         background-size: cover;
     }
+}
 
 
 /* DIV - DIREITA */
 div.form-right {
     margin: 0 auto;
-    height: 100vh;
-    width: 45%;
-    float: right;
-}
-
-div.form-right form {
     height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-}
-
-.input_form, .button_form {
-    height: 60px;
-    min-height: 60px;
-    width: config.$widthInput;
-    max-width: config.$maxWidthInput;
-    border: 0;
-    transition: all 0.2s ease-in-out;
+    width: 55%;
+    float: right;
     
-    &:hover {
-        transform: scale(1.03);
+    form {
+        height: 100%;
+        width: 90%;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // flex-direction: column;
     }
-}
-
-
-.input_form {
-    border-bottom: 1px solid var(--text-color);
-    margin-top: 40px;
-    background: 0;
-    color: var(--text-color-80);
-}
-    ::-ms-reveal {
-        display: none;
+    
+    .input_form, .button_form {
+        height: 60px;
+        min-height: 60px;
+        width: config.$widthInput;
+        max-width: config.$maxWidthInput;
+        border: 0;
     }
-
-    .input_form::placeholder {
+    
+    
+    .input_form {
+        border-bottom: 1px solid var(--text-color);
+        margin-top: 40px;
+        background: 0;
         color: var(--text-color-80);
+        
+        &::-ms-reveal {
+            display: none;
+        }
+    
+        &::placeholder {
+            color: var(--text-color-80);
+        }
+    
+        &:focus {
+            outline: none;
+        } 
+    
+        &:hover{
+            transform: scale(1.02, 1.02);
+        }
     }
-
-    .input_form:focus {
-        outline: none;
+    
+    
+    .button_form {
+        border: 0;
+        background: var(--second-color);
+        color: white;
+        margin: 30px 0 10px 0;
+        border-radius: 4px;
+        cursor: pointer;
+        
+        &:active {
+            transform: scale(0.98);
+        }
     } 
-
-    .input_form:hover{
-        transform: scale(1.02, 1.02);
-    }
-
-
-.button_form {
-    border: 0;
-    background: var(--second-color);
-    color: white;
-    margin: 30px 0 10px 0;
-    border-radius: 4px;
-    cursor: pointer;
-    // transition: all 0.2s ease-in-out;
     
-    // &:hover {
-    //     background-color: var(--second-color);
-    //     transform: scale(1.03);
-    // }
     
-    &:active {
-        transform: scale(0.98);
-    }
-} 
-
-
-
-.msg_erro {
-    width: config.$widthInput;
-    max-width: config.$maxWidthInput;
-    text-align: left;
-    margin-top: 8px;
-    color: rgb(255, 89, 89);
-}
-    .msg_erro i {
+    
+    .msg_erro {
+        width: config.$widthInput;
+        max-width: config.$maxWidthInput;
+        text-align: left;
+        margin-top: 8px;
         color: rgb(255, 89, 89);
-        margin-right: 5px;
     }
-
-i.eye {
-    position: relative;
+        .msg_erro i {
+            color: rgb(255, 89, 89);
+            margin-right: 5px;
+        }
     
+    i.eye {
+        position: relative;
+        
+    }
 }
 
 

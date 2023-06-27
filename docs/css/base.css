@@ -137,6 +137,7 @@ button {
 }
 
 .animation-title {
+  width: fit-content;
   /*Animação*/
   --b: 0.1em; /* A grossura da linha */
   --c: #6BA5F2; /* A cor da linha*/
@@ -169,6 +170,16 @@ button {
 
 .fade {
   transition: all 0.2s ease-in-out;
+}
+
+.animation-scale {
+  transition: all 0.2s ease-in-out;
+}
+.animation-scale:hover {
+  transform: scale(1.03);
+}
+.animation-scale:active {
+  transform: scale(0.98);
 }
 
 /*# sourceMappingURL=base.css.map */

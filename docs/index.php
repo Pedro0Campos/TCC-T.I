@@ -43,8 +43,8 @@ if (isset($_GET['tema'])) {
 </head>
 
 <body class="fade">
-    <div class="music-player" id="music-player">
-    <!-- <div class="music-player ocult-player" id="music-player"> -->
+    <!-- <div class="music-player" id="music-player"> -->
+    <div class="music-player ocult-player" id="music-player">
         <div class="close-box" onclick="{openCloseMusicPlayer(), pause()}">
             <div class="leftright"></div>
             <div class="rightleft"></div>
@@ -123,7 +123,7 @@ if (isset($_GET['tema'])) {
             </div> <!-- .padding-box-title -->
             
             <div class="padding-box-title" data-aos="fade-right" data-aos-anchor-placement="top-bottom">
-                <a href="sobre.php" class="btn-home"><button type="button">Sobre o musical</button></a>
+                <a href="sobre.php" class="btn-home"><button type="button" class="animation-scale">Sobre o musical</button></a>
             </div> <!-- .padding-box-title -->
         </div> <!-- .wh100 flex-collumn -->
     </section> <!-- .section-impar -->

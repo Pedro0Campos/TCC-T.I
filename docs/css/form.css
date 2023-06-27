@@ -57,12 +57,11 @@
 
 /* DIV - ESQUERDA */
 div.form-left {
-  height: 100vh;
-  width: 55%;
+  height: 100%;
+  width: 45%;
   float: left;
 }
-
-div.backg-image-logcad {
+div.form-left .backg-image-logcad {
   background: no-repeat url(../imgs/cadastro/background4.png);
   background-position-y: center;
   background-size: cover;
@@ -71,56 +70,40 @@ div.backg-image-logcad {
 /* DIV - DIREITA */
 div.form-right {
   margin: 0 auto;
-  height: 100vh;
-  width: 45%;
+  height: 100%;
+  width: 55%;
   float: right;
 }
-
 div.form-right form {
   height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  width: 90%;
 }
-
-.input_form, .button_form {
+div.form-right .input_form, div.form-right .button_form {
   height: 60px;
   min-height: 60px;
   width: 70%;
   max-width: 450px;
   border: 0;
-  transition: all 0.2s ease-in-out;
 }
-.input_form:hover, .button_form:hover {
-  transform: scale(1.03);
-}
-
-.input_form {
+div.form-right .input_form {
   border-bottom: 1px solid var(--text-color);
   margin-top: 40px;
   background: 0;
   color: var(--text-color-80);
 }
-
-::-ms-reveal {
+div.form-right .input_form::-ms-reveal {
   display: none;
 }
-
-.input_form::placeholder {
+div.form-right .input_form::placeholder {
   color: var(--text-color-80);
 }
-
-.input_form:focus {
+div.form-right .input_form:focus {
   outline: none;
 }
-
-.input_form:hover {
+div.form-right .input_form:hover {
   transform: scale(1.02, 1.02);
 }
-
-.button_form {
+div.form-right .button_form {
   border: 0;
   background: var(--second-color);
   color: white;
@@ -128,24 +111,21 @@ div.form-right form {
   border-radius: 4px;
   cursor: pointer;
 }
-.button_form:active {
+div.form-right .button_form:active {
   transform: scale(0.98);
 }
-
-.msg_erro {
+div.form-right .msg_erro {
   width: 70%;
   max-width: 450px;
   text-align: left;
   margin-top: 8px;
   color: rgb(255, 89, 89);
 }
-
-.msg_erro i {
+div.form-right .msg_erro i {
   color: rgb(255, 89, 89);
   margin-right: 5px;
 }
-
-i.eye {
+div.form-right i.eye {
   position: relative;
 }
 

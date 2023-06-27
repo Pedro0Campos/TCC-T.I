@@ -136,6 +136,8 @@ button {
 
 // Animação de títulos - hover
 .animation-title {
+    width: fit-content;
+    
     /*Animação*/
     --b: 0.1em;   /* A grossura da linha */
     --c: #6BA5F2; /* A cor da linha*/
@@ -143,10 +145,10 @@ button {
     color: var(--text-color-80);
     padding-block: var(--b);
     background: 
-    linear-gradient(var(--c) 50%, var(--text-color-80) 0) 0% calc(100% - var(--_p,0%))/100% 200%,
-    linear-gradient(var(--c) 0 0) 0% var(--_p,0%)/var(--_p,0%) var(--b) no-repeat;
-    -webkit-background-clip: text,padding-box;
-    background-clip: text,padding-box;
+        linear-gradient(var(--c) 50%, var(--text-color-80) 0) 0% calc(100% - var(--_p,0%))/100% 200%,
+        linear-gradient(var(--c) 0 0) 0% var(--_p,0%)/var(--_p,0%) var(--b) no-repeat;
+        -webkit-background-clip: text, padding-box;
+    background-clip: text, padding-box;
     transition: .3s var(--_s,0s) linear,background-size .3s calc(.3s - var(--_s,0s));
 }
     .animation-title:hover {
@@ -178,5 +180,16 @@ button {
     transition: all .2s ease-in-out;
 }
 
+// Animação com scale
+.animation-scale {
+    transition: all 0.2s ease-in-out;
+    
+    &:hover {
+        transform: scale(1.03);
+    }
 
+    &:active {
+        transform: scale(0.98);
+    }
+}
 // ===================================================
