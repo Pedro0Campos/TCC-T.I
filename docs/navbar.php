@@ -25,8 +25,8 @@
 
         <!-- ITENS NA DIREITA - Login e cadastro -->
         <div class="navlista itens-direita">
-            <a class="animation-link" href="login.php" class="navitens">Login</a>
             <a class="animation-link" href="cadastro.php" class="navitens">Cadastra-se</a>
+            <a class="animation-link" href="login.php" class="navitens">Login</a>
             <!-- <li class="duplo-li"><span>Olá Fulano!</span><a href="" class="animation-link">Sair?</a></li> -->
             <!-- <a class="" href="perfiluser.php"><img class="img-user" src="../docs/imgs/icon-user.png" alt=""></a> -->
         </div>

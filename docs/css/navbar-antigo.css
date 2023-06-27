@@ -43,7 +43,8 @@
   --third-color: #00109d;
   --sect-par-backg-color: #000;
   --sect-par-text-color: #fff;
-  --wait: rgb(50, 50, 50);
+  --fieldset-color: #B6B6B6;
+  --backg-camada-1: #EFEFEF;
 }
 
 .darkmode:root {
@@ -54,6 +55,7 @@
   --second-color: #A167FF;
   --second-color-50: #A167FF80;
   --third-color: #C6A4FF;
+  --backg-camada-1: #242424;
 }
 
 /* Formatação do navbar */

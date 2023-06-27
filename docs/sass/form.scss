@@ -22,63 +22,67 @@ div.form-right {
     height: 100%;
     width: 55%;
     float: right;
+    min-height: 700px;
     
     form {
         height: 100%;
         width: 90%;
-        // display: flex;
-        // justify-content: center;
-        // align-items: center;
-        // flex-direction: column;
-    }
-    
-    .input_form, .button_form {
-        height: 60px;
-        min-height: 60px;
-        width: config.$widthInput;
         max-width: config.$maxWidthInput;
-        border: 0;
-    }
-    
-    
-    .input_form {
-        border-bottom: 1px solid var(--text-color);
-        margin-top: 40px;
-        background: 0;
-        color: var(--text-color-80);
-        
-        &::-ms-reveal {
-            display: none;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        flex-direction: column;
+        text-align: center;
+
+        h2 {
+            margin: 0 auto;
         }
-    
-        &::placeholder {
+        
+        fieldset {
+            border: none;
+            margin: 40px 0 0 0;
+
+            legend {
+                text-align: left;
+                padding: 0 10px 0 10px;
+                display: none;
+                font-size: 1rem;
+            }
+        }
+
+        input {
+            height: 60px;
+            min-height: 60px;
+            width: 100%;
+            display: block;
+            border: 0;
+            font-size: 1em;
+        }
+
+        .input_form {
+            background: transparent;
+            border-bottom: 1px solid var(--text-color);
             color: var(--text-color-80);
-        }
-    
-        &:focus {
             outline: none;
-        } 
-    
-        &:hover{
-            transform: scale(1.02, 1.02);
+
+            &::placeholder {
+                color: var(--text-color-80);
+            }
+
+            // Tirar o "olhinho" para ver a senha
+            &::-ms-reveal {
+                display: none;
+            }
         }
-    }
-    
-    
-    .button_form {
-        border: 0;
-        background: var(--second-color);
-        color: white;
-        margin: 30px 0 10px 0;
-        border-radius: 4px;
-        cursor: pointer;
-        
-        &:active {
-            transform: scale(0.98);
+
+        .button_form {
+            margin: 30px 0 15px 0;
+            color: white;
+            background-color: var(--second-color);
+            // font-size: 1em;
         }
-    } 
-    
-    
+    }    
     
     .msg_erro {
         width: config.$widthInput;
@@ -108,10 +112,53 @@ div.form-right {
     div.form-right {
         float: none;
         width: 100%;
-        // padding: 35px 0 20px 0;
-        padding: 0; 
+        display: flex;
+        align-items: end;
+
+        
+        form {
+            // margin: 0 !important;
+            // max-width: none;
+            background-color: var(--backg-camada-1);
+            height: 65%;
+            // min-height: 600px;
+            justify-content: flex-end;
+
+        }
+
+        .form-camada-2 {
+            background-color: white;
+            padding-bottom: 50px;
+            width: 100%;
+        }
+
+        fieldset {
+            border: 1px solid var(--fieldset-color) !important;
+            padding: 0 10px 0 10px;
+
+            legend { 
+                display: initial !important;
+                color: var(--fieldset-color);
+            }
+
+            // Vale para o input todos os imputs - respeitando a hierarquiedade do CSS
+            input { transform: none !important }
+
+            .input_form {
+                border: none;
+                position: relative;
+                // bottom: 5px;
+                transform: translateY(-7.5%) !important;
+                
+                &::placeholder {
+                    color: transparent;
+                }
+            }
+
+        }
     }
 
+    
 }
 
 @media only screen and (max-height: 500px) {

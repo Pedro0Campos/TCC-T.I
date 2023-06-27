@@ -119,37 +119,44 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             
             <!-- Retorna para o próprio link para criar a validação -->
             <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?>" method="post" autocomplete="off">
-                <h2 class="animation-title">Criar Conta</h2>
-
-                <fieldset>
-                    <legend>Nome</legend>
-                    <input id="nome" class="input_form animation-scale" type="text" name="nome" placeholder="Nome" value="<?php echo $nome ?>">
-                </fieldset>
-
-                <input id="nome" class="input_form animation-scale" type="text" name="nome" placeholder="Nome" value="<?php echo $nome ?>">
-                <?php
-                    if ($nomeErro != '') {
-                        echo "<span id='erro_email' class='msg_erro'><i class='fa-solid fa-circle-exclamation'></i> $nomeErro </span>";
-                    }
-                ?>
+                <h2 class="animation-title">Criar uma Conta Nova</h2>
                 
-                <input id="email" class="input_form animation-scale" type="text" name="email" placeholder="Email" value="<?php echo $email ?>">
-                <?php
-                    if ($emailErro != '') {
-                        echo "<span id='erro_email' class='msg_erro'><i class='fa-solid fa-circle-exclamation'></i> $emailErro </span>";
-                    }
-                ?>
-                
-                <input id="senha" class="input_form animation-scale" type="password" name="senha" placeholder="Senha" value="<?php echo "" ?>">
-                <?php
-                    if ($senhaErro != '') {
-                        echo "<span id='erro_email' class='msg_erro'><i class='fa-solid fa-circle-exclamation'></i> $senhaErro </span>";
-                    }
-                ?>
-
-                <input class="button_form animation-scale" type="submit" value="Cadastrar">
-                
-                <p class="text">Já tem uma conta? <a href="login.php" class="underline">Login</a></p>
+                <div class="form-camada-2">
+                    <fieldset>
+                        <legend>Nome</legend>
+                        <input id="nome" class="input_form animation-scale" type="text" name="nome" placeholder="Nome" value="<?php echo $nome ?>">
+                    </fieldset>
+                    <?php
+                        if ($nomeErro != '') {
+                            echo "<span id='erro_email' class='msg_erro'><i class='fa-solid fa-circle-exclamation'></i> $nomeErro </span>";
+                        }
+                        ?>
+                    
+                    <fieldset>
+                        <legend>Email</legend>
+                        <input id="email" class="input_form animation-scale" type="text" name="email" placeholder="Email" value="<?php echo $email ?>">
+                    </fieldset>
+                    <?php
+                        if ($emailErro != '') {
+                            echo "<span id='erro_email' class='msg_erro'><i class='fa-solid fa-circle-exclamation'></i> $emailErro </span>";
+                        }
+                        ?>
+                    
+                    <fieldset>
+                        <legend>Senha</legend>
+                        <input id="senha" class="input_form animation-scale" type="password" name="senha" placeholder="Senha" value="<?php echo "" ?>">
+                    </fieldset>
+                    <?php
+                        if ($senhaErro != '') {
+                            echo "<span id='erro_email' class='msg_erro'><i class='fa-solid fa-circle-exclamation'></i> $senhaErro </span>";
+                        }
+                    ?>
+    
+                    <input class="button_form animation-scale" type="submit" value="Cadastrar">
+                    
+                    <p class="text">Já tem uma conta? <a href="login.php" class="underline">Login</a></p>
+                    
+                </div>
             </form>
         </div>
 

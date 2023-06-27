@@ -42,7 +42,8 @@
   --third-color: #00109d;
   --sect-par-backg-color: #000;
   --sect-par-text-color: #fff;
-  --wait: rgb(50, 50, 50);
+  --fieldset-color: #B6B6B6;
+  --backg-camada-1: #EFEFEF;
 }
 
 .darkmode:root {
@@ -53,6 +54,7 @@
   --second-color: #A167FF;
   --second-color-50: #A167FF80;
   --third-color: #C6A4FF;
+  --backg-camada-1: #242424;
 }
 
 /* DIV - ESQUERDA */
@@ -73,46 +75,56 @@ div.form-right {
   height: 100%;
   width: 55%;
   float: right;
+  min-height: 700px;
 }
 div.form-right form {
   height: 100%;
   width: 90%;
+  max-width: 450px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: column;
+  text-align: center;
 }
-div.form-right .input_form, div.form-right .button_form {
+div.form-right form h2 {
+  margin: 0 auto;
+}
+div.form-right form fieldset {
+  border: none;
+  margin: 40px 0 0 0;
+}
+div.form-right form fieldset legend {
+  text-align: left;
+  padding: 0 10px 0 10px;
+  display: none;
+  font-size: 1rem;
+}
+div.form-right form input {
   height: 60px;
   min-height: 60px;
-  width: 70%;
-  max-width: 450px;
+  width: 100%;
+  display: block;
   border: 0;
+  font-size: 1em;
 }
-div.form-right .input_form {
+div.form-right form .input_form {
+  background: transparent;
   border-bottom: 1px solid var(--text-color);
-  margin-top: 40px;
-  background: 0;
   color: var(--text-color-80);
-}
-div.form-right .input_form::-ms-reveal {
-  display: none;
-}
-div.form-right .input_form::placeholder {
-  color: var(--text-color-80);
-}
-div.form-right .input_form:focus {
   outline: none;
 }
-div.form-right .input_form:hover {
-  transform: scale(1.02, 1.02);
+div.form-right form .input_form::placeholder {
+  color: var(--text-color-80);
 }
-div.form-right .button_form {
-  border: 0;
-  background: var(--second-color);
+div.form-right form .input_form::-ms-reveal {
+  display: none;
+}
+div.form-right form .button_form {
+  margin: 30px 0 15px 0;
   color: white;
-  margin: 30px 0 10px 0;
-  border-radius: 4px;
-  cursor: pointer;
-}
-div.form-right .button_form:active {
-  transform: scale(0.98);
+  background-color: var(--second-color);
 }
 div.form-right .msg_erro {
   width: 70%;
@@ -137,7 +149,37 @@ div.form-right i.eye {
   div.form-right {
     float: none;
     width: 100%;
-    padding: 0;
+    display: flex;
+    align-items: end;
+  }
+  div.form-right form {
+    background-color: var(--backg-camada-1);
+    height: 65%;
+    justify-content: flex-end;
+  }
+  div.form-right .form-camada-2 {
+    background-color: white;
+    padding-bottom: 50px;
+    width: 100%;
+  }
+  div.form-right fieldset {
+    border: 1px solid var(--fieldset-color) !important;
+    padding: 0 10px 0 10px;
+  }
+  div.form-right fieldset legend {
+    display: initial !important;
+    color: var(--fieldset-color);
+  }
+  div.form-right fieldset input {
+    transform: none !important;
+  }
+  div.form-right fieldset .input_form {
+    border: none;
+    position: relative;
+    transform: translateY(-7.5%) !important;
+  }
+  div.form-right fieldset .input_form::placeholder {
+    color: transparent;
   }
 }
 @media only screen and (max-height: 500px) {

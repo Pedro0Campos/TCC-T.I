@@ -84,22 +84,16 @@
                     $consulta = consultar_user($condicao, $conexao_db);
                     $cadastro = mysqli_fetch_row($consulta);
 
-                    // Não existe um email cadastrado igual o que o usuário digitou
-                    if (mysqli_num_rows($consulta) == 0) {
-                        $emailErro = 'Email não cadastrado.';
+                    if (verificarSenha($senha, $cadastro[3]) && $cadastro != NULL) {
+                        // Login
+                        
+                        
+                        // Trocar de tela
+                        header("Location: index.php");
+                        die();
 
                     } else {
-                        if (verificarSenha($senha, $cadastro[3])) {
-                            // Login
-                            
-                            
-                            // Trocar de tela
-                            header("Location: index.php");
-                            die();
-
-                        } else {
-                            $senhaErro = 'Senha inválida';
-                        }
+                        $senhaErro = 'Dados inválidos';
                     }
                 }
             }
