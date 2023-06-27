@@ -44,7 +44,8 @@
   --sect-par-backg-color: #000;
   --sect-par-text-color: #fff;
   --fieldset-color: #B6B6B6;
-  --backg-camada-1: #EFEFEF;
+  --backg-form: #EFEFEF;
+  --backg-camada-2: white;
 }
 
 .darkmode:root {
@@ -55,7 +56,8 @@
   --second-color: #A167FF;
   --second-color-50: #A167FF80;
   --third-color: #C6A4FF;
-  --backg-camada-1: #242424;
+  --backg-form: #242424;
+  --backg--camada-2: #121111;
 }
 
 * {

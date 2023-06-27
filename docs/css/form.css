@@ -43,7 +43,8 @@
   --sect-par-backg-color: #000;
   --sect-par-text-color: #fff;
   --fieldset-color: #B6B6B6;
-  --backg-camada-1: #EFEFEF;
+  --backg-form: #EFEFEF;
+  --backg-camada-2: white;
 }
 
 .darkmode:root {
@@ -54,7 +55,8 @@
   --second-color: #A167FF;
   --second-color-50: #A167FF80;
   --third-color: #C6A4FF;
-  --backg-camada-1: #242424;
+  --backg-form: #242424;
+  --backg--camada-2: #121111;
 }
 
 /* DIV - ESQUERDA */
@@ -153,33 +155,42 @@ div.form-right i.eye {
     align-items: end;
   }
   div.form-right form {
-    background-color: var(--backg-camada-1);
+    background-color: var(--backg-form) !important;
     height: 65%;
+    width: 100%;
     justify-content: flex-end;
   }
   div.form-right .form-camada-2 {
-    background-color: white;
+    background-color: var(--backg-camada-2);
     padding-bottom: 50px;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
-  div.form-right fieldset {
+  div.form-right .form-camada-2 fieldset {
     border: 1px solid var(--fieldset-color) !important;
     padding: 0 10px 0 10px;
+    width: 90%;
   }
-  div.form-right fieldset legend {
+  div.form-right .form-camada-2 fieldset legend {
     display: initial !important;
     color: var(--fieldset-color);
   }
-  div.form-right fieldset input {
+  div.form-right .form-camada-2 fieldset input {
     transform: none !important;
   }
-  div.form-right fieldset .input_form {
+  div.form-right .form-camada-2 fieldset .input_form {
     border: none;
     position: relative;
     transform: translateY(-7.5%) !important;
   }
-  div.form-right fieldset .input_form::placeholder {
+  div.form-right .form-camada-2 fieldset .input_form::placeholder {
     color: transparent;
+  }
+  div.form-right .form-camada-2 .button_form {
+    width: 90%;
   }
 }
 @media only screen and (max-height: 500px) {
