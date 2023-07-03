@@ -22,6 +22,10 @@
   font-family: Inter;
   src: url(../fonts/Inter/Inter-Regular.ttf);
 }
+@font-face {
+  font-family: InterSemiBold;
+  src: url(../fonts/Inter/Inter-SemiBold.ttf);
+}
 :root {
   --width-box-title1: 500px;
   --font-size-box-title1: 1.8rem;
@@ -56,153 +60,172 @@
   --second-color-50: #A167FF80;
   --third-color: #C6A4FF;
   --backg-form: #242424;
-  --backg--camada-2: #121111;
+  --backg-camada-2: #121111;
 }
 
 /* DIV - ESQUERDA */
-div.form-left {
+div.content {
+  /* DIV - DIREITA */
+}
+div.content div.form-left {
   height: 100%;
   width: 45%;
   float: left;
-}
-div.form-left .backg-image-logcad {
   background: no-repeat url(../imgs/cadastro/background4.png);
   background-position-y: center;
   background-size: cover;
 }
-
-/* DIV - DIREITA */
-div.form-right {
+div.content div.form-right {
   margin: 0 auto;
   height: 100%;
   width: 55%;
   float: right;
-  min-height: 700px;
+  padding: 35px 0 50px 0;
 }
-div.form-right form {
+div.content div.form-right form {
   height: 100%;
-  width: 90%;
-  max-width: 450px;
-  margin: 0 auto;
+  font-size: 1rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: stretch;
-  flex-direction: column;
-  text-align: center;
 }
-div.form-right form h2 {
+div.content div.form-right form h2 {
   margin: 0 auto;
 }
-div.form-right form fieldset {
-  border: none;
-  margin: 40px 0 0 0;
+div.content div.form-right form .form-camada-2 {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-div.form-right form fieldset legend {
+div.content div.form-right form .form-camada-2 .conteiner-input {
+  max-width: 550px;
+  width: 75%;
+  padding: 40px 0 0 0;
+}
+div.content div.form-right form .form-camada-2 .conteiner-input:first-child {
+  padding: 0;
+}
+div.content div.form-right form .form-camada-2 .conteiner-input fieldset {
+  border: none;
+  margin-bottom: 5px;
+}
+div.content div.form-right form .form-camada-2 .conteiner-input fieldset legend {
   text-align: left;
   padding: 0 10px 0 10px;
   display: none;
-  font-size: 1rem;
+  font-size: 1em;
 }
-div.form-right form input {
-  height: 60px;
-  min-height: 60px;
+div.content div.form-right form .form-camada-2 .conteiner-input input {
   width: 100%;
-  display: block;
+  height: 60px;
   border: 0;
   font-size: 1em;
 }
-div.form-right form .input_form {
+div.content div.form-right form .form-camada-2 .conteiner-input .input_form {
   background: transparent;
   border-bottom: 1px solid var(--text-color);
-  color: var(--text-color-80);
+  color: var(--text-color-50);
   outline: none;
 }
-div.form-right form .input_form::placeholder {
-  color: var(--text-color-80);
+div.content div.form-right form .form-camada-2 .conteiner-input .input_form::placeholder {
+  color: var(--text-color-50);
 }
-div.form-right form .input_form::-ms-reveal {
+div.content div.form-right form .form-camada-2 .conteiner-input .input_form::-ms-reveal {
   display: none;
 }
-div.form-right form .button_form {
-  margin: 30px 0 15px 0;
+div.content div.form-right form .form-camada-2 .conteiner-input .button_form {
+  margin: 0px 0 15px 0;
   color: white;
   background-color: var(--second-color);
+  font-size: 1em;
 }
-div.form-right .msg_erro {
-  width: 70%;
-  max-width: 450px;
-  text-align: left;
-  margin-top: 8px;
+div.content div.form-right form .form-camada-2 .conteiner-input .msg_erro {
   color: rgb(255, 89, 89);
 }
-div.form-right .msg_erro i {
+div.content div.form-right form .form-camada-2 .conteiner-input .msg_erro i {
   color: rgb(255, 89, 89);
   margin-right: 5px;
 }
-div.form-right i.eye {
-  position: relative;
+div.content div.form-right form .form-camada-2 p {
+  text-align: center;
+  font-family: InterSemiBold;
+  color: var(--text-color-80);
 }
 
 @media only screen and (max-width: 800px) {
+  body {
+    padding: 0;
+  }
+  .navbar {
+    display: none !important;
+  }
   div.form-left {
     visibility: hidden;
     display: none;
   }
   div.form-right {
     float: none;
-    width: 100%;
-    display: flex;
-    align-items: end;
+    width: 100% !important;
+    min-height: 900px;
+    background-color: var(--second-color);
   }
   div.form-right form {
-    background-color: var(--backg-form) !important;
-    height: 65%;
+    background-color: var(--backg-form);
+    height: auto !important;
     width: 100%;
-    justify-content: flex-end;
+    position: absolute;
+    bottom: 0;
+    border-radius: 35px 35px 0 0;
   }
-  div.form-right .form-camada-2 {
+  div.form-right form .conteiner-h2 {
+    padding: 25px 0 25px;
+  }
+  div.form-right form .form-camada-2 {
     background-color: var(--backg-camada-2);
-    padding-bottom: 50px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+    border-radius: 35px 35px 0 0;
   }
-  div.form-right .form-camada-2 fieldset {
-    border: 1px solid var(--fieldset-color) !important;
-    padding: 0 10px 0 10px;
-    width: 90%;
+  div.form-right form .form-camada-2 .conteiner-input {
+    width: 100% !important;
   }
-  div.form-right .form-camada-2 fieldset legend {
-    display: initial !important;
+  div.form-right form .form-camada-2 .conteiner-input fieldset {
+    border: 2px solid var(--fieldset-color) !important;
     color: var(--fieldset-color);
+    padding: 0 10px 0 10px;
   }
-  div.form-right .form-camada-2 fieldset input {
+  div.form-right form .form-camada-2 .conteiner-input fieldset:focus-within {
+    border-color: var(--second-color) !important;
+    color: var(--second-color) !important;
+  }
+  div.form-right form .form-camada-2 .conteiner-input fieldset legend {
+    display: initial !important;
+  }
+  div.form-right form .form-camada-2 .conteiner-input input {
     transform: none !important;
   }
-  div.form-right .form-camada-2 fieldset .input_form {
-    border: none;
+  div.form-right form .form-camada-2 .conteiner-input .input_form {
+    border: none !important;
     position: relative;
     transform: translateY(-7.5%) !important;
+    height: 50px !important;
   }
-  div.form-right .form-camada-2 fieldset .input_form::placeholder {
-    color: transparent;
+  div.form-right form .form-camada-2 .conteiner-input .input_form::placeholder {
+    color: transparent !important;
   }
-  div.form-right .form-camada-2 .button_form {
-    width: 90%;
+  div.form-right form .form-camada-2 .conteiner-input .button_form {
+    border-radius: 30px;
   }
 }
-@media only screen and (max-height: 500px) {
+@media only screen and (max-height: 715px) {
   div.form-left {
     visibility: hidden;
     display: none;
   }
   div.form-right {
     float: none;
-    width: 100%;
+    width: 100% !important;
     height: 100%;
-    padding: 35px 0 20px 0;
   }
 }
 

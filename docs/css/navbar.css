@@ -22,6 +22,10 @@
   font-family: Inter;
   src: url(../fonts/Inter/Inter-Regular.ttf);
 }
+@font-face {
+  font-family: InterSemiBold;
+  src: url(../fonts/Inter/Inter-SemiBold.ttf);
+}
 :root {
   --width-box-title1: 500px;
   --font-size-box-title1: 1.8rem;
@@ -56,7 +60,7 @@
   --second-color-50: #A167FF80;
   --third-color: #C6A4FF;
   --backg-form: #242424;
-  --backg--camada-2: #121111;
+  --backg-camada-2: #121111;
 }
 
 .itens-direita {

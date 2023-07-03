@@ -81,7 +81,7 @@ a {
 // Botão
 button {
     cursor: pointer;
-    font-family: config.$JosefinSansRegular;
+    font-family: JosefinSansMedium;
 }
 // ===================================================
 
@@ -136,11 +136,11 @@ button {
 
 // Animação de títulos - hover
 .animation-title {
-    width: max-content;
+    width: fit-content;
     
     /*Animação*/
     --b: 0.1em;   /* A grossura da linha */
-    --c: #6BA5F2; /* A cor da linha*/
+    --c: var(--second-color); /* A cor da linha*/
     
     color: var(--text-color-80);
     padding-block: var(--b);

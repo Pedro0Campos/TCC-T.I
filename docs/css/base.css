@@ -23,6 +23,10 @@
   font-family: Inter;
   src: url(../fonts/Inter/Inter-Regular.ttf);
 }
+@font-face {
+  font-family: InterSemiBold;
+  src: url(../fonts/Inter/Inter-SemiBold.ttf);
+}
 :root {
   --width-box-title1: 500px;
   --font-size-box-title1: 1.8rem;
@@ -57,7 +61,7 @@
   --second-color-50: #A167FF80;
   --third-color: #C6A4FF;
   --backg-form: #242424;
-  --backg--camada-2: #121111;
+  --backg-camada-2: #121111;
 }
 
 * {
@@ -122,7 +126,7 @@ a .underline:hover {
 
 button {
   cursor: pointer;
-  font-family: JosefinSansRegular;
+  font-family: JosefinSansMedium;
 }
 
 .flexCenterVH {
@@ -141,10 +145,10 @@ button {
 }
 
 .animation-title {
-  width: max-content;
+  width: fit-content;
   /*Animação*/
   --b: 0.1em; /* A grossura da linha */
-  --c: #6BA5F2; /* A cor da linha*/
+  --c: var(--second-color); /* A cor da linha*/
   color: var(--text-color-80);
   padding-block: var(--b);
   background: linear-gradient(var(--c) 50%, var(--text-color-80) 0) 0% calc(100% - var(--_p, 0%))/100% 200%, linear-gradient(var(--c) 0 0) 0% var(--_p, 0%)/var(--_p, 0%) var(--b) no-repeat;

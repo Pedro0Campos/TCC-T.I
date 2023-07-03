@@ -3,107 +3,127 @@
 
 /* DIV - ESQUERDA */
 
-div.form-left {
-    height: 100%;
-    width: 45%;
-    float: left;
-
-    .backg-image-logcad {
+div.content {
+    
+    div.form-left {
+        height: 100%;
+        width: 45%;
+        float: left;
         background: no-repeat url(../imgs/cadastro/background4.png);
         background-position-y: center;
         background-size: cover;
     }
-}
-
-
-/* DIV - DIREITA */
-div.form-right {
-    margin: 0 auto;
-    height: 100%;
-    width: 55%;
-    float: right;
-    min-height: 700px;
     
-    form {
-        height: 100%;
-        width: 90%;
-        max-width: config.$maxWidthInput;
+    
+    /* DIV - DIREITA */
+    div.form-right {
         margin: 0 auto;
-        display: flex;
-        justify-content: center;
-        align-items: stretch;
-        flex-direction: column;
-        text-align: center;
-
-        h2 {
-            margin: 0 auto;
-        }
+        height: 100%;
+        width: 55%;
+        float: right;
+        padding: 35px 0 50px 0;
         
-        fieldset {
-            border: none;
-            margin: 40px 0 0 0;
-
-            legend {
-                text-align: left;
-                padding: 0 10px 0 10px;
-                display: none;
-                font-size: 1rem;
-            }
-        }
-
-        input {
-            height: 60px;
-            min-height: 60px;
-            width: 100%;
-            display: block;
-            border: 0;
-            font-size: 1em;
-        }
-
-        .input_form {
-            background: transparent;
-            border-bottom: 1px solid var(--text-color);
-            color: var(--text-color-80);
-            outline: none;
-
-            &::placeholder {
-                color: var(--text-color-80);
-            }
-
-            // Tirar o "olhinho" para ver a senha
-            &::-ms-reveal {
-                display: none;
-            }
-        }
-
-        .button_form {
-            margin: 30px 0 15px 0;
-            color: white;
-            background-color: var(--second-color);
-            // font-size: 1em;
-        }
-    }    
+        form {
+            height: 100%;
+            font-size: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: stretch;
     
-    .msg_erro {
-        width: config.$widthInput;
-        max-width: config.$maxWidthInput;
-        text-align: left;
-        margin-top: 8px;
-        color: rgb(255, 89, 89);
-    }
-        .msg_erro i {
-            color: rgb(255, 89, 89);
-            margin-right: 5px;
-        }
-    
-    i.eye {
-        position: relative;
+            h2 {
+                margin: 0 auto;
+            }
+            
+            .form-camada-2 {
+                padding: 40px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                
+                .conteiner-input {
+                    max-width: config.$maxWidthInput;
+                    width: config.$widthInput;
+                    padding: 40px 0 0 0;
+                    
+                    &:first-child {
+                        padding: 0;
+                    }
+
+                    fieldset {
+                        border: none;
+                        margin-bottom: 5px;
+                        
+                        legend {
+                            text-align: left;
+                            padding: 0 10px 0 10px;
+                            display: none;
+                            font-size: 1em;
+                        }
+                    }
+                    
+                    input {
+                        width: 100%;
+                        height: 60px;
+                        border: 0;
+                        font-size: 1em;
+                    }
+            
+                    .input_form {
+                        background: transparent;
+                        border-bottom: 1px solid var(--text-color);
+                        color: var(--text-color-50);
+                        outline: none;
+            
+                        &::placeholder {
+                            color: var(--text-color-50);
+                        }
+            
+                        // Tirar o "olhinho" para ver a senha
+                        &::-ms-reveal {
+                            display: none;
+                        }
+                    }
+            
+                    .button_form {
+                        margin: 0px 0 15px 0;
+                        color: white;
+                        background-color: var(--second-color);
+                        font-size: 1em;
+                    }
         
-    }
+                    .msg_erro {
+                        color: rgb(255, 89, 89);
+    
+                        i {
+                            color: rgb(255, 89, 89);
+                            margin-right: 5px;
+                        }
+                    }
+                }
+        
+                p {
+                    text-align: center;
+                    font-family: InterSemiBold;
+                    color: var(--text-color-80);
+                }
+
+            }  // form-camada-2
+
+        }  // Form    
+
+    }  // div.form-right
 }
+
 
 
 @media only screen and (max-width: 800px) {
+    body {
+        padding: 0;
+    }
+    .navbar {
+        display: none !important;
+    }
     div.form-left {
         visibility: hidden;
         display: none;
@@ -111,55 +131,69 @@ div.form-right {
 
     div.form-right {
         float: none;
-        width: 100%;
-        display: flex;
-        align-items: end;
-
+        width: 100% !important; 
+        min-height: 900px;
+        background-color: var(--second-color);
+        // display: flex;
+        
+        // background-color: white;
         
         form {
-            background-color: var(--backg-form) !important;
-            height: 65%;
+            background-color: var(--backg-form);
+            height: auto !important;
             width: 100%;
-            justify-content: flex-end;
-        }
+            position: absolute;
+            bottom: 0;
+            border-radius: 35px 35px 0 0;
 
-        .form-camada-2 {
-            background-color: var(--backg-camada-2);
-            padding-bottom: 50px;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            align-items: center;
-
-            fieldset {
-                border: 1px solid var(--fieldset-color) !important;
-                padding: 0 10px 0 10px;
-                width: 90%;
-
-                legend { 
-                    display: initial !important;
-                    color: var(--fieldset-color);
-                }
+            .conteiner-h2 {
+                padding: 25px 0 25px;
+            }
+    
+            .form-camada-2 {
+                background-color: var(--backg-camada-2);
+                border-radius: 35px 35px 0 0;
+                // padding-bottom: 35px;
                 
-                // Vale para o input todos os imputs - respeitando a hierarquiedade do CSS
-                input { transform: none !important }
-
-                .input_form {
-                    border: none;
-                    position: relative;
-                    // bottom: 5px;
-                    transform: translateY(-7.5%) !important;
-                    
-                    &::placeholder {
-                        color: transparent;
+                .conteiner-input {
+                    width: 100% !important;
+    
+                    fieldset {
+                        border: 2px solid var(--fieldset-color) !important;
+                        color: var(--fieldset-color);
+                        padding: 0 10px 0 10px;
+    
+                        &:focus-within {
+                            border-color: var(--second-color) !important;
+                            color: var(--second-color) !important;
+                        }
+                        
+                        legend { 
+                            display: initial !important;
+                        }
                     }
-                }
-            }
+                    
+                    // Vale para o input todos os imputs - respeitando a hierarquiedade do CSS
+                    input { 
+                        transform: none !important;
+                    }
+        
+                    .input_form {
+                        border: none !important;
+                        position: relative;
+                        transform: translateY(-7.5%) !important;
+                        height: 50px !important;
+                        
+                        &::placeholder {
+                            color: transparent !important;
+                        }
+                    }
 
-            .button_form {
-                width: 90%;
-            }
+                    .button_form {
+                        border-radius: 30px;
+                    }
+                }  // .conteiner-input
+            }  // .form-camada-2
         }
 
     }
@@ -167,7 +201,7 @@ div.form-right {
     
 }
 
-@media only screen and (max-height: 500px) {
+@media only screen and (max-height: 715px) {
     div.form-left {
         visibility: hidden;
         display: none;
@@ -175,8 +209,7 @@ div.form-right {
 
     div.form-right {
         float: none;
-        width: 100%;
+        width: 100% !important;
         height: 100%;
-        padding: 35px 0 20px 0;
     }
 }

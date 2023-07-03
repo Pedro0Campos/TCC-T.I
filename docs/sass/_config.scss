@@ -28,6 +28,11 @@
     src: url(../fonts/Inter/Inter-Regular.ttf);
 }
 
+@font-face {
+    font-family: InterSemiBold;
+    src: url(../fonts/Inter/Inter-SemiBold.ttf);
+}
+
 
 // Fontes
 $JosefinSansRegular: JosefinSansRegular;
@@ -51,8 +56,8 @@ $alturaNAV: 4.5rem;
 
 
 // Formulário
-$widthInput: 70%;
-$maxWidthInput: 450px;
+$widthInput: 75%;
+$maxWidthInput: 550px;
 
 
 // Player - Spotify
@@ -111,7 +116,7 @@ $height-option-bar: 100px;
     
     // Formulário - login e cadastro
     --backg-form: #242424;
-    --backg--camada-2: #121111;
+    --backg-camada-2: #121111;
 }
 // ===================================================
 
