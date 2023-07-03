@@ -116,7 +116,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div id="form-left" class="form-left" data-aos="fade" data-aos-duration="500"></div>
 
             <div class="form-right" data-aos="fade-down">
-                <i class="fa-solid fa-arrow-left-long"></i>
                 
                 <!-- Retorna para o próprio link para criar a validação -->
                 <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?>" method="post" autocomplete="off">
