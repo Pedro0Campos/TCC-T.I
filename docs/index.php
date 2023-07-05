@@ -45,10 +45,8 @@ if (isset($_GET['tema'])) {
 <body class="fade">
     <!-- <div class="music-player" id="music-player"> -->
     <div class="music-player ocult-player" id="music-player">
-        <div class="close-box" onclick="{openCloseMusicPlayer(), pause()}">
-            <div class="leftright"></div>
-            <div class="rightleft"></div>
-            <label class="close">close</label>
+        <div class="close-box">
+            <img src="imgs/close.svg" alt="" onclick="{openCloseMusicPlayer(), pause()}">
         </div>
         
         <div class="music-details">

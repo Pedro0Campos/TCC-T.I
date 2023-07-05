@@ -83,44 +83,14 @@
 }
 .music-player .close-box {
   width: 100%;
-  min-height: 50px;
-  display: flex;
-  align-items: center;
+  min-height: 20px;
+  height: 20px;
   padding-left: 20px;
-  margin-bottom: 20px;
+  margin: 20px 0px 20px 0px;
 }
-.music-player .close-box .leftright {
-  height: 4px;
-  width: 40px;
-  position: absolute;
-  margin-top: 24px;
-  background-color: rgb(255, 255, 255);
-  border-radius: 2px;
-  transform: rotate(45deg);
-  transition: all 0.3s ease-in;
+.music-player .close-box img {
+  height: 100%;
   cursor: pointer;
-}
-.music-player .close-box .rightleft {
-  height: 4px;
-  width: 40px;
-  position: absolute;
-  margin-top: 24px;
-  background-color: rgb(255, 255, 255);
-  border-radius: 2px;
-  transform: rotate(-45deg);
-  transition: all 0.3s ease-in;
-  cursor: pointer;
-}
-.music-player .close-box .close {
-  color: white;
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 0.6em;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  transition: all 0.3s ease-in;
-  display: none;
-  margin: 50px 0 0 -3px;
-  position: absolute;
 }
 .music-player .music-details {
   font-size: 1.3rem;

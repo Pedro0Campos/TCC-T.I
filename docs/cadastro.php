@@ -81,7 +81,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 <!DOCTYPE html>
-<html lang="pt-br" class="darkmode">
+<html lang="pt-br">
 <head>
 
     <meta charset="UTF-8">
@@ -116,6 +116,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div id="form-left" class="form-left" data-aos="fade" data-aos-duration="500"></div>
 
             <div class="form-right" data-aos="fade-down">
+                <!-- Cabeçalho -->
+                <div class="cabecalho">
+                    <img id="back" src="imgs/cadastro/back.svg" alt="Back">
+                </div>
                 
                 <!-- Retorna para o próprio link para criar a validação -->
                 <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?>" method="post" autocomplete="off">

@@ -23,48 +23,13 @@
     .close-box {
         width: 100%;
         min-height: config.$height-close-box;
-        display: flex;
-        align-items: center;
+        height: config.$height-close-box;
         padding-left: 20px;
-        margin-bottom: 20px;
+        margin: 20px 0px 20px 0px;
 
-        // Um lado do X
-        .leftright {
-            height: 4px;
-            width: 40px;
-            position: absolute;
-            margin-top: 24px;
-            background-color: rgb(255, 255, 255);
-            border-radius: 2px;
-            transform: rotate(45deg);
-            transition: all 0.3s ease-in;
+        img {
+            height: 100%;
             cursor: pointer;
-        }
-        
-        // Outro lado do X
-        .rightleft {
-            height: 4px;
-            width: 40px;
-            position: absolute;
-            margin-top: 24px;
-            background-color: rgb(255, 255, 255);
-            border-radius: 2px;
-            transform: rotate(-45deg);
-            transition: all 0.3s ease-in;
-            cursor: pointer;
-        }
-        
-        // Label com texto Close
-        .close {
-            color: white;
-            font-family: Helvetica, Arial, sans-serif;
-            font-size: 0.6em;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            transition: all 0.3s ease-in;
-            display: none;
-            margin: 50px 0 0 -3px;
-            position: absolute;
         }
     }
 

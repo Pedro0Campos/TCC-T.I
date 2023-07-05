@@ -65,6 +65,8 @@
 
 /* DIV - ESQUERDA */
 div.content {
+  height: 100%;
+  width: 100%;
   /* DIV - DIREITA */
 }
 div.content div.form-left {
@@ -78,9 +80,18 @@ div.content div.form-left {
 div.content div.form-right {
   margin: 0 auto;
   height: 100%;
+  min-height: 600px;
   width: 55%;
   float: right;
-  padding: 35px 0 50px 0;
+}
+div.content div.form-right .cabecalho {
+  display: none;
+  min-height: 40px;
+  height: 200px;
+  width: 100%;
+}
+div.content div.form-right .cabecalho #back {
+  height: 20px;
 }
 div.content div.form-right form {
   height: 100%;
@@ -89,6 +100,7 @@ div.content div.form-right form {
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
+  padding-top: 25px;
 }
 div.content div.form-right form h2 {
   margin: 0 auto;
@@ -171,12 +183,13 @@ div.content div.form-right form .form-camada-2 p {
     min-height: 900px;
     background-color: var(--second-color);
   }
+  div.form-right .cabecalho {
+    display: block !important;
+  }
   div.form-right form {
     background-color: var(--backg-form);
-    height: auto !important;
     width: 100%;
-    position: absolute;
-    bottom: 0;
+    padding: 0 !important;
     border-radius: 35px 35px 0 0;
   }
   div.form-right form .conteiner-h2 {
@@ -185,6 +198,7 @@ div.content div.form-right form .form-camada-2 p {
   div.form-right form .form-camada-2 {
     background-color: var(--backg-camada-2);
     border-radius: 35px 35px 0 0;
+    height: 100%;
   }
   div.form-right form .form-camada-2 .conteiner-input {
     width: 100% !important;

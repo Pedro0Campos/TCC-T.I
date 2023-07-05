@@ -4,6 +4,8 @@
 /* DIV - ESQUERDA */
 
 div.content {
+    height: 100%;
+    width: 100%;
     
     div.form-left {
         height: 100%;
@@ -19,9 +21,22 @@ div.content {
     div.form-right {
         margin: 0 auto;
         height: 100%;
+        min-height: 600px;
         width: 55%;
         float: right;
-        padding: 35px 0 50px 0;
+        // padding: 35px 0 50px 0;
+        // overflow: auto;
+    
+        .cabecalho {
+            display: none;
+            min-height: 40px;
+            height: 200px;
+            width: 100%;
+
+            #back {
+                height: 20px;
+            }
+        }
         
         form {
             height: 100%;
@@ -30,6 +45,7 @@ div.content {
             flex-direction: column;
             justify-content: center;
             align-items: stretch;
+            padding-top: 25px;
     
             h2 {
                 margin: 0 auto;
@@ -40,6 +56,7 @@ div.content {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                // justify-content: center;
                 
                 .conteiner-input {
                     max-width: config.$maxWidthInput;
@@ -116,7 +133,7 @@ div.content {
 }
 
 
-
+// Tablet e celular
 @media only screen and (max-width: 800px) {
     body {
         padding: 0;
@@ -134,16 +151,16 @@ div.content {
         width: 100% !important; 
         min-height: 900px;
         background-color: var(--second-color);
-        // display: flex;
         
-        // background-color: white;
+        .cabecalho {
+            display: block !important;
+        }
         
         form {
             background-color: var(--backg-form);
-            height: auto !important;
+            // height: auto !important;
             width: 100%;
-            position: absolute;
-            bottom: 0;
+            padding: 0 !important;
             border-radius: 35px 35px 0 0;
 
             .conteiner-h2 {
@@ -153,7 +170,8 @@ div.content {
             .form-camada-2 {
                 background-color: var(--backg-camada-2);
                 border-radius: 35px 35px 0 0;
-                // padding-bottom: 35px;
+                height: 100%;
+                // justify-content: center;
                 
                 .conteiner-input {
                     width: 100% !important;
@@ -201,6 +219,7 @@ div.content {
     
 }
 
+// Desabilitar o lado esquerdo se a altura for menor ou igual a 715px
 @media only screen and (max-height: 715px) {
     div.form-left {
         visibility: hidden;

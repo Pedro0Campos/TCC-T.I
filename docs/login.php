@@ -107,7 +107,7 @@
             <div class="form-right" data-aos="fade-down">
 
                 <!-- Retorna para o próprio link para criar a validação -->
-                <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']). "?pagina=login"?>" method="post" autocomplete="off">
+                <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?>" method="post" autocomplete="off">
                     <div class="conteiner-h2">
                         <h2 class="animation-title">Login</h2>
                     </div>
