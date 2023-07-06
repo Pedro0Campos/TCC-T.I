@@ -1,6 +1,5 @@
 <?php 
     include('database/db.php');
-    include('navbar.php');
     include('php/form.php');
     include('php/consultar_user.php');  // Consultar usuários no banco
 ?>
@@ -98,6 +97,10 @@
     
 </head>
 <body class="fade"> 
+
+    <div class="disable-navbar">
+        <?php include('navbar.php'); ?>
+    </div>
     
     <!-- CONTEÚDO -->
     <main>
@@ -105,6 +108,17 @@
             <div id="form-left" class="form-left" data-aos="fade" data-aos-duration="500"></div>
             
             <div class="form-right" data-aos="fade-down">
+                <!-- Cabeçalho -->
+                <div class="cabecalho">
+                    <!-- Icon - back -->
+                    <a href="index.php"><img id="back" src="imgs/cadastro/back.svg" alt="Back"></a>
+
+                    <!-- Detalhes -->
+                    <img id="component1" class="components" src="imgs/cadastro/Component1.svg" alt="Detalhe 1 - esquerda">
+                    <img id="component2" class="components" src="imgs/cadastro/Component2.svg" alt="Detalhe 2 - direita / topo">
+                    <img id="component3" class="components" src="imgs/cadastro/Component3.svg" alt="Detalhe 3 - direita">
+                    <img id="component4" class="components" src="imgs/cadastro/Component4.svg" alt="Detalhe 4 - Centro">
+                </div>
 
                 <!-- Retorna para o próprio link para criar a validação -->
                 <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?>" method="post" autocomplete="off">

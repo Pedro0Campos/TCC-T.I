@@ -20,7 +20,7 @@ if (isset($_GET['tema'])) {
 
     <!-- Estilos do site -->
     <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/form.css">
+    <!-- <link rel="stylesheet" href="css/form.css"> -->
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/toggle.css">

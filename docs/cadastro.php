@@ -1,5 +1,4 @@
 <?php 
-    include('navbar.php');
     include('database/db.php');
     include('php/form.php');
     include('php/consultar_user.php');  // Consultar usuários no banco
@@ -50,23 +49,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $emailErro = 'Email inválido.';
         }
     }
-
+    
     if (empty($senha)) {
         $senhaErro = 'Senha é obrigatório.';
     }
-
-
+    
+    
     // Verificar se pode fazer o cadastro
     if ($nomeErro == '' and $emailErro == '' and $senhaErro == '') {
-
+        
         // Verificar se já existe um cadastro com esse email
         $condicao = "WHERE email = '$email'";
         $consulta = consultar_user($condicao, $conexao_db);
-
+        
         // Verificar se existe algum email cadastrado
         if (mysqli_num_rows($consulta) > 0) {
             $emailErro = 'Email já utilizado.';
-
+            
         } else {
             // Código para inserir os valores no banco
             cadastrar($nome, $email, $senha, $conexao_db);
@@ -82,8 +81,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-
+    <head>
+        
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -100,25 +99,35 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <!-- Scripts do site -->
     <script src="js/darkmode.js"></script>
     <script src="js/navbar.js"></script>
-
+    
     <!-- AOS - Animation in scrool -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
+    
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/55197c00fe.js" crossorigin="anonymous"></script>
     
 </head>
 <body class="fade">
+    <div class="disable-navbar">
+        <?php include('navbar.php'); ?>
+    </div>
     
     <!-- CONTEÚDO -->
     <main>        
         <div class="content">
             <div id="form-left" class="form-left" data-aos="fade" data-aos-duration="500"></div>
 
-            <div class="form-right" data-aos="fade-down">
+            <div class="form-right" data-aos="fade-down" alt="Imagem de decoração que retrata os anos 50/60">
                 <!-- Cabeçalho -->
                 <div class="cabecalho">
-                    <img id="back" src="imgs/cadastro/back.svg" alt="Back">
+                    <!-- Icon - back -->
+                    <a href="index.php"><img id="back" src="imgs/cadastro/back.svg" alt="Back"></a>
+
+                    <!-- Detalhes -->
+                    <img id="component1" class="components" src="imgs/cadastro/Component1.svg" alt="Detalhe 1 - esquerda">
+                    <img id="component2" class="components" src="imgs/cadastro/Component2.svg" alt="Detalhe 2 - direita / topo">
+                    <img id="component3" class="components" src="imgs/cadastro/Component3.svg" alt="Detalhe 3 - direita">
+                    <img id="component4" class="components" src="imgs/cadastro/Component4.svg" alt="Detalhe 4 - Centro">
                 </div>
                 
                 <!-- Retorna para o próprio link para criar a validação -->
@@ -176,7 +185,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
     </main>
     
-    <script src="js/change_background.js"></script> 
+    <!-- <script src="js/change_background.js"></script>  -->
     <!-- AOS - Animation in scrool -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
