@@ -1,6 +1,10 @@
 @use "config";
 
-.carrosel-musica {
+
+// ===========================
+// Carrossel 
+// ===========================
+.carrossel-musica {
     margin: 15px 0px 15px 0;
 
     #carousel-title {
@@ -85,14 +89,32 @@
     .splide__pagination {
         display: none;
     }
+}
 
+@media only screen and (max-width: 700px){
+    .carrossel-musica {
+        #carousel-title {
+            text-decoration: none;
+        }
+    }
+}
+.carrossel-playlists {
+    display: none;
 }
 
 
+// ===========================
 //carrossel personagens
+// ===========================
+
+
+
+// ===========================
+//carrossel personagens
+// ===========================
 .carrosel-personagens {
     // margin-left: 50px;
-    display: none;
+    // display: none;
 
     /* Título do carrosel */
     #carousel-title {
@@ -161,5 +183,9 @@
 @media only screen and (max-width: 700px) {
     .opacity {
         display: none;
+    }
+
+    .carrossel-playlists {
+        display: block;
     }
 }

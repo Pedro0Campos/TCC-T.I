@@ -64,18 +64,18 @@
   --backg-camada-2: #121111;
 }
 
-.carrosel-musica {
+.carrossel-musica {
   margin: 15px 0px 15px 0;
   /* Botão das setas */
   /* Seta pra direita */
 }
-.carrosel-musica #carousel-title {
+.carrossel-musica #carousel-title {
   letter-spacing: 3px;
   text-decoration: underline;
   text-underline-offset: 5px;
   margin-bottom: 20px;
 }
-.carrosel-musica .opacity {
+.carrossel-musica .opacity {
   position: absolute;
   z-index: 1;
   top: 17%;
@@ -85,55 +85,63 @@
   background-color: rgba(0, 0, 0, 0.6);
   filter: blur(6px);
 }
-.carrosel-musica .splide__slide {
+.carrossel-musica .splide__slide {
   background-color: transparent;
   font-size: 14px;
   width: 100%;
   transition: transform ease-in-out 0.15s;
 }
-.carrosel-musica .splide__slide .wait_api {
+.carrossel-musica .splide__slide .wait_api {
   width: 100%;
   aspect-ratio: 1/1;
   background-color: var(--wait);
 }
-.carrosel-musica .splide__slide:hover {
+.carrossel-musica .splide__slide:hover {
   transform: scale(1.03) translate(1.5px, 3px);
 }
-.carrosel-musica .splide__slide img {
+.carrossel-musica .splide__slide img {
   width: 100%;
 }
-.carrosel-musica .splide__slide .nome_musica {
+.carrossel-musica .splide__slide .nome_musica {
   margin-top: 0.5em;
   font-family: JosefinSansBold;
   font-size: 1em;
 }
-.carrosel-musica .splide__slide .autor_musica {
+.carrossel-musica .splide__slide .autor_musica {
   font-family: JosefinSansRegular;
   font-size: 0.9em;
   margin-top: 0.3em;
 }
-.carrosel-musica .splide__arrow {
+.carrossel-musica .splide__arrow {
   background: transparent;
   opacity: 1;
 }
-.carrosel-musica .splide__arrow svg {
+.carrossel-musica .splide__arrow svg {
   fill: rgb(255, 255, 255);
 }
-.carrosel-musica .splide__arrow--next {
+.carrossel-musica .splide__arrow--next {
   top: 14px;
   right: 10px;
 }
-.carrosel-musica .splide__arrow--prev {
+.carrossel-musica .splide__arrow--prev {
   top: 14px;
   right: 40px;
   left: unset;
 }
-.carrosel-musica .splide__pagination {
+.carrossel-musica .splide__pagination {
+  display: none;
+}
+
+@media only screen and (max-width: 700px) {
+  .carrossel-musica #carousel-title {
+    text-decoration: none;
+  }
+}
+.carrossel-playlists {
   display: none;
 }
 
 .carrosel-personagens {
-  display: none;
   /* Título do carrosel */
   /* Todos os slides */
   /* Os slides visiveis vão ter 100% de opacidade  */
@@ -190,6 +198,9 @@
 @media only screen and (max-width: 700px) {
   .opacity {
     display: none;
+  }
+  .carrossel-playlists {
+    display: block;
   }
 }
 

@@ -1,11 +1,4 @@
-  function openPopup() {
-    var popup = document.getElementById('popup');
-    popup.style.display = 'flex';
-    carroselPopup.mount();
-  }
- 
-  function closePopup() {
-    var popup = document.getElementById('popup');
-    popup.style.display = 'none';
-    carroselPopup.destroy();
-  }
+function showPopUp() {
+    document.getElementById('showPopUp').classList.toggle('ocult-container')
+    document.querySelector('body').classList.toggle('disable-scroll')
+}

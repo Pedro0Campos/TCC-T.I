@@ -1,12 +1,3 @@
-<?php
-if (isset($_GET['tema'])) {
-    $tema = $_GET['tema'];
-}
-
-// echo $tema;
-// setcookie('tema', 'darkmode', time() + (86400 * 30), '/');
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -20,8 +11,9 @@ if (isset($_GET['tema'])) {
 
     <!-- Estilos do site -->
     <link rel="stylesheet" href="css/base.css">
-    <!-- <link rel="stylesheet" href="css/form.css"> -->
+    <link rel="stylesheet" href="css/utils.css">
     <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/box-content.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/toggle.css">
     <link rel="stylesheet" href="css/carrosel.css">
@@ -30,7 +22,6 @@ if (isset($_GET['tema'])) {
     <!-- Scripts do site -->
     <script src="js/darkmode.js"></script>
     <script src="js/navbar.js"></script>
-    <script src="js/carroselpopup.js"></script>
 
     <!-- AOS - Animation in scrool -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -45,7 +36,7 @@ if (isset($_GET['tema'])) {
 
 <body class="fade">
     <!-- <div class="music-player" id="music-player"> -->
-    <div class="music-player ocult-player" id="music-player">
+    <div class="music-player fixed-container ocult-container" id="music-player">
         <div class="close-box">
             <img src="imgs/close.svg" alt="" onclick="{openCloseMusicPlayer(), pause()}">
         </div>
@@ -99,173 +90,169 @@ if (isset($_GET['tema'])) {
     </div>
 
     <?php
-    include('navbar.php');
+        include('navbar.php');
     ?>
 
 <!-- CONTEÚDO -->
 <main>
     <!-- Sessão 1 -->
-    <section class="section-impar">
+    <section>
         <img src="imgs/home/sandy-danny-light.png" alt="Sanddy e Danny - Grease" class="sandy-danny" data-aos="fade-up">
         
         <div class="wh100 flex-collumn">
-            <div class="padding-box-title" data-aos="fade-right">
-                <div class="box-title1 border-box">
+            <div class="wrapper-content-main" data-aos="fade-right">
+                <div class="box-title1 border-box padding">
                     <h1>Conheça tudo sobre o musical de <span>Grease</span></p>
-                </div> <!-- .box-title1 -->
-            </div> <!-- .padding-box-title -->
+                </div> <!-- .box-title1 .border-box .padding-->
+            </div> <!-- .wrapper-content-main -->
             
-            <div class="padding-box-title" data-aos="fade-right">
-                <div class="box-title3">
+            <div class="wrapper-content-main" data-aos="fade-right">
+                <div class="box-title3 padding">
                     <h3><span>“Uma viagem aos tempos da brilhantina”</span></h3>
-                </div> <!-- .box-title3 -->
-            </div> <!-- .padding-box-title -->
+                </div> <!-- .box-title3 .padding-->
+            </div> <!-- .wrapper-content-main -->
             
-            <div class="padding-box-title" data-aos="fade-right" data-aos-anchor-placement="top-bottom">
-                <a href="sobre.php" class="btn-home"><button type="button" class="animation-scale">Sobre o musical</button></a>
-            </div> <!-- .padding-box-title -->
-        </div> <!-- .wh100 flex-collumn -->
+            <div class="wrapper-content-main" data-aos="fade-right" data-aos-anchor-placement="top-bottom">
+                <a href="sobre.php"><button type="button" class="animation-scale btn-home">Sobre o musical</button></a>
+            </div> <!-- .wrapper-content-main -->
+        </div> <!-- .wh100 .flex-collumn -->
     </section> <!-- .section-impar -->
     
 
 
     <!-- Sessão 2 -->
-    <section class="section-par section2">
+    <section class="section-theme-black section2">
         
-        <div class="retro-line flex-collumn" data-aos="fade">
-            <div class="padding-box-title right-bar" data-aos="fade-down">
-                <div class="box-title2 border-box">
+        <div class="retro-line flex-collumn wh100" data-aos="fade">
+
+            <div class="wrapper-content-main side-bar" data-aos="fade-down">
+                <div class="box-title2 border-box padding">
                     <h2>Conheça as música que refletem os anos <span class="sect2-title2 color-title_light">50</span></h2>
-                </div> <!-- .box-title2 border-box -->
-            </div> <!-- .padding-box-title right-bar -->
+                </div> <!-- .box-title2 .border-box .padding-->
+            </div> <!-- .wrapper-content-main side-bar -->
+
+
+            <!-- Carrossel - Playlist -->
+
+            <div class="wrapper-content-main" data-aos="fade-down">
+                <div class="carrossel-playlists splide" aria-label="Playlists">
+                    <div class="splide__track">
+                        <div class="splide__list">
+                            <div class="splide__slide">
+                                <div style="width: 100%; height: 100%; background-color: var(--second-color);">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
-            <div class="padding-box-title" data-aos="fade-right">
-                <div class="carrosel-musica splide" role="group" aria-labelledby="carousel-title">
-                    <h2 id="carousel-title">Explorar </h2>
+            <!-- Carrossel - Musicas -->
+            <div class="wrapper-content-main" data-aos="fade-right">
+                <div class="carrossel-musica splide" aria-labelledby="carousel-title">
+                    <h2 id="carousel-title">Explorar</h2>
+
                     <!-- Caixa com opacidade (no final) para criar efeito de continuidade -->
                     <div class="opacity"></div>
                     
                     <div class="splide__track">
                         <ul class="splide__list" id="splide__list_MUSICAS">
-                            
                             <div class="splide__slide track" onclick="closeMusicPlayer()">
                                 <div id="0" class="wait_api"></div>
                             </div>
                         </ul> <!-- .splide__list#splide__list-->
                     </div> <!-- .splide__track -->
-                </div> <!-- .carrosel-musica splide -->
-            </div> <!-- .padding-box-title -->
+                </div> <!-- .carrossel-musica splide -->
+            </div> <!-- .wrapper-content-main -->
             
-            <div class="padding-box-title" data-aos="fade-right">
+            <div class="wrapper-content-main" data-aos="fade-right">
                 <div class="mais-tocadas">
                     <h3>MAIS TOCADAS</h3>
-                    <div class="right-bar">
+                    <div class="side-bar">
                         <div class="container-itens" id="itens-mais-tocadas">
                             <p class="item" id="0">1. Summer Nights - Grease</p>
                             <p class="item" id="3">2. Don’t be Cruel - Elvis Presley</p>
                             <p class="item" id="4">3. I Walk The Line - Johnny Cash</p>
                         </div> <!-- .container-itens -->
-                    </div> <!-- .right-bar -->
+                    </div> <!-- .side-bar -->
                 </div> <!-- .mais-tocadas -->
-            </div> <!-- .padding-box-title -->
-        </div> <!-- .retro-line flex-collumn -->
-    </section> <!-- .section-par section2 -->
+            </div> <!-- .wrapper-content-main -->
+
+        </div> <!-- .retro-line .flex-collumn -->
+    </section> <!-- .section-par .section2 -->
     
 
 
     <!-- Sessão 3 -->
-    <section class="section-impar">       
-        <div class="flex-collumn">
-            <div class="padding-box-title right-bar" data-aos="fade-right">
-                <div class="box-title2 border-box">
+    <section class="section3">
+
+        <div class="flex-collumn wh100">
+
+            <div class="wrapper-content-main side-bar" data-aos="fade-right">
+                <div class="box-title2 border-box padding">
                     <h2>Personagens <span class="sect2-title2 color-title_light">incríveis</span> merecem todo o reconhecimento</h2>
-                </div> <!-- .box-title2 border-box -->
+                </div> <!-- .box-title2 .border-box .padding-->
+            </div> <!-- .wrapper-content-main .side-bar -->
+
+            <div class="wrapper-content-main" data-aos="fade-right">
+                <button type="button" onclick="showPopUp()" class="btn-home btn-retro animation-scale">Conheça os personagens</button>
+            </div> <!-- .wrapper-content-main -->
+
+            <div class="fixed-container ocult-container" id="showPopUp">
+                <div class="carrosel-personagens splide" id="popup">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <div class="splide__slide">
+                                <img src="imgs/home/PopUpSandy.png" alt="">
+                                <!--<p class="nome_musica">Sandy Olsson</p>-->
+                            </div>
+                            <div class="splide__slide">
+                                <img src="imgs/home/PopUpDanny.png" alt="">
+                                <!--<p class="nome_musica">Danny Zuko</p>-->
+                            </div>
+                            <div class="splide__slide">
+                                <img src="imgs/home/PopUpJan.png" alt="">
+                                <!--<p class="nome_musica">Betty Rizzo</p>-->
+                            </div>
+                            <div class="splide__slide">
+                                <img src="imgs/home/PopUpPutzie.png" alt="">
+                              <!--  <p class="nome_musica">Marty Marachino</p>-->
+                            </div>
+                            <div class="splide__slide">
+                                <img src="imgs/home/PopUpFrenchy.png" alt="">
+                              <!--  <p class="nome_musica">Kenickie Willians</p>-->
+                            </div>
+                
+                            <div class="splide__slide">
+                                <img src="imgs/home/PopUpDoody.png" alt="">
+                              <!--  <p class="nome_musica">Frenchy Palardino</p>-->
+                            </div>
+                            <div class="splide__slide">
+                                <img src="imgs/home/PopUpRizzo.png" alt="">
+                              <!--  <p class="nome_musica">Putzie</p>-->
+                            </div>
+                            <div class="splide__slide">
+                                <img src="imgs/home/PopUpKenickie.png" alt="">
+                                <!-- <p class="nome_musica">Sonny Lattiery</p>-->
+                            </div>
+                            <div class="splide__slide">
+                                <img src="imgs/home/PopUpMarty.png" alt="">
+                               <!--  <p class="nome_musica">Doody</p>-->
+                            </div>
+                            <div class="splide__slide">
+                                <img src="imgs/home/PopUpSonny.png" alt="">
+                               <!--  <p class="nome_musica">Jan Martin</p>-->
+                            </div>
+                        </ul>
+                    </div>
+                </div> <!-- .carrosel-personagens .splide -->
             </div>
-
-            <div class="padding-box-title" data-aos="fade-right">
-                <button onclick="openPopup()" class="btnretro btn-home">Conheça os personagens</button>
-            </div> <!-- .padding-box-title -->
-
-            <div class="splide carrosel-personagens" role="group" aria-labelledby="carousel-title" id="popup">
-                <h2 id="carousel-title"></h2>
-                <div class="splide__track">
-                    <ul class="splide__list">
-                        <div class="splide__slide">
-                            <img src="imgs/home/PopUpSandy.png" alt="">
-                            <!--<p class="nome_musica">Sandy Olsson</p>-->
-                        </div>
-
-                        <div class="splide__slide">
-                            <img src="imgs/home/PopUpDanny.png" alt="">
-                            <!--<p class="nome_musica">Danny Zuko</p>-->
-                        </div>
-    
-                        <div class="splide__slide">
-                            <img src="imgs/home/PopUpJan.png" alt="">
-                            <!--<p class="nome_musica">Betty Rizzo</p>-->
-                        </div>
-    
-                        <div class="splide__slide">
-                            <img src="imgs/home/PopUpPutzie.png" alt="">
-                          <!--  <p class="nome_musica">Marty Marachino</p>-->
-                        </div>
-    
-                        <div class="splide__slide">
-                            <img src="imgs/home/PopUpFrenchy.png" alt="">
-                          <!--  <p class="nome_musica">Kenickie Willians</p>-->
-                        </div>
-                        
-                        <div class="splide__slide">
-                            <img src="imgs/home/PopUpDoody.png" alt="">
-                          <!--  <p class="nome_musica">Frenchy Palardino</p>-->
-                        </div>
-    
-        
-                        <div class="splide__slide">
-                            <img src="imgs/home/PopUpRizzo.png" alt="">
-                          <!--  <p class="nome_musica">Putzie</p>-->
-                        </div>
-                        <div class="splide__slide">
-                            <img src="imgs/home/PopUpKenickie.png" alt="">
-                            <!-- <p class="nome_musica">Sonny Lattiery</p>-->
-                        </div>
-                        <div class="splide__slide">
-                            <img src="imgs/home/PopUpMarty.png" alt="">
-                           <!--  <p class="nome_musica">Doody</p>-->
-                        </div>
-                        <div class="splide__slide">
-                            <img src="imgs/home/PopUpSonny.png" alt="">
-                           <!--  <p class="nome_musica">Jan Martin</p>-->
-                        </div>
-
-                    </ul>
-                </div>
-            </div>
+            
         </div> <!-- .flex_collumn -->
         
     </section> <!--.section-impar -->
 
- 
-
-    <script type="module">
-        var carroselPopup = new Splide('.carrosel-personagens', {
-            type:   'loop',       // Fica em loop
-            height: 'auto',       // Altura do carrosel
-            width: '100%',        // Comprimento do carrosel
-            fixedWidth: '400px',  // Altura do slide
-            focus:   0,           // Habilita uma classe para personalizar o elemento focado
-            gap: '20px',          // Espaçamento entre os slides
-            easing: 'ease-out',
-            padding: '5rem',
-
- 
-
-        });
-
- 
-
-        carroselPopup.mount();
-    </script>
 </main>
     
     <!-- AOS - Animation in scrool -->
@@ -281,11 +268,15 @@ if (isset($_GET['tema'])) {
         </script>
     <!-- AOS - Animation in scrool -->
     
+    
     <!-- Music Player -->
     <script src="js/music.js"></script>
     <script src="js/carrosel.js" type="module"></script>
+    
+    <!-- Carrosel personagens -->
+    <script src="js/carroselpopup.js"></script>
 
-    <!-- Carrossel -->
+    <!-- Import Splide -->
     <script src="splide/js/splide.min.js"></script>
 </body>
 

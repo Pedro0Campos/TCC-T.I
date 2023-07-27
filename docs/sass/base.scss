@@ -1,4 +1,4 @@
-// BASE -> Configurações, reset, título, texto, botões, scrollbar, classes úteis, animações
+// BASE -> Configurações, reset, título, texto, botões, scrollbar, animações
 
 
 @use 'config';
@@ -84,32 +84,6 @@ button {
     font-family: JosefinSansMedium;
 }
 // ===================================================
-
-
-
-// ===================================================
-// Tags úteis
-
-// centralizar horizontalmente e verticalmente com Flex
-.flexCenterVH {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-// Itálico
-.italic {
-    font-style: italic;
-}
-
-// Altura e comprimento 100%
-.wh100 {
-    height: 100%;
-    width: 100%;
-}
-// ===================================================
-
-
 
 
 // ===================================================

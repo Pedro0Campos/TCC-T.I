@@ -1,0 +1,33 @@
+// ===================================================
+// Tags úteis
+
+// centralizar horizontalmente e verticalmente com Flex
+.flexCenterVH {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Itálico
+.italic {
+    font-style: italic;
+}
+
+// Altura e comprimento 100%
+.wh100 {
+    height: 100%;
+    width: 100%;
+}
+
+// CLasses para ser colocadas via JS
+// Serve para deixar a div oculta
+.fixed-container {
+    position: fixed;
+    z-index: 4;
+    bottom: 0;
+    transition: bottom 0.2s ease;
+}
+.ocult-container {
+    bottom: -100% !important;
+}
+// ===================================================

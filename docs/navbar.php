@@ -3,7 +3,7 @@
         <!-- TOGGLER --> 
         <div class="navlista" id="toggler">
             <label for="checkbox">
-                <input type="checkbox" name="" id="checkbox" onchange="ocult_elements(this)" placeholder="modo escuro" checked>
+                <input type="checkbox" name="" id="checkbox" onchange="chance_theme(this)" placeholder="modo escuro" checked>
                 <span class="ball"></span>
                 <i class="fa-solid fa-moon moon desativado" id="moon"></i>
                 <i class="fa-solid fa-sun sun" id="sun"></i>

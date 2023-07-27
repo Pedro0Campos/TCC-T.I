@@ -129,21 +129,6 @@ button {
   font-family: JosefinSansMedium;
 }
 
-.flexCenterVH {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.italic {
-  font-style: italic;
-}
-
-.wh100 {
-  height: 100%;
-  width: 100%;
-}
-
 .animation-title {
   width: fit-content;
   /*Animação*/

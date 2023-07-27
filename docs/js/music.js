@@ -149,7 +149,7 @@ let musica = musicas[0]
 // Open / Close Music Player
 // --------------------------------
 function openCloseMusicPlayer() {
-    document.querySelector('.music-player').classList.toggle('ocult-player')
+    document.querySelector('.music-player').classList.toggle('ocult-container')
     document.querySelector('body').classList.toggle('disable-scroll')
     play_pause.className = 'fa-solid fa-pause'
     playState = 'pause'
@@ -432,6 +432,6 @@ function whilePlaying () {
 // TECLAS DE ATALHO
 // ================================
 document.addEventListener('keydown', e => {
-    console.log(e);
+    // console.log(e);
 })
 // ================================

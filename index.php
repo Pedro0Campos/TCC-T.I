@@ -43,7 +43,7 @@ if (isset($_GET['tema'])) {
 </head>
 
 <body class="fade">
-    <div class="music-player ocult-player" id="music-player">
+    <div class="music-player ocult-container" id="music-player">
     <!-- <div class="music-player" id="music-player"> -->
         <div class="close-box" onclick="closeMusicPlayer()">
             <div class="leftright"></div>
@@ -83,21 +83,21 @@ if (isset($_GET['tema'])) {
         
         <!-- Sombra - usando linear gradient -->
         <div class="backgr-gradient wh100 flex-collumn">
-            <div class="padding-box-title" data-aos="fade-right">
+            <div class="wrapper-content-main" data-aos="fade-right">
                 <div class="box-title1 border-box">
                     <h1>Conheça tudo sobre o musical de <span>Grease</span></p>
                 </div> <!-- .box-title1 -->
-            </div> <!-- .padding-box-title -->
+            </div> <!-- .wrapper-content-main -->
             
-            <div class="padding-box-title" data-aos="fade-right">
+            <div class="wrapper-content-main" data-aos="fade-right">
                 <div class="box-title3">
                     <h3><span>“Uma viagem aos tempos da brilhantina”</span></h3>
                 </div> <!-- .box-title3 -->
-            </div> <!-- .padding-box-title -->
+            </div> <!-- .wrapper-content-main -->
             
-            <div class="padding-box-title" data-aos="fade-right" data-aos-anchor-placement="top-bottom">
+            <div class="wrapper-content-main" data-aos="fade-right" data-aos-anchor-placement="top-bottom">
                 <a href="sobre.php" class="btn-home"><button type="button">Sobre o musical</button></a>
-            </div> <!-- .padding-box-title -->
+            </div> <!-- .wrapper-content-main -->
         </div> <!-- .backgr-gradient wh100 flex-collumn -->
         
     </section> <!-- .section-impar -->
@@ -105,14 +105,14 @@ if (isset($_GET['tema'])) {
     <section class="section-par section2">
         
         <div class="retro-line flex-collumn" data-aos="fade">
-            <div class="padding-box-title right-bar" data-aos="fade-down">
+            <div class="wrapper-content-main side-bar" data-aos="fade-down">
                 <div class="box-title2 border-box">
                     <h2>Conheça as música que refletem os anos <span class="sect2-title2 color-title_light">50</span></h2>
                 </div> <!-- .box-title2 border-box -->
-            </div> <!-- .padding-box-title right-bar -->
+            </div> <!-- .wrapper-content-main side-bar -->
             
-            <div class="padding-box-title" data-aos="fade-right">
-                <div class="carrosel-musica splide" role="group" aria-labelledby="carousel-title">
+            <div class="wrapper-content-main" data-aos="fade-right">
+                <div class="carrossel-musica splide" role="group" aria-labelledby="carousel-title">
                     <h2 id="carousel-title">Explorar </h2>
                     
                     <!-- Caixa com opacidade (no final) para criar efeito de continuidade -->
@@ -127,39 +127,39 @@ if (isset($_GET['tema'])) {
                            
                         </ul> <!-- .splide__list#splide__list-->
                     </div> <!-- .splide__track -->
-                </div> <!-- .carrosel-musica splide -->
-            </div> <!-- .padding-box-title -->
+                </div> <!-- .carrossel-musica splide -->
+            </div> <!-- .wrapper-content-main -->
             
             
-            <div class="padding-box-title" data-aos="fade-right">
+            <div class="wrapper-content-main" data-aos="fade-right">
                 <div class="mais-tocadas">
                     <h3>MAIS TOCADAS</h3>
-                    <div class="right-bar">
+                    <div class="side-bar">
                         <div class="container-itens">
                             <p class="item">1. Summer Nights - Grease</p>
                             <p class="item">2. Don’t be Cruel - Elvis Presley</p>
                             <p class="item">3. I Walk The Line - Johnny Cash</p>
                         </div> <!-- .container-itens -->
-                    </div> <!-- .right-bar -->
+                    </div> <!-- .side-bar -->
                 </div> <!-- .mais-tocadas -->
-            </div> <!-- .padding-box-title -->
+            </div> <!-- .wrapper-content-main -->
         </div> <!-- .retro-line flex-collumn -->
     </section> <!-- .section-par section2 -->
     
     <section class="section-impar">       
         <div class="flex-collumn"> <br>
             <div class="backgr-gradient wh100 flex-collumn">
-            <div class="padding-box-title right-bar" data-aos="fade-right">
+            <div class="wrapper-content-main side-bar" data-aos="fade-right">
                 <div class="box-title2 border-box">
                     <h2>Personagens <span class="sect2-title2 color-title_light">incríveis</span> merecem todo o reconhecimento</h2>
                 </div> <!-- .box-title2 border-box -->
             </div>
 
-            <div class="padding-box-title" data-aos="fade-right">
+            <div class="wrapper-content-main" data-aos="fade-right">
               <button onclick="openPopup()" class="btnretro" >
                 <p id="perso">Conheça os personagens</p>
               </button>
-            </div> <!-- .padding-box-title -->
+            </div> <!-- .wrapper-content-main -->
             </div> <!-- .backgr-gradient wh100 flex-collumn -->
 
             <!-- <div class="splide carrosel-personagens" role="group" aria-labelledby="carousel-title">
@@ -406,7 +406,7 @@ if (isset($_GET['tema'])) {
     <script src="js/music_player.js" type="module"></script>
     <script>
         function closeMusicPlayer() {
-            document.querySelector('.music-player').classList.toggle('ocult-player')
+            document.querySelector('.music-player').classList.toggle('ocult-container')
             document.querySelector('body').classList.toggle('disable-scroll')
         }
     </script>

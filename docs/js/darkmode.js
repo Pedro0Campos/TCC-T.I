@@ -1,4 +1,4 @@
-function ocult_elements(checkbox) {
+function chance_theme(checkbox) {
     let itens = [document.querySelector('.sun'),
                  document.querySelector('#cloud1'),
                  document.querySelector('#cloud2'),
@@ -11,10 +11,6 @@ function ocult_elements(checkbox) {
         element.classList.toggle('desativado')
     })
 
-    change_theme()
-}
-
-function change_theme() {
     const html = document.querySelector('html')
     const sandy_danny = document.querySelector('.sandy-danny')
     

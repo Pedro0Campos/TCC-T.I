@@ -1,0 +1,180 @@
+@use 'config';
+
+// ===================================================
+// Caixas de texto
+.wrapper-content-main {
+    font-size: 18px; 
+
+    .padding {
+        padding: 20px;
+    }
+
+    .box-title1 {
+        // max-width: var(--width-box-title1);
+        max-width: 500px;
+
+        & h1 {
+            font-size: var(--font-size-box-title1);
+            font-family: config.$JosefinSansMedium;
+            letter-spacing: 0.15em;
+            line-height: 1.2em;
+            & span {
+                color: var(--third-color);
+                background-color: var(--second-color-50);
+                padding: 7px;
+            }
+        }
+    }
+    
+    .box-title2 {
+        // max-width: var(--width-box-title2);
+        max-width: 480px;
+
+        & h2 {
+            font-size: var(--font-size-box-title2);
+            letter-spacing: 0.1em;
+            line-height: 1.2;
+
+            & span {
+                color: var(--second-color)
+            }
+        }
+    }
+    
+    .box-title3 {
+        // max-width: var(--width-box-title3);
+        max-width: 350px;
+
+        & h3 {
+            font-size: var(--font-size-box-title3);
+            font-family: config.$JosefinSansBoldItalic;
+            letter-spacing: 0.1em;
+            line-height: 1.1em;
+            & span {
+                color: var(--second-color);
+            }
+        }
+    }
+    
+    .border-box {
+        border: 7px solid var(--text-color); 
+    }
+    
+    .btn-home {
+        width: 80%;
+        font-size: 1rem;
+        width: 100%;
+        max-width: 350px;
+        height: 45px;
+        // padding: 1.2em 12.1em 1.2em 12.1em;
+        border: none;
+        border-radius: 100px;
+        background-color: var(--text-color);
+        color: var(--backg-color);
+        
+
+    }
+
+    .btn-retro {
+        color: white;
+        background: rgb(2,0,36);
+        background: linear-gradient(75deg,
+        rgba(2,0,36,1) 0%,
+        rgba(0,0,0,1) 77%,
+        rgba(156,41,61,1) 77%,
+        rgba(156,41,61,1) 83%,
+        rgba(247,158,82,1) 83%,
+        rgba(247,158,82,1) 89%,
+        rgba(59,164,172,1) 89%,
+        rgba(59,164,172,1) 94%,
+        rgba(39,61,98,1) 94%);
+        
+        // padding-left:20px;
+        // padding-right: 20px;
+        // border:none;
+        // border-radius: 100px;
+        // height: 60px;
+        // width: 400px;
+        // font-size: 15px;
+        // margin-top: 10px;
+        // margin-left: 10px;
+    }
+
+    .mais-tocadas {
+        max-width: var(--width-mais-tocadas);
+        width: 80%;
+
+        h3 {
+            font-size: calc(var(--font-size-box-title3) * 0.75);
+            font-family: JosefinSansBold;
+            text-align: center;
+            letter-spacing: 0.1em;  
+            padding-right: 27px;
+        }
+
+        .container-itens {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+
+            .item {
+                font-family: JosefinSansRegular;
+                font-size: calc(var(--font-size-box-title3) * 0.6);
+                margin-top: 20px;
+                padding: 12.5px ;
+                padding-right: 50px;
+                border: 1px solid white;
+                border-radius: 30px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &.side-bar {
+        display: flex;
+        gap: 20px;
+
+        // ::after e ::before no Media Screen
+    }
+}
+
+@media only screen and (min-width: 701px){
+    .wrapper-content-main {
+        
+        &.side-bar {
+            &::after {
+                content: '';
+                width: 7px;
+                background-color: var(--second-color);
+            }
+        }
+    }
+}
+
+// Tablet pra baixo
+@media only screen and (max-width: 700px){
+    .wrapper-content-main {
+
+        &.side-bar {
+            &::before {
+                content: '';
+                width: 7px;
+                background-color: var(--second-color);
+            }
+        }
+
+        .border-box {
+            border: none;
+        }
+
+        .padding {
+            padding: 0;
+        }
+
+        .mais-tocadas {
+            display: none;
+        }
+    }
+}
+// Caixas de texto
+// ===================================================

@@ -1,0 +1,27 @@
+.flexCenterVH {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.wh100 {
+  height: 100%;
+  width: 100%;
+}
+
+.fixed-container {
+  position: fixed;
+  z-index: 4;
+  bottom: 0;
+  transition: bottom 0.2s ease;
+}
+
+.ocult-container {
+  bottom: -100% !important;
+}
+
+/*# sourceMappingURL=utils.css.map */
