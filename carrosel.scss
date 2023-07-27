@@ -33,7 +33,7 @@
         .wait_api {
             width: 100%;
             aspect-ratio: 1/1;
-            background-color: var(--wait);
+            background-color: rgb(50, 50, 50);
         }
 
         &:hover {
@@ -89,7 +89,9 @@
 }
 
 
-//carrossel personagens
+//Parte dos personagens
+//abaixo o carrossel
+
 .carrosel-personagens {
     // margin-left: 50px;
     display: none;
@@ -157,9 +159,162 @@
     }
 }
 
-
-@media only screen and (max-width: 700px) {
-    .opacity {
-        display: none;
-    }
+//aqui é o modelo da pagina e do botão
+.btnretro {
+    color: white;
+    background: rgb(2,0,36);
+    padding-left:20px;
+    padding-right: 20px;
+    border:none;
+    border-radius: 100px;
+    height: 60px;
+    width: 400px;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
 }
+
+.btnretro:hover {
+    transform: scale(1.03);
+}
+
+.btnretro:active {
+    transform: scale(0.98);
+}
+
+.btnretro {
+    background: rgb(2,0,36);
+    background: linear-gradient(75deg,
+    rgba(2,0,36,1) 0%,
+    rgba(0,0,0,1) 77%,
+    rgba(156,41,61,1) 77%,
+    rgba(156,41,61,1) 83%,
+    rgba(247,158,82,1) 83%,
+    rgba(247,158,82,1) 89%,
+    rgba(59,164,172,1) 89%,
+    rgba(59,164,172,1) 94%,
+    rgba(39,61,98,1) 94%);
+}
+/*aqui é o carrossel personagens
+
+.splide__slideP {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 0 10px;
+  }
+  
+  .splide__slide img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+  }
+  .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  
+    .popup-content {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+  
+  /* Estilo do botão de fechar o popup 
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  */
+  .splide__slideP {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 0 10px;
+  }
+  
+  .splide__slide img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+  }
+  
+  .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .popup-content {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+  
+  /* Estilo do botão de fechar o popup */
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  

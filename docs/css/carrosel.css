@@ -133,6 +133,7 @@
 }
 
 .carrosel-personagens {
+  display: none;
   /* Título do carrosel */
   /* Todos os slides */
   /* Os slides visiveis vão ter 100% de opacidade  */
