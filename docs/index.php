@@ -96,8 +96,7 @@
 <!-- CONTEÚDO -->
 <main>
     <!-- Sessão 1 -->
-    <section>
-        <img src="imgs/home/sandy-danny-light.png" alt="Sanddy e Danny - Grease" class="sandy-danny" data-aos="fade-up">
+    <section class="section1">
         
         <div class="wh100 flex-collumn">
             <div class="wrapper-content-main" data-aos="fade-right">
@@ -116,6 +115,9 @@
                 <a href="sobre.php"><button type="button" class="animation-scale btn-home">Sobre o musical</button></a>
             </div> <!-- .wrapper-content-main -->
         </div> <!-- .wh100 .flex-collumn -->
+
+        <img src="imgs/home/sandy-danny-light.png" alt="Sanddy e Danny - Grease" class="sandy-danny" data-aos="fade-up">
+
     </section> <!-- .section-impar -->
     
 
@@ -131,10 +133,8 @@
                 </div> <!-- .box-title2 .border-box .padding-->
             </div> <!-- .wrapper-content-main side-bar -->
 
-
             <!-- Carrossel - Playlist -->
-
-            <div class="wrapper-content-main" data-aos="fade-down">
+            <div class="wrapper-content-main wrapper-carrossel-playlist" role="group" data-aos="fade-down">
                 <div class="carrossel-playlists splide" aria-label="Playlists">
                     <div class="splide__track">
                         <div class="splide__list">
@@ -163,6 +163,14 @@
                             </div>
                         </ul> <!-- .splide__list#splide__list-->
                     </div> <!-- .splide__track -->
+
+                    <!-- Progress bar element -->
+                    <div class="slider-progress">
+                        <div class="slider-progress-bar" id="slider-progress-bar">
+
+                        </div>
+                    </div>
+
                 </div> <!-- .carrossel-musica splide -->
             </div> <!-- .wrapper-content-main -->
             

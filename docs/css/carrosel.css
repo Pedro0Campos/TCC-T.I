@@ -67,7 +67,6 @@
 .carrossel-musica {
   margin: 15px 0px 15px 0;
   /* Botão das setas */
-  /* Seta pra direita */
 }
 .carrossel-musica #carousel-title {
   letter-spacing: 3px;
@@ -112,35 +111,44 @@
   font-size: 0.9em;
   margin-top: 0.3em;
 }
-.carrossel-musica .splide__arrow {
+.carrossel-musica .splide__arrows {
+  /* Seta pra direita */
+}
+.carrossel-musica .splide__arrows .splide__arrow {
   background: transparent;
   opacity: 1;
 }
-.carrossel-musica .splide__arrow svg {
+.carrossel-musica .splide__arrows .splide__arrow svg {
   fill: rgb(255, 255, 255);
 }
-.carrossel-musica .splide__arrow--next {
+.carrossel-musica .splide__arrows .splide__arrow--next {
   top: 14px;
   right: 10px;
 }
-.carrossel-musica .splide__arrow--prev {
+.carrossel-musica .splide__arrows .splide__arrow--prev {
   top: 14px;
   right: 40px;
   left: unset;
-}
-.carrossel-musica .splide__pagination {
-  display: none;
 }
 
 @media only screen and (max-width: 700px) {
   .carrossel-musica #carousel-title {
     text-decoration: none;
   }
+  .carrossel-musica .slider-progress {
+    background: #292929;
+    margin-top: 20px;
+  }
+  .carrossel-musica .slider-progress .slider-progress-bar {
+    background-color: #fff;
+    height: 4px;
+    transition: width 400ms ease;
+    width: 0;
+  }
+  .carrossel-musica .splide__arrows {
+    display: none;
+  }
 }
-.carrossel-playlists {
-  display: none;
-}
-
 .carrosel-personagens {
   /* Título do carrosel */
   /* Todos os slides */

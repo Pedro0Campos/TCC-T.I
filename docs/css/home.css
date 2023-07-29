@@ -65,15 +65,6 @@
 
 section {
   height: calc(100vh - 4.5rem);
-  min-height: 520px;
-}
-section .sandy-danny {
-  position: absolute;
-  width: 40vw;
-  min-width: 400px;
-  bottom: 0;
-  right: 0;
-  z-index: -1;
 }
 section.section-theme-black {
   background-color: var(--sect-par-backg-color);
@@ -82,19 +73,35 @@ section.section-theme-black {
 section.section-theme-black .border-box {
   border-color: rgb(255, 255, 255);
 }
+section.section1 {
+  min-height: 520px;
+  position: relative;
+}
+section.section1 .sandy-danny {
+  position: absolute;
+  width: 40vw;
+  min-width: 400px;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
 section.section2 {
   min-height: 820px;
 }
-section .retro-line {
+section.section2 .retro-line {
   background-image: url("../imgs/home/retro-line.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: right;
 }
+section.section3 {
+  min-height: 450px;
+}
+
 .flex-collumn {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -105,17 +112,12 @@ section .retro-line {
     display: none;
   }
 }
-@media only screen and (min-width: 700px) {
-  .flex-collumn {
-    justify-content: space-around;
+@media only screen and (max-width: 900px) {
+  .retro-line {
+    background: none !important;
   }
 }
-@media only screen and (max-width: 903px) {
-  section .retro-line {
-    background: none;
-  }
-}
-@media screen and (max-height: 613px), (max-width: 30px) {
+@media screen and (max-height: 613px) {
   section:first-child .sandy-danny {
     display: none;
   }

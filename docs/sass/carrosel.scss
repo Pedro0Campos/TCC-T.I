@@ -62,51 +62,71 @@
     }
 
     /* Botão das setas */
-    .splide__arrow {
-        background: transparent;
-        opacity: 1;
-    }
-
-    // SVG das setas
-    .splide__arrow svg {
-        fill: rgb(255, 255, 255);
-    }
-
-    /* Seta pra direita */
-    .splide__arrow--next {
-        top: 14px;
-        right: 10px;
-    }
-
-    // Seta pra esquerda
-    .splide__arrow--prev {
-        top: 14px;
-        right: 40px;
-        left: unset;
-    }
-
-    // Tirar as bolinhas de paginação
-    .splide__pagination {
-        display: none;
+    .splide__arrows {
+        .splide__arrow {
+            background: transparent;
+            opacity: 1;
+        }
+    
+        // SVG das setas
+        .splide__arrow svg {
+            fill: rgb(255, 255, 255);
+        }
+    
+        /* Seta pra direita */
+        .splide__arrow--next {
+            top: 14px;
+            right: 10px;
+        }
+    
+        // Seta pra esquerda
+        .splide__arrow--prev {
+            top: 14px;
+            right: 40px;
+            left: unset;
+        }
     }
 }
 
+// Tablet pra baixo
 @media only screen and (max-width: 700px){
     .carrossel-musica {
         #carousel-title {
             text-decoration: none;
         }
+
+        .slider-progress {
+            background: #292929;
+            margin-top: 20px;
+            .slider-progress-bar {
+                background-color: #fff;
+                height: 4px;
+                transition: width 400ms ease;
+                width: 0;
+            }
+        }
+    
+        .splide__arrows {
+            display: none;
+        }
     }
 }
+
+
+
+// ===========================
+//carrossel playlists
+// ===========================
 .carrossel-playlists {
-    display: none;
+    // display: none;
 }
 
+// Tablet pra baixo
+@media only screen and (max-width: 700px) {
+    .carrossel-playlists {
 
-// ===========================
-//carrossel personagens
-// ===========================
-
+    }
+}
 
 
 // ===========================

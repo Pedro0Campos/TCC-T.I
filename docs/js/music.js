@@ -157,11 +157,18 @@ function openCloseMusicPlayer() {
 
 // Clicar em uma música
 splideList.addEventListener('click', (e) => {
-    openCloseMusicPlayer()
-    musica = musicas[e.target.id]
+    var id = e.target.id
 
+    if (id.split('slide') == '') {
+        var id = e.target.offsetParent.id
+    }
+    var index = Number(id.split('slide')[1]) - 1
+    
+    musica = musicas[index]
     updateContent(musica)
+    openCloseMusicPlayer()
     play()
+
 })
 mais_tocadas.addEventListener('click', (e) => {
     openCloseMusicPlayer()

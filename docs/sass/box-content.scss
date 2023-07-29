@@ -136,8 +136,13 @@
 
         // ::after e ::before no Media Screen
     }
+
+    &.wrapper-carrossel-playlist {
+        display: none;
+    }
 }
 
+// Maior que um tablet
 @media only screen and (min-width: 701px){
     .wrapper-content-main {
         
@@ -173,6 +178,10 @@
 
         .mais-tocadas {
             display: none;
+        }
+
+        &.wrapper-carrossel-playlist {
+            display: block;
         }
     }
 }

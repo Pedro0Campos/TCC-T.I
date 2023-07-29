@@ -7,17 +7,6 @@
 // Sessão
 section {
     height: calc(100vh - config.$alturaNAV);
-    min-height: 520px;
-
-    // Imagem do sandy e danny
-    .sandy-danny {
-        position: absolute;
-        width: 40vw;
-        min-width: 400px;
-        bottom: 0;
-        right: 0;
-        z-index: -1;
-    }
     
     &.section-theme-black {
         background-color: var(--sect-par-backg-color);
@@ -28,18 +17,33 @@ section {
         }
     }
 
+    &.section1 {
+        min-height: 520px;
+
+        // Imagem do sandy e danny
+        position: relative;
+        .sandy-danny {
+            position: absolute;
+            width: 40vw;
+            min-width: 400px;
+            bottom: 0;
+            right: 0;
+            z-index: -1;
+        }
+    }
+
     &.section2 {
         min-height: 820px;
-    }
-    .retro-line {
-        background-image: url('../imgs/home/retro-line.png');
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: right;
+        .retro-line {
+            background-image: url('../imgs/home/retro-line.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: right;
+        }
     }
 
     &.section3 {
-        // min-height: 820px;
+        min-height: 450px;
     }
 }
 
@@ -47,7 +51,8 @@ section {
 .flex-collumn {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    // justify-content: space-evenly;
+    justify-content: space-around;
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -67,19 +72,17 @@ section {
 
 @media only screen and (min-width: 700px) {
     .flex-collumn {
-        justify-content: space-around;
+        // justify-content: space-around;
     }
 }
 
-@media only screen and (max-width: 903px) {
-    section {
-        .retro-line {
-            background: none;
-        }
+@media only screen and (max-width: 900px) {
+    .retro-line {
+        background: none !important;
     }
 }
 
-@media screen and (max-height: 613px), (max-width:30px) {
+@media screen and (max-height: 613px) {
     section:first-child {
         .sandy-danny {
             display: none;
