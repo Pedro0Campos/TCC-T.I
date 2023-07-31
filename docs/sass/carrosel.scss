@@ -50,12 +50,12 @@
 
         .nome_musica {
             margin-top: 0.5em;
-            font-family: config.$JosefinSansBold;
+            font-family: 'Josefin Sans Bold';
             font-size: 1em;
         }
 
         .autor_musica {
-            font-family: config.$JosefinSansRegular;
+            font-family: 'Josefin Sans Regular';
             font-size: 0.9em;
             margin-top: 0.3em;
         }
@@ -118,15 +118,51 @@
 //carrossel playlists
 // ===========================
 .carrossel-playlists {
-    // display: none;
-}
+    font-size: 0.7em;
 
-// Tablet pra baixo
-@media only screen and (max-width: 700px) {
-    .carrossel-playlists {
+    .splide__slide {
+        width: 100%;
+        min-height: 200px;
+        aspect-ratio: 53/24;
+        padding-top: 60px;
 
+        .slide {
+            width: 100%; 
+            height: 100%;
+            display: flex;
+            align-items: end;
+            position: relative;
+            border-radius: 10px;;
+            
+            &#slide-1 {
+                background: #00F4BE;
+                color: #D022FC;
+            }
+            &#slide-2 {
+                background: #FF3263;
+                color: #F8E00F;
+            }
+            &#slide-3 {
+                background: #FFD5BC;
+                color: #FF8B03;
+            }
+
+            .wrapper-text {
+                width: 40%;
+                margin: 10px;
+            }
+        }
+
+        .banner {
+            position: absolute;
+            height: 100%;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+        }
     }
 }
+
 
 
 // ===========================

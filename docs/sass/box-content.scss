@@ -15,7 +15,7 @@
 
         & h1 {
             font-size: var(--font-size-box-title1);
-            font-family: config.$JosefinSansMedium;
+            font-family: 'Josefin Sans Medium';
             letter-spacing: 0.15em;
             line-height: 1.2em;
             & span {
@@ -47,7 +47,7 @@
 
         & h3 {
             font-size: var(--font-size-box-title3);
-            font-family: config.$JosefinSansBoldItalic;
+            font-family: 'Josefin Sans Bold Italic';
             letter-spacing: 0.1em;
             line-height: 1.1em;
             & span {
@@ -106,7 +106,7 @@
 
         h3 {
             font-size: calc(var(--font-size-box-title3) * 0.75);
-            font-family: JosefinSansBold;
+            font-family: 'Josefin Sans Bold';
             text-align: center;
             letter-spacing: 0.1em;  
             padding-right: 27px;
@@ -118,7 +118,7 @@
             flex-direction: column;
 
             .item {
-                font-family: JosefinSansRegular;
+                font-family: 'Josefin Sans Regular';
                 font-size: calc(var(--font-size-box-title3) * 0.6);
                 margin-top: 20px;
                 padding: 12.5px ;

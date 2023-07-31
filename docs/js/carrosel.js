@@ -60,7 +60,7 @@ var carrossel_playlists = new Splide('.carrossel-playlists', {
     height: 'auto', // Altura do carrosel
     width: '100%', // Comprimento do carrosel
     fixedWidth: '90%', // Comprimento do slide
-    fixedHeight: '200px', // Altura do slide
+    // fixedHeight: '200px', // Altura do slide
     pagination: false,
     arrows: false,
     gap: '20px', // Espaçamento entre os slides

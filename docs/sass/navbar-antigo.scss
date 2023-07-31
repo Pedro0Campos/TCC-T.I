@@ -9,7 +9,7 @@
     background: #000000;
     width: 100%;
     height: config.$alturaNAV;
-    font-family: config.$JosefinSansLight;
+    font-family: 'Josefin Sans Light';
     color: white;
     
     position: fixed;
@@ -55,7 +55,7 @@
 
         & li#grease {
             font-size: 1.3rem; /* 20px*/
-            font-family: JosefinSansRegular;
+            font-family: 'Josefin Sans Regular';
             cursor: default;
         }
     }

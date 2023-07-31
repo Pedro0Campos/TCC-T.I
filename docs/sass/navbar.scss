@@ -34,7 +34,7 @@
     height: config.$alturaNAV;
     background: #000;
     color: white;
-    font-family: config.$JosefinSansLight;
+    font-family: 'Josefin Sans Light';
     font-size: 1rem;
 
     display: flex;
@@ -45,7 +45,7 @@
     .navlista {
         // TÍTULO 'GREASE'
         #grease {
-            font-family: JosefinSansRegular;
+            font-family: 'Josefin Sans Regular';
             font-size: 1.3rem;
             cursor: default;
         }

@@ -1,22 +1,26 @@
 @charset "UTF-8";
 @font-face {
-  font-family: JosefinSansRegular;
+  font-family: "Josefin Sans Regular";
   src: url(../fonts/JosefinSans/JosefinSans-Regular.ttf);
 }
 @font-face {
-  font-family: JosefinSansMedium;
+  font-family: "Josefin Sans Medium";
   src: url(../fonts/JosefinSans/JosefinSans-Medium.ttf);
 }
 @font-face {
-  font-family: JosefinSansLight;
+  font-family: "Josefin Sans Light";
   src: url(../fonts/JosefinSans/JosefinSans-Light.ttf);
 }
 @font-face {
-  font-family: JosefinSansBold;
+  font-family: "Josefin Sans Bold";
   src: url(../fonts/JosefinSans/JosefinSans-Bold.ttf);
 }
 @font-face {
-  font-family: JosefinSansBoldItalic;
+  font-family: "Josefin Sans SemiBold";
+  src: url(../fonts/JosefinSans/JosefinSans-SemiBold.ttf);
+}
+@font-face {
+  font-family: "Josefin Sans Bold Italic";
   src: url(../fonts/JosefinSans/JosefinSans-BoldItalic.ttf);
 }
 @font-face {
@@ -93,9 +97,9 @@ main {
   z-index: 0;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   font: inherit;
-  font-family: JosefinSansRegular;
+  font-family: "Josefin Sans Regular";
 }
 
 h1 {
@@ -110,8 +114,12 @@ h3 {
   font-size: 1.25em;
 }
 
+h4 {
+  font-size: 1.1em;
+}
+
 p.text {
-  margin: 8px;
+  margin-block: 8px;
   font-size: 1em;
 }
 
@@ -126,7 +134,7 @@ a .underline:hover {
 
 button {
   cursor: pointer;
-  font-family: JosefinSansMedium;
+  font-family: "Josefin Sans Medium";
 }
 
 .animation-title {

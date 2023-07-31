@@ -139,8 +139,29 @@
                     <div class="splide__track">
                         <div class="splide__list">
                             <div class="splide__slide">
-                                <div style="width: 100%; height: 100%; background-color: var(--second-color);">
-                                    
+                                <div id="slide-1" class="slide">
+                                    <div class="wrapper-text">
+                                        <h2>Somente as músicas nacionais</h2>
+                                    </div>
+                                </div>
+                                <img class="banner" src="imgs/carrossel/playlist/banner-1.png" alt="">
+                            </div>
+                            
+                            <div class="splide__slide">
+                                <div id="slide-2" class="slide">
+                                    <div class="wrapper-text">
+                                        <h2>Somentes as maiores</h2>
+                                        <p class="text">De Elvis à Johnny Cash</p>
+                                    </div>
+                                </div>
+                                <img class="banner" src="imgs/carrossel/playlist/banner-1.png" alt="">
+                            </div>
+                            
+                            <div class="splide__slide">
+                                <div id="slide-3" class="slide">
+                                    <div class="wrapper-text">
+                                        <h2>Músicas diretamente de Grease</h2>
+                                    </div>
                                 </div>
                             </div>
                         </div>

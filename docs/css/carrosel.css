@@ -1,22 +1,26 @@
 @charset "UTF-8";
 @font-face {
-  font-family: JosefinSansRegular;
+  font-family: "Josefin Sans Regular";
   src: url(../fonts/JosefinSans/JosefinSans-Regular.ttf);
 }
 @font-face {
-  font-family: JosefinSansMedium;
+  font-family: "Josefin Sans Medium";
   src: url(../fonts/JosefinSans/JosefinSans-Medium.ttf);
 }
 @font-face {
-  font-family: JosefinSansLight;
+  font-family: "Josefin Sans Light";
   src: url(../fonts/JosefinSans/JosefinSans-Light.ttf);
 }
 @font-face {
-  font-family: JosefinSansBold;
+  font-family: "Josefin Sans Bold";
   src: url(../fonts/JosefinSans/JosefinSans-Bold.ttf);
 }
 @font-face {
-  font-family: JosefinSansBoldItalic;
+  font-family: "Josefin Sans SemiBold";
+  src: url(../fonts/JosefinSans/JosefinSans-SemiBold.ttf);
+}
+@font-face {
+  font-family: "Josefin Sans Bold Italic";
   src: url(../fonts/JosefinSans/JosefinSans-BoldItalic.ttf);
 }
 @font-face {
@@ -103,11 +107,11 @@
 }
 .carrossel-musica .splide__slide .nome_musica {
   margin-top: 0.5em;
-  font-family: JosefinSansBold;
+  font-family: "Josefin Sans Bold";
   font-size: 1em;
 }
 .carrossel-musica .splide__slide .autor_musica {
-  font-family: JosefinSansRegular;
+  font-family: "Josefin Sans Regular";
   font-size: 0.9em;
   margin-top: 0.3em;
 }
@@ -149,6 +153,47 @@
     display: none;
   }
 }
+.carrossel-playlists {
+  font-size: 0.7em;
+}
+.carrossel-playlists .splide__slide {
+  width: 100%;
+  min-height: 200px;
+  aspect-ratio: 53/24;
+  padding-top: 60px;
+}
+.carrossel-playlists .splide__slide .slide {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: end;
+  position: relative;
+  border-radius: 10px;
+}
+.carrossel-playlists .splide__slide .slide#slide-1 {
+  background: #00F4BE;
+  color: #D022FC;
+}
+.carrossel-playlists .splide__slide .slide#slide-2 {
+  background: #FF3263;
+  color: #F8E00F;
+}
+.carrossel-playlists .splide__slide .slide#slide-3 {
+  background: #FFD5BC;
+  color: #FF8B03;
+}
+.carrossel-playlists .splide__slide .slide .wrapper-text {
+  width: 40%;
+  margin: 10px;
+}
+.carrossel-playlists .splide__slide .banner {
+  position: absolute;
+  height: 100%;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
 .carrosel-personagens {
   /* Título do carrosel */
   /* Todos os slides */

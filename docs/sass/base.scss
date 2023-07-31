@@ -43,26 +43,27 @@ main {
 
 
 // Títulos
-h1, h2, h3 {
+h1, h2, h3, h4 {
     font: inherit;
-    font-family: config.$JosefinSansRegular;
+    font-family: 'Josefin Sans Regular';
 }
 h1 {
-    font-size: config.$font-size-title1;
+    font-size: 2em;
 }
 
 h2 {
-    font-size: config.$font-size-title2;
+    font-size: 1.5em;
 }
 
 h3 {
-    font-size: config.$font-size-title3;
+    font-size: 1.25em;
 }
-
-// Formatação de parágrafo
+h4 {
+    font-size: 1.1em;
+}
 p.text {
-    margin: 8px;
-    font-size: config.$font-size-text;
+    margin-block: 8px;
+    font-size: 1em;
 }
 
 
@@ -81,7 +82,7 @@ a {
 // Botão
 button {
     cursor: pointer;
-    font-family: JosefinSansMedium;
+    font-family: 'Josefin Sans Medium';
 }
 // ===================================================
 

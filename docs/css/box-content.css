@@ -1,21 +1,25 @@
 @font-face {
-  font-family: JosefinSansRegular;
+  font-family: "Josefin Sans Regular";
   src: url(../fonts/JosefinSans/JosefinSans-Regular.ttf);
 }
 @font-face {
-  font-family: JosefinSansMedium;
+  font-family: "Josefin Sans Medium";
   src: url(../fonts/JosefinSans/JosefinSans-Medium.ttf);
 }
 @font-face {
-  font-family: JosefinSansLight;
+  font-family: "Josefin Sans Light";
   src: url(../fonts/JosefinSans/JosefinSans-Light.ttf);
 }
 @font-face {
-  font-family: JosefinSansBold;
+  font-family: "Josefin Sans Bold";
   src: url(../fonts/JosefinSans/JosefinSans-Bold.ttf);
 }
 @font-face {
-  font-family: JosefinSansBoldItalic;
+  font-family: "Josefin Sans SemiBold";
+  src: url(../fonts/JosefinSans/JosefinSans-SemiBold.ttf);
+}
+@font-face {
+  font-family: "Josefin Sans Bold Italic";
   src: url(../fonts/JosefinSans/JosefinSans-BoldItalic.ttf);
 }
 @font-face {
@@ -74,7 +78,7 @@
 }
 .wrapper-content-main .box-title1 h1 {
   font-size: var(--font-size-box-title1);
-  font-family: JosefinSansMedium;
+  font-family: "Josefin Sans Medium";
   letter-spacing: 0.15em;
   line-height: 1.2em;
 }
@@ -99,7 +103,7 @@
 }
 .wrapper-content-main .box-title3 h3 {
   font-size: var(--font-size-box-title3);
-  font-family: JosefinSansBoldItalic;
+  font-family: "Josefin Sans Bold Italic";
   letter-spacing: 0.1em;
   line-height: 1.1em;
 }
@@ -131,7 +135,7 @@
 }
 .wrapper-content-main .mais-tocadas h3 {
   font-size: calc(var(--font-size-box-title3) * 0.75);
-  font-family: JosefinSansBold;
+  font-family: "Josefin Sans Bold";
   text-align: center;
   letter-spacing: 0.1em;
   padding-right: 27px;
@@ -142,7 +146,7 @@
   flex-direction: column;
 }
 .wrapper-content-main .mais-tocadas .container-itens .item {
-  font-family: JosefinSansRegular;
+  font-family: "Josefin Sans Regular";
   font-size: calc(var(--font-size-box-title3) * 0.6);
   margin-top: 20px;
   padding: 12.5px;
