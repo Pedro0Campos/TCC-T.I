@@ -89,7 +89,7 @@
 }
 
 // Tablet pra baixo
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 768px){
     .carrossel-musica {
         #carousel-title {
             text-decoration: none;
@@ -155,7 +155,7 @@
 }
 
 // Tablet
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 768px) {
     .carrossel-playlists {
         font-size: 1.1rem;
     }
@@ -234,7 +234,7 @@
 }
 
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 768px) {
     .opacity {
         display: none;
     }

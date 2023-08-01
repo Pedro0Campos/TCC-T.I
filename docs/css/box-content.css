@@ -160,14 +160,14 @@
   display: none;
 }
 
-@media only screen and (min-width: 701px) {
+@media only screen and (min-width: 769px) {
   .wrapper-content-main.side-bar::after {
     content: "";
     width: 7px;
     background-color: var(--second-color);
   }
 }
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 768px) {
   .wrapper-content-main.side-bar::before {
     content: "";
     width: 7px;
