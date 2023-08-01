@@ -30,7 +30,7 @@
         background-color: transparent;
         // color: rgba(255, 255, 255, 0);
         // opacity: 0.4;
-        font-size: 14px;
+        font-size: 0.78em;
         width: 100%;
         transition: transform ease-in-out 0.15s;
         
@@ -89,7 +89,7 @@
 }
 
 // Tablet pra baixo
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 425px){
     .carrossel-musica {
         #carousel-title {
             text-decoration: none;
@@ -129,35 +129,50 @@
             display: flex;
             align-items: end;
             border-radius: 10px;
+            
+            background-repeat: no-repeat;
+            background-size: 50%;
+            background-position: bottom right;
+
+            
             &#slide-1 {
                 background-color: #00F4BE;
                 color: #D022FC;
-                &::before {
-                    content: '';
-                    background-image: url('../imgs/carrossel/playlist/banner-1.png');
-                }
+                background-image: url('../imgs/carrossel/playlist/banner-1-pequeno.png');
+                
             }
             &#slide-2 {
                 background-color: #FF3263;
                 color: #F8E00F;
+                background-image: url('../imgs/carrossel/playlist/banner-2-pequeno.png');
             }
             &#slide-3 {
                 background-color: #FFD5BC;
                 color: #FF8B03;
+                background-image: url('../imgs/carrossel/playlist/banner-3-pequeno.png');
             }
 
             .wrapper-text {
                 width: 50%;
                 margin: 10px;
+                h2 {
+                    font-family: 'Josefin Sans SemiBold';
+                }
+                p {
+                    font-family: 'Josefin Sans Bold';
+                    font-size: 0.7em;
+                }
             }
         }
     }
 }
 
 // Tablet
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 425px) {
     .carrossel-playlists {
-        font-size: 1.1rem;
+        .wrapper-text {
+            // font-size: 1rem !important;
+        }
     }
 }
 
@@ -234,7 +249,7 @@
 }
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 425px) {
     .opacity {
         display: none;
     }

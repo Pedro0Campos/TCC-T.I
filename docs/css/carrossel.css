@@ -90,7 +90,7 @@
 }
 .carrossel-musica .splide__slide {
   background-color: transparent;
-  font-size: 14px;
+  font-size: 0.78em;
   width: 100%;
   transition: transform ease-in-out 0.15s;
 }
@@ -135,7 +135,7 @@
   left: unset;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 425px) {
   .carrossel-musica #carousel-title {
     text-decoration: none;
   }
@@ -163,33 +163,37 @@
   display: flex;
   align-items: end;
   border-radius: 10px;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: bottom right;
 }
 .carrossel-playlists .splide__slide .slide#slide-1 {
   background-color: #00F4BE;
   color: #D022FC;
-}
-.carrossel-playlists .splide__slide .slide#slide-1::before {
-  content: "";
-  background-image: url("../imgs/carrossel/playlist/banner-1.png");
+  background-image: url("../imgs/carrossel/playlist/banner-1-pequeno.png");
 }
 .carrossel-playlists .splide__slide .slide#slide-2 {
   background-color: #FF3263;
   color: #F8E00F;
+  background-image: url("../imgs/carrossel/playlist/banner-2-pequeno.png");
 }
 .carrossel-playlists .splide__slide .slide#slide-3 {
   background-color: #FFD5BC;
   color: #FF8B03;
+  background-image: url("../imgs/carrossel/playlist/banner-3-pequeno.png");
 }
 .carrossel-playlists .splide__slide .slide .wrapper-text {
   width: 50%;
   margin: 10px;
 }
-
-@media only screen and (max-width: 768px) {
-  .carrossel-playlists {
-    font-size: 1.1rem;
-  }
+.carrossel-playlists .splide__slide .slide .wrapper-text h2 {
+  font-family: "Josefin Sans SemiBold";
 }
+.carrossel-playlists .splide__slide .slide .wrapper-text p {
+  font-family: "Josefin Sans Bold";
+  font-size: 0.7em;
+}
+
 .carrosel-personagens {
   /* Título do carrosel */
   /* Todos os slides */
@@ -244,7 +248,7 @@
   display: none;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 425px) {
   .opacity {
     display: none;
   }

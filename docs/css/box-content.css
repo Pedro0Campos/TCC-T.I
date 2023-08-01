@@ -74,7 +74,6 @@
   max-width: 500px;
 }
 .wrapper-content-main .box-title1 h1 {
-  font-size: var(--font-size-box-title1);
   font-family: "Josefin Sans Medium";
   letter-spacing: 0.15em;
   line-height: 1.2em;
@@ -88,7 +87,6 @@
   max-width: 480px;
 }
 .wrapper-content-main .box-title2 h2 {
-  font-size: var(--font-size-box-title2);
   letter-spacing: 0.1em;
   line-height: 1.2;
 }
@@ -99,7 +97,6 @@
   max-width: 350px;
 }
 .wrapper-content-main .box-title3 h3 {
-  font-size: var(--font-size-box-title3);
   font-family: "Josefin Sans Bold Italic";
   letter-spacing: 0.1em;
   line-height: 1.1em;
@@ -160,14 +157,14 @@
   display: none;
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 426px) {
   .wrapper-content-main.side-bar::after {
     content: "";
     width: 7px;
     background-color: var(--second-color);
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 425px) {
   .wrapper-content-main.side-bar::before {
     content: "";
     width: 7px;

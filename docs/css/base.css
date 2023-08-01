@@ -76,13 +76,13 @@
 
 html, body {
   height: 100%;
+  font-size: 18px;
 }
 
 body {
   background-color: var(--backg-color);
   color: var(--text-color);
   font-family: Inter;
-  font-size: 18px;
   padding-top: 4.5em;
   overflow-x: hidden;
 }
@@ -181,6 +181,17 @@ button {
 }
 .animation-scale:active {
   transform: scale(0.98);
+}
+
+@media only screen and (max-width: 320px) {
+  html, body {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  html, body {
+    font-size: 16px;
+  }
 }
 
 /*# sourceMappingURL=base.css.map */

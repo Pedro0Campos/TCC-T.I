@@ -111,19 +111,14 @@ section.section3 {
 }
 
 /* RESPONSIVIDADE */
-@media only screen and (max-width: 871px) {
-  section .sandy-danny {
-    display: none;
+@media only screen and (max-width: 840px) {
+  .sandy-danny {
+    display: none !important;
   }
 }
 @media only screen and (max-width: 900px) {
   .retro-line {
     background: none !important;
-  }
-}
-@media screen and (max-height: 613px) {
-  section:first-child .sandy-danny {
-    display: none;
   }
 }
 
