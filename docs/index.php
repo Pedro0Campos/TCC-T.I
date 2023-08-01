@@ -154,7 +154,6 @@
                                         <p class="text">De Elvis à Johnny Cash</p>
                                     </div>
                                 </div>
-                                <img class="banner" src="imgs/carrossel/playlist/banner-1.png" alt="">
                             </div>
                             
                             <div class="splide__slide">
