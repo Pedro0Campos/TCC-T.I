@@ -167,15 +167,12 @@ splideList.addEventListener('click', (e) => {
     musica = musicas[index]
     updateContent(musica)
     openCloseMusicPlayer()
-    play()
 
 })
 mais_tocadas.addEventListener('click', (e) => {
     openCloseMusicPlayer()
     musica = musicas[e.target.id]
-    
     updateContent(musica)
-    play()
 })
 
 
@@ -189,6 +186,7 @@ function updateContent(musica) {
     document.querySelector('#music-image-small').src = musica.smallImage
     music_player.style.background = musica.background 
     audio.src = musica.src
+    play()
 }
 
 
@@ -346,18 +344,18 @@ if (audio.readyState > 0) {
     })
 }
 
-const calculateTime = (secs) => {
+function calculateTime (secs) {
     const minutes = Math.floor(secs / 60);
     const seconds = Math.floor(secs % 60);
     const returnedSeconds = seconds < 10 ? `0${seconds}` : `${seconds}`;
     return `${minutes}:${returnedSeconds}`;
 }
 
-const displayDuration = () => {
+function displayDuration () {
     tempo_total.textContent = calculateTime(audio.duration);
 }
 
-const setSliderMax = () => {
+function setSliderMax () {
     controle_deslizante.max = Math.floor(audio.duration);
 }
 

@@ -138,13 +138,13 @@
                 <div class="carrossel-playlists splide" aria-label="Playlists">
                     <div class="splide__track">
                         <div class="splide__list">
+
                             <div class="splide__slide">
                                 <div id="slide-1" class="slide">
                                     <div class="wrapper-text">
                                         <h2>Somente as músicas nacionais</h2>
                                     </div>
                                 </div>
-                                <img class="banner" src="imgs/carrossel/playlist/banner-1.png" alt="">
                             </div>
                             
                             <div class="splide__slide">

@@ -33,13 +33,13 @@
 }
 :root {
   --width-box-title1: 500px;
-  --font-size-box-title1: 1.8rem;
+  --font-size-box-title1: 1.8em;
   --width-box-title2: 490px;
-  --font-size-box-title2: 1.7rem;
+  --font-size-box-title2: 1.7em;
   --width-box-title3: 300px;
-  --font-size-box-title3: 1.1rem;
+  --font-size-box-title3: 1.1em;
   --width-mais-tocadas: 480px;
-  --font-size-box-title3: 1.6rem;
+  --font-size-box-title3: 1.6em;
   --height-sandy-danny: 95vh;
   --backg-color: #FEFCF3;
   --text-color: #000000;
@@ -154,46 +154,45 @@
   }
 }
 .carrossel-playlists {
-  font-size: 0.7em;
+  font-size: 1.1rem;
 }
 .carrossel-playlists .splide__slide {
-  width: 100%;
-  min-height: 200px;
+  min-height: 150px;
   aspect-ratio: 53/24;
-  padding-top: 60px;
 }
 .carrossel-playlists .splide__slide .slide {
   width: 100%;
   height: 100%;
   display: flex;
   align-items: end;
-  position: relative;
   border-radius: 10px;
 }
 .carrossel-playlists .splide__slide .slide#slide-1 {
-  background: #00F4BE;
+  background-color: #00F4BE;
   color: #D022FC;
 }
+.carrossel-playlists .splide__slide .slide#slide-1::before {
+  content: "";
+  background-image: url("../imgs/carrossel/playlist/banner-1.png");
+}
 .carrossel-playlists .splide__slide .slide#slide-2 {
-  background: #FF3263;
+  background-color: #FF3263;
   color: #F8E00F;
 }
 .carrossel-playlists .splide__slide .slide#slide-3 {
-  background: #FFD5BC;
+  background-color: #FFD5BC;
   color: #FF8B03;
 }
 .carrossel-playlists .splide__slide .slide .wrapper-text {
-  width: 40%;
+  width: 50%;
   margin: 10px;
 }
-.carrossel-playlists .splide__slide .banner {
-  position: absolute;
-  height: 100%;
-  right: 0;
-  bottom: 0;
-  overflow: hidden;
-}
 
+@media only screen and (max-width: 375px) {
+  .carrossel-playlists {
+    font-size: 0.9rem;
+  }
+}
 .carrosel-personagens {
   /* Título do carrosel */
   /* Todos os slides */

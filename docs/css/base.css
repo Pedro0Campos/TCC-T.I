@@ -33,13 +33,13 @@
 }
 :root {
   --width-box-title1: 500px;
-  --font-size-box-title1: 1.8rem;
+  --font-size-box-title1: 1.8em;
   --width-box-title2: 490px;
-  --font-size-box-title2: 1.7rem;
+  --font-size-box-title2: 1.7em;
   --width-box-title3: 300px;
-  --font-size-box-title3: 1.1rem;
+  --font-size-box-title3: 1.1em;
   --width-mais-tocadas: 480px;
-  --font-size-box-title3: 1.6rem;
+  --font-size-box-title3: 1.6em;
   --height-sandy-danny: 95vh;
   --backg-color: #FEFCF3;
   --text-color: #000000;
@@ -83,7 +83,7 @@ body {
   color: var(--text-color);
   font-family: Inter;
   font-size: 18px;
-  padding-top: 4.5rem;
+  padding-top: 4.5em;
   overflow-x: hidden;
 }
 

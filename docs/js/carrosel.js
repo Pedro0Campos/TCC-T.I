@@ -38,7 +38,6 @@ carrossel_musica.mount();
 // Criar barra de rolagem
 // ================================
 var bar = document.querySelector('#slider-progress-bar')
-console.log(bar);
 
 // Atualizar a barra conforme passa os slides
 carrossel_musica.on('mounted move', function() {
