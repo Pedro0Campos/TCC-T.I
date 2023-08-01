@@ -224,7 +224,7 @@
                 </div> <!-- .box-title2 .border-box .padding-->
             </div> <!-- .wrapper-content-main .side-bar -->
 
-            <div class="wrapper-content-main" data-aos="fade-right">
+            <div class="wrapper-content-main" data-aos="fade-right" data-aos-anchor-placement="top-bottom">
                 <button type="button" onclick="showPopUp()" class="btn-home btn-retro animation-scale">Conheça os personagens</button>
             </div> <!-- .wrapper-content-main -->
 
