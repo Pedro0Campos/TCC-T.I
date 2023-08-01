@@ -98,6 +98,22 @@ function getMusics() {
             "smallImage": "https://i.scdn.co/image/ab67616d00001e02a8c4aa43fde3c0e97cd0dd35",
             "background": "#db5697",
             "src": "musics/Celly-Campello-Estupido-Cupido.mp3"
+        },
+        {
+            "nome": "Banho de Lua",
+            "artista": "Celly Campello",
+            "largeImage": "musics/imgs/banho-de-lua.jpg",
+            "smallImage": "musics/imgs/banho-de-lua.jpg",
+            "background": "##e6cd5a",
+            "src": "musics/Banho De Lua (Tintarella Di Luna).mp3"
+        },
+        {
+            "nome": "Garota de Ipanema",
+            "artista": "Tom Jobim",
+            "largeImage": "musics/imgs/garota-de-ipanema.jpg",
+            "smallImage": "musics/imgs/garota-de-ipanema.jpg",
+            "background": "##e6cd5a",
+            "src": "musics/Garota De Ipanema.mp3"
         }
     ]
 
