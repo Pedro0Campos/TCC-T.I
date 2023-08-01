@@ -83,7 +83,6 @@
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/toggle.css">
-    <link rel="stylesheet" href="css/carrosel.css">
     
     <!-- Scripts do site -->
     <script src="js/darkmode.js"></script>
