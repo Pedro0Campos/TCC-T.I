@@ -71,7 +71,6 @@
 .carrossel-musica {
   margin: 15px 0px 15px 0;
   /* Botão das setas */
-  /* Seta pra direita */
 }
 .carrossel-musica #carousel-title {
   letter-spacing: 3px;
@@ -91,14 +90,14 @@
 }
 .carrossel-musica .splide__slide {
   background-color: transparent;
-  font-size: 0.8em;
+  font-size: 14px;
   width: 100%;
   transition: transform ease-in-out 0.15s;
 }
 .carrossel-musica .splide__slide .wait_api {
   width: 100%;
   aspect-ratio: 1/1;
-  background-color: rgb(50, 50, 50);
+  background-color: var(--wait);
 }
 .carrossel-musica .splide__slide:hover {
   transform: scale(1.03) translate(1.5px, 3px);
@@ -116,28 +115,82 @@
   font-size: 0.9em;
   margin-top: 0.3em;
 }
-.carrossel-musica .splide__arrow {
+.carrossel-musica .splide__arrows {
+  /* Seta pra direita */
+}
+.carrossel-musica .splide__arrows .splide__arrow {
   background: transparent;
   opacity: 1;
 }
-.carrossel-musica .splide__arrow svg {
+.carrossel-musica .splide__arrows .splide__arrow svg {
   fill: rgb(255, 255, 255);
 }
-.carrossel-musica .splide__arrow--next {
+.carrossel-musica .splide__arrows .splide__arrow--next {
   top: 14px;
   right: 10px;
 }
-.carrossel-musica .splide__arrow--prev {
+.carrossel-musica .splide__arrows .splide__arrow--prev {
   top: 14px;
   right: 40px;
   left: unset;
 }
-.carrossel-musica .splide__pagination {
-  display: none;
+
+@media only screen and (max-width: 700px) {
+  .carrossel-musica #carousel-title {
+    text-decoration: none;
+  }
+  .carrossel-musica .slider-progress {
+    background: #292929;
+    margin-top: 20px;
+  }
+  .carrossel-musica .slider-progress .slider-progress-bar {
+    background-color: #fff;
+    height: 4px;
+    transition: width 400ms ease;
+    width: 0;
+  }
+  .carrossel-musica .splide__arrows {
+    display: none;
+  }
+}
+.carrossel-playlists .splide__slide {
+  min-height: 150px;
+  aspect-ratio: 53/24;
+}
+.carrossel-playlists .splide__slide .slide {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: end;
+  border-radius: 10px;
+}
+.carrossel-playlists .splide__slide .slide#slide-1 {
+  background-color: #00F4BE;
+  color: #D022FC;
+}
+.carrossel-playlists .splide__slide .slide#slide-1::before {
+  content: "";
+  background-image: url("../imgs/carrossel/playlist/banner-1.png");
+}
+.carrossel-playlists .splide__slide .slide#slide-2 {
+  background-color: #FF3263;
+  color: #F8E00F;
+}
+.carrossel-playlists .splide__slide .slide#slide-3 {
+  background-color: #FFD5BC;
+  color: #FF8B03;
+}
+.carrossel-playlists .splide__slide .slide .wrapper-text {
+  width: 50%;
+  margin: 10px;
 }
 
+@media only screen and (max-width: 700px) {
+  .carrossel-playlists {
+    font-size: 1.1rem;
+  }
+}
 .carrosel-personagens {
-  display: none;
   /* Título do carrosel */
   /* Todos os slides */
   /* Os slides visiveis vão ter 100% de opacidade  */
@@ -161,7 +214,7 @@
   color: rgba(255, 255, 255, 0);
   /* Todos os slides vão ter 40% de opacidade */
   opacity: 0.4;
-  font-size: 1em;
+  font-size: 14px;
 }
 .carrosel-personagens .is-visible {
   opacity: 1;
@@ -191,93 +244,13 @@
   display: none;
 }
 
-.btnretro {
-  color: white;
-  background: rgb(2, 0, 36);
-  padding-left: 20px;
-  padding-right: 20px;
-  border: none;
-  border-radius: 100px;
-  height: 60px;
-  width: 400px;
-  font-size: 1em;
-  margin-top: 10px;
-  margin-left: 10px;
-  cursor: pointer;
-  transition: ease-in-out 0.3s;
-}
-
-.btnretro:hover {
-  transform: scale(1.03);
-}
-
-.btnretro:active {
-  transform: scale(0.98);
-}
-
-.btnretro {
-  background: rgb(2, 0, 36);
-  background: linear-gradient(75deg, rgb(2, 0, 36) 0%, rgb(0, 0, 0) 77%, rgb(156, 41, 61) 77%, rgb(156, 41, 61) 83%, rgb(247, 158, 82) 83%, rgb(247, 158, 82) 89%, rgb(59, 164, 172) 89%, rgb(59, 164, 172) 94%, rgb(39, 61, 98) 94%);
-}
-
-.splide__slideP {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background-color: #f5f5f5;
-  border-radius: 5px;
-  padding: 20px;
-  margin: 0 10px;
-}
-
-.splide__slide img {
-  max-width: 100%;
-  height: auto;
-}
-
-.popup {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 999;
-}
-
-.popup-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: none;
-  justify-content: center;
-  align-items: center;
-}
-
-.popup-content {
-  background-color: #fff;
-  border-radius: 5px;
-  padding: 20px;
-  max-width: 600px;
-  max-height: 80vh;
-  overflow-y: auto;
-}
-
-/* Estilo do botão de fechar o popup */
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  color: #fff;
-  font-size: 1em;
-  cursor: pointer;
+@media only screen and (max-width: 700px) {
+  .opacity {
+    display: none;
+  }
+  .carrossel-playlists {
+    display: block;
+  }
 }
 
 /*# sourceMappingURL=carrossel.css.map */
