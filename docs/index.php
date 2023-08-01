@@ -153,6 +153,7 @@
                                         <h2>Somentes as maiores</h2>
                                         <p class="text">De Elvis à Johnny Cash</p>
                                     </div>
+                                    <img class="banner" src="" alt="">
                                 </div>
                             </div>
                             
