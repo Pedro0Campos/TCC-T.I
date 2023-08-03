@@ -145,6 +145,7 @@
                                         <h2>Somente as músicas nacionais</h2>
                                     </div>
                                 </div>
+                                <img class="banner" src="imgs/carrossel/playlist/banner-1-grande.png" alt="">
                             </div>
                             
                             <div class="splide__slide">
@@ -153,8 +154,8 @@
                                         <h2>Somentes as maiores</h2>
                                         <p class="text">De Elvis à Johnny Cash</p>
                                     </div>
-                                    <img class="banner" src="" alt="">
                                 </div>
+                                <img class="banner" src="imgs/carrossel/playlist/banner-2-grande.png" alt="">
                             </div>
                             
                             <div class="splide__slide">
@@ -163,6 +164,7 @@
                                         <h2>Músicas diretamente de Grease</h2>
                                     </div>
                                 </div>
+                                <img class="banner" src="imgs/carrossel/playlist/banner-3-grande.png" alt="">
                             </div>
                         </div>
                     </div>

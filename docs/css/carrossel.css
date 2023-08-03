@@ -193,7 +193,26 @@
   font-family: "Josefin Sans Bold";
   font-size: 0.7em;
 }
+.carrossel-playlists .splide__slide .banner {
+  display: none;
+}
 
+@media only screen and (min-width: 375px) {
+  .carrossel-playlists .slide {
+    background-image: none !important;
+  }
+  .carrossel-playlists .splide__slide {
+    position: relative;
+    margin-top: 40px;
+  }
+  .carrossel-playlists .splide__slide .banner {
+    display: block !important;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 60%;
+  }
+}
 .carrosel-personagens {
   /* Título do carrosel */
   /* Todos os slides */

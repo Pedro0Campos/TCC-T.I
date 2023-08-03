@@ -139,7 +139,6 @@
                 background-color: #00F4BE;
                 color: #D022FC;
                 background-image: url('../imgs/carrossel/playlist/banner-1-pequeno.png');
-                
             }
             &#slide-2 {
                 background-color: #FF3263;
@@ -163,15 +162,32 @@
                     font-size: 0.7em;
                 }
             }
+        } //.slide
+        
+        .banner {
+            display: none;
         }
     }
 }
 
 @media only screen and (min-width: 375px) {
     .carrossel-playlists {
-        .banner {
-            
+        .slide {
+            background-image: none !important;
         }
+        
+        .splide__slide {
+            position: relative;
+            margin-top: 40px;
+            .banner {
+                display: block !important;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 60%;
+            }
+        }
+
     }
 }
 
