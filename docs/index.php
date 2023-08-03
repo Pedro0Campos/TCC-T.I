@@ -129,7 +129,7 @@
 
             <div class="wrapper-content-main side-bar" data-aos="fade-down">
                 <div class="box-title2 border-box padding">
-                    <h2>Conheça as música que refletem os anos <span class="sect2-title2 color-title_light">50</span></h2>
+                    <h2>Conheça as música que refletem os anos <span>50</span></h2>
                 </div> <!-- .box-title2 .border-box .padding-->
             </div> <!-- .wrapper-content-main side-bar -->
 
@@ -190,7 +190,6 @@
                     <!-- Progress bar element -->
                     <div class="slider-progress">
                         <div class="slider-progress-bar" id="slider-progress-bar">
-
                         </div>
                     </div>
 
@@ -209,6 +208,12 @@
                     </div> <!-- .side-bar -->
                 </div> <!-- .mais-tocadas -->
             </div> <!-- .wrapper-content-main -->
+
+            <div class="wrapper-content-main side-bar" data-aos="fade-down">
+                <div class="box-title2 border-box padding">
+                    <h2>A música exprime a mais alta filosofia numa linguagem que a razão não compreende.</h2>
+                </div> <!-- .box-title2 .border-box .padding-->
+            </div> <!-- .wrapper-content-main side-bar -->
 
         </div> <!-- .retro-line .flex-collumn -->
     </section> <!-- .section-par .section2 -->
