@@ -169,14 +169,27 @@ button {
 }
 // ===================================================
 
+// Divs que só são exibida quando a tela é menor ou igual a 425px
+.display-425px {
+    display: none;
+}
 
-@media only screen and (max-width: 425px) {
+
+
+// Tablet
+@media only screen and (max-width: 768px) {
     html, body {
         font-size: 16px;
     }
 }
-@media only screen and (max-width: 320px) {
+
+// Celular grande
+@media only screen and (max-width: 426px) {
     html, body {
         font-size: 14px;
     }
+
+    .display-425px {
+        display: initial;
+    } 
 }

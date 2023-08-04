@@ -153,18 +153,17 @@
   display: flex;
   gap: 20px;
 }
-.wrapper-content-main.wrapper-carrossel-playlist {
-  display: none;
+.wrapper-content-main.side-bar::after {
+  content: "";
+  width: 7px;
+  background-color: var(--second-color);
 }
 
-@media only screen and (min-width: 426px) {
+@media only screen and (max-width: 426px) {
   .wrapper-content-main.side-bar::after {
     content: "";
-    width: 7px;
-    background-color: var(--second-color);
+    width: 0px;
   }
-}
-@media only screen and (max-width: 425px) {
   .wrapper-content-main.side-bar::before {
     content: "";
     width: 7px;
@@ -178,9 +177,6 @@
   }
   .wrapper-content-main .mais-tocadas {
     display: none;
-  }
-  .wrapper-content-main.wrapper-carrossel-playlist {
-    display: block;
   }
 }
 

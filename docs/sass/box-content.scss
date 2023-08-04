@@ -113,39 +113,32 @@
                 cursor: pointer;
             }
         }
-    }
+    }   
 
     &.side-bar {
         display: flex;
         gap: 20px;
 
         // ::after e ::before no Media Screen
-    }
-
-    &.wrapper-carrossel-playlist {
-        display: none;
-    }
-}
-
-// Maior que um celular grande
-@media only screen and (min-width: 426px){
-    .wrapper-content-main {
-        
-        &.side-bar {
-            &::after {
-                content: '';
-                width: 7px;
-                background-color: var(--second-color);
-            }
+        &::after {
+            content: '';
+            width: 7px;
+            background-color: var(--second-color);
         }
     }
 }
 
-// Celular grande
-@media only screen and (max-width: 425px){
+
+// Celular grande => 425px
+@media only screen and (max-width: 426px){
     .wrapper-content-main {
 
         &.side-bar {
+            &::after {
+                content: '';
+                width: 0px;
+            }
+
             &::before {
                 content: '';
                 width: 7px;
@@ -163,10 +156,6 @@
 
         .mais-tocadas {
             display: none;
-        }
-
-        &.wrapper-carrossel-playlist {
-            display: block;
         }
     }
 }

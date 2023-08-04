@@ -134,42 +134,43 @@
             </div> <!-- .wrapper-content-main side-bar -->
 
             <!-- Carrossel - Playlist -->
-            <div class="wrapper-content-main wrapper-carrossel-playlist" role="group" data-aos="fade-down">
-                <div class="carrossel-playlists splide" aria-label="Playlists">
-                    <div class="splide__track">
-                        <div class="splide__list">
-
-                            <div class="splide__slide">
-                                <div id="slide-1" class="slide">
-                                    <div class="wrapper-text">
-                                        <h2>Somente as músicas nacionais</h2>
+            <div class="display-425px">
+                <div class="wrapper-content-main wrapper-carrossel-playlist" role="group" data-aos="fade-down">
+                    <div class="carrossel-playlists splide" aria-label="Playlists">
+                        <div class="splide__track">
+                            <div class="splide__list">
+                                <div class="splide__slide">
+                                    <div id="slide-1" class="slide">
+                                        <div class="wrapper-text">
+                                            <h2>Somente as músicas nacionais</h2>
+                                        </div>
                                     </div>
+                                    <img class="banner" src="imgs/carrossel/playlist/banner-1-grande.png" alt="">
                                 </div>
-                                <img class="banner" src="imgs/carrossel/playlist/banner-1-grande.png" alt="">
-                            </div>
-                            
-                            <div class="splide__slide">
-                                <div id="slide-2" class="slide">
-                                    <div class="wrapper-text">
-                                        <h2>Somentes as maiores</h2>
-                                        <p class="text">De Elvis à Johnny Cash</p>
+                
+                                <div class="splide__slide">
+                                    <div id="slide-2" class="slide">
+                                        <div class="wrapper-text">
+                                            <h2>Somentes as maiores</h2>
+                                            <p class="text">De Elvis à Johnny Cash</p>
+                                        </div>
                                     </div>
+                                    <img class="banner" src="imgs/carrossel/playlist/banner-2-grande.png" alt="">
                                 </div>
-                                <img class="banner" src="imgs/carrossel/playlist/banner-2-grande.png" alt="">
-                            </div>
-                            
-                            <div class="splide__slide">
-                                <div id="slide-3" class="slide">
-                                    <div class="wrapper-text">
-                                        <h2>Músicas diretamente de Grease</h2>
+                
+                                <div class="splide__slide">
+                                    <div id="slide-3" class="slide">
+                                        <div class="wrapper-text">
+                                            <h2>Músicas diretamente de Grease</h2>
+                                        </div>
                                     </div>
+                                    <img class="banner" src="imgs/carrossel/playlist/banner-3-grande.png" alt="">
                                 </div>
-                                <img class="banner" src="imgs/carrossel/playlist/banner-3-grande.png" alt="">
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
+                    </div>  <!-- .carrossel-playlists.splide -->
+                </div>  <!-- .wrapper-content-main.wrapper-carrossel-playlist -->
+            </div>  <!-- .display-425px -->
             
             <!-- Carrossel - Musicas -->
             <div class="wrapper-content-main" data-aos="fade-right">
@@ -209,11 +210,13 @@
                 </div> <!-- .mais-tocadas -->
             </div> <!-- .wrapper-content-main -->
 
-            <div class="wrapper-content-main side-bar" data-aos="fade-down">
-                <div class="box-title2 border-box padding">
-                    <h2>A música exprime a mais alta filosofia numa linguagem que a razão não compreende.</h2>
-                </div> <!-- .box-title2 .border-box .padding-->
-            </div> <!-- .wrapper-content-main side-bar -->
+            <div class="display-425px">
+                <div class="wrapper-content-main side-bar" data-aos="fade-down">
+                    <div class="box-title2 border-box padding">
+                        <h2>A música exprime a mais alta filosofia numa linguagem que a razão não compreende.</h2>
+                    </div> <!-- .box-title2 .border-box .padding-->
+                </div> <!-- .wrapper-content-main side-bar -->
+            </div>
 
         </div> <!-- .retro-line .flex-collumn -->
     </section> <!-- .section-par .section2 -->
