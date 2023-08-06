@@ -121,5 +121,15 @@ section.section3 {
     background: none !important;
   }
 }
+@media only screen and (max-width: 425px) {
+  section.section2 {
+    min-height: 1000px;
+    padding-bottom: 120px;
+    background-image: url("../imgs/home/section-2-bottom.png");
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: bottom right;
+  }
+}
 
 /*# sourceMappingURL=home.css.map */

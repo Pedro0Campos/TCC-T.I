@@ -101,7 +101,7 @@
         <div class="wh100 flex-collumn">
             <div class="wrapper-content-main" data-aos="fade-right">
                 <div class="box-title1 border-box padding">
-                    <h1>Conheça tudo sobre o musical de <span>Grease</span></p>
+                    <h1 class="JSMedium">Conheça tudo sobre o musical de <span>Grease</span></p>
                 </div> <!-- .box-title1 .border-box .padding-->
             </div> <!-- .wrapper-content-main -->
             
@@ -127,11 +127,11 @@
         
         <div class="retro-line flex-collumn wh100" data-aos="fade">
 
-            <div class="wrapper-content-main side-bar" data-aos="fade-down">
+            <div class="wrapper-content-main side-bar side-bar-style-1" data-aos="fade-down">
                 <div class="box-title2 border-box padding">
                     <h2>Conheça as música que refletem os anos <span>50</span></h2>
                 </div> <!-- .box-title2 .border-box .padding-->
-            </div> <!-- .wrapper-content-main side-bar -->
+            </div> <!-- .wrapper-content-main side-bar side-bar-style-1 -->
 
             <!-- Carrossel - Playlist -->
             <div class="display-425px">
@@ -197,25 +197,28 @@
                 </div> <!-- .carrossel-musica splide -->
             </div> <!-- .wrapper-content-main -->
             
-            <div class="wrapper-content-main" data-aos="fade-right">
-                <div class="mais-tocadas">
-                    <h3>MAIS TOCADAS</h3>
-                    <div class="side-bar">
-                        <div class="container-itens" id="itens-mais-tocadas">
-                            <p class="item" id="0">1. Summer Nights - Grease</p>
-                            <p class="item" id="3">2. Don’t be Cruel - Elvis Presley</p>
-                            <p class="item" id="4">3. I Walk The Line - Johnny Cash</p>
-                        </div> <!-- .container-itens -->
-                    </div> <!-- .side-bar -->
-                </div> <!-- .mais-tocadas -->
-            </div> <!-- .wrapper-content-main -->
+            <div class="ocult-425px">
+                <div class="wrapper-content-main" data-aos="fade-right">
+                    <div class="mais-tocadas">
+                        <h3>MAIS TOCADAS</h3>
+                        <div class="side-bar side-bar-style-1">
+                            <div class="container-itens" id="itens-mais-tocadas">
+                                <p class="item" id="0">1. Summer Nights - Grease</p>
+                                <p class="item" id="3">2. Don’t be Cruel - Elvis Presley</p>
+                                <p class="item" id="4">3. I Walk The Line - Johnny Cash</p>
+                            </div> <!-- .container-itens -->
+                        </div> <!-- .side-bar side-bar-style-1 -->
+                    </div> <!-- .mais-tocadas -->
+                </div> <!-- .wrapper-content-main -->
+            </div> <!-- .ocult-425px -->
 
             <div class="display-425px">
-                <div class="wrapper-content-main side-bar" data-aos="fade-down">
+                <div class="wrapper-content-main side-bar side-bar-style-2" data-aos="fade-down">
                     <div class="box-title2 border-box padding">
-                        <h2>A música exprime a mais alta filosofia numa linguagem que a razão não compreende.</h2>
+                        <h2 class="JSMedium">A música exprime a mais alta filosofia numa linguagem que a razão não compreende.</h2>
+                        <h3 class="subtitle JSMedium">Arthur Schopenhauer</h3>
                     </div> <!-- .box-title2 .border-box .padding-->
-                </div> <!-- .wrapper-content-main side-bar -->
+                </div> <!-- .wrapper-content-main side-bar side-bar-style-2 -->
             </div>
 
         </div> <!-- .retro-line .flex-collumn -->
@@ -228,11 +231,11 @@
 
         <div class="flex-collumn wh100">
 
-            <div class="wrapper-content-main side-bar" data-aos="fade-right">
+            <div class="wrapper-content-main side-bar side-bar-style-1" data-aos="fade-right">
                 <div class="box-title2 border-box padding">
                     <h2>Personagens <span class="sect2-title2 color-title_light">incríveis</span> merecem todo o reconhecimento</h2>
                 </div> <!-- .box-title2 .border-box .padding-->
-            </div> <!-- .wrapper-content-main .side-bar -->
+            </div> <!-- .wrapper-content-main .side-bar side-bar-style-1 -->
 
             <div class="wrapper-content-main" data-aos="fade-right" data-aos-anchor-placement="top-bottom">
                 <button type="button" onclick="showPopUp()" class="btn-home btn-retro animation-scale">Conheça os personagens</button>

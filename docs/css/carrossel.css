@@ -135,7 +135,7 @@
   left: unset;
 }
 
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 425px) {
   .carrossel-musica #carousel-title {
     text-decoration: none;
   }
@@ -150,6 +150,9 @@
     width: 0;
   }
   .carrossel-musica .splide__arrows {
+    display: none;
+  }
+  .opacity {
     display: none;
   }
 }
@@ -210,7 +213,7 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 60%;
+    height: calc(100% + 40px);
   }
 }
 .carrosel-personagens {
@@ -268,9 +271,6 @@
 }
 
 @media only screen and (max-width: 425px) {
-  .opacity {
-    display: none;
-  }
   .carrossel-playlists {
     display: block;
   }

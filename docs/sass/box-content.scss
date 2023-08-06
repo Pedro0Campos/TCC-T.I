@@ -8,11 +8,9 @@
     }
     
     .box-title1 {
-        // max-width: var(--width-box-title1);
         max-width: 500px;
         
         & h1 {
-            font-family: 'Josefin Sans Medium';
             letter-spacing: 0.15em;
             line-height: 1.2em;
             & span {
@@ -24,7 +22,6 @@
     }
     
     .box-title2 {
-        // max-width: var(--width-box-title2);
         max-width: 480px;
         
         & h2 {
@@ -35,10 +32,14 @@
                 color: var(--second-color)
             }
         }
+        & h3.subtitle {
+            font-size: 1em;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
     }
     
     .box-title3 {
-        // max-width: var(--width-box-title3);
         max-width: 350px;
 
         & h3 {
@@ -114,35 +115,50 @@
             }
         }
     }   
-
+    
     &.side-bar {
         display: flex;
         gap: 20px;
-
-        // ::after e ::before no Media Screen
-        &::after {
-            content: '';
-            width: 7px;
-            background-color: var(--second-color);
+        
+        &.side-bar-style-1 {
+            &::before {
+                content: none;
+                min-width: 5px;
+                background-color: var(--second-color);
+            }
+            &::after {
+                content: '';
+                min-width: 5px;
+                background-color: var(--second-color);
+            }
+        }
+        &.side-bar-style-2 {
+            &::before {
+                content: none;
+                min-width: 8px;
+                background-color: #FFF;
+            }
         }
     }
 }
 
 
 // Celular grande => 425px
-@media only screen and (max-width: 426px){
+@media only screen and (max-width: 425px){
     .wrapper-content-main {
-
         &.side-bar {
-            &::after {
-                content: '';
-                width: 0px;
+            &.side-bar-style-1 {
+                &::before {
+                    content: '';
+                }
+                &::after {
+                    content: none;
+                }
             }
-
-            &::before {
-                content: '';
-                width: 7px;
-                background-color: var(--second-color);
+            &.side-bar-style-2 {
+                &::before {
+                    content: '';
+                }
             }
         }
 
@@ -152,10 +168,6 @@
 
         .padding {
             padding: 0;
-        }
-
-        .mais-tocadas {
-            display: none;
         }
     }
 }

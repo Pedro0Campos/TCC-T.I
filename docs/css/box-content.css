@@ -74,7 +74,6 @@
   max-width: 500px;
 }
 .wrapper-content-main .box-title1 h1 {
-  font-family: "Josefin Sans Medium";
   letter-spacing: 0.15em;
   line-height: 1.2em;
 }
@@ -92,6 +91,11 @@
 }
 .wrapper-content-main .box-title2 h2 span {
   color: var(--second-color);
+}
+.wrapper-content-main .box-title2 h3.subtitle {
+  font-size: 1em;
+  margin-top: 15px;
+  margin-bottom: 5px;
 }
 .wrapper-content-main .box-title3 {
   max-width: 350px;
@@ -153,30 +157,37 @@
   display: flex;
   gap: 20px;
 }
-.wrapper-content-main.side-bar::after {
-  content: "";
-  width: 7px;
+.wrapper-content-main.side-bar.side-bar-style-1::before {
+  content: none;
+  min-width: 5px;
   background-color: var(--second-color);
 }
+.wrapper-content-main.side-bar.side-bar-style-1::after {
+  content: "";
+  min-width: 5px;
+  background-color: var(--second-color);
+}
+.wrapper-content-main.side-bar.side-bar-style-2::before {
+  content: none;
+  min-width: 8px;
+  background-color: #FFF;
+}
 
-@media only screen and (max-width: 426px) {
-  .wrapper-content-main.side-bar::after {
+@media only screen and (max-width: 425px) {
+  .wrapper-content-main.side-bar.side-bar-style-1::before {
     content: "";
-    width: 0px;
   }
-  .wrapper-content-main.side-bar::before {
+  .wrapper-content-main.side-bar.side-bar-style-1::after {
+    content: none;
+  }
+  .wrapper-content-main.side-bar.side-bar-style-2::before {
     content: "";
-    width: 7px;
-    background-color: var(--second-color);
   }
   .wrapper-content-main .border-box {
     border: none;
   }
   .wrapper-content-main .padding {
     padding: 0;
-  }
-  .wrapper-content-main .mais-tocadas {
-    display: none;
   }
 }
 

@@ -65,6 +65,9 @@ p.text {
     margin-block: 8px;
     font-size: 1em;
 }
+.JSMedium {
+    font-family: 'Josefin Sans Medium';
+}
 
 
 // Formatação de LINK
@@ -184,12 +187,15 @@ button {
 }
 
 // Celular grande
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 425px) {
     html, body {
         font-size: 14px;
     }
 
     .display-425px {
         display: initial;
+    } 
+    .ocult-425px {
+        display: none;
     } 
 }

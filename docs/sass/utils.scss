@@ -25,7 +25,7 @@
     position: fixed;
     z-index: 4;
     bottom: 0;
-    transition: bottom 0.2s ease;
+    transition: all 0.2s ease;
 }
 .ocult-container {
     bottom: -100% !important;

@@ -123,6 +123,10 @@ p.text {
   font-size: 1em;
 }
 
+.JSMedium {
+  font-family: "Josefin Sans Medium";
+}
+
 a {
   text-decoration: none;
   color: var(--link-color);
@@ -192,12 +196,15 @@ button {
     font-size: 16px;
   }
 }
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 425px) {
   html, body {
     font-size: 14px;
   }
   .display-425px {
     display: initial;
+  }
+  .ocult-425px {
+    display: none;
   }
 }
 
