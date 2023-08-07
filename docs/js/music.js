@@ -124,335 +124,345 @@ function getMusics() {
 // Music Player
 // ================================
 
-// VARs 
-// ================================
+function musicPlayer () {
+    // VARs 
+    // ================================
 
-// Container
-let music_player = document.querySelector("#music-player")
+    let body = document.querySelector('body')
 
-// Icons
-let backward = document.querySelector("#backward")
-let play_pause = document.querySelector("#play-pause")
-let forward_icon = document.querySelector("#forward")
-let shuffle = document.querySelector("#shuffle")
-let repeat = document.querySelector("#repeat")
-let volume = document.querySelector("#volume")
+    // Container
+    let music_player = document.querySelector("#music-player")
 
-// Inputs - output
-let controle_deslizante = document.querySelector("#controle-deslizante")
-let tempo_atual = document.querySelector("#tempo-atual")
-let tempo_total = document.querySelector("#tempo-total")
+    // Icons
+    let backward = document.querySelector("#backward")
+    let play_pause = document.querySelector("#play-pause")
+    let forward_icon = document.querySelector("#forward")
+    let shuffle = document.querySelector("#shuffle")
+    let repeat = document.querySelector("#repeat")
+    let icon_close = document.querySelector("#close")
 
-// Carrossel e mais tocadas
-let splideList = document.querySelector('#splide__list_MUSICAS')
-let mais_tocadas = document.querySelector('#itens-mais-tocadas')
-// Musica
-let audio = document.querySelector("#audio")
-let musicas = getMusics();
+    // Inputs - output
+    let controle_deslizante = document.querySelector("#controle-deslizante")
+    let tempo_atual = document.querySelector("#tempo-atual")
+    let tempo_total = document.querySelector("#tempo-total")
 
-// Estágios
-let playState = 'play'
-let loopState = 'false'
-let raf = null
-let musica = musicas[0]
-// ================================
+    // Carrossel e mais tocadas
+    let splideList = document.querySelector('#splide__list_MUSICAS')
+    let mais_tocadas = document.querySelector('#itens-mais-tocadas')
+    // Musica
+    let audio = document.querySelector("#audio")
+    let musicas = getMusics();
 
-
-
-// EVENTS - FUNCTIONS
-// ================================
-
-// Open / Close Music Player
-// --------------------------------
-function openCloseMusicPlayer() {
-    document.querySelector('.music-player').classList.toggle('ocult-container')
-    document.querySelector('body').classList.toggle('disable-scroll')
-    play_pause.className = 'fa-solid fa-pause'
-    playState = 'pause'
-}
-
-// Clicar em uma música
-splideList.addEventListener('click', (e) => {
-    var id = e.target.id
-
-    if (id.split('slide') == '') {
-        var id = e.target.offsetParent.id
-    }
-    var index = Number(id.split('slide')[1]) - 1
-    
-    musica = musicas[index]
-    updateContent(musica)
-    openCloseMusicPlayer()
-
-})
-mais_tocadas.addEventListener('click', (e) => {
-    openCloseMusicPlayer()
-    musica = musicas[e.target.id]
-    updateContent(musica)
-})
+    // Estágios
+    let playState = 'play'
+    let loopState = 'false'
+    let raf = null
+    let musica = musicas[0]
+    // ================================
 
 
-// --------------------------------
 
-// Atualizar conteúdo
-function updateContent(musica) {
-    document.querySelector('#music-name').innerHTML = musica.nome 
-    document.querySelector('#music-artist').innerHTML = musica.artista
-    document.querySelector('#music-image-large').src = musica.largeImage
-    document.querySelector('#music-image-small').src = musica.smallImage
-    music_player.style.background = musica.background 
-    audio.src = musica.src
-    play()
-}
+    // EVENTS - FUNCTIONS
+    // ================================
 
-
-// Icons
-// --------------------------------
-
-// Ativar icon
-function ativar(icon) {
-    if (icon.className.includes('active')) {
-        icon.classList.remove('active')
-        
-        // Está desativado
-        return false
-    } else {
-        icon.classList.add('active')
-
-        // Está desativado
-        return true 
-    }
-}
-
-// play / pause
-play_pause.addEventListener('click', () => {
-    if (play_pause.className == 'fa-solid fa-play') {
+    // Audio
+    audio.addEventListener('progress', whilePlaying)
+    audio.addEventListener('play', () => {
         play_pause.className = 'fa-solid fa-pause'
         requestAnimationFrame(whilePlaying)
-        playState = 'pause'
-        play()
-    } else {
+        playState = 'play'
+    })
+    audio.addEventListener('pause', () => {
         play_pause.className = 'fa-solid fa-play'
         cancelAnimationFrame(raf)
+        playState = 'pause'
+    })
+
+    // Open / Close Music Player
+    // --------------------------------
+    icon_close.addEventListener('click', openCloseMusicPlayer())
+    function openCloseMusicPlayer() {
+        let lista_classes = Array.prototype.slice.call(music_player.classList)
+        // Está oculta
+        console.log(icon_close);
+        if (lista_classes.includes('ocult-container')) {
+            music_player.classList.remove('ocult-container')
+            body.classList.add('disable-scroll')
+        } else {
+            music_player.classList.add('ocult-container')
+            body.classList.remove('disable-scroll')
+        }
+    }
+
+    
+
+    // Clicar em uma música
+    splideList.addEventListener('click', (e) => {
+        var id = e.target.id
+
+        if (id.split('slide') == '') {
+            var id = e.target.offsetParent.id
+        }
+        var index = Number(id.split('slide')[1]) - 1
+        
+        musica = musicas[index]
+        updateContent(musica)
+        openCloseMusicPlayer()
+
+    })
+    mais_tocadas.addEventListener('click', (e) => {
+        openCloseMusicPlayer()
+        musica = musicas[e.target.id]
+        updateContent(musica)
+    })
+
+
+    // --------------------------------
+
+    // Atualizar conteúdo
+    function updateContent(musica) {
+        document.querySelector('#music-name').innerHTML = musica.nome 
+        document.querySelector('#music-artist').innerHTML = musica.artista
+        document.querySelector('#music-image-large').src = musica.largeImage
+        document.querySelector('#music-image-small').src = musica.smallImage
+        music_player.style.background = musica.background 
+        audio.src = musica.src
+        play()
+    }
+
+
+    // Icons
+    // --------------------------------
+
+    // Ativar icon
+    function ativar(icon) {
+        if (icon.className.includes('active')) {
+            icon.classList.remove('active')
+            
+            // Está desativado
+            return false
+        } else {
+            icon.classList.add('active')
+
+            // Está desativado
+            return true 
+        }
+    }
+
+    // play / pause
+    play_pause.addEventListener('click', () => {
+        if (playState == 'pause') {
+            play()
+        } else {
+            pause()
+        }
+    })
+    function play() {
+        audio.play()
         playState = 'play'
-        pause()
     }
-})
-function play() {
-    audio.play()
-}
-function pause() {
-    audio.pause()
-}
-
-
-// Backward
-backward.addEventListener('click', () => {
-    let index = musicas.indexOf(musica) - 1
-    if (index < 0) {
-        index = 11
+    function pause() {
+        audio.pause()
+        playState = 'pause'
     }
 
-    // Atualizar conteúdo
-    musica = musicas[index]
-    updateContent(musica)
-    play_pause.className = 'fa-solid fa-pause'
-})
+
+    // Backward
+    backward.addEventListener('click', () => {
+        let index = musicas.indexOf(musica) - 1
+        if (index < 0) {
+            index = 11
+        }
+
+        // Atualizar conteúdo
+        musica = musicas[index]
+        updateContent(musica)
+        play_pause.className = 'fa-solid fa-pause'
+    })
 
 
-// Forward
-function forward() {
-    let index = musicas.indexOf(musica) + 1
-    if (index >= musicas.length) {
-        index = 0
+    // Forward
+    function forward() {
+        let index = musicas.indexOf(musica) + 1
+        if (index >= musicas.length) {
+            index = 0
+        }
+
+        // Atualizar conteúdo
+        musica = musicas[index]
+        updateContent(musica)
+        play_pause.className = 'fa-solid fa-pause'
+    }
+    forward_icon.addEventListener('click', forward)
+
+
+    // Shuffle
+    function embaralhar(array) {
+        for (let j, x, i = array.length; i; j = Math.floor(Math.random() * i), x = array[--i], array[i] = array[j], array[j] = x);
+        return array;
+    }
+    shuffle.addEventListener('click', () => {
+        let resposta = ativar(shuffle)
+        
+        if (resposta) {
+            embaralhar(musicas)
+        } else {
+            musicas = getMusics()
+        } 
+    })
+
+
+    // Repeat
+    repeat.addEventListener('click', () => {
+        let resposta = ativar(repeat)
+        
+        if (resposta) {
+            audio.setAttribute('loop', 'true')
+            loopState = true
+        } else {
+            audio.removeAttribute('loop')
+            loopState = false
+        }
+    })
+
+
+    // Volume
+    // estadios_volume = []
+    // volume.addEventListener('click', () => {
+    //     console.log(volume);
+
+    // })
+    // --------------------------------
+
+
+    // Progresso do input
+    const showRangeProgress = (rangeInput) => {
+        let value = rangeInput.value / rangeInput.max * 100 + '%'
+        music_player.style.setProperty('--seek-before-width', value);
     }
 
-    // Atualizar conteúdo
-    musica = musicas[index]
-    updateContent(musica)
-    play_pause.className = 'fa-solid fa-pause'
-}
-forward_icon.addEventListener('click', forward)
+    // Controle deslizante - tempo da musica
+    controle_deslizante.addEventListener('input', (e) => {
+        // -> mostrar o tempo da música ao mover o input
+        showRangeProgress(e.target)
+        tempo_atual.textContent = calculateTime(controle_deslizante.value);
+        if(!audio.paused) {
+            cancelAnimationFrame(raf);
+        }
+    })
+    controle_deslizante.addEventListener('change', () => {
+        // -> definir o tempo da música ao soltar o input
+        audio.currentTime = controle_deslizante.value;
+        requestAnimationFrame(whilePlaying);
+    })
 
 
-// Shuffle
-function embaralhar(array) {
-    for (let j, x, i = array.length; i; j = Math.floor(Math.random() * i), x = array[--i], array[i] = array[j], array[j] = x);
-    return array;
-}
-shuffle.addEventListener('click', () => {
-    let resposta = ativar(shuffle)
-    
-    if (resposta) {
-        embaralhar(musicas)
-    } else {
-        musicas = getMusics()
-    } 
-})
-
-
-// Repeat
-repeat.addEventListener('click', () => {
-    let resposta = ativar(repeat)
-    
-    if (resposta) {
-        audio.setAttribute('loop', 'true')
-        loopState = true
-    } else {
-        audio.removeAttribute('loop')
-        loopState = false
-    }
-})
-
-
-// Volume
-// estadios_volume = []
-// volume.addEventListener('click', () => {
-//     console.log(volume);
-
-// })
-// --------------------------------
-
-
-// Audio
-audio.addEventListener('progress', whilePlaying)
-audio.addEventListener('play', () => {
-    play_pause.className = 'fa-solid fa-pause'
-    requestAnimationFrame(whilePlaying)
-    playState = 'play'
-})
-audio.addEventListener('pause', () => {
-    play_pause.className = 'fa-solid fa-play'
-    cancelAnimationFrame(raf)
-    playState = 'pause'
-})
-
-// Progresso do input
-const showRangeProgress = (rangeInput) => {
-    let value = rangeInput.value / rangeInput.max * 100 + '%'
-    music_player.style.setProperty('--seek-before-width', value);
-}
-
-// Controle deslizante - tempo da musica
-controle_deslizante.addEventListener('input', (e) => {
-    // -> mostrar o tempo da música ao mover o input
-    showRangeProgress(e.target)
-    tempo_atual.textContent = calculateTime(controle_deslizante.value);
-    if(!audio.paused) {
-        cancelAnimationFrame(raf);
-    }
-})
-controle_deslizante.addEventListener('change', () => {
-    // -> definir o tempo da música ao soltar o input
-    audio.currentTime = controle_deslizante.value;
-    requestAnimationFrame(whilePlaying);
-})
-
-
-// --------------------------------
-if (audio.readyState > 0) {
-    displayDuration();
-    setSliderMax();
-} else {
-    audio.addEventListener('loadedmetadata', () => {
+    // --------------------------------
+    if (audio.readyState > 0) {
         displayDuration();
         setSliderMax();
-    })
-}
-
-function calculateTime (secs) {
-    const minutes = Math.floor(secs / 60);
-    const seconds = Math.floor(secs % 60);
-    const returnedSeconds = seconds < 10 ? `0${seconds}` : `${seconds}`;
-    return `${minutes}:${returnedSeconds}`;
-}
-
-function displayDuration () {
-    tempo_total.textContent = calculateTime(audio.duration);
-}
-
-function setSliderMax () {
-    controle_deslizante.max = Math.floor(audio.duration);
-}
-
-
-function whilePlaying () {
-    controle_deslizante.value = Math.floor(audio.currentTime);
-    tempo_atual.textContent = calculateTime(controle_deslizante.value);
-    music_player.style.setProperty('--seek-before-width', `${controle_deslizante.value / controle_deslizante.max * 100}%`);
-    raf = requestAnimationFrame(whilePlaying)
-
-    if (audio.currentTime == audio.duration && loopState == false) {
-        forward()
+    } else {
+        audio.addEventListener('loadedmetadata', () => {
+            displayDuration();
+            setSliderMax();
+        })
     }
+
+    function calculateTime (secs) {
+        const minutes = Math.floor(secs / 60);
+        const seconds = Math.floor(secs % 60);
+        const returnedSeconds = seconds < 10 ? `0${seconds}` : `${seconds}`;
+        return `${minutes}:${returnedSeconds}`;
+    }
+
+    function displayDuration () {
+        tempo_total.textContent = calculateTime(audio.duration);
+    }
+
+    function setSliderMax () {
+        controle_deslizante.max = Math.floor(audio.duration);
+    }
+
+
+    function whilePlaying () {
+        controle_deslizante.value = Math.floor(audio.currentTime);
+        tempo_atual.textContent = calculateTime(controle_deslizante.value);
+        music_player.style.setProperty('--seek-before-width', `${controle_deslizante.value / controle_deslizante.max * 100}%`);
+        raf = requestAnimationFrame(whilePlaying)
+
+        if (audio.currentTime == audio.duration && loopState == false) {
+            forward()
+        }
+    }
+
+    // Media Session
+    // --------------------------------
+    // if('mediaSession' in navigator) {
+    //         navigator.mediaSession.metadata = new MediaMetadata({
+    //                 title: title,
+    //                 artist: artist,
+    //                 artwork: [
+    //                         { src: smallImage, sizes: '300x300', type: 'image/png' },
+    //             { src: bigImagem, sizes: '640x640', type: 'image/png' },
+    //         ]
+    //     });
+    //     navigator.mediaSession.setActionHandler('play', () => {
+    //             if(playState === 'play') {
+    //                     audio.play();
+    //                     requestAnimationFrame(whilePlaying);
+    //                     playState = 'pause';
+    //                 } else {
+    //                         audio.pause();
+    //                         cancelAnimationFrame(raf);
+    //                         playState = 'play';
+    //                     }
+    //                 });
+    //                 navigator.mediaSession.setActionHandler('pause', () => {
+    //                         if(playState === 'play') {
+    //                                 audio.play();
+    //                                 requestAnimationFrame(whilePlaying);
+    //                                 playState = 'pause';
+    //                             } else {
+    //                                     audio.pause();
+    //                                     cancelAnimationFrame(raf);
+    //                                     playState = 'play';
+    //                                 }
+    //                             });
+    //                             navigator.mediaSession.setActionHandler('seekbackward', (details) => {
+    //         audio.currentTime = audio.currentTime - (details.seekOffset || 10);
+    //     });
+    //     navigator.mediaSession.setActionHandler('seekforward', (details) => {
+    //             audio.currentTime = audio.currentTime + (details.seekOffset || 10);
+    //         });
+    //         navigator.mediaSession.setActionHandler('seekto', (details) => {
+    //                 if (details.fastSeek && 'fastSeek' in audio) {
+    //                       audio.fastSeek(details.seekTime);
+    //                       return;
+    //                     }
+    //                     audio.currentTime = details.seekTime;
+    //                 });
+    //                 navigator.mediaSession.setActionHandler('stop', () => {
+    //                         audio.currentTime = 0;
+    //                         controle_deslizante.value = 0;
+    //                         musicPlayer.style.setProperty('--seek-before-width', '0%');
+    //                         tempo_atual.textContent = '0:00';
+    //                         if(playState === 'pause') {
+    //                                 cancelAnimationFrame(raf);
+    //                                 playState = 'play';
+    //                             }
+    //                         });
+    //                     }
+    // --------------------------------
+    // ================================
+
+
+
+    // TECLAS DE ATALHO
+    // ================================
+    document.addEventListener('keydown', k => {
+        
+    })
+    // ================================
 }
 
-// Media Session
-// --------------------------------
-// if('mediaSession' in navigator) {
-//         navigator.mediaSession.metadata = new MediaMetadata({
-//                 title: title,
-//                 artist: artist,
-//                 artwork: [
-//                         { src: smallImage, sizes: '300x300', type: 'image/png' },
-//             { src: bigImagem, sizes: '640x640', type: 'image/png' },
-//         ]
-//     });
-//     navigator.mediaSession.setActionHandler('play', () => {
-//             if(playState === 'play') {
-//                     audio.play();
-//                     requestAnimationFrame(whilePlaying);
-//                     playState = 'pause';
-//                 } else {
-//                         audio.pause();
-//                         cancelAnimationFrame(raf);
-//                         playState = 'play';
-//                     }
-//                 });
-//                 navigator.mediaSession.setActionHandler('pause', () => {
-//                         if(playState === 'play') {
-//                                 audio.play();
-//                                 requestAnimationFrame(whilePlaying);
-//                                 playState = 'pause';
-//                             } else {
-//                                     audio.pause();
-//                                     cancelAnimationFrame(raf);
-//                                     playState = 'play';
-//                                 }
-//                             });
-//                             navigator.mediaSession.setActionHandler('seekbackward', (details) => {
-//         audio.currentTime = audio.currentTime - (details.seekOffset || 10);
-//     });
-//     navigator.mediaSession.setActionHandler('seekforward', (details) => {
-//             audio.currentTime = audio.currentTime + (details.seekOffset || 10);
-//         });
-//         navigator.mediaSession.setActionHandler('seekto', (details) => {
-//                 if (details.fastSeek && 'fastSeek' in audio) {
-//                       audio.fastSeek(details.seekTime);
-//                       return;
-//                     }
-//                     audio.currentTime = details.seekTime;
-//                 });
-//                 navigator.mediaSession.setActionHandler('stop', () => {
-//                         audio.currentTime = 0;
-//                         controle_deslizante.value = 0;
-//                         musicPlayer.style.setProperty('--seek-before-width', '0%');
-//                         tempo_atual.textContent = '0:00';
-//                         if(playState === 'pause') {
-//                                 cancelAnimationFrame(raf);
-//                                 playState = 'play';
-//                             }
-//                         });
-//                     }
-// --------------------------------
-// ================================
-
-
-
-
-// TECLAS DE ATALHO
-// ================================
-document.addEventListener('keydown', e => {
-    // console.log(e);
-})
-// ================================
+musicPlayer();
