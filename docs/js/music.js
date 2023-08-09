@@ -102,16 +102,16 @@ function getMusics() {
         {
             "nome": "Banho de Lua",
             "artista": "Celly Campello",
-            "largeImage": "musics/imgs/banho-de-lua.jpg",
-            "smallImage": "musics/imgs/banho-de-lua.jpg",
+            "largeImage": "musics/imgs/banho-de-lua.png",
+            "smallImage": "musics/imgs/banho-de-lua.png",
             "background": "##e6cd5a",
             "src": "musics/Banho De Lua (Tintarella Di Luna).mp3"
         },
         {
             "nome": "Garota de Ipanema",
             "artista": "Tom Jobim",
-            "largeImage": "musics/imgs/garota-de-ipanema.jpg",
-            "smallImage": "musics/imgs/garota-de-ipanema.jpg",
+            "largeImage": "musics/imgs/garota-de-ipanema.png",
+            "smallImage": "musics/imgs/garota-de-ipanema.png",
             "background": "##e6cd5a",
             "src": "musics/Garota De Ipanema.mp3"
         }
@@ -134,12 +134,14 @@ function musicPlayer () {
     let music_player = document.querySelector("#music-player")
 
     // Icons
-    let backward = document.querySelector("#backward")
-    let play_pause = document.querySelector("#play-pause")
-    let forward_icon = document.querySelector("#forward")
-    let shuffle = document.querySelector("#shuffle")
-    let repeat = document.querySelector("#repeat")
-    let icon_close = document.querySelector("#close")
+    let icons = {
+        backward: document.querySelector("#backward"),
+        play_pause: document.querySelector("#play-pause"),
+        forward: document.querySelector("#forward"),
+        shuffle: document.querySelector("#shuffle"),
+        repeat: document.querySelector("#repeat"),
+        close: document.querySelector("#close")
+    }
 
     // Inputs - output
     let controle_deslizante = document.querySelector("#controle-deslizante")
@@ -147,7 +149,7 @@ function musicPlayer () {
     let tempo_total = document.querySelector("#tempo-total")
 
     // Carrossel e mais tocadas
-    let splideList = document.querySelector('#splide__list_MUSICAS')
+    let splide_list = document.querySelector('#splide__list_MUSICAS')
     let mais_tocadas = document.querySelector('#itens-mais-tocadas')
     // Musica
     let audio = document.querySelector("#audio")
@@ -165,26 +167,13 @@ function musicPlayer () {
     // EVENTS - FUNCTIONS
     // ================================
 
-    // Audio
-    audio.addEventListener('progress', whilePlaying)
-    audio.addEventListener('play', () => {
-        play_pause.className = 'fa-solid fa-pause'
-        requestAnimationFrame(whilePlaying)
-        playState = 'play'
-    })
-    audio.addEventListener('pause', () => {
-        play_pause.className = 'fa-solid fa-play'
-        cancelAnimationFrame(raf)
-        playState = 'pause'
-    })
-
     // Open / Close Music Player
     // --------------------------------
-    icon_close.addEventListener('click', openCloseMusicPlayer())
+    icons.close.addEventListener('click', openCloseMusicPlayer())
     function openCloseMusicPlayer() {
         let lista_classes = Array.prototype.slice.call(music_player.classList)
+
         // Está oculta
-        console.log(icon_close);
         if (lista_classes.includes('ocult-container')) {
             music_player.classList.remove('ocult-container')
             body.classList.add('disable-scroll')
@@ -193,11 +182,10 @@ function musicPlayer () {
             body.classList.remove('disable-scroll')
         }
     }
-
     
 
     // Clicar em uma música
-    splideList.addEventListener('click', (e) => {
+    splide_list.addEventListener('click', (e) => {
         var id = e.target.id
 
         if (id.split('slide') == '') {
@@ -227,7 +215,18 @@ function musicPlayer () {
         document.querySelector('#music-image-small').src = musica.smallImage
         music_player.style.background = musica.background 
         audio.src = musica.src
-        play()
+        audio.play()
+
+        if ('mediaSession' in navigator) {
+            navigator.mediaSession.metadata = new MediaMetadata({
+                title: musica.nome,
+                artist: musica.artista,
+                artwork: [
+                    { src: musica.smallImage, sizes: '300x300', type: 'image/png' },
+                    { src: musica.largeImage, sizes: '640x640', type: 'image/png' },
+                ]
+            });
+        }
     }
 
 
@@ -238,83 +237,100 @@ function musicPlayer () {
     function ativar(icon) {
         if (icon.className.includes('active')) {
             icon.classList.remove('active')
-            
-            // Está desativado
             return false
         } else {
             icon.classList.add('active')
-
-            // Está desativado
             return true 
         }
     }
 
     // play / pause
-    play_pause.addEventListener('click', () => {
+    icons.play_pause.addEventListener('click', playPause)
+    function playPause() {
         if (playState == 'pause') {
-            play()
+            audio.play()
         } else {
-            pause()
+            audio.pause()
         }
-    })
-    function play() {
-        audio.play()
-        playState = 'play'
-    }
-    function pause() {
-        audio.pause()
-        playState = 'pause'
     }
 
 
     // Backward
-    backward.addEventListener('click', () => {
+    icons.backward.addEventListener('click', backward)
+    function backward() {
+        // O objeto "musica" não é indêntico ao objeto dentro do array "musicas" após embaralhar o array.
+        // Pelo forEach, encontro os objetos iguais e substituo o objeto "musica" pelo "e"
+        // Após isso, o indexOf vai achar o elemento
+        musicas.forEach(e => {
+            if (e.src == musica.src) {
+                musica = e
+            }
+        })
+
+        // Index da música anterior
         let index = musicas.indexOf(musica) - 1
-        if (index < 0) {
-            index = 11
+
+        if (index < 0) { 
+            // O index da musica anterior é -1
+            // e pela lógica, vai dar um clico no loop de músicas (indo para o final)
+            index = musicas.length - 1
         }
 
-        // Atualizar conteúdo
         musica = musicas[index]
         updateContent(musica)
-        play_pause.className = 'fa-solid fa-pause'
-    })
-
+    }
 
     // Forward
+    icons.forward.addEventListener('click', forward)
     function forward() {
+        // O objeto "musica" não é indêntico ao objeto dentro do array "musicas" após embaralhar o array.
+        // Pelo forEach, encontro os objetos iguais e substituo o objeto "musica" pelo "e"
+        // Após isso, o indexOf vai achar o elemento
+        musicas.forEach(e => {
+            if (e.src == musica.src) {
+                musica = e
+            }
+        })
+        
+        // Index da próxima música
         let index = musicas.indexOf(musica) + 1
-        if (index >= musicas.length) {
+
+        if (index >= musicas.length) {  
+            // O index da próxima música está fora do limite do array, 
+            // e pela lógica, vai dar um clico no loop de músicas (indo para o começo)
             index = 0
         }
 
-        // Atualizar conteúdo
         musica = musicas[index]
         updateContent(musica)
-        play_pause.className = 'fa-solid fa-pause'
     }
-    forward_icon.addEventListener('click', forward)
-
-
+    
+    
     // Shuffle
-    function embaralhar(array) {
-        for (let j, x, i = array.length; i; j = Math.floor(Math.random() * i), x = array[--i], array[i] = array[j], array[j] = x);
-        return array;
-    }
-    shuffle.addEventListener('click', () => {
-        let resposta = ativar(shuffle)
-        
+    icons.shuffle.addEventListener('click', shuffle)
+    function shuffle() {
+        let resposta = ativar(icons.shuffle)
         if (resposta) {
-            embaralhar(musicas)
+            var m = musicas.length, t, i;
+        
+            while (m) {
+              i = Math.floor(Math.random() * m--);
+          
+              t = musicas[m];
+              musicas[m] = musicas[i];
+              musicas[i] = t;
+            }
+
         } else {
             musicas = getMusics()
         } 
-    })
-
-
+    }
+    
+    
     // Repeat
-    repeat.addEventListener('click', () => {
-        let resposta = ativar(repeat)
+    icons.repeat.addEventListener('click', repeat)
+    function repeat() {
+        let resposta = ativar(icons.repeat)
         
         if (resposta) {
             audio.setAttribute('loop', 'true')
@@ -323,20 +339,24 @@ function musicPlayer () {
             audio.removeAttribute('loop')
             loopState = false
         }
+    } 
+        
+    // Audio
+    audio.addEventListener('progress', whilePlaying)
+    audio.addEventListener('play', () => {
+        icons.play_pause.className = 'fa-solid fa-pause'
+        requestAnimationFrame(whilePlaying)
+        playState = 'play'
     })
-
-
-    // Volume
-    // estadios_volume = []
-    // volume.addEventListener('click', () => {
-    //     console.log(volume);
-
-    // })
-    // --------------------------------
-
-
+    audio.addEventListener('pause', () => {
+        icons.play_pause.className = 'fa-solid fa-play'
+        cancelAnimationFrame(raf)
+        playState = 'pause'
+    })
+    
+    
     // Progresso do input
-    const showRangeProgress = (rangeInput) => {
+    function showRangeProgress(rangeInput) {
         let value = rangeInput.value / rangeInput.max * 100 + '%'
         music_player.style.setProperty('--seek-before-width', value);
     }
@@ -346,14 +366,12 @@ function musicPlayer () {
         // -> mostrar o tempo da música ao mover o input
         showRangeProgress(e.target)
         tempo_atual.textContent = calculateTime(controle_deslizante.value);
-        if(!audio.paused) {
-            cancelAnimationFrame(raf);
-        }
+        cancelAnimationFrame(raf);
     })
     controle_deslizante.addEventListener('change', () => {
         // -> definir o tempo da música ao soltar o input
         audio.currentTime = controle_deslizante.value;
-        requestAnimationFrame(whilePlaying);
+        cancelAnimationFrame(raf);
     })
 
 
@@ -397,61 +415,39 @@ function musicPlayer () {
 
     // Media Session
     // --------------------------------
-    // if('mediaSession' in navigator) {
-    //         navigator.mediaSession.metadata = new MediaMetadata({
-    //                 title: title,
-    //                 artist: artist,
-    //                 artwork: [
-    //                         { src: smallImage, sizes: '300x300', type: 'image/png' },
-    //             { src: bigImagem, sizes: '640x640', type: 'image/png' },
-    //         ]
-    //     });
-    //     navigator.mediaSession.setActionHandler('play', () => {
-    //             if(playState === 'play') {
-    //                     audio.play();
-    //                     requestAnimationFrame(whilePlaying);
-    //                     playState = 'pause';
-    //                 } else {
-    //                         audio.pause();
-    //                         cancelAnimationFrame(raf);
-    //                         playState = 'play';
-    //                     }
-    //                 });
-    //                 navigator.mediaSession.setActionHandler('pause', () => {
-    //                         if(playState === 'play') {
-    //                                 audio.play();
-    //                                 requestAnimationFrame(whilePlaying);
-    //                                 playState = 'pause';
-    //                             } else {
-    //                                     audio.pause();
-    //                                     cancelAnimationFrame(raf);
-    //                                     playState = 'play';
-    //                                 }
-    //                             });
-    //                             navigator.mediaSession.setActionHandler('seekbackward', (details) => {
-    //         audio.currentTime = audio.currentTime - (details.seekOffset || 10);
-    //     });
-    //     navigator.mediaSession.setActionHandler('seekforward', (details) => {
-    //             audio.currentTime = audio.currentTime + (details.seekOffset || 10);
-    //         });
-    //         navigator.mediaSession.setActionHandler('seekto', (details) => {
-    //                 if (details.fastSeek && 'fastSeek' in audio) {
-    //                       audio.fastSeek(details.seekTime);
-    //                       return;
-    //                     }
-    //                     audio.currentTime = details.seekTime;
-    //                 });
-    //                 navigator.mediaSession.setActionHandler('stop', () => {
-    //                         audio.currentTime = 0;
-    //                         controle_deslizante.value = 0;
-    //                         musicPlayer.style.setProperty('--seek-before-width', '0%');
-    //                         tempo_atual.textContent = '0:00';
-    //                         if(playState === 'pause') {
-    //                                 cancelAnimationFrame(raf);
-    //                                 playState = 'play';
-    //                             }
-    //                         });
-    //                     }
+    if('mediaSession' in navigator) {
+        navigator.mediaSession.metadata = new MediaMetadata({
+            title: musica.nome,
+            artist: musica.artista,
+            artwork: [
+                { src: musica.smallImage, sizes: '300x300', type: 'image/png' },
+                { src: musica.largeImage, sizes: '640x640', type: 'image/png' },
+            ]
+        });
+        navigator.mediaSession.setActionHandler('play', ()=> {audio.play()});
+
+        navigator.mediaSession.setActionHandler('pause', ()=> {audio.pause()});
+
+        navigator.mediaSession.setActionHandler('previoustrack', backward);
+
+        navigator.mediaSession.setActionHandler('nexttrack', forward);
+
+        // navigator.mediaSession.setActionHandler('seekto', (details) => {
+        //     if (details.fastSeek && 'fastSeek' in audio) {
+        //         audio.fastSeek(details.seekTime);
+        //         return;
+        //     }
+        //     audio.currentTime = details.seekTime;
+        // });
+
+        navigator.mediaSession.setActionHandler('stop', () => {
+            audio.currentTime = 0;
+            controle_deslizante.value = 0;
+            musicPlayer.style.setProperty('--seek-before-width', '0%');
+            // tempo_atual.textContent = '0:00';
+            pause()
+        });
+    }
     // --------------------------------
     // ================================
 
@@ -459,8 +455,40 @@ function musicPlayer () {
 
     // TECLAS DE ATALHO
     // ================================
+    function teclasAtalho(k) {
+        k = k.toLowerCase()
+
+        const acceptedKeys = {
+            k: function () {
+                console.log('Play / Pause');
+                playPause()
+            },
+            j: function () {
+                console.log('Anterior');
+                backward()
+            },
+            l: function () {
+                console.log('Próximo');
+                forward()
+            },
+            a: function () {
+                console.log('Aleatório');
+                shuffle()
+            },
+            r: function () {
+                console.log('Repetir');
+                repeat()
+            },
+        }
+
+        const funcao = acceptedKeys[k]
+        if (funcao) {
+            funcao()
+        }
+    }
+    
     document.addEventListener('keydown', k => {
-        
+        teclasAtalho(k.key)
     })
     // ================================
 }

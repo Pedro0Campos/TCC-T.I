@@ -35,8 +35,8 @@
 </head>
 
 <body class="fade">
-    <!-- <div class="music-player fixed-container" id="music-player"> -->
-    <div class="music-player fixed-container ocult-container" id="music-player">
+    <div class="music-player fixed-container" id="music-player">
+    <!-- <div class="music-player fixed-container ocult-container" id="music-player"> -->
         <div class="close-box">
             <img src="imgs/close.svg" alt="" id="close">
         </div>
