@@ -8,7 +8,7 @@ let splideList = document.querySelector('#splide__list_MUSICAS')
 
 splideList.innerHTML = ''
 
-let musicas = getMusics()
+let musicas = getTracks()
 musicas.forEach((e, i) => {
     splideList.innerHTML += `
     <div class="splide__slide track">

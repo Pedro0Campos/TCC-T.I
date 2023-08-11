@@ -126,6 +126,7 @@
     .splide__slide {
         min-height: 150px;
         aspect-ratio: 53/24;
+        position: relative;
 
         .slide {
             width: 100%; 
@@ -166,10 +167,19 @@
                     font-size: 0.7em;
                 }
             }
+
         } //.slide
         
         .banner {
             display: none;
+        }
+        .click-playlist {
+            position: absolute;
+            z-index: 3;
+            height: calc(100% + 40px);
+            top: -40px;
+            // background-color: yellow;
+            width: 100%;
         }
     }
 }

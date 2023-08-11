@@ -35,8 +35,8 @@
 </head>
 
 <body class="fade">
-    <div class="music-player fixed-container" id="music-player">
-    <!-- <div class="music-player fixed-container ocult-container" id="music-player"> -->
+    <!-- <div class="music-player fixed-container" id="music-player"> -->
+    <div class="music-player fixed-container ocult-container" id="music-player">
         <div class="close-box">
             <img src="imgs/close.svg" alt="" id="close">
         </div>
@@ -138,7 +138,8 @@
                 <div class="wrapper-content-main wrapper-carrossel-playlist" role="group" data-aos="fade-down">
                     <div class="carrossel-playlists splide" aria-label="Playlists">
                         <div class="splide__track">
-                            <div class="splide__list">
+                            <div class="splide__list" id="splide__list_PLAYLIST">
+
                                 <div class="splide__slide">
                                     <div id="slide-1" class="slide">
                                         <div class="wrapper-text">
@@ -146,6 +147,7 @@
                                         </div>
                                     </div>
                                     <img class="banner" src="imgs/carrossel/playlist/banner-1-grande.png" alt="">
+                                    <div id="playlist-0" class="wh-100 click-playlist"></div>
                                 </div>
                 
                                 <div class="splide__slide">
@@ -156,6 +158,7 @@
                                         </div>
                                     </div>
                                     <img class="banner" src="imgs/carrossel/playlist/banner-2-grande.png" alt="">
+                                    <div id="playlist-1" class="wh-100 click-playlist"></div>
                                 </div>
                 
                                 <div class="splide__slide">
@@ -165,6 +168,7 @@
                                         </div>
                                     </div>
                                     <img class="banner" src="imgs/carrossel/playlist/banner-3-grande.png" alt="">
+                                    <div id="playlist-2" class="wh-100 click-playlist"></div>
                                 </div>
                             </div>
                         </div>

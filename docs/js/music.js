@@ -1,7 +1,7 @@
 
 // LISTA DE MÚSICAS
 // ================================
-function getMusics() {
+function getTracks(type='musics') {
     let listaMusicas = [
         {
             "nome": "Summer Nights - From “Grease”",
@@ -117,7 +117,33 @@ function getMusics() {
         }
     ]
 
-    return listaMusicas
+    let playlists = [
+        // Nacionais
+        [
+            listaMusicas[11],
+             listaMusicas[12], 
+             listaMusicas[13]],
+
+        // Elvis à Johnny Cash
+        [
+            listaMusicas[2], 
+            listaMusicas[3],
+            listaMusicas[9],
+            listaMusicas[10],
+        ],
+
+        // Grease
+        [
+            listaMusicas[0],
+            listaMusicas[1],
+        ],
+    ]
+
+    if (type === 'musics') {
+        return listaMusicas
+    } else if (type === 'playlists') {
+        return playlists
+    }
 }
 
 // ================================
@@ -148,18 +174,23 @@ function musicPlayer () {
     let tempo_atual = document.querySelector("#tempo-atual")
     let tempo_total = document.querySelector("#tempo-total")
 
-    // Carrossel e mais tocadas
-    let splide_list = document.querySelector('#splide__list_MUSICAS')
+    // Divs para chamar músicas na sessão 2
+    let splide_musicas = document.querySelector('#splide__list_MUSICAS')
+    let splide_playlist = document.querySelector('#splide__list_PLAYLIST')
     let mais_tocadas = document.querySelector('#itens-mais-tocadas')
+    
     // Musica
     let audio = document.querySelector("#audio")
-    let musicas = getMusics();
+    let musicas = getTracks();
 
     // Estágios
     let playState = 'play'
-    let loopState = 'false'
+    let loopState = false
+    let countLoop = 0
     let raf = null
     let musica = musicas[0]
+    let tipoReproducao = 'musicas'
+    let playlist = 0
     // ================================
 
 
@@ -169,7 +200,7 @@ function musicPlayer () {
 
     // Open / Close Music Player
     // --------------------------------
-    icons.close.addEventListener('click', openCloseMusicPlayer())
+    icons.close.addEventListener('click', openCloseMusicPlayer)
     function openCloseMusicPlayer() {
         let lista_classes = Array.prototype.slice.call(music_player.classList)
 
@@ -177,15 +208,17 @@ function musicPlayer () {
         if (lista_classes.includes('ocult-container')) {
             music_player.classList.remove('ocult-container')
             body.classList.add('disable-scroll')
+            console.log('Mostrar Music Player');
         } else {
             music_player.classList.add('ocult-container')
             body.classList.remove('disable-scroll')
+            console.log('Ocultar Music Player');
         }
     }
     
 
-    // Clicar em uma música
-    splide_list.addEventListener('click', (e) => {
+    // Carrossel de músicas
+    splide_musicas.addEventListener('click', (e) => {
         var id = e.target.id
 
         if (id.split('slide') == '') {
@@ -193,15 +226,40 @@ function musicPlayer () {
         }
         var index = Number(id.split('slide')[1]) - 1
         
+        musicas = getTracks()
+        tipoReproducao = 'musicas'
+
         musica = musicas[index]
         updateContent(musica)
         openCloseMusicPlayer()
 
     })
+
+    // Carrossel de playlists
+    splide_playlist.addEventListener('click', (e) => {
+        let id = e.target.id.split('-')[1]
+        if (!isNaN(id)) {
+            musicas = getTracks('playlists')[id]
+            tipoReproducao = 'playlists'
+            playlist = id
+
+            musica = musicas[0]
+            updateContent(musica)
+            openCloseMusicPlayer()
+        }
+    })
+
+    // Mais
     mais_tocadas.addEventListener('click', (e) => {
-        openCloseMusicPlayer()
-        musica = musicas[e.target.id]
-        updateContent(musica)
+        let id = e.target.id
+        if (!isNaN(id)) {
+            musicas = getTracks()
+            tipoReproducao = 'musicas'
+
+            musica = musicas[id]
+            updateContent(musica)
+            openCloseMusicPlayer()
+        }
     })
 
 
@@ -280,6 +338,7 @@ function musicPlayer () {
         updateContent(musica)
     }
 
+
     // Forward
     icons.forward.addEventListener('click', forward)
     function forward() {
@@ -303,6 +362,7 @@ function musicPlayer () {
 
         musica = musicas[index]
         updateContent(musica)
+        countLoop = 0
     }
     
     
@@ -322,7 +382,11 @@ function musicPlayer () {
             }
 
         } else {
-            musicas = getMusics()
+            if (tipoReproducao === 'musicas') {
+                musicas = getTracks()
+            } else if (tipoReproducao === 'playlists'){
+                musicas = getTracks('playlists')[playlist]
+            }
         } 
     }
     
@@ -333,10 +397,10 @@ function musicPlayer () {
         let resposta = ativar(icons.repeat)
         
         if (resposta) {
-            audio.setAttribute('loop', 'true')
+            // audio.setAttribute('loop', 'true')
             loopState = true
         } else {
-            audio.removeAttribute('loop')
+            // audio.removeAttribute('loop')
             loopState = false
         }
     } 
@@ -352,6 +416,18 @@ function musicPlayer () {
         icons.play_pause.className = 'fa-solid fa-play'
         cancelAnimationFrame(raf)
         playState = 'pause'
+    })
+    audio.addEventListener('ended', () => {
+        if (loopState == false) {
+            forward()
+        } else {
+            countLoop++
+            if (countLoop > 1) {
+                forward()
+            } else {
+                audio.play()
+            }
+        }
     })
     
     
@@ -407,10 +483,6 @@ function musicPlayer () {
         tempo_atual.textContent = calculateTime(controle_deslizante.value);
         music_player.style.setProperty('--seek-before-width', `${controle_deslizante.value / controle_deslizante.max * 100}%`);
         raf = requestAnimationFrame(whilePlaying)
-
-        if (audio.currentTime == audio.duration && loopState == false) {
-            forward()
-        }
     }
 
     // Media Session
@@ -432,19 +504,11 @@ function musicPlayer () {
 
         navigator.mediaSession.setActionHandler('nexttrack', forward);
 
-        // navigator.mediaSession.setActionHandler('seekto', (details) => {
-        //     if (details.fastSeek && 'fastSeek' in audio) {
-        //         audio.fastSeek(details.seekTime);
-        //         return;
-        //     }
-        //     audio.currentTime = details.seekTime;
-        // });
-
         navigator.mediaSession.setActionHandler('stop', () => {
             audio.currentTime = 0;
             controle_deslizante.value = 0;
             musicPlayer.style.setProperty('--seek-before-width', '0%');
-            // tempo_atual.textContent = '0:00';
+            tempo_atual.textContent = '0:00';
             pause()
         });
     }
