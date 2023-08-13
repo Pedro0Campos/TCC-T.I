@@ -184,7 +184,7 @@ function musicPlayer () {
     let musicas = getTracks();
 
     // Estágios
-    let playState = 'play'
+    let playState = 'pause'
     let loopState = false
     let countLoop = 0
     let raf = null
@@ -208,11 +208,9 @@ function musicPlayer () {
         if (lista_classes.includes('ocult-container')) {
             music_player.classList.remove('ocult-container')
             body.classList.add('disable-scroll')
-            console.log('Mostrar Music Player');
         } else {
             music_player.classList.add('ocult-container')
             body.classList.remove('disable-scroll')
-            console.log('Ocultar Music Player');
         }
     }
     
@@ -524,23 +522,18 @@ function musicPlayer () {
 
         const acceptedKeys = {
             k: function () {
-                console.log('Play / Pause');
                 playPause()
             },
             j: function () {
-                console.log('Anterior');
                 backward()
             },
             l: function () {
-                console.log('Próximo');
                 forward()
             },
             a: function () {
-                console.log('Aleatório');
                 shuffle()
             },
             r: function () {
-                console.log('Repetir');
                 repeat()
             },
         }

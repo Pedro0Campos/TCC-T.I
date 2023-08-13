@@ -1,20 +1,30 @@
-function chance_theme(checkbox) {
-    let itens = [document.querySelector('.sun'),
-                 document.querySelector('#cloud1'),
-                 document.querySelector('#cloud2'),
-                 document.querySelector('.moon'),
-                 document.querySelector('#star1'),
-                 document.querySelector('#star2'),
-                 document.querySelector('#star3')]
+function darkmode() {
+    let form = document.querySelector('#form-darkmode')
+    let checkbox = document.querySelector('#checkbox')
+    if (form && checkbox) {
+        checkbox.addEventListener('change', () => {
+            form.submit()
+        })
+        // form.submit()
+    }
+    // checkbox.addEventListener('change', () => {console.log('a');})
 
-    itens.forEach(element => {
-        element.classList.toggle('desativado')
-    })
+    // let itens = [document.querySelector('.sun'),
+    //              document.querySelector('#cloud1'),
+    //              document.querySelector('#cloud2'),
+    //              document.querySelector('.moon'),
+    //              document.querySelector('#star1'),
+    //              document.querySelector('#star2'),
+    //              document.querySelector('#star3')]
+
+    // itens.forEach(element => {
+    //     element.classList.toggle('desativado')
+    // })
 
     const html = document.querySelector('html')
+    // html.classList.toggle('darkmode')
+
     const sandy_danny = document.querySelector('.sandy-danny')
-    
-    html.classList.toggle('darkmode')
     if (sandy_danny != null) {
         if (html.classList == 'darkmode') {
             sandy_danny.src = 'imgs/home/sandy-danny-dark.png'
@@ -23,3 +33,5 @@ function chance_theme(checkbox) {
         }
     }
 }
+
+darkmode()

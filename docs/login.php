@@ -2,6 +2,8 @@
     include('database/db.php');
     include('php/form.php');
     include('php/consultar_user.php');  // Consultar usuários no banco
+
+    include('php/verify_darkmode.php');
 ?>
 
 <?php
@@ -68,7 +70,7 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" <?php if ($darkmode) {echo "class='darkmode'";} ?>>
 <head>
 
     <meta charset="UTF-8">
@@ -85,7 +87,6 @@
     <link rel="stylesheet" href="css/toggle.css">
     
     <!-- Scripts do site -->
-    <script src="js/darkmode.js"></script>
     <script src="js/navbar.js"></script>
 
     <!-- AOS - Animation in scrool -->

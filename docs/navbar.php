@@ -2,19 +2,22 @@
 
         <!-- TOGGLER --> 
         <div class="navlista" id="toggler">
-            <label for="checkbox">
-                <input type="checkbox" name="" id="checkbox" onchange="chance_theme(this)" placeholder="modo escuro" checked>
-                <span class="ball"></span>
-                <i class="fa-solid fa-moon moon desativado" id="moon"></i>
-                <i class="fa-solid fa-sun sun" id="sun"></i>
-                <i class="fa-solid fa-star star star1 desativado" id="star1"></i>
-                <i class="fa-solid fa-star star star2 desativado" id="star2"></i>
-                <i class="fa-solid fa-star star star3 desativado" id="star3"></i>
-                <i class="fa-solid fa-cloud cloud cloud1" id="cloud1"></i>
-                <i class="fa-solid fa-cloud cloud cloud2" id="cloud2"></i>
-            </label> 
+            <form action="?verify_darkmode" method="post" id="form-darkmode">
+                <label for="checkbox">
+                    <input type="checkbox" name="checkbox" id="checkbox" placeholder="Darkmode" <?php if ($darkmode) {echo 'checked="true"'; } ?>>
+                    <!-- <span class="ball"></span>
+                    <i class="fa-solid fa-moon moon desativado" id="moon"></i>
+                    <i class="fa-solid fa-sun sun" id="sun"></i>
+                    <i class="fa-solid fa-star star star1 desativado" id="star1"></i>
+                    <i class="fa-solid fa-star star star2 desativado" id="star2"></i>
+                    <i class="fa-solid fa-star star star3 desativado" id="star3"></i>
+                    <i class="fa-solid fa-cloud cloud cloud1" id="cloud1"></i>
+                    <i class="fa-solid fa-cloud cloud cloud2" id="cloud2"></i> -->
+                </label>
+            </form>
         </div>
-
+        
+        
         <!-- ITENS NO MEIO -->
         <div class="navlista">
             <a class="animation-link" href="index.php">Home</a>
@@ -22,7 +25,7 @@
             <a class="animation-link" href="sobre.php">Sobre</a>
         </div>
         <!-- ITENS NO MEIO -->
-
+        
         <!-- ITENS NA DIREITA - Login e cadastro -->
         <div class="navlista itens-direita">
             <a class="animation-link" href="cadastro.php" class="navitens">Cadastra-se</a>
@@ -31,7 +34,7 @@
             <!-- <a class="" href="perfiluser.php"><img class="img-user" src="../docs/imgs/icon-user.png" alt=""></a> -->
         </div>
         <!-- ITENS NA DIREITA - Login e cadastro -->
-
+        
         <!-- CONTAINER - ICON MENU -->
         <div class="container-icon-menu" onclick="openNavLateral()">
             <button class="menu" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu">
@@ -44,8 +47,8 @@
         </div>
         <!-- CONTAINER - ICON MENU -->
     </div>
-
-
+    
+    
     <!-- NAVBAR - LATERAL -->
     <div class="container-navbar-lateral">
         <div class="navbar-lateral" id="navbar-lateral">
@@ -59,3 +62,5 @@
             </div>
         </div>
     </div>
+    
+    <script type="text/javascript" src="js/darkmode.js"></script>

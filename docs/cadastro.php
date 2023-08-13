@@ -25,7 +25,9 @@ $nome = $email = $senha = '';
 $nomeErro = $emailErro = $senhaErro = '';  // Mensagens de erro
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
+    if (isset($_GET['verify_darkmode'])) {
+        header('Location: ?');
+    }
     // Pegar e tratar os valores
     $nome = input_post('nome');
     $email = input_post('email');
@@ -79,8 +81,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 
 
+<?php  include('php/verify_darkmode.php') ?>
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" <?php if ($darkmode) {echo "class='darkmode'";} ?>>
     <head>
         
     <meta charset="UTF-8">
@@ -97,7 +100,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="css/toggle.css">
     
     <!-- Scripts do site -->
-    <script src="js/darkmode.js"></script>
     <script src="js/navbar.js"></script>
     
     <!-- AOS - Animation in scrool -->

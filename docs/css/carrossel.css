@@ -187,7 +187,7 @@
   background-image: url("../imgs/carrossel/playlist/banner-3-pequeno.png");
 }
 .carrossel-playlists .splide__slide .slide .wrapper-text {
-  width: 50%;
+  width: 45%;
   margin: 10px;
 }
 .carrossel-playlists .splide__slide .slide .wrapper-text h2 {
@@ -202,9 +202,9 @@
 }
 .carrossel-playlists .splide__slide .click-playlist {
   position: absolute;
+  top: -40px;
   z-index: 3;
   height: calc(100% + 40px);
-  top: -40px;
   width: 100%;
 }
 

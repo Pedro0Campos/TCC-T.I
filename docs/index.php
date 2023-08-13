@@ -1,5 +1,9 @@
+<?php
+    include('php/verify_darkmode.php')
+?>
+
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" <?php if ($darkmode) {echo "class='darkmode'";} ?>>
 
 <head>
 
@@ -20,7 +24,6 @@
     <link rel="stylesheet" href="css/music-player.css">
 
     <!-- Scripts do site -->
-    <script src="js/darkmode.js"></script>
     <script src="js/navbar.js"></script>
 
     <!-- AOS - Animation in scrool -->
