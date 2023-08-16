@@ -161,6 +161,27 @@
   bottom: 4px;
   left: 15px;
 }
+.navbar #toggler label .moon {
+  right: 5%;
+  font-size: 30px;
+  top: 50%;
+  transform: rotate(210deg) translate(50%, 35%);
+}
+.navbar #toggler label .star1 {
+  top: 15px;
+  right: 25px;
+  font-size: 2px;
+}
+.navbar #toggler label .star2 {
+  right: 32px;
+  top: 6px;
+  font-size: 4px;
+}
+.navbar #toggler label .star3 {
+  right: 35px;
+  bottom: 10px;
+  font-size: 6px;
+}
 .navbar .navlista #grease {
   font-family: "Josefin Sans Regular";
   font-size: 1.3rem;

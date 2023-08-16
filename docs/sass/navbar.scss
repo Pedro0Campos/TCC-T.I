@@ -107,6 +107,27 @@
             }
 
 
+            .moon {
+                right: 5%;
+                font-size: 30px;
+                top: 50%;
+                transform: rotate(210deg) translate(50%, 35%);
+            }
+            .star1 {
+                top: 15px;
+                right: 25px;
+                font-size: 2px;
+            }
+            .star2 {
+                right: 32px;
+                top: 6px;
+                font-size: 4px;
+            }
+            .star3 {
+                right: 35px;
+                bottom: 10px;
+                font-size: 6px;
+            }
 
         }
     }
