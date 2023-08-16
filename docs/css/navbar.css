@@ -105,6 +105,62 @@
   justify-content: space-between;
   flex-direction: row;
 }
+.navbar #toggler {
+  margin-inline-start: 20px;
+}
+.navbar #toggler label {
+  border: 2px solid white;
+  border-radius: 30px;
+  padding: 10px;
+  height: 40px;
+  width: 80px;
+  display: block;
+  position: relative;
+}
+.navbar #toggler label i, .navbar #toggler label .ball {
+  position: absolute;
+  display: block;
+}
+.navbar #toggler label .ball {
+  height: 80%;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  background: white;
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+.navbar #toggler label #checkbox:checked + .ball {
+  left: 5%;
+  right: 0;
+}
+.navbar #toggler label #checkbox {
+  display: none;
+}
+.navbar #toggler label .cloud {
+  color: white;
+}
+.navbar #toggler label .sun, .navbar #toggler label .moon, .navbar #toggler label .star {
+  color: #F8F81B;
+}
+.navbar #toggler label .sun {
+  font-size: 25px;
+  top: 50%;
+  left: 6.4%;
+  transform: translateY(-50%);
+}
+.navbar #toggler label .cloud1 {
+  font-size: 7px;
+  top: 4px;
+  left: 30px;
+}
+.navbar #toggler label .cloud2 {
+  font-size: 20px;
+  bottom: 4px;
+  left: 15px;
+}
 .navbar .navlista #grease {
   font-family: "Josefin Sans Regular";
   font-size: 1.3rem;

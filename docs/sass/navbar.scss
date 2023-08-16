@@ -42,6 +42,75 @@
     justify-content: space-between;
     flex-direction: row;
     
+    #toggler {
+        margin-inline-start: 20px;
+        label {
+            border: 2px solid white;
+            border-radius: 30px;
+            padding: 10px;
+            height: 40px;
+            width: 80px;
+            display: block;
+            position: relative;
+
+            i, .ball {
+                position: absolute;
+                display: block;
+            }
+            
+            .ball {
+                height: 80%;
+                aspect-ratio: 1/1;
+                border-radius: 100%;
+                background: white;
+                position: absolute;
+                top: 50%;
+                right: 5%;
+                transform: translateY(-50%);
+                z-index: 10;
+            }
+
+            #checkbox:checked + .ball {
+                left: 5%;
+                right: 0;
+            }
+            #checkbox {
+                display: none;
+            }
+
+
+            // Icons
+            .cloud {
+                color: white;
+            }
+
+            .sun, .moon, .star {
+                color: #F8F81B
+            }
+
+            .sun {
+                font-size: 25px;
+                top: 50%;
+                left: 6.4%;
+                transform: translateY(-50%);
+            }
+
+            .cloud1 {
+                font-size: 7px;
+                top: 4px;
+                left: 30px;
+            }
+            .cloud2 {
+                font-size: 20px;
+                bottom: 4px;
+                left: 15px;
+            }
+
+
+
+        }
+    }
+
     .navlista {
         // TÍTULO 'GREASE'
         #grease {
@@ -57,6 +126,7 @@
             color: white;
         }
     }
+
 
         
     .itens-direita {

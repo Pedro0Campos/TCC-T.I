@@ -5,14 +5,25 @@
             <form action="?verify_darkmode" method="post" id="form-darkmode">
                 <label for="checkbox">
                     <input type="checkbox" name="checkbox" id="checkbox" placeholder="Darkmode" <?php if ($darkmode) {echo 'checked="true"'; } ?>>
-                    <!-- <span class="ball"></span>
-                    <i class="fa-solid fa-moon moon desativado" id="moon"></i>
+                    <span class="ball"></span>
+                    
+                    <?php
+                        if (!$darkmode) {
+                    ?>
                     <i class="fa-solid fa-sun sun" id="sun"></i>
-                    <i class="fa-solid fa-star star star1 desativado" id="star1"></i>
-                    <i class="fa-solid fa-star star star2 desativado" id="star2"></i>
-                    <i class="fa-solid fa-star star star3 desativado" id="star3"></i>
                     <i class="fa-solid fa-cloud cloud cloud1" id="cloud1"></i>
-                    <i class="fa-solid fa-cloud cloud cloud2" id="cloud2"></i> -->
+                    <i class="fa-solid fa-cloud cloud cloud2" id="cloud2"></i>
+                    <?php
+                        } else {
+
+                    ?>
+                    <i class="fa-solid fa-moon moon" id="moon"></i>
+                    <i class="fa-solid fa-star star star1" id="star1"></i>
+                    <i class="fa-solid fa-star star star2" id="star2"></i>
+                    <i class="fa-solid fa-star star star3" id="star3"></i>
+                    <?php
+                        }
+                    ?>
                 </label>
             </form>
         </div>
