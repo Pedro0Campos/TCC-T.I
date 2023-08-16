@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="css/form.css">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/toggle.css">
     <link rel="stylesheet" href="css/carrossel.css">
     
     <!-- Scripts do site -->

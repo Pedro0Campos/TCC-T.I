@@ -19,7 +19,6 @@
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/box-content.css">
     <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/toggle.css">
     <link rel="stylesheet" href="css/carrossel.css">
     <link rel="stylesheet" href="css/music-player.css">
 
