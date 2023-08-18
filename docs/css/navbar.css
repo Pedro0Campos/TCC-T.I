@@ -110,7 +110,7 @@
 }
 .navbar #toggler label {
   border: 2px solid white;
-  border-radius: 30px;
+  border-radius: 200px;
   padding: 10px;
   height: 40px;
   width: 80px;
@@ -181,6 +181,23 @@
   right: 35px;
   bottom: 10px;
   font-size: 6px;
+}
+.navbar #toggler .resize-font-size {
+  margin-left: 20px;
+  user-select: none;
+}
+.navbar #toggler .resize-font-size .wrapper-button {
+  height: 40px;
+  width: 40px;
+  border: 2px solid white;
+  border-radius: 7px;
+  margin-inline: 5px;
+  font-family: "Josefin Sans Regular";
+  cursor: pointer;
+}
+.navbar #toggler .resize-font-size .wrapper-button:hover {
+  background-color: white;
+  color: black;
 }
 .navbar .navlista #grease {
   font-family: "Josefin Sans Regular";
@@ -283,19 +300,15 @@
   overflow: hidden;
 }
 
-@media only screen and (max-width: 504px) {
+@media only screen and (max-width: 634px) {
   .navbar {
     justify-content: left;
   }
-  .navbar .navlista:not(:nth-child(2)) {
+  .navbar #links-meio a:not(#grease) {
     display: none;
   }
-  .navbar .navlista a:not(#grease) {
+  .navbar .navlista.itens-direita {
     display: none;
-  }
-  .navbar .navlista:first-child {
-    display: initial;
-    margin-right: 20px;
   }
   .navbar .container-icon-menu {
     position: absolute;

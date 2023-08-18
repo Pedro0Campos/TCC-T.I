@@ -1,7 +1,7 @@
     <div class="navbar" id="navbar">
 
         <!-- TOGGLER --> 
-        <div class="navlista" id="toggler">
+        <div class="navlista flexCenterVH" id="toggler">
             <form action="?verify_darkmode" method="post" id="form-darkmode">
                 <label for="checkbox">
                     <input type="checkbox" name="checkbox" id="checkbox" placeholder="Darkmode" <?php if ($darkmode) {echo 'checked="true"'; } ?>>
@@ -26,11 +26,20 @@
                     ?>
                 </label>
             </form>
+
+            <div class="resize-font-size flexCenterVH">
+                <div class="wrapper-button flexCenterVH" id="aumentar-texto">
+                    A+
+                </div>
+                <div class="wrapper-button flexCenterVH" id="diminuir-texto">
+                    A-
+                </div>
+            </div>
         </div>
         
         
         <!-- ITENS NO MEIO -->
-        <div class="navlista">
+        <div class="navlista" id="links-meio">
             <a class="animation-link" href="index.php">Home</a>
             <a id="grease" href="index.php" >Grease</a>
             <a class="animation-link" href="sobre.php">Sobre</a>

@@ -46,7 +46,7 @@
         margin-inline-start: 20px;
         label {
             border: 2px solid white;
-            border-radius: 30px;
+            border-radius: 200px;
             padding: 10px;
             height: 40px;
             width: 80px;
@@ -130,7 +130,26 @@
             }
 
         }
-    }
+
+        .resize-font-size {
+            margin-left: 20px;
+            user-select: none;
+            .wrapper-button {
+                height: 40px;
+                width: 40px;
+                border: 2px solid white;
+                border-radius: 7px;
+                margin-inline: 5px;
+                font-family: "Josefin Sans Regular";
+                cursor: pointer;
+                
+                &:hover {
+                    background-color: white;
+                    color: black;
+                }
+            }
+        }
+    } // Toggler
 
     .navlista {
         // TÍTULO 'GREASE'
@@ -259,18 +278,18 @@
 
 
 // RESPONSIVIDADE DA NAVBAR
-@media only screen and (max-width: 504px) {
+@media only screen and (max-width: 634px) {
     .navbar {
         justify-content: left;
 
-        .navlista:not(:nth-child(2)) {
-            display: none
+        #links-meio {
+            a:not(#grease) {
+                display: none
+            }
         }
-        .navlista a:not(#grease) {display: none}
         
-        .navlista:first-child{
-            display: initial;
-            margin-right: 20px;
+        .navlista.itens-direita{
+            display: none;
         }
         .container-icon-menu {
             position: absolute;
