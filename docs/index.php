@@ -114,7 +114,7 @@
             </div> <!-- .wrapper-content-main -->
             
             <div class="wrapper-content-main" data-aos="fade-right" data-aos-anchor-placement="top-bottom">
-                <a href="sobre.php"><button type="button" class="animation-scale btn-home">Sobre o musical</button></a>
+                <button type="button" class="animation-scale btn-home" onclick="window.location.href='sobre.php'">Sobre o musical</button>
             </div> <!-- .wrapper-content-main -->
         </div> <!-- .wh100 .flex-collumn -->
 

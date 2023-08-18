@@ -14,7 +14,7 @@
 // Bug -> body e o html fica com altura 0
 html, body {
     height: 100%;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 // Configurações do Body
@@ -52,11 +52,11 @@ h1 {
 }
 
 h2 {
-    font-size: 1.5em;
+    font-size: 1.75em;
 }
 
 h3 {
-    font-size: 1.25em;
+    font-size: 1.5em;
 }
 h4 {
     font-size: 1.1em;
@@ -179,6 +179,18 @@ button {
 
 
 
+// Monitor grande
+@media only screen and (min-width: 1440px) {
+    html, body {
+        font-size: 24px;
+    }
+}
+// Monitor médio
+@media only screen and (max-width: 1024px) {
+    html, body {
+        font-size: 20px;
+    }
+}
 // Tablet
 @media only screen and (max-width: 768px) {
     html, body {

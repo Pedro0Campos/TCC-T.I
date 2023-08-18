@@ -204,13 +204,15 @@ function musicPlayer () {
     function openCloseMusicPlayer() {
         let lista_classes = Array.prototype.slice.call(music_player.classList)
 
-        // Está oculta
         if (lista_classes.includes('ocult-container')) {
+            // Exibir o music player
             music_player.classList.remove('ocult-container')
             body.classList.add('disable-scroll')
         } else {
+            // Ocultar o music player
             music_player.classList.add('ocult-container')
             body.classList.remove('disable-scroll')
+            audio.pause()
         }
     }
     
@@ -228,7 +230,12 @@ function musicPlayer () {
         tipoReproducao = 'musicas'
 
         musica = musicas[index]
-        updateContent(musica)
+
+        if (audio.src.split('docs/')[1] == musica.src) {
+            updateContent(musica, mesmaMusica=true)
+        } else {
+            updateContent(musica)
+        }
         openCloseMusicPlayer()
 
     })
@@ -264,14 +271,20 @@ function musicPlayer () {
     // --------------------------------
 
     // Atualizar conteúdo
-    function updateContent(musica) {
+    function updateContent(musica, mesmaMusica=false) {
         document.querySelector('#music-name').innerHTML = musica.nome 
         document.querySelector('#music-artist').innerHTML = musica.artista
         document.querySelector('#music-image-large').src = musica.largeImage
         document.querySelector('#music-image-small').src = musica.smallImage
+        
+        let tempoAtual = 0
+        if (mesmaMusica) {
+            tempoAtual = audio.currentTime
+        }
         music_player.style.background = musica.background 
         audio.src = musica.src
         audio.play()
+        audio.currentTime = tempoAtual
 
         if ('mediaSession' in navigator) {
             navigator.mediaSession.metadata = new MediaMetadata({
