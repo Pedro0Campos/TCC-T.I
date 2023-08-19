@@ -76,6 +76,9 @@
 
 html, body {
   height: 100%;
+}
+
+html {
   font-size: 20px;
 }
 
@@ -83,7 +86,7 @@ body {
   background-color: var(--backg-color);
   color: var(--text-color);
   font-family: Inter;
-  padding-top: 4.5em;
+  padding-top: 72px;
   overflow-x: hidden;
 }
 
@@ -192,22 +195,22 @@ button {
 }
 
 @media only screen and (min-width: 1440px) {
-  html, body {
+  html {
     font-size: 24px;
   }
 }
 @media only screen and (max-width: 1024px) {
-  html, body {
+  html {
     font-size: 20px;
   }
 }
 @media only screen and (max-width: 768px) {
-  html, body {
+  html {
     font-size: 16px;
   }
 }
 @media only screen and (max-width: 425px) {
-  html, body {
+  html {
     font-size: 14px;
   }
   .display-425px {

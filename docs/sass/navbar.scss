@@ -52,6 +52,7 @@
             width: 80px;
             display: block;
             position: relative;
+            cursor: pointer;
 
             i, .ball {
                 position: absolute;
@@ -141,6 +142,7 @@
                 border-radius: 7px;
                 margin-inline: 5px;
                 font-family: "Josefin Sans Regular";
+                font-size: 18px;
                 cursor: pointer;
                 
                 &:hover {
@@ -170,6 +172,7 @@
 
         
     .itens-direita {
+        margin-inline-end: 10px;
         .duplo-li a {
             margin: 0;
         }
@@ -178,7 +181,10 @@
 
     // CONTAINER DO ÍCONE DE MENU
     .container-icon-menu {
+        position: absolute;
+        right: -10px;
         display: none;
+        // height: 100%;
 
           .menu {
             background-color: transparent;
@@ -292,10 +298,7 @@
             display: none;
         }
         .container-icon-menu {
-            position: absolute;
             display: initial;
-            right: 20px;
-            font-size: 1.4rem;
         }   
     }
 }
