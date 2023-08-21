@@ -1,0 +1,78 @@
+#area{
+  background-color:#EEEEEE;
+  border:none;
+  border-radius:15px;
+  width:100%;
+}
+
+#com{
+    border-bottom: solid;
+    border-bottom-color: #E6E6E6;
+    text-align: center;
+}
+
+#ifr{
+   background-color:#EEEEEE; 
+
+}
+
+#but{
+    border-top: solid;
+    border-top-color: #E6E6E6;
+}
+
+#divComent{
+  background-color:#EEEEEE;
+  border:none;
+  border-radius:15px;
+  width:100%;
+}
+
+#textInput{
+  float:left;
+  background-color:#E6E6E6;
+  padding-left:5px;
+  font-size:18px;
+  border:none;
+  height:42px;
+  width:92%;
+  border-radius: 50px;
+}
+
+img{
+    width: 33px;
+    height: 33px;
+    text-align: center;
+}
+h2{
+  font-family: JosefinSans;
+}
+
+iframe{
+    width: 100%;
+    height: 300px;
+    border: none;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+  outline: revert;
+  width: 40px;
+  height: 40px;
+}
+.emoji-button {
+    font-size: 24px;
+    cursor: pointer;
+  }
+  .emoji-list {
+    display: none;
+    position: absolute;
+    bottom: 50px;
+    right: 10px;
+    z-index: 1;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    cursor: pointer;
+  }

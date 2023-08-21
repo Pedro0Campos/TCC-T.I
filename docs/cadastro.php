@@ -95,7 +95,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <!-- Estilos do site -->
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/form.css">
-    <!-- <link rel="stylesheet" href="css/home.css"> -->
+    <link rel="stylesheet" href="css/utils.css">
     <link rel="stylesheet" href="css/navbar.css">
     
     <!-- Scripts do site -->
