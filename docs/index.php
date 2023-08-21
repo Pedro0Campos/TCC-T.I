@@ -23,6 +23,7 @@ include('php/verify_darkmode.php');
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/carrossel.css">
     <link rel="stylesheet" href="css/music-player.css">
+    <link rel="stylesheet" href="css/comentarios.css">
 
     <!-- Scripts do site -->
     <script src="js/navbar.js"></script>
@@ -303,18 +304,16 @@ include('php/verify_darkmode.php');
 
         </section> <!--.section-impar -->
 
-        <section class="section-theme-black section2">
-
-            <div class="" data-aos="fade">
+        <section class="section-theme-black section4">
 
                 <div id="area">
                     <br>
                     <div id="com">
                         <h1>Comentários</h1>
                     </div>
-                    <div id="ifr">
+                    <!-- <div id="ifr">
                         <iframe src="iframe.php" allowfullscreen></iframe>
-                    </div>
+                    </div> -->
                     <div id="but"></div>
                     <br>
 
@@ -465,7 +464,7 @@ include('php/verify_darkmode.php');
                             </script>
 
                             <button type="submit" onclick="window.alert('Comentário Enviado!')">
-                                <img src="imagens/enviar.png">
+                                <img src="imgs/home/comentarios/enviar.png">
                             </button>
                         </form>
 
@@ -473,8 +472,7 @@ include('php/verify_darkmode.php');
                     <br>
                 </div>
 
-            </div>
-        </section>
+        </section>  <!-- .section-theme-black.section4 -->
 
 
     </main>

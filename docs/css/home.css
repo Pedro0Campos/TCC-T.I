@@ -101,6 +101,9 @@ section.section2 .retro-line {
 section.section3 {
   min-height: 450px;
 }
+section.section4 {
+  position: relative;
+}
 
 .flex-collumn {
   display: flex;
