@@ -104,7 +104,7 @@ function getTracks(type='musics') {
             "artista": "Celly Campello",
             "largeImage": "musics/imgs/banho-de-lua.png",
             "smallImage": "musics/imgs/banho-de-lua.png",
-            "background": "##e6cd5a",
+            "background": "#e6cd5a",
             "src": "musics/Banho De Lua (Tintarella Di Luna).mp3"
         },
         {
@@ -112,8 +112,24 @@ function getTracks(type='musics') {
             "artista": "Tom Jobim",
             "largeImage": "musics/imgs/garota-de-ipanema.png",
             "smallImage": "musics/imgs/garota-de-ipanema.png",
-            "background": "##e6cd5a",
+            "background": "#e6cd5a",
             "src": "musics/Garota De Ipanema.mp3"
+        },
+        {
+            "nome": "Can't Stop Lovin' You",
+            "artista": "Ray Charles",
+            "largeImage": "musics/imgs/cant-stop.jpg",
+            "smallImage": "musics/imgs/cant-stop.jpg",
+            "background": "#ca2068",
+            "src": "musics/cant-sop.mp4"
+        },
+        {
+            "nome": "Chove Chuva",
+            "artista": "Jorge Ben",
+            "largeImage": "musics/imgs/chove-chuva.jpg",
+            "smallImage": "musics/imgs/chove-chuva.jpg",
+            "background": "#cba98c",
+            "src": "musics/chove-chuva.mp3"
         }
     ]
 
@@ -122,7 +138,8 @@ function getTracks(type='musics') {
         [
             listaMusicas[11],
              listaMusicas[12], 
-             listaMusicas[13]],
+             listaMusicas[13],
+             listaMusicas[15]],
 
         // Elvis à Johnny Cash
         [
