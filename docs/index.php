@@ -307,13 +307,44 @@ include('php/verify_darkmode.php');
         <section class="section-theme-black section4">
 
                 <div id="area">
-                    <br>
-                    <div id="com">
-                        <h1>Comentários</h1>
+
+                    <h3>Comentários</h3>
+
+                    <h3>10 comentários</h3>
+                        <!-- <iframe src="iframe.php" allowfullscreen></iframe> -->
+
+                    <div class="container-comentario">     
+                        <!-- <img src="imgs/home/comentarios/usuario.png"> -->
+                        <h2>Olá</h2>
+                        <h2>Olá</h2>
+                        <h2>Olá</h2>
+                        <h2>Olá</h2>
+                        <h2>Olá</h2>
+                        <h2>Olá</h2>
+                        <h2>Olá</h2>
+                        <h2>Olá</h2>
+                        <h2>Olá</h2>
+                        <h2>Olá</h2>
+                        <h2>Olá</h2>
+                        <h2>Olá</h2>
+                        <h2>Olá</h2>
+                        <h2>Olá</h2>
+                        <h2>Olá</h2>
+                        <h2>Olá</h2>
+                        <h2>Olá</h2>
+                        <h2>Olá</h2>
+                        <h2>Olá</h2>
+                        <h2>Olá</h2>
+                        <h2>Olá</h2>
+                        <h2>Olá</h2>
+                        <h2>Olá</h2>
+                        <h2>Olá</h2>
+                        <h2>Olá</h2>
+                        <h2>Olá</h2>
+                        <h2>Olá</h2>
+                        <h2>Olá</h2>
+                        <h2>Olá</h2>
                     </div>
-                    <!-- <div id="ifr">
-                        <iframe src="iframe.php" allowfullscreen></iframe>
-                    </div> -->
                     <div id="but"></div>
                     <br>
 

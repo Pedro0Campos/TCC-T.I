@@ -3,10 +3,17 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/utils.css">
     <title></title>
     
 
     <style>
+        body {
+            background: none;
+            margin: 0;
+            padding: 0
+        }
         #a {
             border-bottom: solid;
             border-bottom-color: #E6E6E6;
@@ -17,10 +24,6 @@
             width: 90px;
             height: 85px;
             text-align: center;
-        }
-
-        h2 {
-            font-family: JosefinSans;
         }
 
         td {
@@ -50,7 +53,7 @@
 </head>
 <body bgcolor="EEEEEE">
 
-       <h4><div id="a"><u><h2>34 Comentários</h2></u></div></h4>
+       <div id="a"><u><h3>34 Comentários</h3></u></div>
        
        <table>     
             <tr>
