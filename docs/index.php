@@ -24,6 +24,7 @@ include('php/verify_darkmode.php');
     <link rel="stylesheet" href="css/carrossel.css">
     <link rel="stylesheet" href="css/music-player.css">
     <link rel="stylesheet" href="css/comentarios.css">
+    <link rel="stylesheet" href="css/form.css">
 
     <!-- Scripts do site -->
     <script src="js/navbar.js"></script>
@@ -134,7 +135,7 @@ include('php/verify_darkmode.php');
 
                 <div class="wrapper-content-main side-bar side-bar-style-1" data-aos="fade-down">
                     <div class="box-title2 border-box padding">
-                        <h2>Conheça as música que refletem os anos <span>50</span></h2>
+                        <h2>Conheça as músicas que refletem os anos <span>50</span></h2>
                     </div> <!-- .box-title2 .border-box .padding-->
                 </div> <!-- .wrapper-content-main side-bar side-bar-style-1 -->
 
@@ -308,53 +309,51 @@ include('php/verify_darkmode.php');
 
                 <div id="area">
 
-                    <h3>Comentários</h3>
+                    <div class="header">
+                        <h3 class="title">Comentários</h3>
+                    </div>
 
-                    <h3>10 comentários</h3>
+                    <div class="header-quant-coment">
+                        <h3>3 comentários</h3>
+                    </div>
                         <!-- <iframe src="iframe.php" allowfullscreen></iframe> -->
 
                     <div class="container-comentario">     
-                        <!-- <img src="imgs/home/comentarios/usuario.png"> -->
-                        <h2>Olá</h2>
-                        <h2>Olá</h2>
-                        <h2>Olá</h2>
-                        <h2>Olá</h2>
-                        <h2>Olá</h2>
-                        <h2>Olá</h2>
-                        <h2>Olá</h2>
-                        <h2>Olá</h2>
-                        <h2>Olá</h2>
-                        <h2>Olá</h2>
-                        <h2>Olá</h2>
-                        <h2>Olá</h2>
-                        <h2>Olá</h2>
-                        <h2>Olá</h2>
-                        <h2>Olá</h2>
-                        <h2>Olá</h2>
-                        <h2>Olá</h2>
-                        <h2>Olá</h2>
-                        <h2>Olá</h2>
-                        <h2>Olá</h2>
-                        <h2>Olá</h2>
-                        <h2>Olá</h2>
-                        <h2>Olá</h2>
-                        <h2>Olá</h2>
-                        <h2>Olá</h2>
-                        <h2>Olá</h2>
-                        <h2>Olá</h2>
-                        <h2>Olá</h2>
-                        <h2>Olá</h2>
+
+                        <div class="wrapper-comentario">
+                            <p class="name-user">Roberto Soares</p>
+                            <p class="comentario">
+                                Lorem ipsum dolor sit amet. Et quisquam accusamus ut perferendis inventore id doloribus laborum et quos alias ea obcaecati Quis ut consequuntur dolor. Aut consequatur cumque qui culpa excepturi sit quaerat omnis qui sunt delectus sed voluptatum vitae qui aliquam eius. Ea accusantium rerum aut enim modi sed magnam...
+                            </p>
+                        </div>
+                        
+                        <div class="wrapper-comentario">
+                            <p class="name-user">Roberto Soares</p>
+                            <p class="comentario">
+                                Lorem ipsum dolor sit amet. Et quisquam accusamus ut perferendis inventore id doloribus laborum et quos alias ea obcaecati Quis ut consequuntur dolor. Aut consequatur cumque qui culpa excepturi sit quaerat omnis qui sunt delectus sed voluptatum vitae qui aliquam eius. Ea accusantium rerum aut enim modi sed magnam...
+                            </p>
+                        </div>
+
+                        <div class="wrapper-comentario">
+                            <p class="name-user">Roberto Soares</p>
+                            <p class="comentario">
+                                Lorem ipsum dolor sit amet. Et quisquam accusamus ut perferendis inventore id doloribus laborum et quos alias ea obcaecati Quis ut consequuntur dolor. Aut consequatur cumque qui culpa excepturi sit quaerat omnis qui sunt delectus sed voluptatum vitae qui aliquam eius. Ea accusantium rerum aut enim modi sed magnam...
+                            </p>
+                        </div>
+
                     </div>
                     <div id="but"></div>
-                    <br>
-
+                    
                     <div id="divComent">
-
-                        <form action="index.php">
+                        
+                        <form action="index.php" class="flexCenterVH wh100">
                             <input type="text" id="textInput" placeholder="Aa" />
-                            &nbsp;
+                            <div class="emoji-button flexCenterVH" id="emojiButton"></div>
 
-                            <div class="emoji-button" id="emojiButton">😀</div>
+                            <button type="submit" onclick="window.alert('Comentário Enviado!')">
+                                <img src="imgs/home/comentarios/enviar.svg">
+                            </button>
+
                             <div class="emoji-list" id="emojiList">
                                 <span>🙂</span>
                                 <span>😀</span>
@@ -478,29 +477,28 @@ include('php/verify_darkmode.php');
                                 const textInput = document.getElementById("textInput");
 
                                 emojiButton.addEventListener("click", () => {
-                                    emojiList.style.display = emojiList.style.display === "none" ? "block" : "none";
+                                    emojiList.classList.toggle('mostrar')
                                 });
-
+                                
                                 emojiList.addEventListener("click", event => {
-                                    const selectedEmoji = event.target.textContent;
-                                    textInput.value += selectedEmoji;
-                                    emojiList.style.display = "none";
+                                    if (event.target.id != 'emojiList') {
+                                        const selectedEmoji = event.target.textContent;
+                                        textInput.value += selectedEmoji;
+                                        emojiList.classList.toggle('mostrar')
+                                    } else {
+                                        emojiList.classList.toggle('mostrar')
+                                    }
                                 });
 
                                 document.addEventListener("click", event => {
                                     if (!emojiButton.contains(event.target) && !emojiList.contains(event.target)) {
-                                        emojiList.style.display = "none";
+                                        emojiList.classList.remove('mostrar')
                                     }
                                 });
                             </script>
-
-                            <button type="submit" onclick="window.alert('Comentário Enviado!')">
-                                <img src="imgs/home/comentarios/enviar.png">
-                            </button>
                         </form>
 
                     </div>
-                    <br>
                 </div>
 
         </section>  <!-- .section-theme-black.section4 -->

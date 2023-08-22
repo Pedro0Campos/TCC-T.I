@@ -94,18 +94,18 @@ button {
 // ===================================================
 // Scrollbar
 
-// ::-webkit-scrollbar {
-//     width: 12.5px;
-//     height: 8px;
-//     background-color: white;
-// }
+::-webkit-scrollbar {
+    width: 8px;
+}
 
-// ::-webkit-scrollbar-thumb {
-//     background: rgb(187, 187, 187);
-//     border-radius: 30px;
-//     height: 50px;
-//     width: 50px;
-// }
+::-webkit-scrollbar-track {
+    background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #7B7B7B;
+    border-radius: 20px;
+}
 // ===================================================
 
 

@@ -144,6 +144,19 @@ button {
   font-family: "Josefin Sans Medium";
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #7B7B7B;
+  border-radius: 20px;
+}
+
 .animation-title {
   width: fit-content;
   /*Animação*/

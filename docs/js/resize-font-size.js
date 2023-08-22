@@ -5,14 +5,12 @@ function resizeFontSize () {
     
     function diminuir() {
         let atual = Number(window.getComputedStyle(html).getPropertyValue('font-size').split('px')[0])
-        console.log(`${atual - 2}px`);
         html.style.fontSize = `${atual - 2}px`  
     }
     
     function aumentar () {
         let atual = Number(window.getComputedStyle(html).getPropertyValue('font-size').split('px')[0])
-        console.log(`${atual}px`);
-        html.style.fontSize = `${atual + 2}px`
+        if (atual <= 26) { html.style.fontSize = `${atual + 2}px` }
     }
 }
 

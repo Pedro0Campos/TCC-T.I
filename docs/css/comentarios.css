@@ -2,16 +2,30 @@
   position: absolute;
   bottom: 0;
   background-color: #EEEEEE;
+  color: black;
   border: none;
   border-radius: 15px 15px 0 0;
   width: 100%;
-  height: 85%;
 }
-#area #com {
-  border-bottom: solid;
-  border-bottom-color: #E6E6E6;
+#area .header {
+  border-bottom: solid rgba(67, 62, 62, 0.1);
   text-align: center;
   padding: 15px 0 15px 0;
+}
+#area .header h3 {
+  font-size: 1em;
+}
+#area .header-quant-coment {
+  border-bottom: solid rgba(67, 62, 62, 0.1);
+  padding: 7px 0 0 0;
+}
+#area .header-quant-coment h3 {
+  width: fit-content;
+  border-bottom: solid rgb(245, 0, 0);
+  padding-left: 35px;
+  font-size: 1em;
+  transform: translateY(2px);
+  padding-bottom: 7px;
 }
 #area #ifr {
   background-color: #EEEEEE;
@@ -20,58 +34,27 @@
   border-top: solid;
   border-top-color: #E6E6E6;
 }
-#area #divComent {
-  background-color: #EEEEEE;
-  border: none;
-  border-radius: 15px;
-  width: 100%;
-}
-#area #textInput {
-  float: left;
-  background-color: #E6E6E6;
-  padding-left: 5px;
-  font-size: 18px;
-  border: none;
-  height: 42px;
-  width: 92%;
-  border-radius: 50px;
-}
-#area img {
-  width: 33px;
-  height: 33px;
-  text-align: center;
-}
-#area button {
-  all: unset;
-  cursor: pointer;
-  outline: revert;
-  width: 40px;
-  height: 40px;
-}
-#area .emoji-button {
-  font-size: 24px;
-  cursor: pointer;
-}
-#area .emoji-list {
-  display: none;
-  position: absolute;
-  bottom: 50px;
-  right: 10px;
-  z-index: 1;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  padding: 10px;
-  cursor: pointer;
-}
 #area .container-comentario {
   height: 300px;
   overflow-y: scroll;
   color: black;
   padding: 0 30px 0 30px;
-  margin: 0 15px 0 15px;
+  margin: 20px 15px 20px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
-#area .container-comentario .coment-text {
+#area .container-comentario .wrapper-comentario {
+  background-color: white;
+  padding: 20px;
+  border-radius: 30px;
+}
+#area .container-comentario .wrapper-comentario .name-user {
+  margin-bottom: 15px;
+}
+#area .container-comentario .wrapper-comentario .comentario {
   color: #686868;
+  padding-left: 10px;
 }
 #area .container-comentario::-webkit-scrollbar {
   width: 4px;
@@ -82,6 +65,67 @@
 #area .container-comentario::-webkit-scrollbar-thumb {
   background-color: #7B7B7B;
   border-radius: 20px;
+}
+#area #divComent {
+  background-color: #EEEEEE;
+  border: none;
+  border-radius: 15px;
+  width: 100%;
+  height: 70px;
+}
+#area #divComent form {
+  gap: 20px;
+}
+#area #divComent #textInput {
+  float: left;
+  background-color: #E6E6E6;
+  padding-left: 5px;
+  font-size: 18px;
+  border: none;
+  height: 40px;
+  width: 70%;
+  border-radius: 50px;
+  outline: none;
+  padding-left: 15px;
+}
+#area #divComent button {
+  all: unset;
+  cursor: pointer;
+  outline: none;
+  width: 40px;
+  height: 40px;
+}
+#area #divComent button img {
+  height: 100%;
+  aspect-ratio: 1/1;
+}
+#area #divComent .emoji-button {
+  font-size: 30px;
+  height: 40px;
+  aspect-ratio: 1/1;
+  cursor: pointer;
+  background-image: url("../imgs/home/comentarios/emoji.png");
+  background-size: cover;
+}
+#area #divComent .emoji-list {
+  display: none;
+  position: absolute;
+  bottom: 50px;
+  right: 10px;
+  left: 10px;
+  z-index: 1;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  border-radius: 30px;
+  box-shadow: 4px 4px 10px rgba(62, 62, 62, 0.405);
+}
+#area #divComent .emoji-list span {
+  cursor: pointer;
+}
+#area #divComent .emoji-list.mostrar {
+  display: block;
 }
 
 /*# sourceMappingURL=comentarios.css.map */

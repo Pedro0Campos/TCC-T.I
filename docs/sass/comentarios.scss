@@ -3,16 +3,33 @@
     position: absolute;
     bottom: 0;
     background-color: #EEEEEE;
+    color: black;
     border: none;
     border-radius: 15px 15px 0 0;
     width: 100%;
-    height: 85%;
+    // height: 85%;
     
-    #com {
-        border-bottom: solid;
-        border-bottom-color: #E6E6E6;
+    .header {
+        border-bottom: solid rgba(67, 62, 62, 0.1);
         text-align: center;
         padding: 15px 0 15px 0;
+        h3 {
+            font-size: 1em;
+        }
+    }
+    
+    .header-quant-coment {
+        border-bottom: solid rgba(67, 62, 62, 0.1);
+        padding: 7px 0 0 0;
+        
+        h3 {
+            width: fit-content;
+            border-bottom: solid rgb(245, 0, 0);
+            padding-left: 35px;
+            font-size: 1em;
+            transform: translateY(2px);
+            padding-bottom: 7px;
+        }
     }
     
     #ifr {
@@ -25,65 +42,28 @@
         border-top-color: #E6E6E6;
     }
     
-    #divComent {
-        background-color: #EEEEEE;
-        border: none;
-        border-radius: 15px;
-        width: 100%;
-    }
-    
-    #textInput {
-        float: left;
-        background-color: #E6E6E6;
-        padding-left: 5px;
-        font-size: 18px;
-        border: none;
-        height: 42px;
-        width: 92%;
-        border-radius: 50px;
-    }
-    
-    img {
-        width: 33px;
-        height: 33px;
-        text-align: center;
-    }
-    
-    button {
-        all: unset;
-        cursor: pointer;
-        outline: revert;
-        width: 40px;
-        height: 40px;
-    }
-    
-    .emoji-button {
-        font-size: 24px;
-        cursor: pointer;
-    }
-    
-    .emoji-list {
-        display: none;
-        position: absolute;
-        bottom: 50px;
-        right: 10px;
-        z-index: 1;
-        background-color: #fff;
-        border: 1px solid #ccc;
-        padding: 10px;
-        cursor: pointer;
-    }
-
     .container-comentario {
         // background-color: rgba(255, 0, 0, 0.467);
         height: 300px;
         overflow-y: scroll;
         color: black;
         padding: 0 30px 0 30px;
-        margin: 0 15px 0 15px;
+        margin: 20px 15px 20px 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
 
-        .coment-text {
-            color: #686868;
+        .wrapper-comentario {
+            background-color: white;
+            padding: 20px;
+            border-radius: 30px;
+            .name-user {
+                margin-bottom: 15px;
+            }
+            .comentario {
+                color: #686868;
+                padding-left: 10px;
+            }
         }
 
 
@@ -99,6 +79,73 @@
             background-color: #7B7B7B;
             border-radius: 20px;
         }
-    }
+    }  // .container-comentario
 
+    #divComent {
+        background-color: #EEEEEE;
+        border: none;
+        border-radius: 15px;
+        width: 100%;
+        height: 70px;
+        
+        form {
+            gap: 20px;
+        }
+
+        #textInput {
+            float: left;
+            background-color: #E6E6E6;
+            padding-left: 5px;
+            font-size: 18px;
+            border: none;
+            height: 40px;
+            width: 70%;
+            border-radius: 50px;
+            outline: none;
+            padding-left: 15px;
+        }
+
+        button {
+            all: unset;
+            cursor: pointer;
+            outline: none;
+            width: 40px;
+            height: 40px;
+            img {
+                height: 100%;
+                aspect-ratio: 1/1;
+            }
+        }
+        
+        .emoji-button {
+            font-size: 30px;
+            height: 40px;
+            aspect-ratio: 1/1;
+            cursor: pointer;
+            background-image: url('../imgs/home/comentarios/emoji.png');
+            background-size: cover;
+        }
+        
+        .emoji-list {
+            display: none;
+            position: absolute;
+            bottom: 50px;
+            right: 10px;
+            left: 10px;
+            z-index: 1;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+            border-radius: 30px;
+            box-shadow: 4px 4px 10px rgba(62, 62, 62, 0.405);
+            span {
+                cursor: pointer;
+            }
+
+            &.mostrar {
+                display: block;
+            }
+        }    
+    }
 }
