@@ -30,6 +30,9 @@ section {
             right: 0;
             z-index: -1;
         }
+        #SandyDanny.scrollHide {
+            opacity: 0;
+          }
     }
 
     &.section2 {

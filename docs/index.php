@@ -122,7 +122,7 @@ include('php/verify_darkmode.php');
                 </div> <!-- .wrapper-content-main -->
             </div> <!-- .wh100 .flex-collumn -->
 
-            <img src="imgs/home/sandy-danny-light.png" alt="Sanddy e Danny - Grease" class="sandy-danny" data-aos="fade-up">
+            <img src="imgs/home/sandy-danny-light.png" alt="Sanddy e Danny - Grease" class="sandy-danny" id="SandyDanny" data-aos="fade-up">
 
         </section> <!-- .section-impar -->
 
@@ -529,6 +529,9 @@ include('php/verify_darkmode.php');
 
     <!-- Import Splide -->
     <script src="splide/js/splide.min.js"></script>
+
+    <!-- Scroll Home -->
+    <script src="js/scrolling.js"></script>
 </body>
 
 </html>
