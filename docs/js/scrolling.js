@@ -2,7 +2,7 @@ const SandyDanny = document.getElementById('SandyDanny')
 const SandyDannyClassList = SandyDanny.classList
 window.addEventListener('scroll', () => {
     console.log(window.screen.height)
-  if (window.scrollY >= window.screen.height - 450) {
+  if (window.scrollY >= window.screen.height - 500) {
     if (!SandyDannyClassList.contains('scrollHide')) {
         SandyDannyClassList.add('scrollHide')
     }
