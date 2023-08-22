@@ -75,8 +75,8 @@ $height-option-bar: 100px;
     --text-color-80: #000000cc;
     --link-color: #45CFE1;
 
-    --second-color: #6ba5f2;
-    --second-color-50: #6ba5f280;
+    --second-color: #4925B0;
+    --second-color-50: #4a25b085;
     --third-color: #00109d;
 
     --sect-par-backg-color: #000;
@@ -92,21 +92,20 @@ $height-option-bar: 100px;
 // ===================================================
 // Darkmode
 .darkmode:root {
-    --backg-color: #121111;
+    --backg-color: #000000;
     --text-color: #FEFCF3;
     --text-color-50: #FFFFFF80;
     --text-color-80: #FFFFFFcc;
     
-    --second-color: #A167FF;
-    --second-color-50: #A167FF80;
+    --second-color: #8F00FF;
+    --second-color-50: #9000ff74;
     --third-color: #C6A4FF;
     
     // Formulário - login e cadastro
-    --backg-form: #242424;
-    --backg-camada-2: #121111;
+    --backg-form: #000000;
+    --backg-camada-2: #000000;
 }
 // ===================================================
-
 
 
 // ===================================================
