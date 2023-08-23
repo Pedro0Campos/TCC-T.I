@@ -323,34 +323,38 @@ include('php/verify_darkmode.php');
                         <div class="wrapper-comentario">
                             <p class="name-user">Roberto Soares</p>
                             <p class="comentario">
-                                Lorem ipsum dolor sit amet. Et quisquam accusamus ut perferendis inventore id doloribus laborum et quos alias ea obcaecati Quis ut consequuntur dolor. Aut consequatur cumque qui culpa excepturi sit quaerat omnis qui sunt delectus sed voluptatum vitae qui aliquam eius. Ea accusantium rerum aut enim modi sed magnam...
-                            </p>
-                        </div>
-                        
-                        <div class="wrapper-comentario">
-                            <p class="name-user">Roberto Soares</p>
-                            <p class="comentario">
-                                Lorem ipsum dolor sit amet. Et quisquam accusamus ut perferendis inventore id doloribus laborum et quos alias ea obcaecati Quis ut consequuntur dolor. Aut consequatur cumque qui culpa excepturi sit quaerat omnis qui sunt delectus sed voluptatum vitae qui aliquam eius. Ea accusantium rerum aut enim modi sed magnam...
+                                Lorem ipsum dolor sit amet.
                             </p>
                         </div>
 
                         <div class="wrapper-comentario">
                             <p class="name-user">Roberto Soares</p>
                             <p class="comentario">
-                                Lorem ipsum dolor sit amet. Et quisquam accusamus ut perferendis inventore id doloribus laborum et quos alias ea obcaecati Quis ut consequuntur dolor. Aut consequatur cumque qui culpa excepturi sit quaerat omnis qui sunt delectus sed voluptatum vitae qui aliquam eius. Ea accusantium rerum aut enim modi sed magnam...
+                                Lorem ipsum dolor sit amet.
                             </p>
                         </div>
 
+                        <div class="wrapper-comentario">
+                            <p class="name-user">Roberto Soares</p>
+                            <p class="comentario">
+                                Lorem ipsum dolor sit amet.
+                            </p>
+                        </div>
                     </div>
                     <div id="but"></div>
                     
                     <div id="divComent">
                         
-                        <form action="index.php" class="flexCenterVH wh100">
-                            <input type="text" id="textInput" placeholder="Aa" />
+                        <form action="php/comentar.php" class="flexCenterVH wh100" onsubmit="return check_comentario()">
+                            <div class="wrapper-input">
+                                <input type="text" id="input-comentario" name="comentario" placeholder="Aa"
+                                />
+                                <span class='msg-erro' id="erro"><i class='fa-solid fa-circle-exclamation'></i>
+                            </div>
+                            
                             <div class="emoji-button flexCenterVH" id="emojiButton"></div>
 
-                            <button type="submit" onclick="window.alert('Comentário Enviado!')">
+                            <button type="submit">
                                 <img src="imgs/home/comentarios/enviar.svg">
                             </button>
 
@@ -532,6 +536,9 @@ include('php/verify_darkmode.php');
 
     <!-- Scroll Home -->
     <script src="js/scrolling.js"></script>
+
+    <!-- Check form -->
+    <script src="js/check_form.js"></script>
 </body>
 
 </html>
