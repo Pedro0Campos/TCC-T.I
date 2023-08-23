@@ -129,7 +129,7 @@ function getTracks(type='musics') {
             "largeImage": "musics/imgs/chove-chuva.jpg",
             "smallImage": "musics/imgs/chove-chuva.jpg",
             "background": "#cba98c",
-            "src": "musics/chove-chuva.mp3"
+            "src": "Jorge-Ben-Chove-Chuva.mp3"
         }
     ]
 
