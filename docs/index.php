@@ -345,15 +345,16 @@ include('php/verify_darkmode.php');
                     
                     <div id="divComent">
                         
-                        <form action="php/comentar.php" class="flexCenterVH wh100" onsubmit="return check_comentario()">
+                        <form action="php/comentar.php" class="flexCenterVH wh100" onsubmit="return check_comentario()" method="post">
                             <div class="wrapper-input">
                                 <input type="text" id="input-comentario" name="comentario" placeholder="Aa"
                                 />
+                                <!-- <input type="hidden" name="token" value="<?php echo md5(rand(0, 999999)) ?>"/> -->
                                 <span class='msg-erro' id="erro"><i class='fa-solid fa-circle-exclamation'></i>
                             </div>
                             
                             <div class="emoji-button flexCenterVH" id="emojiButton"></div>
-
+                            
                             <button type="submit">
                                 <img src="imgs/home/comentarios/enviar.svg">
                             </button>
@@ -478,7 +479,7 @@ include('php/verify_darkmode.php');
                             <script>
                                 const emojiButton = document.getElementById("emojiButton");
                                 const emojiList = document.getElementById("emojiList");
-                                const textInput = document.getElementById("textInput");
+                                const input = document.getElementById("input-comentario");
 
                                 emojiButton.addEventListener("click", () => {
                                     emojiList.classList.toggle('mostrar')
@@ -487,7 +488,7 @@ include('php/verify_darkmode.php');
                                 emojiList.addEventListener("click", event => {
                                     if (event.target.id != 'emojiList') {
                                         const selectedEmoji = event.target.textContent;
-                                        textInput.value += selectedEmoji;
+                                        input.value += selectedEmoji;
                                         emojiList.classList.toggle('mostrar')
                                     } else {
                                         emojiList.classList.toggle('mostrar')

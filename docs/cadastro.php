@@ -24,6 +24,7 @@
 $nome = $email = $senha = '';
 $nomeErro = $emailErro = $senhaErro = '';  // Mensagens de erro
 
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_GET['verify_darkmode'])) {
         header('Location: ?');
@@ -71,8 +72,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } else {
             // Código para inserir os valores no banco
             cadastrar($nome, $email, $senha, $conexao_db);
-            
+
+            // Coletar o id
+            $consulta = consultar_user($condicao, $conexao_db);
+            $cadastro = mysqli_fetch_row($consulta);
+
             // Trocar de tela
+            session_start();
+            $_SESSION['login'] = ['id' => $cadastro[0], 'nome' => $cadastro[1]];
             header('Location: index.php');
             die();
         }

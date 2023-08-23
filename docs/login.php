@@ -55,8 +55,9 @@
 
             if (verificarSenha($senha, $cadastro[3]) && $cadastro != NULL) {
                 // Login
-                
-                
+                session_start();
+                $_SESSION['login'] = ['id' => $cadastro[0], 'nome' => $cadastro[1]];
+
                 // Trocar de tela
                 header("Location: index.php");
                 die();
