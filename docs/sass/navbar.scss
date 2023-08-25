@@ -24,6 +24,25 @@
         height: 50px;
     }
 }
+.resize-font-size {
+    margin-left: 20px;
+    user-select: none;
+    .wrapper-button {
+        height: 40px;
+        width: 40px;
+        border: 2px solid white;
+        border-radius: 7px;
+        margin-inline: 5px;
+        font-family: "Josefin Sans Regular";
+        font-size: 18px;
+        cursor: pointer;
+        
+        &:hover {
+            background-color: white;
+            color: black;
+        }
+    }
+}
 
 // NAVBAR PRINCIPAL
 .navbar {
@@ -131,26 +150,6 @@
             }
 
         }
-
-        .resize-font-size {
-            margin-left: 20px;
-            user-select: none;
-            .wrapper-button {
-                height: 40px;
-                width: 40px;
-                border: 2px solid white;
-                border-radius: 7px;
-                margin-inline: 5px;
-                font-family: "Josefin Sans Regular";
-                font-size: 18px;
-                cursor: pointer;
-                
-                &:hover {
-                    background-color: white;
-                    color: black;
-                }
-            }
-        }
     } // Toggler
 
     .navlista {
@@ -251,6 +250,11 @@
         max-width: 100%;
         height: 100%;
         float: right;
+
+
+        .resize-font-size {
+            display: flex;
+        }
     
         // LISTA DE ITENS DA NAVBAR
         .navlista {
@@ -284,7 +288,7 @@
 
 
 // RESPONSIVIDADE DA NAVBAR
-@media only screen and (max-width: 634px) {
+@media only screen and (max-width: 677px) {
     .navbar {
         justify-content: left;
 
@@ -300,5 +304,9 @@
         .container-icon-menu {
             display: initial;
         }   
+
+        .resize-font-size {
+            display: none;
+        }
     }
 }

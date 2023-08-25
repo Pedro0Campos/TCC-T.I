@@ -53,15 +53,16 @@
             $consulta = consultar_user($condicao, $conexao_db);
             $cadastro = mysqli_fetch_row($consulta);
 
-            if (verificarSenha($senha, $cadastro[3]) && $cadastro != NULL) {
-                // Login
-                session_start();
-                $_SESSION['login'] = ['id' => $cadastro[0], 'nome' => $cadastro[1]];
-
-                // Trocar de tela
-                header("Location: index.php");
-                die();
-
+            if ($cadastro != NULL) {
+                if (verificarSenha($senha, $cadastro[3])) {
+                    // Login
+                    session_start();
+                    $_SESSION['login'] = ['id' => $cadastro[0], 'nome' => $cadastro[1]];
+    
+                    // Trocar de tela
+                    header("Location: index.php");
+                    die();
+                }
             } else {
                 $senhaErro = 'Dados inválidos';
             }

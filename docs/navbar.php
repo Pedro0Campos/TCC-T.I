@@ -55,7 +55,7 @@
             <?php } else {?>
 
             <li class="duplo-li">
-                <span>Olá <?php echo explode(" ", $_SESSION['login']['nome'])[0]  ?>!</span>
+                <span>Olá <?php echo mb_strimwidth(explode(" ", $_SESSION['login']['nome'])[0], 0, 15, "..."); ?>!</span>
                 <a href="php/logout.php" class="animation-link">Sair?</a>
             </li>
             <a class="" href="perfiluser.php"><img class="img-user" src="../docs/imgs/icon-user.png" alt=""></a>
@@ -79,7 +79,17 @@
     
     <!-- NAVBAR - LATERAL -->
     <div class="container-navbar-lateral">
+
         <div class="navbar-lateral" id="navbar-lateral">
+            <div class="resize-font-size">
+                <div class="wrapper-button flexCenterVH" id="aumentar-texto" aria-label="Aumentar texto" style="border: none">
+                    A+
+                </div>
+                <div class="wrapper-button flexCenterVH" id="diminuir-texto" aria-label="Diminuir texto" style="border: none">
+                    A-
+                </div>
+            </div>
+            
             <div class="navlista">
                 <a class="animation-link" class="animation-link" href="index.php">Home</a>
                 <a class="animation-link" href="sobre.php">Sobre</a>
