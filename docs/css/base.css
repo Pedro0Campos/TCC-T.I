@@ -79,7 +79,7 @@ html, body {
 }
 
 html {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 body {
@@ -209,12 +209,12 @@ button {
 
 @media only screen and (min-width: 1440px) {
   html {
-    font-size: 24px;
+    font-size: 20px;
   }
 }
 @media only screen and (max-width: 1024px) {
   html {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 @media only screen and (max-width: 768px) {

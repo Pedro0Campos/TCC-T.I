@@ -1,5 +1,6 @@
 <?php
-include('php/verify_darkmode.php');
+    include('php/verify_darkmode.php');
+    include('database/db.php')
 ?>
 
 <!DOCTYPE html>
@@ -307,204 +308,197 @@ include('php/verify_darkmode.php');
 
         <section class="section-theme-black section4">
 
-                <div id="area">
+            <a name="area-comentarios"></a>
+            <div id="area">
 
-                    <div class="header">
-                        <h3 class="title">Comentários</h3>
-                    </div>
+                <div class="header"><h3 class="title">Comentários</h3></div>
 
-                    <div class="header-quant-coment">
-                        <h3>3 comentários</h3>
-                    </div>
-                        <!-- <iframe src="iframe.php" allowfullscreen></iframe> -->
+                <div class="header-quant-coment"><h3>3 comentários</h3></div>
 
-                    <div class="container-comentario">     
+                <div class="container-comentario">
 
-                        <div class="wrapper-comentario">
-                            <p class="name-user">Roberto Soares</p>
-                            <p class="comentario">
-                                Lorem ipsum dolor sit amet.
-                            </p>
-                        </div>
-
-                        <div class="wrapper-comentario">
-                            <p class="name-user">Roberto Soares</p>
-                            <p class="comentario">
-                                Lorem ipsum dolor sit amet.
-                            </p>
-                        </div>
-
-                        <div class="wrapper-comentario">
-                            <p class="name-user">Roberto Soares</p>
-                            <p class="comentario">
-                                Lorem ipsum dolor sit amet.
-                            </p>
-                        </div>
-                    </div>
-                    <div id="but"></div>
-                    
-                    <div id="divComent">
-                        
-                        <form action="php/comentar.php" class="flexCenterVH wh100" onsubmit="return check_comentario()" method="post">
-                            <div class="wrapper-input">
-                                <input type="text" id="input-comentario" name="comentario" placeholder="Aa"
-                                />
-                                <!-- <input type="hidden" name="token" value="<?php echo md5(rand(0, 999999)) ?>"/> -->
-                                <span class='msg-erro' id="erro"><i class='fa-solid fa-circle-exclamation'></i>
+                    <?php 
+                        $query = "SELECT usuarios.nome, comentarios.txtComent from usuarios, comentarios where (usuarios.idUser = comentarios.idUser)";
+                        $consulta = mysqli_query($conexao_db, $query);
+                        while($comentario = mysqli_fetch_assoc($consulta)) {
+                            echo "
+                            <div class='wrapper-comentario'>
+                                <p class='name-user'>$comentario[nome]</p>
+                                <p class='comentario'>
+                                    $comentario[txtComent]
+                                </p>
                             </div>
+                            ";
                             
-                            <div class="emoji-button flexCenterVH" id="emojiButton"></div>
-                            
-                            <button type="submit">
-                                <img src="imgs/home/comentarios/enviar.svg">
-                            </button>
+                        }
 
-                            <div class="emoji-list" id="emojiList">
-                                <span>🙂</span>
-                                <span>😀</span>
-                                <span>🥳</span>
-                                <span>😄</span>
-                                <span>😁</span>
-                                <span>😅</span>
-                                <span>😆</span>
-                                <span>🤣</span>
-                                <span>😂</span>
-                                <span>🙃</span>
-                                <span>😉</span>
-                                <span>😊</span>
-                                <span>😇</span>
-                                <span>😎</span>
-                                <span>🤓</span>
-                                <span>🧐</span>
-                                <span>🥳</span>
-                                <span>🥰</span>
-                                <span>😍</span>
-                                <span>🤩</span>
-                                <span>😘</span>
-                                <span>😗</span>
-                                <span>😊</span>
-                                <span>😚</span>
-                                <span>😙</span>
-                                <span>😋</span>
-                                <span>😛</span>
-                                <span>😜</span>
-                                <span>🤪</span>
-                                <span>😝</span>
-                                <span>🤑</span>
-                                <span>🤗</span>
-                                <span>🤭</span>
-                                <span>🤫</span>
-                                <span>🤔</span>
-                                <span>😐</span>
-                                <span>🤐</span>
-                                <span>🤨</span>
-                                <span>😑</span>
-                                <span>😶</span>
-                                <span>😏</span>
-                                <span>😒</span>
-                                <span>🙄</span>
-                                <span>😬</span>
-                                <span>😮‍💨</span>
-                                <span>🤥</span>
-                                <span>😪</span>
-                                <span>😴</span>
-                                <span>😌</span>
-                                <span>😔</span>
-                                <span>🤤</span>
-                                <span>😷</span>
-                                <span>🤒</span>
-                                <span>🤕</span>
-                                <span>🤢</span>
-                                <span>🤮</span>
-                                <span>🤧</span>
-                                <span>🥵</span>
-                                <span>🥶</span>
-                                <span>🥴</span>
-                                <span>😵</span>
-                                <span>🤯</span>
-                                <span>😕</span>
-                                <span>😟</span>
-                                <span>🙁</span>
-                                <span>☹️</span>
-                                <span>😮</span>
-                                <span>😯</span>
-                                <span>😲</span>
-                                <span>😳</span>
-                                <span>🥺</span>
-                                <span>😦</span>
-                                <span>😧</span>
-                                <span>😨</span>
-                                <span>😰</span>
-                                <span>😥</span>
-                                <span>😢</span>
-                                <span>😭</span>
-                                <span>😱</span>
-                                <span>😖</span>
-                                <span>😣</span>
-                                <span>😞</span>
-                                <span>😓</span>
-                                <span>😩</span>
-                                <span>😫</span>
-                                <span>🥱</span>
-                                <span>😤</span>
-                                <span>😡</span>
-                                <span>😠</span>
-                                <span>🤬</span>
-                                <span>💋</span>
-                                <span>💌</span>
-                                <span>💘</span>
-                                <span>💝</span>
-                                <span>💖</span>
-                                <span>💗</span>
-                                <span>💓</span>
-                                <span>💞</span>
-                                <span>💕</span>
-                                <span>💟</span>
-                                <span>❣</span>
-                                <span>💔</span>
-                                <span>❤️‍🔥</span>
-                                <span>❤️‍🩹</span>
-                                <span>❤️</span>
-                                <span>🧡</span>
-                                <span>💛</span>
-                                <span>💚</span>
-                                <span>💙</span>
-                                <span>💜</span>
-                                <span>🤎</span>
-                                <span>🖤</span>
-                                <span>🤍</span>
-                                <span>💯</span>
-                            </div>
+                    ?>
 
-                            <script>
-                                const emojiButton = document.getElementById("emojiButton");
-                                const emojiList = document.getElementById("emojiList");
-                                const input = document.getElementById("input-comentario");
-
-                                emojiButton.addEventListener("click", () => {
-                                    emojiList.classList.toggle('mostrar')
-                                });
-                                
-                                emojiList.addEventListener("click", event => {
-                                    if (event.target.id != 'emojiList') {
-                                        const selectedEmoji = event.target.textContent;
-                                        input.value += selectedEmoji;
-                                        emojiList.classList.toggle('mostrar')
-                                    } else {
-                                        emojiList.classList.toggle('mostrar')
-                                    }
-                                });
-
-                                document.addEventListener("click", event => {
-                                    if (!emojiButton.contains(event.target) && !emojiList.contains(event.target)) {
-                                        emojiList.classList.remove('mostrar')
-                                    }
-                                });
-                            </script>
-                        </form>
-
-                    </div>
                 </div>
+                <div id="but"></div>
+                
+                <div id="divComent">
+                    
+                    <form action="php/comentar.php" class="flexCenterVH wh100" onsubmit="return check_comentario()" method="post">
+                        <div class="wrapper-input">
+                            <input type="text" id="input-comentario" name="comentario" placeholder="Aa"
+                            />
+                            <!-- <input type="hidden" name="token" value="<?php echo md5(rand(0, 999999)) ?>"/> -->
+                            <span class='msg-erro' id="erro"><i class='fa-solid fa-circle-exclamation'></i>
+                        </div>
+                        
+                        <div class="emoji-button flexCenterVH" id="emojiButton"></div>
+                        
+                        <button type="submit">
+                            <img src="imgs/home/comentarios/enviar.svg">
+                        </button>
+
+                        <div class="emoji-list" id="emojiList">
+                            <span>🙂</span>
+                            <span>😀</span>
+                            <span>🥳</span>
+                            <span>😄</span>
+                            <span>😁</span>
+                            <span>😅</span>
+                            <span>😆</span>
+                            <span>🤣</span>
+                            <span>😂</span>
+                            <span>🙃</span>
+                            <span>😉</span>
+                            <span>😊</span>
+                            <span>😇</span>
+                            <span>😎</span>
+                            <span>🤓</span>
+                            <span>🧐</span>
+                            <span>🥳</span>
+                            <span>🥰</span>
+                            <span>😍</span>
+                            <span>🤩</span>
+                            <span>😘</span>
+                            <span>😗</span>
+                            <span>😊</span>
+                            <span>😚</span>
+                            <span>😙</span>
+                            <span>😋</span>
+                            <span>😛</span>
+                            <span>😜</span>
+                            <span>🤪</span>
+                            <span>😝</span>
+                            <span>🤑</span>
+                            <span>🤗</span>
+                            <span>🤭</span>
+                            <span>🤫</span>
+                            <span>🤔</span>
+                            <span>😐</span>
+                            <span>🤐</span>
+                            <span>🤨</span>
+                            <span>😑</span>
+                            <span>😶</span>
+                            <span>😏</span>
+                            <span>😒</span>
+                            <span>🙄</span>
+                            <span>😬</span>
+                            <span>😮‍💨</span>
+                            <span>🤥</span>
+                            <span>😪</span>
+                            <span>😴</span>
+                            <span>😌</span>
+                            <span>😔</span>
+                            <span>🤤</span>
+                            <span>😷</span>
+                            <span>🤒</span>
+                            <span>🤕</span>
+                            <span>🤢</span>
+                            <span>🤮</span>
+                            <span>🤧</span>
+                            <span>🥵</span>
+                            <span>🥶</span>
+                            <span>🥴</span>
+                            <span>😵</span>
+                            <span>🤯</span>
+                            <span>😕</span>
+                            <span>😟</span>
+                            <span>🙁</span>
+                            <span>☹️</span>
+                            <span>😮</span>
+                            <span>😯</span>
+                            <span>😲</span>
+                            <span>😳</span>
+                            <span>🥺</span>
+                            <span>😦</span>
+                            <span>😧</span>
+                            <span>😨</span>
+                            <span>😰</span>
+                            <span>😥</span>
+                            <span>😢</span>
+                            <span>😭</span>
+                            <span>😱</span>
+                            <span>😖</span>
+                            <span>😣</span>
+                            <span>😞</span>
+                            <span>😓</span>
+                            <span>😩</span>
+                            <span>😫</span>
+                            <span>🥱</span>
+                            <span>😤</span>
+                            <span>😡</span>
+                            <span>😠</span>
+                            <span>🤬</span>
+                            <span>💋</span>
+                            <span>💌</span>
+                            <span>💘</span>
+                            <span>💝</span>
+                            <span>💖</span>
+                            <span>💗</span>
+                            <span>💓</span>
+                            <span>💞</span>
+                            <span>💕</span>
+                            <span>💟</span>
+                            <span>❣</span>
+                            <span>💔</span>
+                            <span>❤️‍🔥</span>
+                            <span>❤️‍🩹</span>
+                            <span>❤️</span>
+                            <span>🧡</span>
+                            <span>💛</span>
+                            <span>💚</span>
+                            <span>💙</span>
+                            <span>💜</span>
+                            <span>🤎</span>
+                            <span>🖤</span>
+                            <span>🤍</span>
+                            <span>💯</span>
+                        </div>
+
+                        <script>
+                            const emojiButton = document.getElementById("emojiButton");
+                            const emojiList = document.getElementById("emojiList");
+                            const input = document.getElementById("input-comentario");
+
+                            emojiButton.addEventListener("click", () => {
+                                emojiList.classList.toggle('mostrar')
+                            });
+                            
+                            emojiList.addEventListener("click", event => {
+                                if (event.target.id != 'emojiList') {
+                                    const selectedEmoji = event.target.textContent;
+                                    input.value += selectedEmoji;
+                                    emojiList.classList.toggle('mostrar')
+                                } else {
+                                    emojiList.classList.toggle('mostrar')
+                                }
+                            });
+
+                            document.addEventListener("click", event => {
+                                if (!emojiButton.contains(event.target) && !emojiList.contains(event.target)) {
+                                    emojiList.classList.remove('mostrar')
+                                }
+                            });
+                        </script>
+                    </form>
+
+                </div>
+            </div>
 
         </section>  <!-- .section-theme-black.section4 -->
 

@@ -2,9 +2,14 @@
     include('database/db.php');
     include('php/form.php');
     include('php/consultar_user.php');  // Consultar usuários no banco
+    include('php/verify_darkmode.php');
 ?>
 
 <?php
+    if (isset($_SESSION['login'])) {
+        header('Location: index.php');
+    }
+
 /*
     Esse script (cadastro.php) faz uma verificação do input pelo mesmo arquivo que está o formulário.
 
@@ -21,9 +26,8 @@
 */
 
 // Criação das variáveis
-$nome = $email = $senha = '';
-$nomeErro = $emailErro = $senhaErro = '';  // Mensagens de erro
-
+$nome = $sobrenome = $email = $senha = '';
+$nomeErro = $sobrenomeErro = $emailErro = $senhaErro = '';  // Mensagens de erro
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_GET['verify_darkmode'])) {
@@ -31,16 +35,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     // Pegar e tratar os valores
     $nome = input_post('nome');
+    $sobrenome = input_post('sobrenome');
     $email = input_post('email');
     $senha = input_post('senha');
 
+
     // Tratamento do formulário e retorno de erros para o usuário
+    
+    $fatiado = explode(" ", $nome);
+    $invalido = false;
+    foreach ($fatiado as $valor) {
+        if (strlen($valor) >= 20) {
+            $invalido = true;
+        }
+    }
+
     if (empty($nome)) {  // Nome vazio
         $nomeErro = 'Nome é obrigatório.';
     } else {
         if (!preg_match("|^[\pL\s]+$|u", $nome)) {
             $nomeErro = 'Apenas letras e espaços.';
-        } else if (strlen($nome) < 3) {
+        } else if (strlen($nome) < 3 or $invalido) {
             $nomeErro = 'Nome inválido';
         }
     }
@@ -71,7 +86,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             
         } else {
             // Código para inserir os valores no banco
-            cadastrar($nome, $email, $senha, $conexao_db);
+            cadastrar($nome, $email, $senha, 'usuarios', $conexao_db);
 
             // Coletar o id
             $consulta = consultar_user($condicao, $conexao_db);
@@ -88,7 +103,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 
 
-<?php  include('php/verify_darkmode.php') ?>
 <!DOCTYPE html>
 <html lang="pt-br" <?php if ($darkmode) {echo "class='darkmode'";} ?>>
     <head>
@@ -156,6 +170,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 }
                             ?>
                         </div>
+
+                        <!-- <div class="conteiner-input">
+                            <fieldset>
+                                <legend>Sobrenome</legend>
+                                <input id="sobrenome" class="input_form animation-scale" type="text" name="sobrenome" placeholder="Sobrenome" value="<?php echo $sobrenome ?>">
+                            </fieldset>
+                            <?php
+                                if ($sobrenomeErro != '') {
+                                    echo "<span id='erro_email' class='msg_erro'><i class='fa-solid fa-circle-exclamation'></i> $sobrenomeErro </span>";
+                                }
+                            ?>
+                        </div> -->
                         
                         <div class="conteiner-input">
                             <fieldset>
@@ -192,8 +218,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
         </div>
     </main>
-    
-    <!-- <script src="js/change_background.js"></script>  -->
     <!-- AOS - Animation in scrool -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>

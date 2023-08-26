@@ -13,11 +13,17 @@
         session_start();
 
         if (isset($_SESSION['login'])) {
-            echo $comentario;
-            echo "<br><br>Falta inserir o comentário no banco e exibir eles";
+            $stmt = $conexao_db->prepare("INSERT INTO comentarios (idUser, txtComent) VALUES (?, ?)");
+            $stmt->bind_param('is', $_SESSION['login']['id'], $comentario);
+            $stmt->execute();
+            header('Location: ../index.php#area-comentarios');
+
+
         } else {
             header('Location: ../login.php');
         }
+    }
+        die();
 
         // $stmt = $conexao_db->prepare("INSERT INTO comentarios (idUser, txtComent) VALUES (?, ?)");
         // $stmt->bind_param('is', $comentario);
@@ -47,6 +53,5 @@
         //     header('Location: ../index.php');
         // }
     
-    }
     
-    ?>
+?>

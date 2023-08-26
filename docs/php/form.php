@@ -18,11 +18,11 @@
         return password_verify($senha, $hash);
     }
 
-    function cadastrar($nome, $email, $senha, $conexao_db) {
+    function cadastrar($nome, $email, $senha, $table, $conexao_db) {
         $senha = criptografarSenha($senha);
         
         $typeUser = 0;        
-        $stmt = $conexao_db->prepare("INSERT INTO usuarios (nome, email, senha, tipoUser) VALUES (?, ?, ?, ?)");
+        $stmt = $conexao_db->prepare("INSERT INTO $table (nome, email, senha, tipoUser) VALUES (?, ?, ?, ?)");
         $stmt->bind_param('sssi', $nome, $email, $senha, $typeUser);
 
         $stmt->execute();

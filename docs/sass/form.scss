@@ -135,6 +135,7 @@ div.content {
                         color: white;
                         background-color: var(--second-color);
                         font-size: 1em;
+                        border-radius: 30px;
                     }
         
                     .msg_erro {
@@ -261,5 +262,27 @@ div.content {
         float: none;
         width: 100% !important;
         height: 100%;
+
+        form {
+            height: auto !important;
+        }
+    }
+}
+
+// Desabilitar o lado esquerdo se a altura for menor ou igual a 715px
+@media only screen and (max-width: 1178px) {
+    div.form-left {
+        visibility: hidden;
+        display: none;
+    }
+
+    div.form-right {
+        float: none;
+        width: 100% !important;
+        height: 100%;
+
+        form {
+            height: auto !important;
+        }
     }
 }

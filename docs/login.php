@@ -7,6 +7,9 @@
 ?>
 
 <?php
+    if (isset($_SESSION['login'])) {
+        header('Location: index.php');
+    }
     /*
         Esse script (login.php) faz uma verificação do input pelo mesmo arquivo que está o formulário.
 

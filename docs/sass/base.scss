@@ -16,7 +16,7 @@ html, body {
     height: 100%;
 }
 html {
-    font-size: 20px;
+    font-size: 18px;
 }
 // Configurações do Body
 body{
@@ -183,13 +183,13 @@ button {
 // Monitor grande
 @media only screen and (min-width: 1440px) {
     html {
-        font-size: 24px;
+        font-size: 20px;
     }
 }
 // Monitor médio
 @media only screen and (max-width: 1024px) {
     html {
-        font-size: 20px;
+        font-size: 18px;
     }
 }
 // Tablet
