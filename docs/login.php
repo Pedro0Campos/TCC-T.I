@@ -90,9 +90,6 @@
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/utils.css">
     
-    <!-- Scripts do site -->
-    <script src="js/navbar.js"></script>
-
     <!-- AOS - Animation in scrool -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 

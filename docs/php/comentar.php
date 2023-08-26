@@ -16,7 +16,7 @@
             $stmt = $conexao_db->prepare("INSERT INTO comentarios (idUser, txtComent) VALUES (?, ?)");
             $stmt->bind_param('is', $_SESSION['login']['id'], $comentario);
             $stmt->execute();
-            header('Location: ../index.php#area-comentarios');
+            header('Location: ../index.php#comentarios');
 
 
         } else {

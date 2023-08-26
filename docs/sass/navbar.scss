@@ -1,48 +1,6 @@
 @use 'config';
 
 
-.itens-direita {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    .duplo-li {
-        list-style: none;
-        text-align: left;
-        display: inline-block;
-
-        span, a {
-            display: block;
-            color: white;
-        }
-        a {
-            margin: 0;
-            font-size: 0.9rem;
-            width: fit-content;
-        }
-    }
-    .img-user {
-        height: 50px;
-    }
-}
-.resize-font-size {
-    margin-left: 20px;
-    user-select: none;
-    .wrapper-button {
-        height: 40px;
-        width: 40px;
-        border: 2px solid white;
-        border-radius: 7px;
-        margin-inline: 5px;
-        font-family: "Josefin Sans Regular";
-        font-size: 18px;
-        cursor: pointer;
-        
-        &:hover {
-            background-color: white;
-            color: black;
-        }
-    }
-}
 
 // NAVBAR PRINCIPAL
 .navbar {
@@ -150,6 +108,27 @@
             }
 
         }
+
+        .resize-font-size {
+            margin-left: 20px;
+            user-select: none;
+            .wrapper-button {
+                height: 40px;
+                width: 40px;
+                border: 2px solid white;
+                border-radius: 7px;
+                margin-inline: 5px;
+                font-family: "Josefin Sans Regular";
+                font-size: 18px;
+                cursor: pointer;
+                
+                &:hover {
+                    background-color: white;
+                    color: black;
+                }
+            }
+        }
+        
     } // Toggler
 
     .navlista {
@@ -169,13 +148,31 @@
     }
 
 
-        
     .itens-direita {
-        margin-inline-end: 10px;
-        .duplo-li a {
-            margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: 10px;
+        .duplo-li {
+            list-style: none;
+            text-align: left;
+            display: inline-block;
+    
+            span, a {
+                display: block;
+                color: white;
+            }
+            a {
+                margin: 0;
+                font-size: 0.9rem;
+                width: fit-content;
+            }
+        }
+        .img-user {
+            height: 50px;
         }
     }
+        
 
 
     // CONTAINER DO ÍCONE DE MENU
@@ -241,41 +238,59 @@
     width: 100%;
     height: 100%;
     right: -100%;
+    // right: 0%;
     top: config.$alturaNAV;
     transition: right 0.4s ease-out;
 
     .navbar-lateral {
         background-color: #000;        
-        width: 350px;
-        max-width: 100%;
+        color: white;
+        width: 80%;
+        max-width: 200px;
         height: 100%;
         float: right;
+        overflow-y: scroll;
+        padding: 0 0 0 8px;
+        font-family: "Josefin Sans SemiBold";
 
+        a {
+            color: white !important;
+        }
+
+        .header {
+            height: 100px;
+        }
 
         .resize-font-size {
-            display: flex;
+            margin-bottom: 15px;
+            font-size: 20px;
+            .wrapper-button {
+                display: inline-block;
+                padding: 2.5px;
+            }
         }
     
-        // LISTA DE ITENS DA NAVBAR
-        .navlista {
-            margin: 10px 0 10px 20px;
-            a {
-                display: block;
-                width: fit-content;
-                color: white;
-                margin-bottom: 10px;
+        .wrapper-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .link {
+                padding: 10px 7.5px 10px 7.5px;
+                border-radius: 10px;
+                // background-color: blue;
+                // text-align: center;
+
+                &.active {
+                    background-color: var(--active-link-color);
+                }
+
+                i {
+                    margin-right: 7.5px;
+                }
             }
         }
 
-        .itens-direita {
-            flex-direction: row-reverse;
-            justify-content: left;
-            gap: 20px;
-        }
-
-        .cadastro {
-            margin-top: 40px;
-        }
     }
 }
 // QUANDO ESTIVER ABERTO
@@ -288,7 +303,7 @@
 
 
 // RESPONSIVIDADE DA NAVBAR
-@media only screen and (max-width: 677px) {
+@media only screen and (max-width: 700px) {
     .navbar {
         justify-content: left;
 

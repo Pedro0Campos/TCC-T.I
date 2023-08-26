@@ -40,9 +40,9 @@
         
         <!-- ITENS NO MEIO -->
         <div class="navlista" id="links-meio">
-            <a class="animation-link" href="index.php">Home</a>
-            <a id="grease" href="index.php" >Grease</a>
-            <a class="animation-link" href="sobre.php">Sobre</a>
+            <a class="animation-link" href="index.php#">Home</a>
+            <a id="grease" href="index.php#" >Grease</a>
+            <a class="animation-link" href="sobre.php#">Sobre</a>
         </div>
         <!-- ITENS NO MEIO -->
         
@@ -65,7 +65,7 @@
         
         <!-- CONTAINER - ICON MENU -->
         <div class="container-icon-menu" onclick="openNavLateral()">
-            <button class="menu" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Menu Lateral">
+            <button class="menu" aria-label="Menu Lateral">
                 <svg width="100" height="100" viewBox="0 0 100 100">
                     <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
                     <path class="line line2" d="M 20,50 H 80" />
@@ -75,31 +75,42 @@
         </div>
         <!-- CONTAINER - ICON MENU -->
     </div>
-    
+  
     
     <!-- NAVBAR - LATERAL -->
     <div class="container-navbar-lateral">
 
         <div class="navbar-lateral" id="navbar-lateral">
+
+            <div class="header">
+                Não sei o que vai ter aqui
+            </div>
             <div class="resize-font-size">
-                <div class="wrapper-button flexCenterVH" id="aumentar-texto" aria-label="Aumentar texto" style="border: none">
+                <div class="wrapper-button" id="aumentar-texto-sandwich" aria-label="Aumentar texto">
                     A+
                 </div>
-                <div class="wrapper-button flexCenterVH" id="diminuir-texto" aria-label="Diminuir texto" style="border: none">
+                <div class="wrapper-button" id="diminuir-texto-sandwich" aria-label="Diminuir texto">
                     A-
                 </div>
             </div>
             
-            <div class="navlista">
-                <a class="animation-link" class="animation-link" href="index.php">Home</a>
-                <a class="animation-link" href="sobre.php">Sobre</a>
-            </div>
-            <div class="navlista itens-direita cadastro">
-                <a class="animation-link" href="login.php" class="navitens">Login</a>
-                <a class="animation-link" href="cadastro.php" class="navitens">Cadastra-se</a>
+            <div class="wrapper-links">
+                <a class="link <?php if (strpos($_SERVER['SCRIPT_FILENAME'], 'index')) {echo "active";} ?>" href="index.php#">
+                    <i class="fa-solid fa-house-chimney"></i>Home
+                </a>
+                <a class="link <?php if (strpos($_SERVER['SCRIPT_FILENAME'], 'sobre')) {echo "active";} ?>" href="sobre.php#">
+                    <i class="fa-solid fa-comment"></i>Sobre
+                </a>
+                <a class="link" href="index.php#musicas">
+                    <i class="fa-solid fa-music"></i>Musicas
+                </a>
+                <a class="link" href="index.php#personagens">
+                <i class="fa-solid fa-user"></i>Personagens
+                </a>
             </div>
         </div>
     </div>
     
     <script src="js/darkmode.js"></script>
     <script src="js/resize-font-size.js"></script>
+    <script src="js/navbar.js"></script>

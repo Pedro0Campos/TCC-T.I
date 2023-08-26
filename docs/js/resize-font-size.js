@@ -1,6 +1,8 @@
 function resizeFontSize () {
     document.getElementById('diminuir-texto').addEventListener('click', diminuir)
     document.getElementById('aumentar-texto').addEventListener('click', aumentar)
+    document.getElementById('diminuir-texto-sandwich').addEventListener('click', diminuir)
+    document.getElementById('aumentar-texto-sandwich').addEventListener('click', aumentar)
     let html = document.querySelector('html')
     
     function diminuir() {

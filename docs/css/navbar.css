@@ -45,6 +45,7 @@
   --text-color-50: #00000080;
   --text-color-80: #000000cc;
   --link-color: #45CFE1;
+  --active-link-color: #6406ff;
   --second-color: #4925B0;
   --second-color-50: #4a25b085;
   --third-color: #00109d;
@@ -65,48 +66,6 @@
   --third-color: #C6A4FF;
   --backg-form: #000000;
   --backg-camada-2: #000000;
-}
-
-.itens-direita {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.itens-direita .duplo-li {
-  list-style: none;
-  text-align: left;
-  display: inline-block;
-}
-.itens-direita .duplo-li span, .itens-direita .duplo-li a {
-  display: block;
-  color: white;
-}
-.itens-direita .duplo-li a {
-  margin: 0;
-  font-size: 0.9rem;
-  width: fit-content;
-}
-.itens-direita .img-user {
-  height: 50px;
-}
-
-.resize-font-size {
-  margin-left: 20px;
-  user-select: none;
-}
-.resize-font-size .wrapper-button {
-  height: 40px;
-  width: 40px;
-  border: 2px solid white;
-  border-radius: 7px;
-  margin-inline: 5px;
-  font-family: "Josefin Sans Regular";
-  font-size: 18px;
-  cursor: pointer;
-}
-.resize-font-size .wrapper-button:hover {
-  background-color: white;
-  color: black;
 }
 
 .navbar {
@@ -202,6 +161,24 @@
   bottom: 10px;
   font-size: 6px;
 }
+.navbar #toggler .resize-font-size {
+  margin-left: 20px;
+  user-select: none;
+}
+.navbar #toggler .resize-font-size .wrapper-button {
+  height: 40px;
+  width: 40px;
+  border: 2px solid white;
+  border-radius: 7px;
+  margin-inline: 5px;
+  font-family: "Josefin Sans Regular";
+  font-size: 18px;
+  cursor: pointer;
+}
+.navbar #toggler .resize-font-size .wrapper-button:hover {
+  background-color: white;
+  color: black;
+}
 .navbar .navlista #grease {
   font-family: "Josefin Sans Regular";
   font-size: 1.3rem;
@@ -214,10 +191,27 @@
   color: white;
 }
 .navbar .itens-direita {
-  margin-inline-end: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 10px;
+}
+.navbar .itens-direita .duplo-li {
+  list-style: none;
+  text-align: left;
+  display: inline-block;
+}
+.navbar .itens-direita .duplo-li span, .navbar .itens-direita .duplo-li a {
+  display: block;
+  color: white;
 }
 .navbar .itens-direita .duplo-li a {
   margin: 0;
+  font-size: 0.9rem;
+  width: fit-content;
+}
+.navbar .itens-direita .img-user {
+  height: 50px;
 }
 .navbar .container-icon-menu {
   position: absolute;
@@ -277,30 +271,43 @@
 }
 .container-navbar-lateral .navbar-lateral {
   background-color: #000;
-  width: 350px;
-  max-width: 100%;
+  color: white;
+  width: 80%;
+  max-width: 200px;
   height: 100%;
   float: right;
+  overflow-y: scroll;
+  padding: 0 0 0 8px;
+  font-family: "Josefin Sans SemiBold";
+}
+.container-navbar-lateral .navbar-lateral a {
+  color: white !important;
+}
+.container-navbar-lateral .navbar-lateral .header {
+  height: 100px;
 }
 .container-navbar-lateral .navbar-lateral .resize-font-size {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+.container-navbar-lateral .navbar-lateral .resize-font-size .wrapper-button {
+  display: inline-block;
+  padding: 2.5px;
+}
+.container-navbar-lateral .navbar-lateral .wrapper-links {
   display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
-.container-navbar-lateral .navbar-lateral .navlista {
-  margin: 10px 0 10px 20px;
+.container-navbar-lateral .navbar-lateral .wrapper-links .link {
+  padding: 10px 7.5px 10px 7.5px;
+  border-radius: 10px;
 }
-.container-navbar-lateral .navbar-lateral .navlista a {
-  display: block;
-  width: fit-content;
-  color: white;
-  margin-bottom: 10px;
+.container-navbar-lateral .navbar-lateral .wrapper-links .link.active {
+  background-color: var(--active-link-color);
 }
-.container-navbar-lateral .navbar-lateral .itens-direita {
-  flex-direction: row-reverse;
-  justify-content: left;
-  gap: 20px;
-}
-.container-navbar-lateral .navbar-lateral .cadastro {
-  margin-top: 40px;
+.container-navbar-lateral .navbar-lateral .wrapper-links .link i {
+  margin-right: 7.5px;
 }
 
 .container-navbar-lateral.open {
@@ -311,7 +318,7 @@
   overflow: hidden;
 }
 
-@media only screen and (max-width: 677px) {
+@media only screen and (max-width: 700px) {
   .navbar {
     justify-content: left;
   }

@@ -25,10 +25,7 @@
     <link rel="stylesheet" href="css/carrossel.css">
     <link rel="stylesheet" href="css/music-player.css">
     <link rel="stylesheet" href="css/comentarios.css">
-    <link rel="stylesheet" href="css/form.css">
-
-    <!-- Scripts do site -->
-    <script src="js/navbar.js"></script>
+    <!-- <link rel="stylesheet" href="css/form.css"> -->
 
     <!-- AOS - Animation in scrool -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -122,15 +119,16 @@
                     <button type="button" class="animation-scale btn-home" onclick="window.location.href='sobre.php'">Sobre o musical</button>
                 </div> <!-- .wrapper-content-main -->
             </div> <!-- .wh100 .flex-collumn -->
-
+            
             <img src="imgs/home/sandy-danny-light.png" alt="Sanddy e Danny - Grease" class="sandy-danny" id="SandyDanny" data-aos="fade-up">
-
+            
+            
         </section> <!-- .section-impar -->
-
-
-
+        
+        
         <!-- Sessão 2 -->
         <section class="section-theme-black section2">
+            <a name="musicas"></a>
 
             <div class="retro-line flex-collumn wh100" data-aos="fade">
 
@@ -231,15 +229,15 @@
                         </div> <!-- .box-title2 .border-box .padding-->
                     </div> <!-- .wrapper-content-main side-bar side-bar-style-2 -->
                 </div>
-
+                
             </div> <!-- .retro-line .flex-collumn -->
         </section> <!-- .section-par .section2 -->
-
-
-
+        
+        
+        
         <!-- Sessão 3 -->
         <section class="section3">
-
+            <a name="personagens"></a>
             <div class="flex-collumn wh100">
 
                 <div class="wrapper-content-main side-bar side-bar-style-1" data-aos="fade-right">
@@ -308,7 +306,7 @@
 
         <section class="section-theme-black section4">
 
-            <a name="area-comentarios"></a>
+            <a name="comentarios"></a>
             <div id="area">
 
                 <div class="header"><h3 class="title">Comentários</h3></div>
@@ -323,7 +321,7 @@
                         while($comentario = mysqli_fetch_assoc($consulta)) {
                             echo "
                             <div class='wrapper-comentario'>
-                                <p class='name-user'>$comentario[nome]</p>
+                                <p class='name-user'>". mb_strimwidth($comentario['nome'], 0, 20, '...') ."</p>
                                 <p class='comentario'>
                                     $comentario[txtComent]
                                 </p>
@@ -333,7 +331,6 @@
                         }
 
                     ?>
-
                 </div>
                 <div id="but"></div>
                 
@@ -343,7 +340,6 @@
                         <div class="wrapper-input">
                             <input type="text" id="input-comentario" name="comentario" placeholder="Aa"
                             />
-                            <!-- <input type="hidden" name="token" value="<?php echo md5(rand(0, 999999)) ?>"/> -->
                             <span class='msg-erro' id="erro"><i class='fa-solid fa-circle-exclamation'></i>
                         </div>
                         
