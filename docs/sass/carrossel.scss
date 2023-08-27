@@ -1,8 +1,7 @@
 @use "config";
 
-
 // ===========================
-// Carrossel 
+// Carrossel Musicas
 // ===========================
 .carrossel-musica {
     margin: 15px 0px 15px 0;
@@ -33,7 +32,7 @@
         font-size: 0.78em;
         width: 100%;
         transition: transform ease-in-out 0.15s;
-        
+
         .wait_api {
             width: 100%;
             aspect-ratio: 1/1;
@@ -50,12 +49,12 @@
 
         .nome_musica {
             margin-top: 0.5em;
-            font-family: 'Josefin Sans Bold';
+            font-family: "Josefin Sans Bold";
             font-size: 1em;
         }
 
         .autor_musica {
-            font-family: 'Josefin Sans Regular';
+            font-family: "Josefin Sans Regular";
             font-size: 0.9em;
             margin-top: 0.3em;
         }
@@ -67,18 +66,18 @@
             background: transparent;
             opacity: 1;
         }
-    
+
         // SVG das setas
         .splide__arrow svg {
             fill: rgb(255, 255, 255);
         }
-    
+
         /* Seta pra direita */
         .splide__arrow--next {
             top: 14px;
             right: 10px;
         }
-    
+
         // Seta pra esquerda
         .splide__arrow--prev {
             top: 14px;
@@ -89,7 +88,7 @@
 }
 
 // Celular grande => 425px
-@media only screen and (max-width: 425px){
+@media only screen and (max-width: 425px) {
     .carrossel-musica {
         #carousel-title {
             text-decoration: none;
@@ -105,7 +104,7 @@
                 width: 0;
             }
         }
-    
+
         .splide__arrows {
             display: none;
         }
@@ -116,60 +115,56 @@
     }
 }
 
-
-
 // ===========================
 //carrossel playlists
 // ===========================
 .carrossel-playlists {
-    
     .splide__slide {
         min-height: 150px;
         aspect-ratio: 53/24;
         position: relative;
 
         .slide {
-            width: 100%; 
+            width: 100%;
             height: 100%;
             display: flex;
             align-items: end;
             border-radius: 10px;
-            
+
             background-repeat: no-repeat;
             background-size: 50%;
             background-position: bottom right;
 
-            
             &#slide-1 {
-                background-color: #00F4BE;
-                color: #D022FC;
-                background-image: url('../imgs/carrossel/playlist/banner-1-pequeno.png');
+                background-color: #00f4be;
+                color: #d022fc;
+                background-image: url("../imgs/carrossel/playlist/banner-1-pequeno.png");
             }
             &#slide-2 {
-                background-color: #FF3263;
-                color: #F8E00F;
-                background-image: url('../imgs/carrossel/playlist/banner-2-pequeno.png');
+                background-color: #ff3263;
+                color: #f8e00f;
+                background-image: url("../imgs/carrossel/playlist/banner-2-pequeno.png");
             }
             &#slide-3 {
-                background-color: #FFD5BC;
-                color: #FF8B03;
-                background-image: url('../imgs/carrossel/playlist/banner-3-pequeno.png');
+                background-color: #ffd5bc;
+                color: #ff8b03;
+                background-image: url("../imgs/carrossel/playlist/banner-3-pequeno.png");
             }
 
             .wrapper-text {
-                width: 45%;
-                margin: 10px;
+                width: 50%;
+                margin: 0 0 10px 10px;
                 h2 {
-                    font-family: 'Josefin Sans SemiBold';
+                    font-family: "Josefin Sans SemiBold";
+                    font-size: 1.6em;
                 }
                 p {
-                    font-family: 'Josefin Sans Bold';
+                    font-family: "Josefin Sans Bold";
                     font-size: 0.7em;
                 }
             }
-
         } //.slide
-        
+
         .banner {
             display: none;
         }
@@ -188,7 +183,7 @@
         .slide {
             background-image: none !important;
         }
-        
+
         .splide__slide {
             position: relative;
             margin-top: 40px;
@@ -200,11 +195,8 @@
                 height: calc(100% + 40px);
             }
         }
-
     }
 }
-
-
 
 // ===========================
 //carrossel personagens
@@ -276,9 +268,65 @@
     }
 }
 
-
 @media only screen and (max-width: 425px) {
     .carrossel-playlists {
         display: block;
+    }
+}
+
+// ===========================
+//carrossel Sobre
+// ===========================
+.carrossel-sobre {
+    margin: 50px 30px 10px 30px;
+    
+    .splide__slide {
+        background-color: transparent;
+        font-size: 14px;
+        transition: transform ease-in-out 0.15s;
+        
+        &:hover {
+            transform: scale(1) translate(1.5px, 3px);
+        }
+        img {
+            width: 100%;
+        }
+        .nome_pessoa {
+            margin-top: 0.5em;
+            font-family: 'Josefin Sans Medium';
+            font-size: 1em;
+        }
+    }
+    
+    // cor da seta
+    // .splide__arrow svg {
+        //     color: black;
+        // }
+        // descolamento da seta direita
+        // .splide__arrow--next {
+            //     top: 190px;
+            //     right: 1px;
+            // }
+            /*descolamento da seta esquerda*/
+            // .splide__arrow--prev {
+                //     display: "";
+    // }
+    .splide__pagination {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .carrossel-sobre {
+        .splide__slide {
+            width: calc(((100% + 10px) / 3) - 10px) !important;
+        }
+    }
+}
+@media only screen and (max-width: 375px) {
+    .carrossel-sobre {
+        .splide__slide {
+            width: calc(((100% + 10px) / 2) - 10px) !important;
+        }
     }
 }

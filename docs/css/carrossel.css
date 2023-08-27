@@ -48,7 +48,7 @@
   --link-color: #45CFE1;
   --active-link-color: #6406ff;
   --second-color: #4925B0;
-  --second-color-50: #4a25b085;
+  --second-color-50: #4925B080;
   --third-color: #00109d;
   --sect-par-backg-color: #000;
   --sect-par-text-color: #fff;
@@ -173,26 +173,27 @@
   background-position: bottom right;
 }
 .carrossel-playlists .splide__slide .slide#slide-1 {
-  background-color: #00F4BE;
-  color: #D022FC;
+  background-color: #00f4be;
+  color: #d022fc;
   background-image: url("../imgs/carrossel/playlist/banner-1-pequeno.png");
 }
 .carrossel-playlists .splide__slide .slide#slide-2 {
-  background-color: #FF3263;
-  color: #F8E00F;
+  background-color: #ff3263;
+  color: #f8e00f;
   background-image: url("../imgs/carrossel/playlist/banner-2-pequeno.png");
 }
 .carrossel-playlists .splide__slide .slide#slide-3 {
-  background-color: #FFD5BC;
-  color: #FF8B03;
+  background-color: #ffd5bc;
+  color: #ff8b03;
   background-image: url("../imgs/carrossel/playlist/banner-3-pequeno.png");
 }
 .carrossel-playlists .splide__slide .slide .wrapper-text {
-  width: 45%;
-  margin: 10px;
+  width: 50%;
+  margin: 0 0 10px 10px;
 }
 .carrossel-playlists .splide__slide .slide .wrapper-text h2 {
   font-family: "Josefin Sans SemiBold";
+  font-size: 1.6em;
 }
 .carrossel-playlists .splide__slide .slide .wrapper-text p {
   font-family: "Josefin Sans Bold";
@@ -282,6 +283,40 @@
 @media only screen and (max-width: 425px) {
   .carrossel-playlists {
     display: block;
+  }
+}
+.carrossel-sobre {
+  margin: 50px 30px 10px 30px;
+  /*descolamento da seta esquerda*/
+}
+.carrossel-sobre .splide__slide {
+  background-color: transparent;
+  font-size: 14px;
+  transition: transform ease-in-out 0.15s;
+}
+.carrossel-sobre .splide__slide:hover {
+  transform: scale(1) translate(1.5px, 3px);
+}
+.carrossel-sobre .splide__slide img {
+  width: 100%;
+}
+.carrossel-sobre .splide__slide .nome_pessoa {
+  margin-top: 0.5em;
+  font-family: "Josefin Sans Medium";
+  font-size: 1em;
+}
+.carrossel-sobre .splide__pagination {
+  display: none;
+}
+
+@media only screen and (max-width: 425px) {
+  .carrossel-sobre .splide__slide {
+    width: calc((100% + 10px) / 3 - 10px) !important;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .carrossel-sobre .splide__slide {
+    width: calc((100% + 10px) / 2 - 10px) !important;
   }
 }
 

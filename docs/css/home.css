@@ -47,7 +47,7 @@
   --link-color: #45CFE1;
   --active-link-color: #6406ff;
   --second-color: #4925B0;
-  --second-color-50: #4a25b085;
+  --second-color-50: #4925B080;
   --third-color: #00109d;
   --sect-par-backg-color: #000;
   --sect-par-text-color: #fff;
@@ -68,9 +68,6 @@
   --backg-camada-2: #000000;
 }
 
-section {
-  height: calc(100vh - 72px);
-}
 section.section-theme-black {
   background-color: var(--sect-par-backg-color);
   color: var(--sect-par-text-color);
@@ -79,7 +76,10 @@ section.section-theme-black .border-box {
   border-color: rgb(255, 255, 255);
 }
 section.section1 {
-  min-height: 520px;
+  min-height: calc(100vh - 72px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: relative;
 }
 section.section1 .sandy-danny {
@@ -93,9 +93,6 @@ section.section1 .sandy-danny {
 section.section1 #SandyDanny.scrollHide {
   opacity: 0;
 }
-section.section2 {
-  min-height: 820px;
-}
 section.section2 .retro-line {
   background-image: url("../imgs/home/retro-line.png");
   background-repeat: no-repeat;
@@ -103,19 +100,12 @@ section.section2 .retro-line {
   background-position: right;
 }
 section.section3 {
+  height: calc(100vh - 72px);
   min-height: 450px;
 }
 section.section4 {
   position: relative;
   min-height: 600px;
-}
-
-.flex-collumn {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 
 /* RESPONSIVIDADE */
@@ -130,8 +120,17 @@ section.section4 {
   }
 }
 @media only screen and (max-width: 425px) {
+  section.section1.background-grease {
+    background-image: url("../imgs/home/grease-phone.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100% 50%;
+    color: white;
+  }
+  section.section1.background-grease span.color {
+    color: white !important;
+  }
   section.section2 {
-    min-height: 1000px;
     padding-bottom: 120px;
     background-image: url("../imgs/home/section-2-bottom.png");
     background-repeat: no-repeat;

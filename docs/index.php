@@ -93,32 +93,32 @@
         </div>
     </div>
 
-    <?php
-    include('navbar.php');
-    ?>
 
+
+
+    <?php include('navbar.php') ?>
     <!-- CONTEÚDO -->
     <main>
         <!-- Sessão 1 -->
-        <section class="section1">
+        <section class="section1 padding background-grease">
 
-            <div class="wh100 flex-collumn">
-                <div class="wrapper-content-main" data-aos="fade-right">
-                    <div class="box-title1 border-box padding">
-                        <h1 class="JSMedium">Conheça tudo sobre o musical de <span>Grease</span></p>
-                    </div> <!-- .box-title1 .border-box .padding-->
-                </div> <!-- .wrapper-content-main -->
+            <div class="wrapper-content-main side-bar side-bar-style-1" data-aos="fade-right">
+                <div class="box-title1 border-box padding">
+                    <h1 class="JSMedium h1">Conheça tudo sobre o musical de <span class="color">Grease</span></h1>
+                </div> <!-- .box-title1 .border-box .padding-->
+            </div> <!-- .wrapper-content-main -->
 
+            <div class="ocult-425px">
                 <div class="wrapper-content-main" data-aos="fade-right">
                     <div class="box-title3 padding">
-                        <h3><span>“Uma viagem aos tempos da brilhantina”</span></h3>
+                        <h3 class="h3"><span>“Uma viagem aos tempos da brilhantina”</span></h3>
                     </div> <!-- .box-title3 .padding-->
                 </div> <!-- .wrapper-content-main -->
+            </div>
 
-                <div class="wrapper-content-main" data-aos="fade-right" data-aos-anchor-placement="top-bottom">
-                    <button type="button" class="animation-scale btn-home" onclick="window.location.href='sobre.php'">Sobre o musical</button>
-                </div> <!-- .wrapper-content-main -->
-            </div> <!-- .wh100 .flex-collumn -->
+            <div class="wrapper-content-main" data-aos="fade-right" data-aos-anchor-placement="top-bottom">
+                <button type="button" class="animation-scale btn-home" onclick="window.location.href='sobre.php'">Sobre o musical</button>
+            </div> <!-- .wrapper-content-main -->
             
             <img src="imgs/home/sandy-danny-light.png" alt="Sanddy e Danny - Grease" class="sandy-danny" id="SandyDanny" data-aos="fade-up">
             
@@ -127,14 +127,14 @@
         
         
         <!-- Sessão 2 -->
-        <section class="section-theme-black section2">
+        <section class="section-theme-black section2 padding">
             <a name="musicas"></a>
 
-            <div class="retro-line flex-collumn wh100" data-aos="fade">
+            <div class="retro-line wh100" data-aos="fade">
 
                 <div class="wrapper-content-main side-bar side-bar-style-1" data-aos="fade-down">
                     <div class="box-title2 border-box padding">
-                        <h2>Conheça as músicas que refletem os anos <span>50</span></h2>
+                        <h2 class="h2">Conheça as músicas que refletem os anos <span>50</span></h2>
                     </div> <!-- .box-title2 .border-box .padding-->
                 </div> <!-- .wrapper-content-main side-bar side-bar-style-1 -->
 
@@ -148,7 +148,7 @@
                                     <div class="splide__slide">
                                         <div id="slide-1" class="slide">
                                             <div class="wrapper-text">
-                                                <h2>Somente as músicas nacionais</h2>
+                                                <h2 class="h2">Somente as músicas nacionais</h2>
                                             </div>
                                         </div>
                                         <img class="banner" src="imgs/carrossel/playlist/banner-1-grande.png" alt="">
@@ -158,7 +158,7 @@
                                     <div class="splide__slide">
                                         <div id="slide-2" class="slide">
                                             <div class="wrapper-text">
-                                                <h2>Somentes as maiores</h2>
+                                                <h2 class="h2">Somentes as maiores</h2>
                                                 <p class="text">De Elvis à Johnny Cash</p>
                                             </div>
                                         </div>
@@ -169,7 +169,7 @@
                                     <div class="splide__slide">
                                         <div id="slide-3" class="slide">
                                             <div class="wrapper-text">
-                                                <h2>Músicas diretamente de Grease</h2>
+                                                <h2 class="h2">Músicas diretamente de Grease</h2>
                                             </div>
                                         </div>
                                         <img class="banner" src="imgs/carrossel/playlist/banner-3-grande.png" alt="">
@@ -184,7 +184,7 @@
                 <!-- Carrossel - Musicas -->
                 <div class="wrapper-content-main" data-aos="fade-right">
                     <div class="carrossel-musica splide" aria-labelledby="carousel-title">
-                        <h2 id="carousel-title">Explorar</h2>
+                        <h2 class="h3" id="carousel-title">Explorar</h2>
 
                         <!-- Caixa com opacidade (no final) para criar efeito de continuidade -->
                         <div class="opacity"></div>
@@ -209,7 +209,7 @@
                 <div class="ocult-425px">
                     <div class="wrapper-content-main" data-aos="fade-right">
                         <div class="mais-tocadas">
-                            <h3>MAIS TOCADAS</h3>
+                            <h3 class="h3">MAIS TOCADAS</h3>
                             <div class="side-bar side-bar-style-1">
                                 <div class="container-itens" id="itens-mais-tocadas">
                                     <p class="item" id="0">1. Summer Nights - Grease</p>
@@ -230,77 +230,74 @@
                     </div> <!-- .wrapper-content-main side-bar side-bar-style-2 -->
                 </div>
                 
-            </div> <!-- .retro-line .flex-collumn -->
-        </section> <!-- .section-par .section2 -->
+            </div> <!-- .retro-line wh100 -->
+        </section> <!-- .section-par .section2 .padding -->
         
         
         
         <!-- Sessão 3 -->
-        <section class="section3">
+        <section class="section3 padding">
             <a name="personagens"></a>
-            <div class="flex-collumn wh100">
 
-                <div class="wrapper-content-main side-bar side-bar-style-1" data-aos="fade-right">
-                    <div class="box-title2 border-box padding">
-                        <h2>Personagens <span class="sect2-title2 color-title_light">incríveis</span> merecem todo o reconhecimento</h2>
-                    </div> <!-- .box-title2 .border-box .padding-->
-                </div> <!-- .wrapper-content-main .side-bar side-bar-style-1 -->
+            <div class="wrapper-content-main side-bar side-bar-style-1" data-aos="fade-right">
+                <div class="box-title2 border-box padding">
+                    <h2 class="h2">Personagens <span class="sect2-title2 color-title_light">incríveis</span> merecem todo o reconhecimento</h2>
+                </div> <!-- .box-title2 .border-box .padding-->
+            </div> <!-- .wrapper-content-main .side-bar side-bar-style-1 -->
 
-                <div class="wrapper-content-main" data-aos="fade-right" data-aos-anchor-placement="top-bottom">
-                    <button type="button" onclick="showPopUp()" class="btn-home btn-retro animation-scale">Conheça os personagens</button>
-                </div> <!-- .wrapper-content-main -->
+            <div class="wrapper-content-main" data-aos="fade-right" data-aos-anchor-placement="top-bottom">
+                <button type="button" onclick="showPopUp()" class="btn-home btn-retro animation-scale">Conheça os personagens</button>
+            </div> <!-- .wrapper-content-main -->
 
-                <div class="fixed-container ocult-container" id="showPopUp">
-                    <div class="carrosel-personagens splide" id="popup">
-                        <div class="splide__track">
-                            <ul class="splide__list">
-                                <div class="splide__slide">
-                                    <img src="imgs/home/PopUpSandy.png" alt="">
-                                    <!--<p class="nome_musica">Sandy Olsson</p>-->
-                                </div>
-                                <div class="splide__slide">
-                                    <img src="imgs/home/PopUpDanny.png" alt="">
-                                    <!--<p class="nome_musica">Danny Zuko</p>-->
-                                </div>
-                                <div class="splide__slide">
-                                    <img src="imgs/home/PopUpJan.png" alt="">
-                                    <!--<p class="nome_musica">Betty Rizzo</p>-->
-                                </div>
-                                <div class="splide__slide">
-                                    <img src="imgs/home/PopUpPutzie.png" alt="">
-                                    <!--  <p class="nome_musica">Marty Marachino</p>-->
-                                </div>
-                                <div class="splide__slide">
-                                    <img src="imgs/home/PopUpFrenchy.png" alt="">
-                                    <!--  <p class="nome_musica">Kenickie Willians</p>-->
-                                </div>
+            <div class="fixed-container ocult-container" id="showPopUp">
+                <div class="carrosel-personagens splide" id="popup">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <div class="splide__slide">
+                                <img src="imgs/home/PopUpSandy.png" alt="">
+                                <!--<p class="nome_musica">Sandy Olsson</p>-->
+                            </div>
+                            <div class="splide__slide">
+                                <img src="imgs/home/PopUpDanny.png" alt="">
+                                <!--<p class="nome_musica">Danny Zuko</p>-->
+                            </div>
+                            <div class="splide__slide">
+                                <img src="imgs/home/PopUpJan.png" alt="">
+                                <!--<p class="nome_musica">Betty Rizzo</p>-->
+                            </div>
+                            <div class="splide__slide">
+                                <img src="imgs/home/PopUpPutzie.png" alt="">
+                                <!--  <p class="nome_musica">Marty Marachino</p>-->
+                            </div>
+                            <div class="splide__slide">
+                                <img src="imgs/home/PopUpFrenchy.png" alt="">
+                                <!--  <p class="nome_musica">Kenickie Willians</p>-->
+                            </div>
 
-                                <div class="splide__slide">
-                                    <img src="imgs/home/PopUpDoody.png" alt="">
-                                    <!--  <p class="nome_musica">Frenchy Palardino</p>-->
-                                </div>
-                                <div class="splide__slide">
-                                    <img src="imgs/home/PopUpRizzo.png" alt="">
-                                    <!--  <p class="nome_musica">Putzie</p>-->
-                                </div>
-                                <div class="splide__slide">
-                                    <img src="imgs/home/PopUpKenickie.png" alt="">
-                                    <!-- <p class="nome_musica">Sonny Lattiery</p>-->
-                                </div>
-                                <div class="splide__slide">
-                                    <img src="imgs/home/PopUpMarty.png" alt="">
-                                    <!--  <p class="nome_musica">Doody</p>-->
-                                </div>
-                                <div class="splide__slide">
-                                    <img src="imgs/home/PopUpSonny.png" alt="">
-                                    <!--  <p class="nome_musica">Jan Martin</p>-->
-                                </div>
-                            </ul>
-                        </div>
-                    </div> <!-- .carrosel-personagens .splide -->
-                </div>
-
-            </div> <!-- .flex_collumn -->
+                            <div class="splide__slide">
+                                <img src="imgs/home/PopUpDoody.png" alt="">
+                                <!--  <p class="nome_musica">Frenchy Palardino</p>-->
+                            </div>
+                            <div class="splide__slide">
+                                <img src="imgs/home/PopUpRizzo.png" alt="">
+                                <!--  <p class="nome_musica">Putzie</p>-->
+                            </div>
+                            <div class="splide__slide">
+                                <img src="imgs/home/PopUpKenickie.png" alt="">
+                                <!-- <p class="nome_musica">Sonny Lattiery</p>-->
+                            </div>
+                            <div class="splide__slide">
+                                <img src="imgs/home/PopUpMarty.png" alt="">
+                                <!--  <p class="nome_musica">Doody</p>-->
+                            </div>
+                            <div class="splide__slide">
+                                <img src="imgs/home/PopUpSonny.png" alt="">
+                                <!--  <p class="nome_musica">Jan Martin</p>-->
+                            </div>
+                        </ul>
+                    </div>
+                </div> <!-- .carrosel-personagens .splide -->
+            </div>
 
         </section> <!--.section-impar -->
 
@@ -309,7 +306,7 @@
             <a name="comentarios"></a>
             <div id="area">
 
-                <div class="header"><h3 class="title">Comentários</h3></div>
+                <div class="header"><h2 class="title">Comentários</h2></div>
 
                 <div class="header-quant-coment"><h3>3 comentários</h3></div>
 
