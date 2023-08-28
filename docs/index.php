@@ -224,7 +224,7 @@
                 <div class="display-425px">
                     <div class="wrapper-content-main side-bar side-bar-style-2" data-aos="fade-down">
                         <div class="box-title2 border-box padding">
-                            <h2 class="JSMedium">A música exprime a mais alta filosofia numa linguagem que a razão não compreende.</h2>
+                            <h2 class="JSMedium h2">A música exprime a mais alta filosofia numa linguagem que a razão não compreende.</h2>
                             <h3 class="subtitle JSMedium">Arthur Schopenhauer</h3>
                         </div> <!-- .box-title2 .border-box .padding-->
                     </div> <!-- .wrapper-content-main side-bar side-bar-style-2 -->
@@ -305,16 +305,18 @@
 
             <a name="comentarios"></a>
             <div id="area">
+                <?php 
+                    $query = "SELECT usuarios.nome, comentarios.txtComent, comentarios.dataComent from usuarios, comentarios where (usuarios.idUser = comentarios.idUser) ORDER BY comentarios.dataComent DESC";
+                    $consulta = mysqli_query($conexao_db, $query);
+                ?>
 
                 <div class="header"><h2 class="title">Comentários</h2></div>
 
-                <div class="header-quant-coment"><h3>3 comentários</h3></div>
+                <div class="header-quant-coment"><h3><?php echo mysqli_num_rows($consulta) ?> comentários</h3></div>
 
                 <div class="container-comentario">
 
                     <?php 
-                        $query = "SELECT usuarios.nome, comentarios.txtComent from usuarios, comentarios where (usuarios.idUser = comentarios.idUser)";
-                        $consulta = mysqli_query($conexao_db, $query);
                         while($comentario = mysqli_fetch_assoc($consulta)) {
                             echo "
                             <div class='wrapper-comentario'>
@@ -333,7 +335,7 @@
                 
                 <div id="divComent">
                     
-                    <form action="php/comentar.php" class="flexCenterVH wh100" onsubmit="return check_comentario()" method="post">
+                    <form action="php/comentar.php" class="flexCenterVH wh100" onsubmit="return check_comentario()" method="get">
                         <div class="wrapper-input">
                             <input type="text" id="input-comentario" name="comentario" placeholder="Aa"
                             />

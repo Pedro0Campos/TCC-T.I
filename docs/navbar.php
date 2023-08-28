@@ -28,10 +28,10 @@
             </form>
 
             <div class="resize-font-size flexCenterVH">
-                <div class="wrapper-button flexCenterVH" id="aumentar-texto" aria-label="Aumentar texto">
+                <div class="wrapper-button flexCenterVH" id="aumentar-texto" aria-label="Aumentar tamanho do texto">
                     A+
                 </div>
-                <div class="wrapper-button flexCenterVH" id="diminuir-texto" aria-label="Diminuir texto">
+                <div class="wrapper-button flexCenterVH" id="diminuir-texto" aria-label="Diminuir tamanho do texto">
                     A-
                 </div>
             </div>
@@ -86,10 +86,10 @@
                 Não sei o que vai ter aqui
             </div>
             <div class="resize-font-size">
-                <div class="wrapper-button" id="aumentar-texto-sandwich" aria-label="Aumentar texto">
+                <div class="wrapper-button" id="aumentar-texto-sandwich" aria-label="Aumentar tamanho do texto">
                     A+
                 </div>
-                <div class="wrapper-button" id="diminuir-texto-sandwich" aria-label="Diminuir texto">
+                <div class="wrapper-button" id="diminuir-texto-sandwich" aria-label="Diminuir tamanho do texto">
                     A-
                 </div>
             </div>

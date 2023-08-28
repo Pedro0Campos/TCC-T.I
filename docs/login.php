@@ -56,15 +56,23 @@
             $consulta = consultar_user($condicao, $conexao_db);
             $cadastro = mysqli_fetch_row($consulta);
 
+            var_dump(verificarSenha($senha, $cadastro[3]));
             if ($cadastro != NULL) {
                 if (verificarSenha($senha, $cadastro[3])) {
                     // Login
-                    session_start();
                     $_SESSION['login'] = ['id' => $cadastro[0], 'nome' => $cadastro[1]];
     
                     // Trocar de tela
-                    header("Location: index.php");
+                    $redirec = 'index.php';
+                    if (isset($_POST['redirec']) && isset($_POST['coment'])) {
+                        if ($_POST['redirec'] && $_POST['coment'] != '') {
+                            $redirec = "php/comentar.php?comentario=$_POST[coment]";
+                        }
+                    }
+                    header("Location: $redirec");
                     die();
+                } else {
+                    $senhaErro = 'Dados inválidos';
                 }
             } else {
                 $senhaErro = 'Dados inválidos';
@@ -124,7 +132,7 @@
                 <!-- Retorna para o próprio link para criar a validação -->
                 <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?>" method="post" autocomplete="off">
                     <div class="conteiner-h2">
-                        <h2 class="animation-title">Login</h2>
+                        <h2 class="animation-title h2">Login</h2>
                     </div>
 
                     <div class="form-camada-2">
@@ -152,11 +160,23 @@
                             ?>
                         </div>
 
+                        <?php 
+                            $r = '';
+                            if (isset($_GET['redirec'])) {$r = $_GET['redirec']; } 
+                            if (isset($_POST['redirec'])) {$r = $_POST['redirec']; }
+
+                            $c = '';
+                            if (isset($_GET['coment'])) {$c = $_GET['coment']; }
+                            if (isset($_POST['coment'])) {$c = $_POST['coment']; }
+                        ?>
+                        <input type="hidden" name="redirec" value="<?php echo $r ?>">
+                        <input type="hidden" name="coment" value="<?php echo $c ?>">
+
                         <div class="conteiner-input">
                             <input class="button_form" type="submit" value="Entrar">
                         </div>
 
-                        <p class="text">Não tem uma conta? <a href="cadastro.php" class="underline">Cadastra-se</a></p>
+                        <p class="text">Não tem uma conta? <a href="cadastro.php<?php if ($r != '' & $c != '') { echo "?redirec=$r&coment=$c"; } ?>" class="underline">Cadastra-se</a></p>
                     </div>
                 </form>
             </div>

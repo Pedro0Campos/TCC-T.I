@@ -2,6 +2,9 @@
     function input_post($name) {
         return tratar_input(filter_input(INPUT_POST, $name));
     }
+    function input_get($name) {
+        return tratar_input(filter_input(INPUT_GET, $name));
+    }
 
     function tratar_input ($valor) {
         $valor = trim($valor);          // Deletar espaços no começo e no fim

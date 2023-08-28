@@ -24,4 +24,5 @@ create table `Comentarios` (
     idUser int not null,
     Constraint FK_Coment_User foreign key (idUser) references Usuarios(idUser),
     txtComent varchar(300)
+    dataComent datetime not null
 );

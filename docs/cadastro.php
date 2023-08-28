@@ -93,9 +93,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $cadastro = mysqli_fetch_row($consulta);
 
             // Trocar de tela
-            session_start();
             $_SESSION['login'] = ['id' => $cadastro[0], 'nome' => $cadastro[1]];
-            header('Location: index.php');
+
+            $redirec = 'index.php';
+            if (isset($_POST['redirec']) && isset($_POST['coment'])) {
+                if ($_POST['redirec'] && $_POST['coment'] != '') {
+                    $redirec = "php/comentar.php?comentario=$_POST[coment]";
+                }
+            }
+            echo $redirec;
+            header("Location: $redirec");
             die();
         }
     }
@@ -118,9 +125,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="css/form.css">
     <link rel="stylesheet" href="css/utils.css">
     <link rel="stylesheet" href="css/navbar.css">
-    
-    <!-- Scripts do site -->
-    <script src="js/navbar.js"></script>
     
     <!-- AOS - Animation in scrool -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -155,7 +159,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <!-- Retorna para o próprio link para criar a validação -->
                 <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?>" method="post" autocomplete="off">
                     <div class="conteiner-h2">
-                        <h2 class="animation-title">Criar uma Conta Nova</h2>
+                        <h2 class="animation-title h2">Criar uma Conta Nova</h2>
                     </div>
                     
                     <div class="form-camada-2">
@@ -207,11 +211,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             ?>
                         </div>
 
+                        <?php 
+                            $r = '';
+                            if (isset($_GET['redirec'])) {$r = $_GET['redirec']; } 
+                            if (isset($_POST['redirec'])) {$r = $_POST['redirec']; }
+
+                            $c = '';
+                            if (isset($_GET['coment'])) {$c = $_GET['coment']; }
+                            if (isset($_POST['coment'])) {$c = $_POST['coment']; }
+                        ?>
+                        <input type="hidden" name="redirec" value="<?php echo $r ?>">
+                        <input type="hidden" name="coment" value="<?php echo $c ?>">
+
+
                         <div class="conteiner-input">
                             <input class="button_form animation-scale" type="submit" value="Cadastrar">
                         </div>
                         
-                        <p class="text">Já tem uma conta? <a href="login.php" class="underline">Login</a></p>
+                        <p class="text">Já tem uma conta? <a href="login.php<?php if ($r != '' & $c != '') { echo "?redirec=$r&coment=$c"; } ?>" class="underline">Login</a></p>
                         
                     </div>
                 </form>
