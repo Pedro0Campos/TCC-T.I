@@ -248,13 +248,14 @@
 .carrosel-personagens .splide__slide {
   background-color: transparent;
   color: rgba(255, 255, 255, 0);
+  height: 70%;
   /* Todos os slides vão ter 40% de opacidade */
   opacity: 0.4;
   font-size: 14px;
 }
 .carrosel-personagens .is-visible {
   opacity: 1;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 .carrosel-personagens .splide__slide img {
   width: 100%;
@@ -265,11 +266,11 @@
   background: transparent;
 }
 .carrosel-personagens .splide__arrow svg {
-  fill: rgb(255, 255, 255);
+  fill: rgb(86, 168, 9);
 }
 .carrosel-personagens .splide__arrow--next {
-  top: 14px;
-  right: 10px;
+  top: 25px;
+  left: 10px;
 }
 .carrosel-personagens .splide__arrow--prev {
   top: 14px;

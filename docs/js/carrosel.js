@@ -85,7 +85,6 @@ let carroselPopup = new Splide('#popup', {
     focus:   0,           // Habilita uma classe para personalizar o elemento focado
     gap: '20px',          // Espaçamento entre os slides
     easing: 'ease-out',
-    padding: '5rem',
-});
+    });
 
 carroselPopup.mount()

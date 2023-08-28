@@ -252,6 +252,7 @@
             <div class="fixed-container ocult-container" id="showPopUp">
                 <div class="carrosel-personagens splide" id="popup">
                     <div class="splide__track">
+                    <i class="fa-solid fa-x" style="color: #000000;"></i>
                         <ul class="splide__list">
                             <div class="splide__slide">
                                 <img src="imgs/home/PopUpSandy.png" alt="">
