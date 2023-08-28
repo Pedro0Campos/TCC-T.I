@@ -82,9 +82,15 @@
 
         <div class="navbar-lateral" id="navbar-lateral">
 
-            <div class="header">
-                Não sei o que vai ter aqui
-            </div>
+            <?php 
+            if (isset($_SESSION['login'])) {
+
+            ?>
+                <div class="header">
+                    <img src="imgs/icon-user.png" alt="">
+                    <p><?php echo mb_strimwidth(explode(" ", $_SESSION['login']['nome'])[0], 0, 15, "...") ?></p>
+                </div>
+            <?php }?>
             <div class="resize-font-size">
                 <div class="wrapper-button" id="aumentar-texto-sandwich" aria-label="Aumentar tamanho do texto">
                     A+
@@ -95,7 +101,7 @@
             </div>
             
             <div class="wrapper-links">
-                <a class="link <?php if (strpos($_SERVER['SCRIPT_FILENAME'], 'index')) {echo "active";} ?>" href="index.php#">
+                <a class="link <?php if (strpos($_SERVER['SCRIPT_FILENAME'], 'index.php')) {echo "active";} ?>" href="index.php#">
                     <i class="fa-solid fa-house-chimney"></i>Home
                 </a>
                 <a class="link <?php if (strpos($_SERVER['SCRIPT_FILENAME'], 'sobre')) {echo "active";} ?>" href="sobre.php#">
@@ -105,9 +111,26 @@
                     <i class="fa-solid fa-music"></i>Musicas
                 </a>
                 <a class="link" href="index.php#personagens">
-                <i class="fa-solid fa-user"></i>Personagens
-                </a>
+                    <i class="fa-solid fa-user"></i>Personagens
+                </a>  
+                
+                <?php if (!isset($_SESSION['login'])) { ?>
+                    <a class="link padding-left <?php if (strpos($_SERVER['SCRIPT_FILENAME'], 'login')) {echo "active";} ?>" href="login.php#">
+                        Login
+                    </a>
+                    <a class="link padding-left <?php if (strpos($_SERVER['SCRIPT_FILENAME'], 'cadastro')) {echo "active";} ?>" href="cadastro.php#">
+                        Cadastro
+                    </a>
+                <?php } ?>
+
+                
+
             </div>
+                <?php if (isset($_SESSION['login'])) { ?>
+                    <div class="logout">
+                        <a class="link" href="php/logout.php">Sair da Conta</a>
+                    </div>
+                <?php } ?>
         </div>
     </div>
     

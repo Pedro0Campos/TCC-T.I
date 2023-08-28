@@ -11,8 +11,8 @@ function resizeFontSize () {
     }
     
     function aumentar () {
-        let atual = Number(window.getComputedStyle(html).getPropertyValue('font-size').split('px')[0])
-        if (atual <= 26) { html.style.fontSize = `${atual + 2}px` }
+        let atual = Number(window.getComputedStyle(html).getPropertyValue('font-size').split('px')[0]) + 2
+        if (atual <= 26) { html.style.fontSize = `${atual}px` }
     }
 }
 

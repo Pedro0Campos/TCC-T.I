@@ -12,8 +12,8 @@
   text-align: center;
   padding: 15px 0 15px 0;
 }
-#area .header h3 {
-  font-size: 1em;
+#area .header h2 {
+  font-size: 1.5em;
 }
 #area .header-quant-coment {
   border-bottom: 2px solid rgba(67, 62, 62, 0.1);
@@ -23,7 +23,7 @@
   width: fit-content;
   border-bottom: 2px solid var(--second-color);
   padding-left: 35px;
-  font-size: 1em;
+  font-size: 1.25em;
   transform: translateY(2px);
   padding-bottom: 7px;
 }

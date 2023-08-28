@@ -310,9 +310,9 @@
                     $consulta = mysqli_query($conexao_db, $query);
                 ?>
 
-                <div class="header"><h2 class="title">Comentários</h2></div>
+                <div class="header"><h2 class="title h2">Comentários</h2></div>
 
-                <div class="header-quant-coment"><h3><?php echo mysqli_num_rows($consulta) ?> comentários</h3></div>
+                <div class="header-quant-coment"><h3 class="h3"><?php echo mysqli_num_rows($consulta) ?> comentários</h3></div>
 
                 <div class="container-comentario">
 
