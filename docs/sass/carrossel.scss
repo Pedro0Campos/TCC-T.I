@@ -204,6 +204,8 @@
 .carrosel-personagens {
     // margin-left: 50px;
     // display: none;
+    height: 70vh;
+
 
     /* Título do carrosel */
     #carousel-title {
@@ -219,7 +221,7 @@
     .splide__slide {
         background-color: transparent;
         color: rgba(255, 255, 255, 0);
-        height: 70%;
+        height: 100%;
         /* Todos os slides vão ter 40% de opacidade */
         opacity: 0.4;
         font-size: 14px;
@@ -245,20 +247,20 @@
 
     /* SVG das setas */
     .splide__arrow svg {
-        fill: rgb(86, 168, 9);
+        fill: rgb(0, 0, 0);
     }
 
     /* Seta pra direita */
     .splide__arrow--next {
-        top: 25px;
-        left: 10px;
+        top: 150px;
+        left: 1490px;
     }
 
     /* Seta pra esquerda */
     .splide__arrow--prev {
-        top: 14px;
-        right: 40px;
-        left: unset;
+        top: 150px;
+        right: 130px;
+    
     }
 
     /* Tirar as bolinhas de paginação */
