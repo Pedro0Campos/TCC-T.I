@@ -69,7 +69,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     
     if (empty($senha)) {
-        $senhaErro = 'Senha é obrigatório.';
+        $senhaErro = 'Senha é obrigatória.';
     }
     
     

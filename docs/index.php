@@ -42,7 +42,7 @@
     <!-- <div class="music-player fixed-container" id="music-player"> -->
     <div class="music-player fixed-container ocult-container" id="music-player">
         <div class="close-box">
-            <img src="imgs/close.svg" alt="" id="close">
+            <img src="imgs/close.svg" alt="Fechar" id="close">
         </div>
 
         <div class="music-details">
@@ -213,7 +213,7 @@
                             <div class="side-bar side-bar-style-1">
                                 <div class="container-itens" id="itens-mais-tocadas">
                                     <p class="item" id="0">1. Summer Nights - Grease</p>
-                                    <p class="item" id="3">2. Don’t be Cruel - Elvis Presley</p>
+                                    <p class="item" id="3">2. Don't be Cruel - Elvis Presley</p>
                                     <p class="item" id="4">3. I Walk The Line - Johnny Cash</p>
                                 </div> <!-- .container-itens -->
                             </div> <!-- .side-bar side-bar-style-1 -->
@@ -255,44 +255,44 @@
                     <i class="fa-solid fa-x" style="color: #000000;"></i>
                         <ul class="splide__list">
                             <div class="splide__slide">
-                                <img src="imgs/home/PopUpSandy.png" alt="">
+                                <img src="imgs/home/PopUpSandy.png" alt="Sandy, interpretada por Olivia Newton-John no filme, é a protagonista feminina. Ela é uma garota doce e inocente que se apaixona por Danny durante o verão. Sandy é nova na Rydell High e se esforça para se encaixar no grupo das Pink Ladies">
                                 <!--<p class="nome_musica">Sandy Olsson</p>-->
                             </div>
                             <div class="splide__slide">
-                                <img src="imgs/home/PopUpDanny.png" alt="">
+                                <img src="imgs/home/PopUpDanny.png" alt="Danny é o amor de verão de Sandy, uma garota tímida que se transfere para a escola de Danny no início do ano letivo. Quando os dois se reencontram, no entanto, Danny tenta agir como se não a conhecesse, preocupado em manter sua reputação de durão diante de seus amigos.">
                                 <!--<p class="nome_musica">Danny Zuko</p>-->
                             </div>
                             <div class="splide__slide">
-                                <img src="imgs/home/PopUpJan.png" alt="">
+                                <img src="imgs/home/PopUpJan.png" alt="Jan é uma das Pink Ladies e é conhecida por seu apetite voraz. Ela é divertida, extrovertida e sempre está pronta para comer. Jan é amiga próxima de Frenchy.">
                                 <!--<p class="nome_musica">Betty Rizzo</p>-->
                             </div>
                             <div class="splide__slide">
-                                <img src="imgs/home/PopUpPutzie.png" alt="">
+                                <img src="imgs/home/PopUpPutzie.png" alt="Ele é um membro dos T-Birds e é conhecido por seu senso de humor bobo. Roger é um pouco desajeitado, mas sempre está disposto a apoiar seus amigos.">
                                 <!--  <p class="nome_musica">Marty Marachino</p>-->
                             </div>
                             <div class="splide__slide">
-                                <img src="imgs/home/PopUpFrenchy.png" alt="">
+                                <img src="imgs/home/PopUpFrenchy.png" alt="Ela é uma das Pink Ladies e uma amiga próxima de Sandy. Frenchy é uma garota ingênua e sonhadora, conhecida por seus cabelos rosa. Ela deseja ser uma cabeleireira, mas está sempre em busca de sua verdadeira vocação.">
                                 <!--  <p class="nome_musica">Kenickie Willians</p>-->
                             </div>
 
                             <div class="splide__slide">
-                                <img src="imgs/home/PopUpDoody.png" alt="">
+                                <img src="imgs/home/PopUpDoody.png" alt="Outro membro dos T-Birds, Doody é o mais jovem do grupo. Ele é um pouco tímido, porém leal aos seus amigos. Doody tem um talento para tocar guitarra.">
                                 <!--  <p class="nome_musica">Frenchy Palardino</p>-->
                             </div>
                             <div class="splide__slide">
-                                <img src="imgs/home/PopUpRizzo.png" alt="">
+                                <img src="imgs/home/PopUpRizzo.png" alt="Ela é a líder das Pink Ladies e uma das personagens mais marcantes. Rizzo é uma garota ousada, confiante e sarcástica. Ela é conhecida por seu senso de humor afiado e atitude desafiadora.">
                                 <!--  <p class="nome_musica">Putzie</p>-->
                             </div>
                             <div class="splide__slide">
-                                <img src="imgs/home/PopUpKenickie.png" alt="">
+                                <img src="imgs/home/PopUpKenickie.png" alt="Ele é um dos T-Birds e o melhor amigo de Danny. Kenickie é durão, engraçado e um pouco descuidado. Ele é um piloto de corridas de carros e tem uma personalidade mais rebelde.">
                                 <!-- <p class="nome_musica">Sonny Lattiery</p>-->
                             </div>
                             <div class="splide__slide">
-                                <img src="imgs/home/PopUpMarty.png" alt="">
+                                <img src="imgs/home/PopUpMarty.png" alt="Ela também é uma das Pink Ladies. Marty é uma garota extrovertida e flerta com homens mais velhos. Ela é vaidosa e está sempre preocupada com sua aparência.">
                                 <!--  <p class="nome_musica">Doody</p>-->
                             </div>
                             <div class="splide__slide">
-                                <img src="imgs/home/PopUpSonny.png" alt="">
+                                <img src="imgs/home/PopUpSonny.png" alt="Ele é um dos T-Birds, amigo próximo de Danny. Sonny é brincalhão, um pouco trapalhão e sempre está procurando conquistar garotas.">
                                 <!--  <p class="nome_musica">Jan Martin</p>-->
                             </div>
                         </ul>
