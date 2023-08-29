@@ -170,6 +170,11 @@
         }
         .img-user {
             height: 50px;
+            padding: 10px;
+            img {
+                height: 100%;
+                border-radius: 30px;
+            }
         }
     }
         

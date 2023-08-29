@@ -1,6 +1,7 @@
 <?php
+    include('database/db.php');
     include('php/verify_darkmode.php');
-    include('database/db.php')
+    include('php/consultar_user.php');
 ?>
 
 <!DOCTYPE html>

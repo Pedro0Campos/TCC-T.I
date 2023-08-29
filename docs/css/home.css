@@ -79,7 +79,7 @@ section.section1 {
   min-height: calc(100vh - 72px);
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   position: relative;
 }
 section.section1 .sandy-danny {

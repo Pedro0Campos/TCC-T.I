@@ -60,7 +60,7 @@
             if ($cadastro != NULL) {
                 if (verificarSenha($senha, $cadastro[3])) {
                     // Login
-                    $_SESSION['login'] = ['id' => $cadastro[0], 'nome' => $cadastro[1]];
+                    $_SESSION['login'] = ['id' => $cadastro[0], 'nome' => $cadastro[1], 'tipoUser' => $cadastro[4], 'imgUser' => $cadastro[5]];
     
                     // Trocar de tela
                     $redirec = 'index.php';

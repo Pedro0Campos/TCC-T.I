@@ -8,21 +8,20 @@
                     <span class="ball"></span>
                     
                     <?php
-                        if (!$darkmode) {
-                    ?>
-                    <i class="fa-solid fa-sun sun" id="sun"></i>
-                    <i class="fa-solid fa-cloud cloud cloud1" id="cloud1"></i>
-                    <i class="fa-solid fa-cloud cloud cloud2" id="cloud2"></i>
-                    <?php
-                        } else {
-
-                    ?>
-                    <i class="fa-solid fa-moon moon" id="moon"></i>
-                    <i class="fa-solid fa-star star star1" id="star1"></i>
-                    <i class="fa-solid fa-star star star2" id="star2"></i>
-                    <i class="fa-solid fa-star star star3" id="star3"></i>
-                    <?php
-                        }
+                    if (!$darkmode) {
+                        echo '
+                        <i class="fa-solid fa-sun sun" id="sun"></i>
+                        <i class="fa-solid fa-cloud cloud cloud1" id="cloud1"></i>
+                        <i class="fa-solid fa-cloud cloud cloud2" id="cloud2"></i>
+                        ';
+                    } else {
+                        echo '
+                        <i class="fa-solid fa-moon moon" id="moon"></i>
+                        <i class="fa-solid fa-star star star1" id="star1"></i>
+                        <i class="fa-solid fa-star star star2" id="star2"></i>
+                        <i class="fa-solid fa-star star star3" id="star3"></i>
+                        ';
+                    }
                     ?>
                 </label>
             </form>
@@ -48,18 +47,27 @@
         
         <!-- ITENS NA DIREITA - Login e cadastro -->
         <div class="navlista itens-direita">
-            <?php if (!isset($_SESSION['login'])) {?>
-            <a class="animation-link" href="cadastro.php" class="navitens">Cadastrar-se</a>
-            <a class="animation-link" href="login.php" class="navitens">Login</a>
 
-            <?php } else {?>
+            <?php
+                if (!isset($_SESSION['login'])) {
+                    echo '
+                    <a class="animation-link" href="cadastro.php" class="navitens">Cadastrar-se</a>
+                    <a class="animation-link" href="login.php" class="navitens">Login</a>
+                    ';
+                } else {
+                    $nome_usuario = mb_strimwidth(explode(" ", $_SESSION['login']['nome'])[0], 0, 15, "...");
 
-            <li class="duplo-li">
-                <span>Olá <?php echo mb_strimwidth(explode(" ", $_SESSION['login']['nome'])[0], 0, 15, "..."); ?>!</span>
-                <a href="php/logout.php" class="animation-link">Sair?</a>
-            </li>
-            <a class="" href="perfiluser.php"><img class="img-user" src="../docs/imgs/icon-user.png" alt=""></a>
-            <?php }?>
+                    echo "
+                    <li class='duplo-li'>
+                        <span>Olá $nome_usuario !</span>
+                        <a href='php/logout.php' class='animation-link'>Sair?</a>
+                    </li>
+                    <a class='' href='perfiluser.php'>
+                        <div class='img-user'><img src='" . get_img() . "' alt=''></div>
+                    </a>
+                    ";
+                }
+            ?>
         </div>
         <!-- ITENS NA DIREITA - Login e cadastro -->
         
@@ -101,10 +109,10 @@
             </div>
             
             <div class="wrapper-links">
-                <a class="link <?php if (strpos($_SERVER['SCRIPT_FILENAME'], 'index.php')) {echo "active";} ?>" href="index.php#">
+                <a class="link" href="index.php#">
                     <i class="fa-solid fa-house-chimney"></i>Home
                 </a>
-                <a class="link <?php if (strpos($_SERVER['SCRIPT_FILENAME'], 'sobre')) {echo "active";} ?>" href="sobre.php#">
+                <a class="link" href="sobre.php#">
                     <i class="fa-solid fa-comment"></i>Sobre
                 </a>
                 <a class="link" href="index.php#musicas">
@@ -115,10 +123,10 @@
                 </a>  
                 
                 <?php if (!isset($_SESSION['login'])) { ?>
-                    <a class="link padding-left <?php if (strpos($_SERVER['SCRIPT_FILENAME'], 'login')) {echo "active";} ?>" href="login.php#">
+                    <a class="link padding-left" href="login.php#">
                         Login
                     </a>
-                    <a class="link padding-left <?php if (strpos($_SERVER['SCRIPT_FILENAME'], 'cadastro')) {echo "active";} ?>" href="cadastro.php#">
+                    <a class="link padding-left" href="cadastro.php#">
                         Cadastro
                     </a>
                 <?php } ?>

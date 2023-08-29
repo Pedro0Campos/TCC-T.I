@@ -212,6 +212,11 @@
 }
 .navbar .itens-direita .img-user {
   height: 50px;
+  padding: 10px;
+}
+.navbar .itens-direita .img-user img {
+  height: 100%;
+  border-radius: 30px;
 }
 .navbar .container-icon-menu {
   position: absolute;

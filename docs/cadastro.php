@@ -93,7 +93,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $cadastro = mysqli_fetch_row($consulta);
 
             // Trocar de tela
-            $_SESSION['login'] = ['id' => $cadastro[0], 'nome' => $cadastro[1]];
+            $_SESSION['login'] = ['id' => $cadastro[0], 'nome' => $cadastro[1], 'tipoUser' => $cadastro[4], 'imgUser' => $cadastro[5]];
 
             $redirec = 'index.php';
             if (isset($_POST['redirec']) && isset($_POST['coment'])) {
