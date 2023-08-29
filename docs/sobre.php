@@ -59,7 +59,7 @@
         <div class="wrapper-content-main side-bar side-bar-style-3" style="margin: 50px 0 10px 30px" data-aos="fade-right">
             <div class="box-title1">
                 <h1 class="h3">Conheça nosso time de designers e programadores que fizeram esse projeto ser possível de existir</h1>
-                <h3 class="subtitle">Conheça nosso time de designers e programadores que fizeram esse projeto ser possível de existir</h3>
+                <h3 class="subtitle">Criar um site do zero não é fácil, mas com o esforço de uma equipe extraordinária, fizemos esse projeto sair apenas dos pensamentos. Nessa aba você vai ser capaz de conhecer cada um de nós</h3>
             </div> <!-- .box-title1 .border-box .padding-->
         </div> <!-- .wrapper-content-main -->
 
@@ -68,52 +68,52 @@
             <div class="splide__track">
                 <ul class="splide__list">
                     <div class="splide__slide">
-                        <img src="imgs/carrossel/sobre/henrique.png" alt="">
+                        <img src="imgs/carrossel/sobre/henrique.png" alt="Henrique Silva">
                         <p class="nome_pessoa"> Henrique Silva</p>
                     </div>
 
                     <div class="splide__slide">
-                        <img src="imgs/carrossel/sobre/julia.png" alt="">
+                        <img src="imgs/carrossel/sobre/julia.png" alt="Julia Quesada">
                         <p class="nome_pessoa"> Julia Quesada</p>
                     </div>
 
                     <div class="splide__slide">
-                        <img src="imgs/carrossel/sobre/kerthelin.png" alt="">
+                        <img src="imgs/carrossel/sobre/kerthelin.png" alt="Kethelin Vitoria">
                         <p class="nome_pessoa"> Kethelin Vitoria</p>
                     </div>
 
                     <div class="splide__slide">
-                        <img src="imgs/carrossel/sobre/MatheusM.png" alt="">
+                        <img src="imgs/carrossel/sobre/MatheusM.png" alt="Matheus Martins">
                         <p class="nome_pessoa"> Matheus Martins</p>
                     </div>
 
                     <div class="splide__slide">
-                        <img src="imgs/carrossel/sobre/milena.png" alt="">
+                        <img src="imgs/carrossel/sobre/milena.png" alt="Milena Lima">
                         <p class="nome_pessoa"> Milena Lima</p>
                     </div>
 
                     <div class="splide__slide">
-                        <img src="imgs/carrossel/sobre/nayla.png" alt="">
+                        <img src="imgs/carrossel/sobre/nayla.png" alt="Nayla Assis">
                         <p class="nome_pessoa"> Nayla Assis</p>
                     </div>
 
                     <div class="splide__slide">
-                        <img src="imgs/carrossel/sobre/pedroG.png" alt="">
+                        <img src="imgs/carrossel/sobre/pedroG.png" alt="Pedro Gonçalves">
                         <p class="nome_pessoa"> Pedro Gonçalves</p>
                     </div>
 
                     <div class="splide__slide">
-                        <img src="imgs/carrossel/sobre/pedroH.png" alt="">
+                        <img src="imgs/carrossel/sobre/pedroH.png" alt="Pedro Henrique">
                         <p class="nome_pessoa"> Pedro Henrique</p>
                     </div>
 
                     <div class="splide__slide">
-                        <img src="imgs/carrossel/sobre/raquel.png" alt="">
+                        <img src="imgs/carrossel/sobre/raquel.png" alt="Raquel Lima">
                         <p class="nome_pessoa"> Raquel Lima</p>
                     </div>
 
                     <div class="splide__slide">
-                        <img src="imgs/carrossel/sobre/vinicius.png" alt="">
+                        <img src="imgs/carrossel/sobre/vinicius.png" alt="Vinicius Passos">
                         <p class="nome_pessoa"> Vinicius Passos</p>
                     </div>
                 </ul>

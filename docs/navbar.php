@@ -49,7 +49,7 @@
         <!-- ITENS NA DIREITA - Login e cadastro -->
         <div class="navlista itens-direita">
             <?php if (!isset($_SESSION['login'])) {?>
-            <a class="animation-link" href="cadastro.php" class="navitens">Cadastra-se</a>
+            <a class="animation-link" href="cadastro.php" class="navitens">Cadastrar-se</a>
             <a class="animation-link" href="login.php" class="navitens">Login</a>
 
             <?php } else {?>
@@ -108,7 +108,7 @@
                     <i class="fa-solid fa-comment"></i>Sobre
                 </a>
                 <a class="link" href="index.php#musicas">
-                    <i class="fa-solid fa-music"></i>Musicas
+                    <i class="fa-solid fa-music"></i>Músicas
                 </a>
                 <a class="link" href="index.php#personagens">
                     <i class="fa-solid fa-user"></i>Personagens

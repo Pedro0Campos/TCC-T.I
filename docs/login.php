@@ -44,7 +44,7 @@
         }
 
         if (empty($senha)) {
-            $senhaErro = 'Senha é obrigatório.';
+            $senhaErro = 'Senha é obrigatória.';
         }
 
 
@@ -176,7 +176,7 @@
                             <input class="button_form" type="submit" value="Entrar">
                         </div>
 
-                        <p class="text">Não tem uma conta? <a href="cadastro.php<?php if ($r != '' & $c != '') { echo "?redirec=$r&coment=$c"; } ?>" class="underline">Cadastra-se</a></p>
+                        <p class="text">Não tem uma conta? <a href="cadastro.php<?php if ($r != '' & $c != '') { echo "?redirec=$r&coment=$c"; } ?>" class="underline">Cadastrar-se</a></p>
                     </div>
                 </form>
             </div>
