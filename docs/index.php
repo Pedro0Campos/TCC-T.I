@@ -253,7 +253,7 @@
             <div class="fixed-container ocult-container" id="showPopUp">
                 <div class="carrosel-personagens splide" id="popup">
                     <div class="splide__track">
-                    <i class="fa-solid fa-x" style="color: #000000;"></i>
+                    <i class="fa-solid fa-xmark fa-xl" style="color: #000;"onclick="showPopUp()"></i>
                         <ul class="splide__list">
                             <div class="splide__slide">
                                 <img src="imgs/home/PopUpSandy.png" alt="Sandy, interpretada por Olivia Newton-John no filme, é a protagonista feminina. Ela é uma garota doce e inocente que se apaixona por Danny durante o verão. Sandy é nova na Rydell High e se esforça para se encaixar no grupo das Pink Ladies">

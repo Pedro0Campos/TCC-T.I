@@ -79,7 +79,7 @@ carrossel_playlists.mount();
 // ================================
 let carroselPopup = new Splide('#popup', {
     type:   'loop',       // Fica em loop
-    height: 'auto',       // Altura do carrosel
+    height: '100%',       // Altura do carrosel
     width: '100%',        // Comprimento do carrosel
     fixedWidth: '400px',  // Altura do slide
     focus:   0,           // Habilita uma classe para personalizar o elemento focado

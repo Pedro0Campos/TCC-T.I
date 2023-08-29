@@ -227,6 +227,7 @@
   }
 }
 .carrosel-personagens {
+  height: 70vh;
   /* Título do carrosel */
   /* Todos os slides */
   /* Os slides visiveis vão ter 100% de opacidade  */
@@ -248,10 +249,12 @@
 .carrosel-personagens .splide__slide {
   background-color: transparent;
   color: rgba(255, 255, 255, 0);
-  height: 70%;
+  height: 80vh;
+  width: 100%;
   /* Todos os slides vão ter 40% de opacidade */
   opacity: 0.4;
   font-size: 14px;
+  object-fit: cover;
 }
 .carrosel-personagens .is-visible {
   opacity: 1;
@@ -266,16 +269,15 @@
   background: transparent;
 }
 .carrosel-personagens .splide__arrow svg {
-  fill: rgb(86, 168, 9);
+  fill: rgb(0, 0, 0);
 }
 .carrosel-personagens .splide__arrow--next {
-  top: 25px;
-  left: 10px;
+  top: 150px;
+  left: 1478px;
 }
 .carrosel-personagens .splide__arrow--prev {
-  top: 14px;
-  right: 40px;
-  left: unset;
+  top: 150px;
+  left: -16px;
 }
 .carrosel-personagens .splide__pagination {
   display: none;
