@@ -136,9 +136,9 @@
   color: var(--backg-color);
 }
 .wrapper-content-main .btn-retro {
-  color: white;
+  color: var(--backg-color);
   background: rgb(2, 0, 36);
-  background: linear-gradient(75deg, rgb(2, 0, 36) 0%, rgb(0, 0, 0) 77%, rgb(156, 41, 61) 77%, rgb(156, 41, 61) 83%, rgb(247, 158, 82) 83%, rgb(247, 158, 82) 89%, rgb(59, 164, 172) 89%, rgb(59, 164, 172) 94%, rgb(39, 61, 98) 94%);
+  background: linear-gradient(75deg, var(--text-color) 0%, var(--text-color) 77%, rgb(156, 41, 61) 77%, rgb(156, 41, 61) 83%, rgb(247, 158, 82) 83%, rgb(247, 158, 82) 89%, rgb(59, 164, 172) 89%, rgb(59, 164, 172) 94%, rgb(39, 61, 98) 94%);
 }
 .wrapper-content-main .mais-tocadas {
   max-width: var(--width-mais-tocadas);

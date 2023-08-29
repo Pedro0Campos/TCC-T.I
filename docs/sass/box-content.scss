@@ -80,11 +80,11 @@
     }
 
     .btn-retro {
-        color: white;
+        color: var(--backg-color);
         background: rgb(2,0,36);
         background: linear-gradient(75deg,
-        rgba(2,0,36,1) 0%,
-        rgba(0,0,0,1) 77%,
+        var(--text-color) 0%,
+        var(--text-color) 77%,
         rgba(156,41,61,1) 77%,
         rgba(156,41,61,1) 83%,
         rgba(247,158,82,1) 83%,
