@@ -202,8 +202,7 @@
 //carrossel personagens
 // ===========================
 .carrosel-personagens {
-    // margin-left: 50px;
-    // display: none;
+
     height: 70vh;
 
 
@@ -221,10 +220,12 @@
     .splide__slide {
         background-color: transparent;
         color: rgba(255, 255, 255, 0);
-        height: 100%;
+        height: 80vh;
+        width: 100%;
         /* Todos os slides vão ter 40% de opacidade */
         opacity: 0.4;
         font-size: 14px;
+        object-fit: cover;
     }
 
     /* Os slides visiveis vão ter 100% de opacidade  */
@@ -253,13 +254,13 @@
     /* Seta pra direita */
     .splide__arrow--next {
         top: 150px;
-        left: 1490px;
+        left: 1478px;
     }
 
     /* Seta pra esquerda */
     .splide__arrow--prev {
         top: 150px;
-        right: 130px;
+        left: -16px;
     
     }
 

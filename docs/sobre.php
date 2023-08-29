@@ -73,8 +73,8 @@
                     </div>
 
                     <div class="splide__slide">
-                        <img src="imgs/carrossel/sobre/julia.png" alt="Julia Quesada">
-                        <p class="nome_pessoa"> Julia Quesada</p>
+                        <img src="imgs/carrossel/sobre/julia.png" alt="Julia Quessada">
+                        <p class="nome_pessoa"> Julia Quessada</p>
                     </div>
 
                     <div class="splide__slide">
