@@ -10,15 +10,6 @@ create table `Usuarios` (
     tipoUser boolean not null
 );
 
-create table `Ensaios` (
-	idEnsaio int not null auto_increment primary key,
-    idUser int not null,
-    Constraint FK_Ensaios_Usuarios foreign key (idUser) references Usuarios(idUser),
-    dataEnsaio date not null,
-    curtidas int,
-    horario time not null
-);
-
 create table `Comentarios` (
 	idComent int not null auto_increment primary key,
     idUser int not null,
