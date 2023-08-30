@@ -87,6 +87,7 @@ section {
     section {
         &.section1 {
             &.background-grease {
+                background-color: var(--sect-par-backg-color);
                 background-image: url('../imgs/home/grease-phone.svg');
                 background-repeat: no-repeat;
                 background-size: cover;

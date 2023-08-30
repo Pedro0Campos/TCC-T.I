@@ -1,5 +1,5 @@
 <?php
-    include('../docs/database/db.php');
+    include_once('../docs/database/db.php');
     $data = new DateTime($timezone = 'Etc/UTC');
     $dataF = $data->format('Y-m-d-H-i-s');
     $img = $_FILES['img-user'];

@@ -43,6 +43,7 @@
   --backg-color: #FEFCF3;
   --text-color: #000000;
   --text-color-50: #00000080;
+  --text-color-60: #00000099;
   --text-color-80: #000000cc;
   --link-color: #45CFE1;
   --active-link-color: #6406ff;
@@ -60,6 +61,7 @@
   --backg-color: #000000;
   --text-color: #FEFCF3;
   --text-color-50: #FFFFFF80;
+  --text-color-60: #FFFFFF99;
   --text-color-80: #FFFFFFcc;
   --second-color: #8F00FF;
   --second-color-50: #9000ff74;
@@ -121,6 +123,7 @@ section.section4 {
 }
 @media only screen and (max-width: 425px) {
   section.section1.background-grease {
+    background-color: var(--sect-par-backg-color);
     background-image: url("../imgs/home/grease-phone.svg");
     background-repeat: no-repeat;
     background-size: cover;

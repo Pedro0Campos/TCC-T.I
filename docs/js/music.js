@@ -105,7 +105,7 @@ function getTracks(type='musics') {
             "largeImage": "musics/imgs/banho-de-lua.png",
             "smallImage": "musics/imgs/banho-de-lua.png",
             "background": "#e6cd5a",
-            "src": "musics/Banho De Lua (Tintarella Di Luna).mp3"
+            "src": "musics/Celly-Campello-Luna-Banho-De-Lua.mp3"
         },
         {
             "nome": "Garota de Ipanema",
@@ -113,7 +113,7 @@ function getTracks(type='musics') {
             "largeImage": "musics/imgs/garota-de-ipanema.png",
             "smallImage": "musics/imgs/garota-de-ipanema.png",
             "background": "#e6cd5a",
-            "src": "musics/Garota De Ipanema.mp3"
+            "src": "musics/Garota-De-Ipanema.mp3"
         },
         {
             "nome": "Can't Stop Lovin' You",
@@ -129,7 +129,7 @@ function getTracks(type='musics') {
             "largeImage": "musics/imgs/chove-chuva.jpg",
             "smallImage": "musics/imgs/chove-chuva.jpg",
             "background": "#cba98c",
-            "src": "Jorge-Ben-Chove-Chuva.mp3"
+            "src": "musics/Jorge-Ben-Chove-Chuva.mp3"
         }
     ]
 
@@ -575,7 +575,9 @@ function musicPlayer () {
     }
     
     document.addEventListener('keydown', k => {
-        teclasAtalho(k.key)
+        if (!music_player.className.includes('ocult')) {
+            teclasAtalho(k.key)
+        }
     })
     // ================================
 }

@@ -48,6 +48,8 @@
   background-color: white;
   padding: 20px;
   border-radius: 30px;
+  max-width: 100%;
+  word-break: break-word;
 }
 #area .container-comentario .wrapper-comentario .name-user {
   margin-bottom: 15px;
@@ -72,15 +74,17 @@
   border-radius: 15px;
   width: 100%;
   height: 70px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 #area #divComent form {
   gap: 20px;
 }
-#area #divComent .wrapper-input {
+#area #divComent form .wrapper-input {
   width: 70%;
   position: relative;
 }
-#area #divComent .wrapper-input #input-comentario {
+#area #divComent form .wrapper-input #input-comentario {
   background-color: #E6E6E6;
   border: none;
   border-radius: 50px;
@@ -88,11 +92,20 @@
   height: 40px;
   width: 100%;
   padding-left: 15px;
-  padding-right: 15px;
+  padding-right: 45px;
   font-size: 0.85em;
   color: #686868;
 }
-#area #divComent .wrapper-input .msg-erro {
+#area #divComent form .wrapper-input .carac-faltando {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  font-size: 0.85em;
+  color: #686868;
+}
+#area #divComent form .wrapper-input .msg-erro {
   color: rgb(255, 89, 89);
   position: absolute;
   right: 15px;
@@ -135,6 +148,7 @@
 }
 #area #divComent .emoji-list span {
   cursor: pointer;
+  font-size: 20px;
 }
 #area #divComent .emoji-list.mostrar {
   display: block;

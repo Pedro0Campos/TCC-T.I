@@ -1,8 +1,8 @@
 <?php
 
 // // Importando funções:
-// include('scripts.php');
-// include('form.php');
+// include_once('scripts.php');
+// include_once('form.php');
 
 // // Conectando o Banco:
 // $conn = conectar_bd('dbCoreo', '');

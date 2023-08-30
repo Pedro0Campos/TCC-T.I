@@ -1,8 +1,8 @@
 <?php 
-    include('database/db.php');
-    include('php/form.php');
-    include('php/consultar_user.php');  // Consultar usuários no banco
-    include('php/verify_darkmode.php');
+    include_once('database/db.php');
+    include_once('php/form.php');
+    include_once('php/consultar_user.php');  // Consultar usuários no banco
+    include_once('php/verify_darkmode.php');
 ?>
 
 <?php
@@ -135,7 +135,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body class="fade">
     <div class="disable-navbar">
-        <?php include('navbar.php'); ?>
+        <?php include_once('navbar.php'); ?>
     </div>
     
     <!-- CONTEÚDO -->

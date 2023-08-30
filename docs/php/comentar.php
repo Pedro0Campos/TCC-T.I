@@ -1,6 +1,6 @@
 <?php
-    include('form.php');
-    include('../database/db.php');
+    include_once('form.php');
+    include_once('../database/db.php');
     
     $comentario = input_get('comentario');
     

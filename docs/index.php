@@ -1,7 +1,6 @@
 <?php
-    include('database/db.php');
-    include('php/verify_darkmode.php');
-    include('php/consultar_user.php');
+    include_once('database/db.php');
+    include_once('php/verify_darkmode.php');
 ?>
 
 <!DOCTYPE html>
@@ -97,7 +96,7 @@
 
 
 
-    <?php include('navbar.php') ?>
+    <?php include_once('navbar.php') ?>
     <!-- CONTEÚDO -->
     <main>
         <!-- Sessão 1 -->
@@ -337,11 +336,11 @@
                 
                 <div id="divComent">
                     
-                    <form action="php/comentar.php" class="flexCenterVH wh100" onsubmit="return check_comentario()" method="get">
+                    <form action="php/comentar.php" class="flexCenterVH wh100" id="form-comentario" onsubmit="return checkComentario()" method="get">
                         <div class="wrapper-input">
-                            <input type="text" id="input-comentario" name="comentario" placeholder="Aa"
-                            />
-                            <span class='msg-erro' id="erro"><i class='fa-solid fa-circle-exclamation'></i>
+                            <input type="text" id="input-comentario" name="comentario" placeholder="Aa"/>
+                            <span class="carac-faltando" id="carac-faltando">300</span>
+                            <i class='fa-solid fa-circle-exclamation msg-erro'id="erro"></i>
                         </div>
                         
                         <div class="emoji-button flexCenterVH" id="emojiButton"></div>
@@ -529,8 +528,8 @@
     <!-- Scroll Home -->
     <script src="js/scrolling.js"></script>
 
-    <!-- Check form -->
-    <script src="js/check_form.js"></script>
+    <!-- Comentário -->
+    <script src="js/comentario.js"></script>
 </body>
 
 </html>

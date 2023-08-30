@@ -43,6 +43,7 @@
   --backg-color: #FEFCF3;
   --text-color: #000000;
   --text-color-50: #00000080;
+  --text-color-60: #00000099;
   --text-color-80: #000000cc;
   --link-color: #45CFE1;
   --active-link-color: #6406ff;
@@ -60,6 +61,7 @@
   --backg-color: #000000;
   --text-color: #FEFCF3;
   --text-color-50: #FFFFFF80;
+  --text-color-60: #FFFFFF99;
   --text-color-80: #FFFFFFcc;
   --second-color: #8F00FF;
   --second-color-50: #9000ff74;
@@ -90,7 +92,7 @@
   font-size: 1em;
   margin-top: 15px;
   margin-bottom: 5px;
-  color: rgba(0, 0, 0, 0.6);
+  color: var(--text-color-60);
 }
 .wrapper-content-main .box-title1 span.italic {
   font-style: italic;
@@ -189,7 +191,7 @@
 .wrapper-content-main.side-bar.side-bar-style-3::before {
   content: "";
   min-width: 8px;
-  background-color: var(--sect-par-backg-color);
+  background-color: var(--text-color);
 }
 
 @media only screen and (min-width: 1024px) {

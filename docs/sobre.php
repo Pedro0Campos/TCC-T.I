@@ -1,5 +1,5 @@
 <?php 
-    include('php/verify_darkmode.php');
+    include_once('php/verify_darkmode.php');
 ?>
 <!DOCTYPE html>
 <html lang="pt-br" <?php if ($darkmode) {echo "class='darkmode'";} ?> >
@@ -48,10 +48,10 @@
 <body class="fade">
 
     <?php 
-        // include('database/db.php');
-        include('navbar.php');
-        // include('php/form.php');
-        // include('php/consultar_user.php');  // Consultar usuários no banco
+        // include_once('database/db.php');
+        include_once('navbar.php');
+        // include_once('php/form.php');
+        // include_once('php/consultar_user.php');  // Consultar usuários no banco
     ?>
     
     <!-- CONTEÚDO -->

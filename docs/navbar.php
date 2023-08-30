@@ -1,3 +1,4 @@
+    <?php include_once('php/consultar_user.php'); ?>
     <div class="navbar" id="navbar">
 
         <!-- TOGGLER --> 
@@ -89,16 +90,15 @@
     <div class="container-navbar-lateral">
 
         <div class="navbar-lateral" id="navbar-lateral">
+        <?php 
+        if (isset($_SESSION['login'])) {
+        ?>
+            <div class="header">
+                <img src="imgs/icon-user.png" alt="">
+                <p><?php echo mb_strimwidth(explode(" ", $_SESSION['login']['nome'])[0], 0, 15, "...") ?></p>
+            </div>
+        <?php }?>
 
-            <?php 
-            if (isset($_SESSION['login'])) {
-
-            ?>
-                <div class="header">
-                    <img src="imgs/icon-user.png" alt="">
-                    <p><?php echo mb_strimwidth(explode(" ", $_SESSION['login']['nome'])[0], 0, 15, "...") ?></p>
-                </div>
-            <?php }?>
             <div class="resize-font-size">
                 <div class="wrapper-button" id="aumentar-texto-sandwich" aria-label="Aumentar tamanho do texto">
                     A+
@@ -122,23 +122,23 @@
                     <i class="fa-solid fa-user"></i>Personagens
                 </a>  
                 
-                <?php if (!isset($_SESSION['login'])) { ?>
-                    <a class="link padding-left" href="login.php#">
-                        Login
-                    </a>
-                    <a class="link padding-left" href="cadastro.php#">
-                        Cadastro
-                    </a>
-                <?php } ?>
-
-                
+            <?php if (!isset($_SESSION['login'])) { ?>
+                <a class="link padding-left" href="login.php#">
+                    Login
+                </a>
+                <a class="link padding-left" href="cadastro.php#">
+                    Cadastro
+                </a>
+            <?php } ?>                
 
             </div>
-                <?php if (isset($_SESSION['login'])) { ?>
-                    <div class="logout">
-                        <a class="link" href="php/logout.php">Sair da Conta</a>
-                    </div>
-                <?php } ?>
+
+        <?php if (isset($_SESSION['login'])) { ?>
+            <div class="logout">
+                <a class="link" href="php/logout.php">Sair da Conta</a>
+            </div>
+        <?php } ?>
+
         </div>
     </div>
     
