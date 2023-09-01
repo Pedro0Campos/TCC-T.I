@@ -58,7 +58,7 @@
 }
 
 .darkmode:root {
-  --backg-color: #000000;
+  --backg-color: #121111;
   --text-color: #FEFCF3;
   --text-color-50: #FFFFFF80;
   --text-color-60: #FFFFFF99;
@@ -295,8 +295,13 @@
 .container-navbar-lateral .navbar-lateral .header {
   text-align: center;
 }
-.container-navbar-lateral .navbar-lateral .header img {
+.container-navbar-lateral .navbar-lateral .header .img-user {
   height: 50px;
+  padding: 10px;
+}
+.container-navbar-lateral .navbar-lateral .header .img-user img {
+  height: 100%;
+  border-radius: 30px;
   aspect-ratio: 1/1;
 }
 .container-navbar-lateral .navbar-lateral .resize-font-size {
@@ -318,7 +323,7 @@
   padding: 10px 7.5px 10px 7.5px;
   border-radius: 10px;
 }
-.container-navbar-lateral .navbar-lateral .wrapper-links .link.active {
+.container-navbar-lateral .navbar-lateral .wrapper-links .link:hover {
   background-color: var(--active-link-color);
 }
 .container-navbar-lateral .navbar-lateral .wrapper-links .link i {

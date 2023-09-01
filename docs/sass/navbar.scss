@@ -268,11 +268,15 @@
         }
 
         .header {
-            // height: 100px;
             text-align: center;
-            img {
+            .img-user {
                 height: 50px;
-                aspect-ratio: 1/1;
+                padding: 10px;
+                img {
+                    height: 100%;
+                    border-radius: 30px;
+                    aspect-ratio: 1/1;
+                }
             }
         }
 
@@ -296,9 +300,12 @@
                 padding: 10px 7.5px 10px 7.5px;
                 border-radius: 10px;
 
-                &.active {
+                &:hover {
                     background-color: var(--active-link-color);
                 }
+                // &.active {
+                //     background-color: var(--active-link-color);
+                // }
 
                 i {
                     margin-right: 7.5px;

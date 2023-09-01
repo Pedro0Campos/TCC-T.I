@@ -6,18 +6,20 @@
 // ================================
 let splideList = document.querySelector('#splide__list_MUSICAS')
 
-splideList.innerHTML = ''
+if (splideList) {
+    splideList.innerHTML = ''
 
-let musicas = getTracks()
-musicas.forEach((e, i) => {
-    splideList.innerHTML += `
-    <div class="splide__slide track">
-        <img src="${e.smallImage}" alt="Foto do Album do(a) ${e.artista}"/>
-        <p class="nome_musica">${e.nome}</p>
-        <p class="autor_musica">${e.artista}</p>
-    </div>
-    `
-})
+    let musicas = getTracks()
+    musicas.forEach((e, i) => {
+        splideList.innerHTML += `
+        <div class="splide__slide track">
+            <img src="${e.smallImage}" alt="Foto do Album do(a) ${e.artista}"/>
+            <p class="nome_musica">${e.nome}</p>
+            <p class="autor_musica">${e.artista}</p>
+        </div>
+        `
+    })
+}
 
 
 // Criar o carrosel
@@ -85,6 +87,7 @@ let carroselPopup = new Splide('#popup', {
     focus:   0,           // Habilita uma classe para personalizar o elemento focado
     gap: '20px',          // Espaçamento entre os slides
     easing: 'ease-out',
-    });
+});
 
 carroselPopup.mount()
+

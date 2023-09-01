@@ -59,7 +59,7 @@
 }
 
 .darkmode:root {
-  --backg-color: #000000;
+  --backg-color: #121111;
   --text-color: #FEFCF3;
   --text-color-50: #FFFFFF80;
   --text-color-60: #FFFFFF99;
@@ -291,7 +291,6 @@
   }
 }
 .carrossel-sobre {
-  margin: 50px 30px 10px 30px;
   /*descolamento da seta esquerda*/
 }
 .carrossel-sobre .splide__slide {
@@ -304,6 +303,8 @@
 }
 .carrossel-sobre .splide__slide img {
   width: 100%;
+  aspect-ratio: 75/118;
+  object-fit: cover;
 }
 .carrossel-sobre .splide__slide .nome_pessoa {
   margin-top: 0.5em;
@@ -317,6 +318,16 @@
 @media only screen and (max-width: 425px) {
   .carrossel-sobre .splide__slide {
     width: calc((100% + 10px) / 3 - 10px) !important;
+  }
+  .carrossel-sobre .slider-progress {
+    background: #292929;
+    margin-top: 20px;
+  }
+  .carrossel-sobre .slider-progress .slider-progress-bar {
+    background-color: #fff;
+    height: 4px;
+    transition: width 400ms ease;
+    width: 0;
   }
 }
 @media only screen and (max-width: 375px) {

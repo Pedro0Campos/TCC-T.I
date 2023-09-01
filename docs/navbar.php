@@ -9,31 +9,22 @@
                     <span class="ball"></span>
                     
                     <?php
-                    if (!$darkmode) {
-                        echo '
-                        <i class="fa-solid fa-sun sun" id="sun"></i>
-                        <i class="fa-solid fa-cloud cloud cloud1" id="cloud1"></i>
-                        <i class="fa-solid fa-cloud cloud cloud2" id="cloud2"></i>
-                        ';
-                    } else {
-                        echo '
-                        <i class="fa-solid fa-moon moon" id="moon"></i>
-                        <i class="fa-solid fa-star star star1" id="star1"></i>
-                        <i class="fa-solid fa-star star star2" id="star2"></i>
-                        <i class="fa-solid fa-star star star3" id="star3"></i>
-                        ';
-                    }
-                    ?>
+                    if (!$darkmode) { ?>
+                    <i class="fa-solid fa-sun sun" id="sun"></i>
+                    <i class="fa-solid fa-cloud cloud cloud1" id="cloud1"></i>
+                    <i class="fa-solid fa-cloud cloud cloud2" id="cloud2"></i>
+                    <?php } else { ?>
+                    <i class="fa-solid fa-moon moon" id="moon"></i>
+                    <i class="fa-solid fa-star star star1" id="star1"></i>
+                    <i class="fa-solid fa-star star star2" id="star2"></i>
+                    <i class="fa-solid fa-star star star3" id="star3"></i>
+                    <?php }?>
                 </label>
             </form>
 
             <div class="resize-font-size flexCenterVH">
-                <div class="wrapper-button flexCenterVH" id="aumentar-texto" aria-label="Aumentar tamanho do texto">
-                    A+
-                </div>
-                <div class="wrapper-button flexCenterVH" id="diminuir-texto" aria-label="Diminuir tamanho do texto">
-                    A-
-                </div>
+                <div class="wrapper-button flexCenterVH" id="aumentar-texto" aria-label="Aumentar tamanho do texto">A+</div>
+                <div class="wrapper-button flexCenterVH" id="diminuir-texto" aria-label="Diminuir tamanho do texto">A-</div>
             </div>
         </div>
         
@@ -48,27 +39,21 @@
         
         <!-- ITENS NA DIREITA - Login e cadastro -->
         <div class="navlista itens-direita">
+            
+            <?php if (!isset($_SESSION['login'])) { ?>
+            <a class="animation-link" href="cadastro.php" class="navitens">Cadastrar-se</a>
+            <a class="animation-link" href="login.php" class="navitens">Login</a>
 
-            <?php
-                if (!isset($_SESSION['login'])) {
-                    echo '
-                    <a class="animation-link" href="cadastro.php" class="navitens">Cadastrar-se</a>
-                    <a class="animation-link" href="login.php" class="navitens">Login</a>
-                    ';
-                } else {
-                    $nome_usuario = mb_strimwidth(explode(" ", $_SESSION['login']['nome'])[0], 0, 15, "...");
-
-                    echo "
-                    <li class='duplo-li'>
-                        <span>Olá $nome_usuario !</span>
-                        <a href='php/logout.php' class='animation-link'>Sair?</a>
-                    </li>
-                    <a class='' href='perfiluser.php'>
-                        <div class='img-user'><img src='" . get_img() . "' alt=''></div>
-                    </a>
-                    ";
-                }
+            <?php } else {
+                $nome_usuario = mb_strimwidth(explode(" ", $_SESSION['login']['nome'])[0], 0, 15, "...");
             ?>
+            <li class="duplo-li">
+                <span>Olá <?php echo $nome_usuario?>!</span>
+                <a href="php/logout.php" class="animation-link">Sair?</a>
+            </li>
+            <a href="perfiluser.php"><div class="img-user"><img src="<?php echo get_img()  // consultar_user.php ?>" alt=""></div></a>
+            <?php }?>
+
         </div>
         <!-- ITENS NA DIREITA - Login e cadastro -->
         
@@ -90,22 +75,20 @@
     <div class="container-navbar-lateral">
 
         <div class="navbar-lateral" id="navbar-lateral">
-        <?php 
-        if (isset($_SESSION['login'])) {
-        ?>
-            <div class="header">
-                <img src="imgs/icon-user.png" alt="">
-                <p><?php echo mb_strimwidth(explode(" ", $_SESSION['login']['nome'])[0], 0, 15, "...") ?></p>
-            </div>
-        <?php }?>
+            <?php if (isset($_SESSION['login'])) { ?>
+            <a href="perfiluser.php">
+                <div class="header">
+                    <div class="img-user">
+                        <img src="<?php echo get_img() // consultar_user.php ?>" alt="">
+                    </div>
+                    <p><?php echo $nome_usuario ?></p>
+                </div>
+            </a>
+            <?php }?>
 
             <div class="resize-font-size">
-                <div class="wrapper-button" id="aumentar-texto-sandwich" aria-label="Aumentar tamanho do texto">
-                    A+
-                </div>
-                <div class="wrapper-button" id="diminuir-texto-sandwich" aria-label="Diminuir tamanho do texto">
-                    A-
-                </div>
+                <div class="wrapper-button" id="aumentar-texto-sandwich" aria-label="Aumentar tamanho do texto">A+</div>
+                <div class="wrapper-button" id="diminuir-texto-sandwich" aria-label="Diminuir tamanho do texto">A-</div>
             </div>
             
             <div class="wrapper-links">
@@ -121,23 +104,17 @@
                 <a class="link" href="index.php#personagens">
                     <i class="fa-solid fa-user"></i>Personagens
                 </a>  
-                
-            <?php if (!isset($_SESSION['login'])) { ?>
-                <a class="link padding-left" href="login.php#">
-                    Login
-                </a>
-                <a class="link padding-left" href="cadastro.php#">
-                    Cadastro
-                </a>
-            <?php } ?>                
-
+                <?php if (!isset($_SESSION['login'])) { ?>
+                <a class="link padding-left" href="login.php#">Login</a>
+                <a class="link padding-left" href="cadastro.php#">Cadastro</a>
+                <?php } ?>
             </div>
 
-        <?php if (isset($_SESSION['login'])) { ?>
+            <?php if (isset($_SESSION['login'])) { ?>
             <div class="logout">
                 <a class="link" href="php/logout.php">Sair da Conta</a>
             </div>
-        <?php } ?>
+            <?php } ?>
 
         </div>
     </div>

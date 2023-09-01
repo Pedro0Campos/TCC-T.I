@@ -276,11 +276,11 @@
     }
 }
 
+
 // ===========================
 //carrossel Sobre
 // ===========================
 .carrossel-sobre {
-    margin: 50px 30px 10px 30px;
     
     .splide__slide {
         background-color: transparent;
@@ -292,6 +292,8 @@
         }
         img {
             width: 100%;
+            aspect-ratio: 75/118;
+            object-fit: cover;
         }
         .nome_pessoa {
             margin-top: 0.5em;
@@ -322,6 +324,16 @@
     .carrossel-sobre {
         .splide__slide {
             width: calc(((100% + 10px) / 3) - 10px) !important;
+        }
+        .slider-progress {
+            background: #292929;
+            margin-top: 20px;
+            .slider-progress-bar {
+                background-color: #fff;
+                height: 4px;
+                transition: width 400ms ease;
+                width: 0;
+            }
         }
     }
 }
