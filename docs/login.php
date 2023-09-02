@@ -1,7 +1,7 @@
 <?php 
     include_once('database/db.php');
     include_once('php/form.php');
-    include_once('php/consultar_user.php');  // Consultar usuários no banco
+    include_once('php/consultas.php');  // Consultar usuários no banco
 
     include_once('php/verify_darkmode.php');
 ?>
@@ -52,13 +52,11 @@
         if ($emailErro == '' and $senhaErro == '') {
 
             // Verificar se existe um cadastro com esse email
-            $condicao = "WHERE email = '$email'";
-            $consulta = consultar_user($condicao, $conexao_db);
+            $consulta = consulta($conexao_db, "SELECT * FROM Usuarios WHERE email = '$email'");
             $cadastro = mysqli_fetch_row($consulta);
 
-            var_dump(verificarSenha($senha, $cadastro[3]));
             if ($cadastro != NULL) {
-                if (verificarSenha($senha, $cadastro[3])) {
+                if (verifSenha($senha, $cadastro[3])) {
                     // Login
                     $_SESSION['login'] = ['id' => $cadastro[0], 'nome' => $cadastro[1], 'tipoUser' => $cadastro[4], 'imgUser' => $cadastro[5]];
     
@@ -83,7 +81,7 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="pt-br" <?php if ($darkmode) {echo "class='darkmode'";} ?>>
+<html lang="pt-br" class='<?php if ($darkmode) {echo "darkmode";} ?>'>
 <head>
 
     <meta charset="UTF-8">

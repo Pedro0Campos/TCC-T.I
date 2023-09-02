@@ -56,13 +56,30 @@
             padding: 20px;
             border-radius: 30px;
             max-width: 100%;
-            word-break: break-word;
-            .name-user {
-                margin-bottom: 15px;
+            display: flex;
+            
+            .img-user {
+                height: 50px;
+                margin-right: 10px;
+                background-color: #000000;
+                border-radius: 30px;
+                img {
+                    height: 100%;
+                    border-radius: 30px;
+                    aspect-ratio: 1/1;
+                    object-fit: scale-down;
+                }
             }
-            .comentario {
-                color: #686868;
-                padding-left: 10px;
+            
+            .content {
+                word-break: break-word;
+                .name-user {
+                    margin-bottom: 6px;
+                }
+                .comentario {
+                    color: #686868;
+                    padding-left: 10px;
+                }
             }
         }
 

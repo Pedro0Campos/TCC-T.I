@@ -184,6 +184,7 @@ div.content div.form-right form .form-camada-2 .conteiner-input .button_form {
   background-color: var(--second-color);
   font-size: 1em;
   border-radius: 30px;
+  cursor: pointer;
 }
 div.content div.form-right form .form-camada-2 .conteiner-input .msg_erro {
   color: rgb(255, 89, 89);

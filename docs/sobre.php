@@ -2,7 +2,7 @@
     include_once('php/verify_darkmode.php');
 ?>
 <!DOCTYPE html>
-<html lang="pt-br" <?php if ($darkmode) {echo "class='darkmode'";} ?> >
+<html lang="pt-br" class='<?php if ($darkmode) {echo "darkmode";} ?>'>
 
 <head>
 
@@ -31,9 +31,6 @@
     <script src="splide/js/splide.min.js"></script>
 
     <style>
-        section {
-            padding-bottom: 150px;
-        }
         .vd {
             width: 95%;
         }
@@ -58,6 +55,10 @@
                 background-position: 0 100%;
                 background-size: 100%;
             }
+
+            .padding-bottom {
+                padding-bottom: 180px;
+            }
         }
         </style>
     
@@ -68,14 +69,14 @@
         // include_once('database/db.php');
         include_once('navbar.php');
         // include_once('php/form.php');
-        // include_once('php/consultar_user.php');  // Consultar usuários no banco
+        // include_once('php/consultas.php');  // Consultar usuários no banco
     ?>
     
     <!-- CONTEÚDO -->
     <main>
-        <section class="padding ondas">
+        <section class="padding ondas retro-line-2">
             
-            <div class="retro-line-2 wh100">
+            <div class="padding-bottom">
                 
                 <div class="wrapper-content-main side-bar side-bar-style-3" data-aos="fade-right">
                     <div class="box-title1">

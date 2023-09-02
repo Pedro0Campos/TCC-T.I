@@ -49,12 +49,27 @@
   padding: 20px;
   border-radius: 30px;
   max-width: 100%;
+  display: flex;
+}
+#area .container-comentario .wrapper-comentario .img-user {
+  height: 50px;
+  margin-right: 10px;
+  background-color: #000000;
+  border-radius: 30px;
+}
+#area .container-comentario .wrapper-comentario .img-user img {
+  height: 100%;
+  border-radius: 30px;
+  aspect-ratio: 1/1;
+  object-fit: scale-down;
+}
+#area .container-comentario .wrapper-comentario .content {
   word-break: break-word;
 }
-#area .container-comentario .wrapper-comentario .name-user {
-  margin-bottom: 15px;
+#area .container-comentario .wrapper-comentario .content .name-user {
+  margin-bottom: 6px;
 }
-#area .container-comentario .wrapper-comentario .comentario {
+#area .container-comentario .wrapper-comentario .content .comentario {
   color: #686868;
   padding-left: 10px;
 }

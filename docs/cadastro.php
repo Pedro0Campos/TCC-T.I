@@ -1,7 +1,7 @@
 <?php 
     include_once('database/db.php');
     include_once('php/form.php');
-    include_once('php/consultar_user.php');  // Consultar usuários no banco
+    include_once('php/consultas.php');  // Consultar usuários no banco
     include_once('php/verify_darkmode.php');
 ?>
 
@@ -77,8 +77,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($nomeErro == '' and $emailErro == '' and $senhaErro == '') {
         
         // Verificar se já existe um cadastro com esse email
-        $condicao = "WHERE email = '$email'";
-        $consulta = consultar_user($condicao, $conexao_db);
+        $condicao = "SELECT * FROM Usuarios WHERE email = '$email'";
+        $consulta = consulta($conexao_db, $condicao);
         
         // Verificar se existe algum email cadastrado
         if (mysqli_num_rows($consulta) > 0) {
@@ -89,7 +89,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             cadastrar($nome, $email, $senha, 'usuarios', $conexao_db);
 
             // Coletar o id
-            $consulta = consultar_user($condicao, $conexao_db);
+            $consulta = consulta($conexao_db, $condicao);
             $cadastro = mysqli_fetch_row($consulta);
 
             // Trocar de tela
@@ -101,7 +101,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     $redirec = "php/comentar.php?comentario=$_POST[coment]";
                 }
             }
-            echo $redirec;
             header("Location: $redirec");
             die();
         }
@@ -111,7 +110,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 <!DOCTYPE html>
-<html lang="pt-br" <?php if ($darkmode) {echo "class='darkmode'";} ?>>
+<html lang="pt-br" class='<?php if ($darkmode) {echo "darkmode";} ?>'>
     <head>
         
     <meta charset="UTF-8">

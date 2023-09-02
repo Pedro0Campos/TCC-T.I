@@ -1,4 +1,5 @@
-    <?php include_once('php/consultar_user.php'); ?>
+    <?php include_once('php/consultas.php'); ?>
+    
     <div class="navbar" id="navbar">
 
         <!-- TOGGLER --> 
@@ -34,6 +35,11 @@
             <a class="animation-link" href="index.php#">Home</a>
             <a id="grease" href="index.php#" >Grease</a>
             <a class="animation-link" href="sobre.php#">Sobre</a>
+            <?php if (isset($_SESSION['login'])) {
+                if ($_SESSION['login']['tipoUser'] == 1) {
+                    echo '<a class="animation-link" href="../admin/">Admin</a>';
+                }
+            }?>
         </div>
         <!-- ITENS NO MEIO -->
         
@@ -51,7 +57,7 @@
                 <span>Olá <?php echo $nome_usuario?>!</span>
                 <a href="php/logout.php" class="animation-link">Sair?</a>
             </li>
-            <a href="perfiluser.php"><div class="img-user"><img src="<?php echo get_img()  // consultar_user.php ?>" alt=""></div></a>
+            <a href="perfiluser.php"><div class="img-user"><img src="<?php echo get_img($_SESSION['login']['imgUser'])  // consultas.php ?>" alt=""></div></a>
             <?php }?>
 
         </div>
@@ -79,7 +85,7 @@
             <a href="perfiluser.php">
                 <div class="header">
                     <div class="img-user">
-                        <img src="<?php echo get_img() // consultar_user.php ?>" alt="">
+                        <img src="<?php echo get_img($_SESSION['login']['imgUser']) // consultas.php ?>" alt="">
                     </div>
                     <p><?php echo $nome_usuario ?></p>
                 </div>
@@ -107,7 +113,11 @@
                 <?php if (!isset($_SESSION['login'])) { ?>
                 <a class="link padding-left" href="login.php#">Login</a>
                 <a class="link padding-left" href="cadastro.php#">Cadastro</a>
-                <?php } ?>
+                <?php } else { ?>
+                <a class="link" href="../admin/">
+                    <i class="fa-solid fa-lock"></i>Admin
+                </a>
+                <?php }?>
             </div>
 
             <?php if (isset($_SESSION['login'])) { ?>

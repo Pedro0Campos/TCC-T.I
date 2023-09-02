@@ -13,20 +13,19 @@
         return $valor;
     }
 
-    function criptografarSenha($senha) {
+    function cryptSenha($senha) {
         return password_hash($senha, PASSWORD_DEFAULT);
     }
 
-    function verificarSenha($senha, $hash) {
+    function verifSenha($senha, $hash) {
         return password_verify($senha, $hash);
     }
 
     function cadastrar($nome, $email, $senha, $table, $conexao_db) {
-        $senha = criptografarSenha($senha);
+        $senha = cryptSenha($senha);
         
-        $typeUser = 0;        
-        $stmt = $conexao_db->prepare("INSERT INTO $table (nome, email, senha, tipoUser) VALUES (?, ?, ?, ?)");
-        $stmt->bind_param('sssi', $nome, $email, $senha, $typeUser);
+        $stmt = $conexao_db->prepare("INSERT INTO $table (nome, email, senha) VALUES (?, ?, ?)");
+        $stmt->bind_param('sss', $nome, $email, $senha);
 
         $stmt->execute();
     }

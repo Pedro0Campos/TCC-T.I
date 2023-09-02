@@ -1,12 +1,11 @@
 <?php
     include_once('database/db.php');
     include_once('php/verify_darkmode.php');
+    include_once('php/consultas.php');
 ?>
 
 <!DOCTYPE html>
-<html lang="pt-br" <?php if ($darkmode) {
-                        echo "class='darkmode'";
-                    } ?>>
+<html lang="pt-br" class='<?php if ($darkmode) {echo "darkmode";} ?>'>
 
 <head>
 
@@ -307,8 +306,8 @@
             <a name="comentarios"></a>
             <div id="area">
                 <?php 
-                    $query = "SELECT usuarios.nome, comentarios.txtComent, comentarios.dataComent from usuarios, comentarios where (usuarios.idUser = comentarios.idUser) ORDER BY comentarios.dataComent DESC";
-                    $consulta = mysqli_query($conexao_db, $query);
+                    $query = "SELECT usuarios.nome, usuarios.imgUser, comentarios.txtComent, comentarios.dataComent from usuarios, comentarios where (usuarios.idUser = comentarios.idUser) ORDER BY comentarios.dataComent DESC";
+                    $consulta = consulta($conexao_db, $query);
                 ?>
 
                 <div class="header"><h2 class="title h2">Comentários</h2></div>
@@ -319,18 +318,24 @@
 
                     <?php 
                         while($comentario = mysqli_fetch_assoc($consulta)) {
+                            // $comentario[imgUser]
                             echo "
                             <div class='wrapper-comentario'>
-                                <p class='name-user'>". mb_strimwidth($comentario['nome'], 0, 20, '...') ."</p>
-                                <p class='comentario'>
-                                    $comentario[txtComent]
-                                </p>
+                                <div class='img-user'>
+                                    <img class='' src='" . get_img($comentario['imgUser']) . "' alt='Foto de perfil do Fulano'>
+                                </div>
+
+                                <div class='content'>
+                                    <p class='name-user'>". mb_strimwidth($comentario['nome'], 0, 20, '...') ."</p>
+                                    <p class='comentario'>
+                                        $comentario[txtComent]
+                                    </p>
+                                </div>
                             </div>
                             ";
-                            
                         }
-
                     ?>
+
                 </div>
                 <div id="but"></div>
                 
