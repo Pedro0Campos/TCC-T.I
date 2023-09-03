@@ -1,0 +1,70 @@
+/*Divs*/
+#fundo_verm{ /*Primeira div*/
+    background-color: #8F00FF;
+    border: none #8F00FF;
+    border-bottom-left-radius: 1900px 130%;
+    border-bottom-right-radius: 1900px 130%;
+    height: 400px;
+}
+#linha_top{ /*Segunda div*/
+    border: none;
+    display: flex;
+    align-items: center;
+    height: 80px;
+    padding: 8px;
+}
+#linha_top img{
+    height: 50px;
+}
+#linha_top h2{
+    margin-left: auto;
+    margin-right: auto;
+}
+#painel{ /*Terceira div*/
+    border: white;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border-radius: 35px;
+    box-shadow: #8F00FF 10px 9px 20px; 
+    max-width: 35%; 
+    min-width: 270px;
+    min-height: 350px;
+    text-align: center;
+}
+#bolinha_do_canto{
+    height: 12px; width: 12px;
+    border-radius: 100%;
+    border: solid 2px #F79E52;
+    margin: 10px;
+}
+#img_perfil{
+    border: none white;
+    border-radius: 100%;
+    height: auto;
+    margin-top: 20px;
+    min-width: 120px;
+    max-width: 25%;
+    box-shadow: #8F00FF 10px 9px 20px;
+}
+#bio_amiga{ /*Quarta div*/
+    width: 45%;
+    border: none;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#bio_perfil{
+    width: 97%;
+    border: solid 2px;
+    border-radius: 12px;
+    resize: none;
+    outline: 0;
+    text-indent: 5px;
+    padding-top: 10px;
+    padding-left: 5px;
+    background-color: unset;
+    color: unset;
+}
