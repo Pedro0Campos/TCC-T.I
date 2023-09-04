@@ -103,10 +103,17 @@
                         </div>
                     </td>
                 </tr>
+
                 <tr>
                     <th>Foto</th>
-                    <td><input type="file" name="foto" id="foto" class="caixas_form"></td>
-                    
+                    <td>
+                        <input type="file" name="foto" id="foto" class="caixas_form">
+                    </td>
+                </tr>
+
+                <tr style="font-size: 0.8em;">
+                    <th>Observação:</th>
+                    <td><p class="caixas_form text">Se não inserir nenhuma imagem, a foto atual será preservada</p></td>
                 </tr>
                 
                 <tr>
@@ -115,6 +122,7 @@
                         <input type="submit" value="Editar" id="edit_btn" onclick="editar()">
                     </td>
                 </tr>
+
             </table> 
             <a href="https://www.youtube.com/watch?v=WzRiyWugP-E&t=1270s&ab_channel=Celke"><h1>Tutorial crop</h1></a>
         </form>
