@@ -55,6 +55,8 @@
         width: 40%;
         max-width: 160px;
         margin: 0 auto;
+        margin-bottom: 25px;
+        position: relative;
         img {
             width: 100%;
             border-radius: 100%;
@@ -65,7 +67,18 @@
             box-shadow: 5px 5px 8px 3px rgba(248, 176, 172, 0.75);
         }
 
-        margin-bottom: 25px;
+        i {
+            color: white;
+            border: 1px solid black;
+            border-radius: 100%;
+            background-color: #313131;
+            position: absolute;
+            top: 75%;
+            left: 70%;
+            padding: 0.45em;
+            font-size: 1em;
+            cursor: pointer;
+        }
     }
 
     .editar {

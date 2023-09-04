@@ -78,7 +78,7 @@
         <h1 class="h2">Configuração</h1>
         <hr>
         <div class="img-user">
-            <img src="<?php echo get_img($_SESSION['login']['imgUser']) ?>" alt="Imagem do usuário">
+            <a href="perfil.php"><img src="<?php echo get_img($_SESSION['login']['imgUser']) ?>" alt="Imagem do usuário E link para o perfil do usuário"></a>
         </div>
     </div>
 

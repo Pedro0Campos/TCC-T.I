@@ -18,3 +18,5 @@ create table `Comentarios` (
     txtComent varchar(150),
     dataComent datetime not null
 );
+
+UPDATE Usuarios SET tipoUser = 1 WHERE idUser = 1
