@@ -1,4 +1,6 @@
 <?php 
+    error_reporting(0);
+    ini_set("display_errors", 0);
     include_once('database/db.php');
     include_once('php/form.php');
     include_once('php/consultas.php');  // Consultar usuários no banco
@@ -92,9 +94,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $consulta = query($conexao_db, $condicao);
             $cadastro = mysqli_fetch_row($consulta);
 
+            // Salvar as informações de login
+            $_SESSION['login'] = [
+                'id' => $cadastro[0], 
+                'nome' => $cadastro[1], 
+                'email' => $cadastro[2], 
+                'tipoUser' => $cadastro[4], 
+                'imgUser' => $cadastro[5]
+            ];
+            
             // Trocar de tela
-            $_SESSION['login'] = ['id' => $cadastro[0], 'nome' => $cadastro[1], 'tipoUser' => $cadastro[4], 'imgUser' => $cadastro[5]];
-
             $redirec = 'index.php';
             if (isset($_POST['redirec']) && isset($_POST['coment'])) {
                 if ($_POST['redirec'] && $_POST['coment'] != '') {

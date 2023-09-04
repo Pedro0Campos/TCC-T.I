@@ -1,4 +1,6 @@
 <?php 
+    error_reporting(0);
+    ini_set("display_errors", 0);
     include_once('database/db.php');
     include_once('php/form.php');
     include_once('php/consultas.php');  // Consultar usuários no banco
@@ -58,7 +60,13 @@
             if ($cadastro != NULL) {
                 if (verifSenha($senha, $cadastro[3])) {
                     // Login
-                    $_SESSION['login'] = ['id' => $cadastro[0], 'nome' => $cadastro[1], 'tipoUser' => $cadastro[4], 'imgUser' => $cadastro[5]];
+                    $_SESSION['login'] = [
+                        'id' => $cadastro[0], 
+                        'nome' => $cadastro[1], 
+                        'email' => $cadastro[2], 
+                        'tipoUser' => $cadastro[4], 
+                        'imgUser' => $cadastro[5]
+                    ];
     
                     // Trocar de tela
                     $redirec = 'index.php';

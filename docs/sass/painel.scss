@@ -1,0 +1,115 @@
+@use "config.scss";
+/*Divs*/
+#fundo_verm{ /*Primeira div*/
+    background-color: #F26565;
+    border: none;
+    border-radius: 0 0 100% 100%;
+    height: 325px;
+}
+@media only screen and (max-width: 768px) {
+    #fundo_verm {
+        height: 250px;
+    }
+}
+@media only screen and (max-width: 425px) {
+    #fundo_verm {
+        height: 200px;
+    }
+}
+#linha_top{ /*Segunda div*/
+    border: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    height: 80px;
+    padding: 8px;
+    color: white;
+    position: relative;
+    
+    h2{
+        margin: 0 auto;
+    }
+    #engrenagem {
+        position: absolute;
+        left: 35px;
+    }
+}
+#painel{ /*Terceira div*/
+    border: white;
+    margin: 0 auto;
+    background-color: white;
+    color: black;
+    padding: 10px 10px 50px 10px;
+    border-radius: 35px;
+    box-shadow: #F26565 10px 9px 20px; 
+    max-width: 35%;
+    min-width: 270px;
+    min-height: 320px;
+    text-align: center;
+    position: relative;
+    word-break: break-word;
+    
+    .img-user {
+        width: 40%;
+        max-width: 160px;
+        margin: 0 auto;
+        img {
+            width: 100%;
+            border-radius: 100%;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            // box-shadow: #8F00FF 10px 9px 20px;
+            background-color: black;
+            box-shadow: 5px 5px 8px 3px rgba(248, 176, 172, 0.75);
+        }
+
+        margin-bottom: 25px;
+    }
+
+    .editar {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: 10px;
+        font-weight: 100;
+        font-size: 1em;
+        color: black;
+        a {
+            color: black;
+            text-decoration: underline;
+            text-underline-offset: 5px;
+        }
+    }
+    
+    h3 {
+        font-size: 1.2em;
+    }
+}
+#bolinha_do_canto{
+    height: 12px; width: 12px;
+    border-radius: 100%;
+    border: solid 2px #F79E52;
+    margin: 10px;
+}
+
+#bio_amiga{ /*Quarta div*/
+    width: 45%;
+    border: none;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#bio_perfil{
+    width: 97%;
+    border: solid 2px;
+    border-radius: 12px;
+    resize: none;
+    outline: 0;
+    text-indent: 5px;
+    padding-top: 10px;
+    padding-left: 5px;
+    background-color: unset;
+    color: unset;
+}

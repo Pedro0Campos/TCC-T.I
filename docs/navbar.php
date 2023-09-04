@@ -57,7 +57,7 @@
                 <span>Olá <?php echo $nome_usuario?>!</span>
                 <a href="php/logout.php" class="animation-link">Sair?</a>
             </li>
-            <a href="perfiluser.php"><div class="img-user"><img src="<?php echo get_img($_SESSION['login']['imgUser'])  // consultas.php ?>" alt=""></div></a>
+            <a href="perfil.php"><div class="img-user"><img src="<?php echo get_img($_SESSION['login']['imgUser'])  // consultas.php ?>" alt=""></div></a>
             <?php }?>
 
         </div>
@@ -82,7 +82,7 @@
 
         <div class="navbar-lateral" id="navbar-lateral">
             <?php if (isset($_SESSION['login'])) { ?>
-            <a href="perfiluser.php">
+            <a href="perfil.php">
                 <div class="header">
                     <div class="img-user">
                         <img src="<?php echo get_img($_SESSION['login']['imgUser']) // consultas.php ?>" alt="">

@@ -1,0 +1,185 @@
+@font-face {
+  font-family: "Josefin Sans Regular";
+  src: url(../fonts/JosefinSans/JosefinSans-Regular.ttf);
+}
+@font-face {
+  font-family: "Josefin Sans Medium";
+  src: url(../fonts/JosefinSans/JosefinSans-Medium.ttf);
+}
+@font-face {
+  font-family: "Josefin Sans Light";
+  src: url(../fonts/JosefinSans/JosefinSans-Light.ttf);
+}
+@font-face {
+  font-family: "Josefin Sans Bold";
+  src: url(../fonts/JosefinSans/JosefinSans-Bold.ttf);
+}
+@font-face {
+  font-family: "Josefin Sans SemiBold";
+  src: url(../fonts/JosefinSans/JosefinSans-SemiBold.ttf);
+}
+@font-face {
+  font-family: "Josefin Sans Bold Italic";
+  src: url(../fonts/JosefinSans/JosefinSans-BoldItalic.ttf);
+}
+@font-face {
+  font-family: Inter;
+  src: url(../fonts/Inter/Inter-Regular.ttf);
+}
+@font-face {
+  font-family: InterSemiBold;
+  src: url(../fonts/Inter/Inter-SemiBold.ttf);
+}
+:root {
+  --width-box-title1: 500px;
+  --font-size-box-title1: 1.8em;
+  --width-box-title2: 490px;
+  --font-size-box-title2: 1.7em;
+  --width-box-title3: 300px;
+  --font-size-box-title3: 1.1em;
+  --width-mais-tocadas: 480px;
+  --font-size-box-title3: 1.6em;
+  --height-sandy-danny: 95vh;
+  --backg-color: #FEFCF3;
+  --text-color: #000000;
+  --text-color-50: #00000080;
+  --text-color-60: #00000099;
+  --text-color-80: #000000cc;
+  --link-color: #45CFE1;
+  --active-link-color: #6406ff;
+  --second-color: #4925B0;
+  --second-color-50: #4925B080;
+  --third-color: #00109d;
+  --sect-par-backg-color: #000;
+  --sect-par-text-color: #fff;
+  --fieldset-color: #B6B6B6;
+  --backg-form: #EFEFEF;
+  --backg-camada-2: white;
+}
+
+.darkmode:root {
+  --backg-color: #121111;
+  --text-color: #FEFCF3;
+  --text-color-50: #FFFFFF80;
+  --text-color-60: #FFFFFF99;
+  --text-color-80: #FFFFFFcc;
+  --second-color: #8F00FF;
+  --second-color-50: #9000ff74;
+  --third-color: #C6A4FF;
+  --backg-form: #000000;
+  --backg-camada-2: #000000;
+}
+
+/*Divs*/
+#fundo_verm { /*Primeira div*/
+  background-color: #F26565;
+  border: none;
+  border-radius: 0 0 100% 100%;
+  height: 325px;
+}
+
+@media only screen and (max-width: 768px) {
+  #fundo_verm {
+    height: 250px;
+  }
+}
+@media only screen and (max-width: 425px) {
+  #fundo_verm {
+    height: 200px;
+  }
+}
+#linha_top { /*Segunda div*/
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  padding: 8px;
+  color: white;
+  position: relative;
+}
+#linha_top h2 {
+  margin: 0 auto;
+}
+#linha_top #engrenagem {
+  position: absolute;
+  left: 35px;
+}
+
+#painel { /*Terceira div*/
+  border: white;
+  margin: 0 auto;
+  background-color: white;
+  color: black;
+  padding: 10px 10px 50px 10px;
+  border-radius: 35px;
+  box-shadow: #F26565 10px 9px 20px;
+  max-width: 35%;
+  min-width: 270px;
+  min-height: 320px;
+  text-align: center;
+  position: relative;
+  word-break: break-word;
+}
+#painel .img-user {
+  width: 40%;
+  max-width: 160px;
+  margin: 0 auto;
+  margin-bottom: 25px;
+}
+#painel .img-user img {
+  width: 100%;
+  border-radius: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  background-color: black;
+  box-shadow: 5px 5px 8px 3px rgba(248, 176, 172, 0.75);
+}
+#painel .editar {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 10px;
+  font-weight: 100;
+  font-size: 1em;
+  color: black;
+}
+#painel .editar a {
+  color: black;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+#painel h3 {
+  font-size: 1.2em;
+}
+
+#bolinha_do_canto {
+  height: 12px;
+  width: 12px;
+  border-radius: 100%;
+  border: solid 2px #F79E52;
+  margin: 10px;
+}
+
+#bio_amiga { /*Quarta div*/
+  width: 45%;
+  border: none;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#bio_perfil {
+  width: 97%;
+  border: solid 2px;
+  border-radius: 12px;
+  resize: none;
+  outline: 0;
+  text-indent: 5px;
+  padding-top: 10px;
+  padding-left: 5px;
+  background-color: unset;
+  color: unset;
+}
+
+/*# sourceMappingURL=painel.css.map */
