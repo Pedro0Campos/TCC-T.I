@@ -12,7 +12,7 @@
   height: 100%;
   border-radius: 100%;
   aspect-ratio: 1/1;
-  object-fit: cover;
+  background-color: black;
 }
 
 #top_linha h1 {
@@ -33,24 +33,28 @@
   text-align: left;
 }
 
-#del_btn {
-  border: solid 1px #FF0000;
-  border-radius: 6px;
-  background-color: #fff;
-  color: #FF0000;
-  cursor: pointer;
-  width: 90px;
-  height: 22px;
+.wrap-buttons {
+  width: 100% !important;
 }
 
-#edit_btn {
-  border: solid 1px #5474E5;
+.btn {
   border-radius: 6px;
+  cursor: pointer;
+  padding-left: 1.8em;
+  padding-right: 1.8em;
+  height: 1.8em;
+  font-size: 1em;
+}
+.btn#del_btn {
+  border: solid 1px #FF0000;
+  background-color: #fff;
+  color: #FF0000;
+  margin-right: 10px;
+}
+.btn#edit_btn {
+  border: solid 1px #5474E5;
   background-color: #5474E5;
   color: #fff;
-  cursor: pointer;
-  width: 90px;
-  height: 22px;
   margin-left: 10px;
 }
 
@@ -59,11 +63,12 @@
   border: none;
   margin-left: 25px;
   width: calc(100% - 25px);
-  height: 28px;
+  height: 1.8em;
   text-indent: 10px;
   outline: 0;
   background-color: var(--backg-color);
   color: var(--text-color);
+  font-size: 1em;
 }
 .caixas_form::-ms-reveal {
   display: none;

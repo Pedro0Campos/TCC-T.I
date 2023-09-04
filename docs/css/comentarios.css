@@ -61,7 +61,6 @@
   height: 100%;
   border-radius: 30px;
   aspect-ratio: 1/1;
-  object-fit: cover;
 }
 #area .container-comentario .wrapper-comentario .content {
   word-break: break-word;

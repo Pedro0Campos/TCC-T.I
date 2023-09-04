@@ -19,7 +19,7 @@ if (isset($_SESSION['login'])) {
     </script>";
     die();
 } else {
-    header('Location: ../index.php');
+    header('Location: ../login.php');
     die();
 }
 

@@ -219,7 +219,6 @@
   height: 100%;
   border-radius: 30px;
   aspect-ratio: 1/1;
-  object-fit: cover;
 }
 .navbar .container-icon-menu {
   position: absolute;
@@ -304,7 +303,6 @@
   height: 100%;
   border-radius: 30px;
   aspect-ratio: 1/1;
-  object-fit: cover;
 }
 .container-navbar-lateral .navbar-lateral .resize-font-size {
   margin-top: 15px;

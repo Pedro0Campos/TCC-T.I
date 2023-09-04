@@ -40,17 +40,21 @@
 
         function editar() {
             edit_btn = document.getElementById('edit_btn');
+            form_edit = document.getElementById('form-edit');
+            form_edit.action = 'php/edita_user.php'
 
             if (window.confirm('Deseja mesmo editar estas informações?')) {    
-                edit_btn.formAction = 'php/edita_user.php';
+                form_edit.submit();
             }
         }
-
+            
         function deletar() {
             del_btn = document.getElementById('del_btn');
+            form_edit = document.getElementById('form-edit');
+            form_edit.action = 'php/del_user.php'
 
-            if (window.confirm('Deseja mesmo deletar esta conta?')) {
-                del_btn.formAction = 'php/del_user.php';
+            if (window.confirm('Deseja mesmo editar estas informações?')) {    
+                form_edit.submit();
             }
         }
 
@@ -80,7 +84,7 @@
 
     <div id="edicao">
 
-        <form method="post">
+        <form method="post" id="form-edit">
 
             <table>
 
@@ -103,7 +107,7 @@
                         </div>
                     </td>
                 </tr>
-
+<!-- 
                 <tr>
                     <th>Foto</th>
                     <td>
@@ -115,11 +119,13 @@
                     <th>Observação:</th>
                     <td><p class="caixas_form text">Se não inserir nenhuma imagem, a foto atual será preservada</p></td>
                 </tr>
-                
+                 -->
                 <tr>
-                    <td colspan="2" style="text-align: center; border: none;">
-                        <input type="submit" value="Deletar" id="del_btn" onclick="deletar()">
-                        <input type="submit" value="Editar" id="edit_btn" onclick="editar()">
+                    <td colspan="" style="text-align: right; border: none;" class="wrap-buttons">
+                        <input type="button" value="Deletar" id="del_btn" class="btn" onclick="deletar()">
+                    </td>
+                    <td style="text-align: left; border: none;" class="wrap-button">
+                        <input type="button" value="Editar" id="edit_btn" class="btn" onclick="editar()">
                     </td>
                 </tr>
 
