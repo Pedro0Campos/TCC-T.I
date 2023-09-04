@@ -1,6 +1,6 @@
 <?php
     
-    function consulta($conexao_db, $query) {
+    function query($conexao_db, $query) {
         $consulta = mysqli_query($conexao_db, $query);
         return $consulta;
     }

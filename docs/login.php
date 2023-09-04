@@ -52,7 +52,7 @@
         if ($emailErro == '' and $senhaErro == '') {
 
             // Verificar se existe um cadastro com esse email
-            $consulta = consulta($conexao_db, "SELECT * FROM Usuarios WHERE email = '$email'");
+            $consulta = query($conexao_db, "SELECT * FROM Usuarios WHERE email = '$email'");
             $cadastro = mysqli_fetch_row($consulta);
 
             if ($cadastro != NULL) {

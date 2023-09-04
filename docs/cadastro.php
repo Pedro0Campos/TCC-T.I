@@ -78,7 +78,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         // Verificar se já existe um cadastro com esse email
         $condicao = "SELECT * FROM Usuarios WHERE email = '$email'";
-        $consulta = consulta($conexao_db, $condicao);
+        $consulta = query($conexao_db, $condicao);
         
         // Verificar se existe algum email cadastrado
         if (mysqli_num_rows($consulta) > 0) {
@@ -89,7 +89,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             cadastrar($nome, $email, $senha, 'usuarios', $conexao_db);
 
             // Coletar o id
-            $consulta = consulta($conexao_db, $condicao);
+            $consulta = query($conexao_db, $condicao);
             $cadastro = mysqli_fetch_row($consulta);
 
             // Trocar de tela

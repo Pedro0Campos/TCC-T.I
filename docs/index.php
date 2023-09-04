@@ -307,7 +307,7 @@
             <div id="area">
                 <?php 
                     $query = "SELECT usuarios.nome, usuarios.imgUser, comentarios.txtComent, comentarios.dataComent from usuarios, comentarios where (usuarios.idUser = comentarios.idUser) ORDER BY comentarios.dataComent DESC";
-                    $consulta = consulta($conexao_db, $query);
+                    $consulta = query($conexao_db, $query);
                 ?>
 
                 <div class="header"><h2 class="title h2">Comentários</h2></div>

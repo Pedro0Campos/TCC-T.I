@@ -111,9 +111,13 @@
                     <i class="fa-solid fa-user"></i>Personagens
                 </a>  
                 <?php if (!isset($_SESSION['login'])) { ?>
-                <a class="link padding-left" href="login.php#">Login</a>
-                <a class="link padding-left" href="cadastro.php#">Cadastro</a>
-                <?php } else { ?>
+                <a class="link padding-left" href="login.php#">
+                    Login
+                </a>
+                <a class="link padding-left" href="cadastro.php#">
+                    Cadastro
+                </a>
+                <?php } else if ($_SESSION['login']['tipoUser'] == 1) { ?>
                 <a class="link" href="../admin/">
                     <i class="fa-solid fa-lock"></i>Admin
                 </a>
@@ -121,7 +125,7 @@
             </div>
 
             <?php if (isset($_SESSION['login'])) { ?>
-            <div class="logout">
+            <div class="logout flexCenterVH">
                 <a class="link" href="php/logout.php">Sair da Conta</a>
             </div>
             <?php } ?>

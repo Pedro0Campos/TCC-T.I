@@ -219,6 +219,7 @@
   height: 100%;
   border-radius: 30px;
   aspect-ratio: 1/1;
+  object-fit: cover;
 }
 .navbar .container-icon-menu {
   position: absolute;
@@ -271,7 +272,7 @@
   position: fixed;
   z-index: 10;
   width: 100%;
-  height: calc(100vh - 72px);
+  height: calc(100% - 72px);
   right: -100%;
   top: 72px;
   transition: right 0.4s ease-out;
@@ -303,6 +304,7 @@
   height: 100%;
   border-radius: 30px;
   aspect-ratio: 1/1;
+  object-fit: cover;
 }
 .container-navbar-lateral .navbar-lateral .resize-font-size {
   margin-top: 15px;
@@ -335,16 +337,15 @@
 .container-navbar-lateral .navbar-lateral .logout {
   text-align: center;
   position: absolute;
-  width: calc(100% - 8px);
+  width: 100%;
   height: 40px;
   bottom: 10px;
-  left: 8px;
-  text-align: center;
+  left: 0;
+  padding-left: 16px;
 }
 .container-navbar-lateral .navbar-lateral .logout .link {
   display: block;
   padding: 7.5px 20px 7.5px 20px;
-  margin: 0 auto;
   width: fit-content;
   border: 1px solid #FF0000;
   border-radius: 0.5em;

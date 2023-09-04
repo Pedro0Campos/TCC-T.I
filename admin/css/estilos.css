@@ -1,0 +1,196 @@
+@font-face {
+  font-family: OpenSans;
+  src: url("../fonts/OpenSans-Regular.ttf");
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: OpenSans;
+}
+
+h1, h2, h3 {
+  font-weight: unset;
+  text-align: center;
+}
+
+a {
+  color: #000;
+}
+
+.links {
+  display: inline-block;
+}
+
+.overflow {
+  overflow: scroll;
+}
+
+table {
+  border: none;
+  border-spacing: 0;
+  border-radius: 60px;
+  width: 100%;
+  height: 300px;
+}
+table thead tr {
+  color: white;
+  background-color: rgb(36, 33, 33);
+}
+table thead tr th {
+  font-weight: unset;
+  padding: 15px;
+}
+table thead tr th:first-child {
+  border-radius: 10px 0 0 0;
+}
+table thead tr th:last-child {
+  border-radius: 0 10px 0 0;
+}
+table tbody tr td {
+  padding: 15px 15px 15px 15px;
+}
+table tbody tr:nth-child(2n) {
+  background-color: rgba(240, 240, 240, 0.75);
+}
+table tbody tr:hover {
+  background-color: rgba(240, 240, 240, 0.75);
+}
+table tbody tr:last-child td:first-child {
+  border-radius: 0 0 0 10px;
+}
+table tbody tr:last-child td:last-child {
+  border-radius: 0 0 10px 0;
+}
+table td, table th {
+  text-align: left;
+  word-wrap: break-word;
+  min-width: 150px;
+  max-width: 300px;
+}
+table td:first-child, table th:first-child {
+  padding-left: 40px;
+}
+table td:last-child, table th:last-child {
+  padding-right: 40px;
+}
+table .header {
+  color: white;
+  background-color: rgb(36, 33, 33) !important;
+}
+table .header th {
+  font-weight: unset;
+  padding: 15px 15px 15px 15px;
+}
+table.usuarios .collumn-1 {
+  width: 110px;
+}
+table.usuarios .collumn-2 {
+  width: 300px;
+}
+table.usuarios .collumn-3 {
+  width: 300px;
+}
+table.usuarios .collumn-4 {
+  width: 600px;
+}
+table.usuarios .collumn-5 {
+  width: 120px;
+}
+table.usuarios .collumn-6 {
+  width: 200px;
+}
+table.usuarios .collumn-7 {
+  width: 70px;
+}
+table.usuarios .collumn-8 {
+  width: 70px;
+}
+table.comentarios .collumn-1 {
+  width: 170px;
+}
+table.comentarios .collumn-2 {
+  width: 80px;
+}
+table.comentarios .collumn-3 {
+  width: 300px;
+}
+table.comentarios .collumn-4 {
+  width: 600px;
+}
+table.comentarios .collumn-5 {
+  width: 170px;
+}
+table.comentarios .collumn-6 {
+  width: 70px;
+}
+table.comentarios .collumn-7 {
+  width: 100px;
+}
+
+form {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+form .conteiner-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+form .conteiner-input label {
+  width: 100%;
+  max-width: 500px;
+}
+form .conteiner-input fieldset {
+  margin-bottom: 5px;
+  border: 2px solid #B6B6B6;
+  color: #B6B6B6;
+  padding: 0 10px 0 10px;
+}
+form .conteiner-input fieldset:focus-within {
+  border-color: #4925B0;
+  color: #4925B0;
+}
+form .conteiner-input fieldset legend {
+  text-align: left;
+  padding: 0 10px 0 10px;
+  font-size: 1em;
+}
+form .conteiner-input input {
+  width: 100%;
+}
+form .conteiner-input .input {
+  height: 50px;
+  background: transparent;
+  border-bottom: 1px solid var(--text-color);
+  color: rgba(0, 0, 0, 0.5);
+  outline: none;
+  border: none;
+  transform: translateY(-7.5%);
+}
+form .conteiner-input .input::placeholder {
+  color: transparent;
+}
+form .conteiner-input select {
+  width: 100%;
+  font-size: 1em;
+  cursor: pointer;
+}
+form .conteiner-input .button {
+  width: 90%;
+  height: 50px;
+  background-color: #4925B0;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=estilos.css.map */

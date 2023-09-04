@@ -9,9 +9,11 @@
     if (!isset($img)) {
         die('No file uploaded.');
     }
+    // Verificar tipo de imagem!!
+    
     move_uploaded_file($img["tmp_name"], "../". $upload_dir);
 
-    $query = "UPDATE Usuarios SET imgUser = '$upload_dir' WHERE idUser = 1";
+    $query = "UPDATE Usuarios SET imgUser = '$upload_dir' WHERE idUser = " . $_POST['id'];
     mysqli_query($conexao_db, $query);
     echo $query;
 
