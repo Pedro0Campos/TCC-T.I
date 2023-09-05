@@ -4,7 +4,13 @@
     
 ?>
 
-
+<script>
+    function del($id) {
+        if (confirm("Deseja mesmo deletar o comentário de ID "+ $id + "? " + "Essa ação é irreversível.")) {
+            document.location = 'del-comentarios.php?id=' + $id
+        }
+    }
+</script>
 <h2>Comentários</h2>
 <div class="overflow" style="overflow-y: auto;">
     <table class="comentarios">
@@ -43,8 +49,17 @@
                 <td class="collumn-3"><?php echo $row['nome']?></td>
                 <td class="collumn-4"><?php echo $row['txtComent']?></td>
                 <td class="collumn-5"><?php echo $row['dataComent']?></td>
-                <td class="collumn-6"><a href="edt-comentarios.php?id=<?php echo $row[0] ?>"><i class="fa-solid fa-pen-to-square fa-bounce"></i></a></td>
-                <td class="collumn-7"><a href="del-comentarios.php?id=<?php echo $row[0] ?>"><i class="fa-solid fa-trash fa-bounce"></i></a></td>
+
+                <td class="collumn-6">
+                    <a href="?pagina=form-comentarios&id=<?php echo $row[0] ?>">
+                        <i class="fa-solid fa-pen-to-square fa-bounce" aria-label="Editar Comentário"></i>
+                    </a>
+                </td>
+                <td class="collumn-7">
+                    <button type="button" id="del-users"aria-label="Deletar Comentário" onclick="del(<?php echo $row[0] ?>)">
+                        <i class="fa-solid fa-trash fa-bounce"></i>
+                    </button>
+                </td>
             </tr>
             <?php $count += 1;?>
         <?php }?>

@@ -228,8 +228,30 @@
     height: calc(100% + 40px);
   }
 }
+#showPopUp {
+  background-color: rgba(40, 39, 39, 0.785);
+  left: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#showPopUp .wrap-exit {
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+#showPopUp .wrap-exit #exit {
+  font-size: 50px;
+  margin: 7px 0 0 12px;
+}
+#showPopUp .wrap-exit #exit i {
+  color: white;
+  cursor: pointer;
+}
+
 .carrosel-personagens {
-  height: 70vh;
   /* Título do carrosel */
   /* Todos os slides */
   /* Os slides visiveis vão ter 100% de opacidade  */
@@ -303,7 +325,6 @@
 }
 .carrossel-sobre .splide__slide img {
   width: 100%;
-  aspect-ratio: 75/118;
   object-fit: cover;
 }
 .carrossel-sobre .splide__slide .nome_pessoa {

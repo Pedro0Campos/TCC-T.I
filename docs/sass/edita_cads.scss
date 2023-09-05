@@ -36,7 +36,7 @@
 
 .wrap-buttons {
     // display: flex;
-    width: 100% !important;
+    // width: 100% !important;
     
 }
 .btn {
@@ -120,20 +120,26 @@ td{
 hr{
     border-color: rgba(128, 128, 128, 0.300);
 }
-
 @media only screen and (max-width: 768px) {
     th {
-        width: 100px !important;
+        width: 100px;
     }
     td {
-        width: 100% !important;
+        width: 100%;
+    }
+    .wrap-buttons {
+        // width: 50% !important;
     }
 }
 @media only screen and (max-width: 425px) {
     th {
-        width: 60px !important;
+        width: 60px;
     }
     td {
-        width: 100% !important;
+        width: 100%;
+    }
+
+    .wrap-buttons {
+        // width: 50% !important;
     }
 }

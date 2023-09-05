@@ -53,23 +53,28 @@
             $query_2 = ", imgUser = '$nome_img'";
 
             // Deletar imagem antiga
-            if ($_SESSION['login']['imgUser'] != 'img-padrao') {
+            if (mysqli_fetch_row(query($conexao_db, "SELECT imgUser FROM Usuarios WHERE idUser = '$id'"))[0] != 'img-padrao') {
                 unlink('../'.$_SESSION['login']['imgUser']);
             } 
             // // Salvar na variável de sessão
-            $_SESSION['login']['imgUser'] = $nome_img;
+            if ($id == $_SESSION['login']['id']) {
+                $_SESSION['login']['imgUser'] = $nome_img;
+            }
 
         } else {
             $query_2 = "";
         } 
-
+        
         $query_1 = "UPDATE Usuarios SET nome = '$nome', email = '$email', senha = '$senha', tipoUser = '$tipo_user'";
-
+        
         $query = $query_1 . $query_2 . " WHERE idUser = '$id'";
-        echo "<br><br>";
-        echo $query;
-    
+
         query($conexao_db, $query);
+        
+        if ($id == $_SESSION['login']['id']) {
+            $_SESSION['login']['nome'] =  $nome;
+        }
+    
         header('Location: index.php');
         die();
     }

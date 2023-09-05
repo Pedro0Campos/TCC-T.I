@@ -61,6 +61,7 @@ if (isset($_SESSION['login'])) {
             window.location = '../editar_cads.php'
         </script>
         ";
+        die();
     }
 
 } else {

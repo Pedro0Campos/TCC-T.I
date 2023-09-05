@@ -144,7 +144,7 @@
 
                 <div class="wrapper-content-main">
                     <div style="display: flex; align-items: center; justify-content: center;">
-                        <video src="grease.mp4" preload="auto" controls autoplay loop class="vd"></video>
+                        <video src="vids/grease.mp4" preload="auto" controls autoplay loop class="vd"></video>
                     </div>
                 </div> <!-- .wrapper-content-main -->
 

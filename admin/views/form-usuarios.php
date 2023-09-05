@@ -10,13 +10,14 @@
         if ($user) {
             $editar = true;
         } else {
-            echo '
+            die('
                 <h2>Id inválido</h2>
                 <h3><a href="index.php">Voltar</a></h3>
-            ';
+            ');
         }
     } else {
         header('Location: index.php');
+        die();
     }
 
     
@@ -108,3 +109,8 @@
             
     <?php }
 ?>
+
+<!-- Croppie -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.js"></script>
+
+<script src="js/croppie.js"></script>

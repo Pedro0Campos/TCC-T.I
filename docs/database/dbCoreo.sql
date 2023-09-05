@@ -8,7 +8,8 @@ create table `Usuarios` (
     email varchar(60) not null,
     senha varchar(255) not null,
     tipoUser boolean not null default 0,
-    imgUser varchar(50) default 'img-padrao'
+    imgUser varchar(50) default 'img-padrao',
+    contaDesativda boolean not null default 0
 );
 
 create table `Comentarios` (

@@ -17,6 +17,9 @@
 
     <!-- Croppie -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.css"/>
+    
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 
 </head>
 <body>
@@ -48,21 +51,16 @@
         case 'form-usuarios':
             include_once('views/form-usuarios.php');
             break;
+        case 'form-comentarios':
+            include_once('views/form-comentarios.php');
+            break;
         default:
             include_once('views/table-usuarios.php');
             break;
     }
     
     ?>
-
-
-<!-- JQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     
-    <!-- Croppie -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.js"></script>
-
-    <script src="js/croppie.js"></script>
 </body>
 </html>
 <?php }?>

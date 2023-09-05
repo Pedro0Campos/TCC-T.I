@@ -3,6 +3,15 @@
     include_once('../docs/php/consultas.php');
 ?>
 
+<script>
+    function del($id) {
+        if (confirm("Deseja mesmo deletar a conta de ID "+ $id + "?")) {
+            if (confirm("Verifique se está deletando a conta desejada. Essa ação é irreversível.\n\nID da conta: " + $id + "\n\nConfirmar deleção?")) {
+                document.location = 'del-usuarios.php?id=' + $id
+            }
+        }
+    }
+</script>
 
 <h2>Usuários</h2>
 <div class="overflow">
@@ -45,8 +54,16 @@
                 <td class="collumn-4"><?php echo $row[3]?></td>
                 <td class="collumn-5"><?php echo $row[4]?></td>
                 <td class="collumn-6"><?php echo $row[5]?></td>
-                <td class="collumn-7"><a href="?pagina=form-usuarios&id=<?php echo $row[0] ?>"><i class="fa-solid fa-pen-to-square fa-bounce"></i></a></td>
-                <td class="collumn-8"><a href="del-usuarios.php?id=<?php echo $row[0] ?>"><i class="fa-solid fa-trash fa-bounce"></i></a></td>
+                <td class="collumn-7">
+                    <a href="?pagina=form-usuarios&id=<?php echo $row[0] ?>">
+                        <i class="fa-solid fa-pen-to-square fa-bounce" aria-label="Editar usuário"></i>
+                    </a>
+                </td>
+                <td class="collumn-8">
+                    <button type="button" id="del-users"aria-label="Deletar usuário" onclick="del(<?php echo $row[0] ?>)">
+                        <i class="fa-solid fa-trash fa-bounce"></i>
+                    </button>
+                </td>
             </tr>
             <?php $count += 1 ?>
         <?php }?>

@@ -199,12 +199,36 @@
     }
 }
 
+
+#showPopUp {
+    background-color: rgba(40, 39, 39, 0.785);
+    left: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .wrap-exit {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        #exit {
+            font-size: 50px;
+            margin: 7px 0 0 12px;
+            i {
+                color: white;
+                cursor: pointer;
+            }
+        }
+    }
+}
 // ===========================
 //carrossel personagens
 // ===========================
 .carrosel-personagens {
 
-    height: 70vh;
+    // height: 70vh;
 
 
     /* Título do carrosel */
@@ -293,7 +317,7 @@
         }
         img {
             width: 100%;
-            aspect-ratio: 75/118;
+            // aspect-ratio: 75/118;
             object-fit: cover;
         }
         .nome_pessoa {
