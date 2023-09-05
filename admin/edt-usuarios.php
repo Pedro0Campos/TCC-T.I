@@ -16,7 +16,7 @@
         echo "
         <script>
             window.location = 'index.php?pagina=form-usuarios&id=$id'
-            alert('Não é possível editar a própria permissão do usuário')
+            alert('Não é possível editar a própria permissão de usuário')
         </script>
         ";
     } else {
