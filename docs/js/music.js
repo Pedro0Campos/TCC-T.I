@@ -130,29 +130,59 @@ function getTracks(type='musics') {
             "smallImage": "musics/imgs/chove-chuva.jpg",
             "background": "#cba98c",
             "src": "musics/Jorge-Ben-Chove-Chuva.mp3"
-        }
+        },
+        {
+            "nome": "Love Me Like There Is No Tomorrow",
+            "artista": "Freddie Mercury",
+            "largeImage": "musics/imgs/lovetomorrow.jpg",
+            "smallImage": "musics/imgs/lovetomorrow.jpg",
+            "background": "#130d27",
+            "src": "musics/lovetomorrow.mp3"
+        },
+        {
+            "nome": "I Was Born To Love You",
+            "artista": "Freddie Mercury",
+            "largeImage": "musics/imgs/lovetomorrow.jpg",
+            "smallImage": "musics/imgs/lovetomorrow.jpg",
+            "background": "#130d27",
+            "src": "musics/iwas.mp3"
+        },
+        {
+            "nome": "Baby",
+            "artista": "Gal Costa",
+            "largeImage": "musics/imgs/galcosta.webp",
+            "smallImage": "musics/imgs/galcosta.webp",
+            "background": "#e9e9e7",
+            "src": "musics/baby.mp3"
+        },
     ]
 
     let playlists = [
         // Nacionais
         [
             listaMusicas[11],
-             listaMusicas[12], 
-             listaMusicas[13],
-             listaMusicas[15]],
+            listaMusicas[12], 
+            listaMusicas[13],
+            listaMusicas[15],
+            listaMusicas[18]
+        ],
 
         // Elvis à Johnny Cash
         [
             listaMusicas[2], 
             listaMusicas[3],
+            listaMusicas[4],
+            listaMusicas[5],
             listaMusicas[9],
             listaMusicas[10],
+            listaMusicas[16],
+            listaMusicas[17]
         ],
 
         // Grease
         [
             listaMusicas[0],
-            listaMusicas[1],
+            listaMusicas[1]
         ],
     ]
 
