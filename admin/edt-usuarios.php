@@ -22,6 +22,7 @@
         if ($senha != $senha_consulta = mysqli_fetch_row(query($conexao_db, "SELECT senha FROM Usuarios WHERE idUser = '$id'"))[0] ) {
             $senha = cryptSenha($senha);
         }
+        
 
         if ($imgUser == '') {
             $query = "UPDATE Usuarios SET nome = '$nome', email = '$email', senha = '$senha', tipoUser = '$tipoUser'  WHERE idUser = '$id'";

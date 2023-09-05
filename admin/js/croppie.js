@@ -15,8 +15,8 @@ function croppie() {
 
         // Recipiente interno
         viewport: {
-            width: 200, 
-            height: 200, 
+            width: 250, 
+            height: 250, 
             type: 'square',
         },
     })
