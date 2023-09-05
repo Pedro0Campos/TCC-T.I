@@ -93,43 +93,43 @@
                         <div class="splide__track">
                             <ul class="splide__list">
                                 <div class="splide__slide">
-                                    <img src="imgs/carrossel/sobre/henrique.png" alt="Henrique Silva">
+                                    <img src="imgs/carrossel/sobre/HenriqueS.png" alt="Henrique Silva">
                                     <p class="nome_pessoa"> Henrique Silva</p>
                                 </div>
                                 <div class="splide__slide">
-                                    <img src="imgs/carrossel/sobre/julia.png" alt="Julia Quessada">
+                                    <img src="imgs/carrossel/sobre/JuliaQ.png" alt="Julia Quessada">
                                     <p class="nome_pessoa"> Julia Quessada</p>
                                 </div>
                                 <div class="splide__slide">
-                                    <img src="imgs/carrossel/sobre/kerthelin.png" alt="Kethelin Vitoria">
+                                    <img src="imgs/carrossel/sobre/Kethelin.png" alt="Kethelin Vitoria">
                                     <p class="nome_pessoa"> Kethelin Vitoria</p>
                                 </div>
                                 <div class="splide__slide">
-                                    <img src="imgs/carrossel/sobre/MatheusM.png" alt="Matheus Martins">
+                                    <img src="imgs/carrossel/sobre/Matheus.png" alt="Matheus Martins">
                                     <p class="nome_pessoa"> Matheus Martins</p>
                                 </div>
                                 <div class="splide__slide">
-                                    <img src="imgs/carrossel/sobre/milena.png" alt="Milena Lima">
+                                    <img src="imgs/carrossel/sobre/MilenaL.png" alt="Milena Lima">
                                     <p class="nome_pessoa"> Milena Lima</p>
                                 </div>
                                 <div class="splide__slide">
-                                    <img src="imgs/carrossel/sobre/nayla.png" alt="Nayla Assis">
+                                    <img src="imgs/carrossel/sobre/NaylaA.png" alt="Nayla Assis">
                                     <p class="nome_pessoa"> Nayla Assis</p>
                                 </div>
                                 <div class="splide__slide">
-                                    <img src="imgs/carrossel/sobre/pedroG.png" alt="Pedro Gonçalves">
+                                    <img src="imgs/carrossel/sobre/Pedro.png" alt="Pedro Gonçalves">
                                     <p class="nome_pessoa"> Pedro Gonçalves</p>
                                 </div>
                                 <div class="splide__slide">
-                                    <img src="imgs/carrossel/sobre/pedroH.png" alt="Pedro Henrique">
+                                    <img src="imgs/carrossel/sobre/PedroH.png" alt="Pedro Henrique">
                                     <p class="nome_pessoa"> Pedro Henrique</p>
                                 </div>
                                 <div class="splide__slide">
-                                    <img src="imgs/carrossel/sobre/raquel.png" alt="Raquel Lima">
+                                    <img src="imgs/carrossel/sobre/RaquelL.png" alt="Raquel Lima">
                                     <p class="nome_pessoa"> Raquel Lima</p>
                                 </div>
                                 <div class="splide__slide">
-                                    <img src="imgs/carrossel/sobre/vinicius.png" alt="Vinicius Passos">
+                                    <img src="imgs/carrossel/sobre/ViniciusP.png" alt="Vinicius Passos">
                                     <p class="nome_pessoa"> Vinicius Passos</p>
                                 </div>
                             </ul>

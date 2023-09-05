@@ -104,6 +104,16 @@ section.section2 .retro-line {
 section.section3 {
   height: calc(100vh - 72px);
   min-height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+section.section3 .img-section3 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 70%;
 }
 section.section4 {
   position: relative;

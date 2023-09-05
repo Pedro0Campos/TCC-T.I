@@ -247,6 +247,19 @@
                 </div> <!-- .box-title2 .border-box .padding-->
             </div> <!-- .wrapper-content-main .side-bar side-bar-style-1 -->
 
+            <div class="ocult-425px">
+                <div class="wrapper-content-main no-padding" data-aos="fade-right">
+                    <img src="imgs/home/circles.svg" alt="" id="circles">
+                </div> <!-- .wrapper-content-main .side-bar side-bar-style-1 -->
+            </div>
+
+            <!-- <div class="ocult-425px">
+                <div class="wrapper-content-main no-padding" data-aos="fade-right" id="lines">
+                    
+                </div> 
+            </div> -->
+
+
             <div class="wrapper-content-main" data-aos="fade-right" data-aos-anchor-placement="top-bottom">
                 <button type="button" onclick="showPopUp()" class="btn-home btn-retro animation-scale">Conheça os personagens</button>
             </div> <!-- .wrapper-content-main -->
@@ -304,6 +317,8 @@
                     </div>
                 </div> <!-- .carrosel-personagens .splide -->
             </div>
+
+            <img src="imgs/home/img-section3.svg" alt="Sandy, danny e Rizzo" class="img-section3" id="" data-aos="fade-up">
 
         </section> <!--.section-impar -->
 
