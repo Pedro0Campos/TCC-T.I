@@ -296,12 +296,12 @@
   text-align: center;
 }
 .container-navbar-lateral .navbar-lateral .header .img-user {
-  height: 50px;
-  margin-bottom: 10px;
+  height: 60px;
+  margin: 10px 0 10px 0;
 }
 .container-navbar-lateral .navbar-lateral .header .img-user img {
   height: 100%;
-  border-radius: 30px;
+  border-radius: 100%;
   aspect-ratio: 1/1;
 }
 .container-navbar-lateral .navbar-lateral .resize-font-size {

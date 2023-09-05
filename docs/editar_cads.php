@@ -107,14 +107,14 @@
                         </div>
                     </td>
                 </tr>
-<!-- 
+                
+                <!-- 
                 <tr>
                     <th>Foto</th>
                     <td>
                         <input type="file" name="foto" id="foto" class="caixas_form">
                     </td>
                 </tr>
-
                 <tr style="font-size: 0.8em;">
                     <th>Observação:</th>
                     <td><p class="caixas_form text">Se não inserir nenhuma imagem, a foto atual será preservada</p></td>

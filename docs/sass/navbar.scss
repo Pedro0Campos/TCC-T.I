@@ -270,11 +270,11 @@
         .header {
             text-align: center;
             .img-user {
-                height: 50px;
-                margin-bottom: 10px;
+                height: 60px;
+                margin: 10px 0 10px 0;
                 img {
                     height: 100%;
-                    border-radius: 30px;
+                    border-radius: 100%;
                     aspect-ratio: 1/1;
                     // object-fit: cover;
                 }

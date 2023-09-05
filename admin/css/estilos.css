@@ -149,18 +149,20 @@ form .conteiner-input label {
 }
 form .conteiner-input fieldset {
   margin-bottom: 5px;
-  border: 2px solid #B6B6B6;
-  color: #B6B6B6;
+  border: 2px solid #000;
   padding: 0 10px 0 10px;
 }
 form .conteiner-input fieldset:focus-within {
   border-color: #4925B0;
+}
+form .conteiner-input fieldset:focus-within legend {
   color: #4925B0;
 }
 form .conteiner-input fieldset legend {
   text-align: left;
   padding: 0 10px 0 10px;
   font-size: 1em;
+  color: black;
 }
 form .conteiner-input input {
   width: 100%;
@@ -169,7 +171,7 @@ form .conteiner-input .input {
   height: 50px;
   background: transparent;
   border-bottom: 1px solid var(--text-color);
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.8);
   outline: none;
   border: none;
   transform: translateY(-7.5%);

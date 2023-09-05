@@ -24,4 +24,8 @@
   bottom: -100% !important;
 }
 
+.disable-scroll {
+  overflow: hidden;
+}
+
 /*# sourceMappingURL=utils.css.map */

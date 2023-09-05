@@ -255,12 +255,6 @@
 }
 
 
-// Desabilita o Scroll -> Body
-.disable-scroll {
-    overflow: hidden;
-}
-
-
 @media only screen and (min-width: 425px) {
     .close-container:hover .leftright {
         transform: rotate(-45deg);
