@@ -173,6 +173,7 @@
         // height: 100%;
         display: flex;
         align-items: center;
+        justify-content: center;
         input {
             border-radius: 6px;
             cursor: pointer;
@@ -183,7 +184,7 @@
             border: solid 1px #5474E5;
             background-color: #5474E5;
             color: #fff;
-            margin: 0 auto;
+            margin-bottom: 20px;
         }
     }
 }

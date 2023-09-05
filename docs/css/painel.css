@@ -227,6 +227,7 @@
 #container-croppie .wrap-submit {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 #container-croppie .wrap-submit input {
   border-radius: 6px;
@@ -238,7 +239,7 @@
   border: solid 1px #5474E5;
   background-color: #5474E5;
   color: #fff;
-  margin: 0 auto;
+  margin-bottom: 20px;
 }
 
 /*# sourceMappingURL=painel.css.map */
