@@ -20,4 +20,4 @@ create table `Comentarios` (
     dataComent datetime not null
 );
 
-UPDATE Usuarios SET tipoUser = 1 WHERE idUser = 1
+-- UPDATE Usuarios SET tipoUser = 1 WHERE idUser = 1
