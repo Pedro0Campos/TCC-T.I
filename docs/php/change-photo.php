@@ -1,7 +1,7 @@
 <?php 
+    include_once('verify_login.php');
     include_once('../database/db.php');
     include_once('form.php');
-    include_once('verify_login.php');
     
     // Pegando valores brutos e "polindo"
     $data_img = explode(';', input_post('data-img'));

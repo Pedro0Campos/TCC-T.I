@@ -58,9 +58,9 @@
         </div>
     </div>
 
-    <div id="container-croppie" class="">
+    <div id="container-croppie">
         <div class="wrap-exit">
-            <div id="exit"><i class="fa-solid fa-xmark"></i></div>
+            <div id="exit"><i class="fa-solid fa-xmark exit"></i></div>
         </div>
 
         <!-- Preview da imagem -->

@@ -15,6 +15,9 @@
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/55197c00fe.js" crossorigin="anonymous"></script>
 
+    <!-- Croppie -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.css"/>
+
 </head>
 <body>
 
@@ -51,6 +54,15 @@
     }
     
     ?>
+
+
+<!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    
+    <!-- Croppie -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.js"></script>
+
+    <script src="js/croppie.js"></script>
 </body>
 </html>
 <?php }?>

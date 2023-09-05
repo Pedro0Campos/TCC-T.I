@@ -22,7 +22,7 @@
     
     if ($editar) {?>
         <h2>Editar usuário</h2>
-        <form action="edt-usuarios.php" method="post">
+        <form action="edt-usuarios.php" method="post" id="edtUser">
             <div class="conteiner-input">
                 <label for="id">
                     <fieldset>
@@ -54,7 +54,8 @@
                 <label for="senha">
                     <fieldset>
                         <legend>Senha</legend>
-                        <input id="senha" name="senha" class="input" value="<?php echo $user[3] ?>">
+                        <input id="senha" name="senha" class="input" value="" placeholder="Sem alteração">
+                        <input type="hidden" name="senhaAntiga" value="<?php echo $user[3]?>">
                     </fieldset>
                 </label>
             </div>
@@ -75,7 +76,10 @@
                 <label for="imgUser">
                     <fieldset>
                         <legend>Foto de perfil</legend>
-                        <input id="imgUser" name="imgUser" type="file" class="input" value="<?php echo $user[5] ?>">
+                        <input name="imgUser" id="imgUser" class="input" type="file" accept="image/png, image/gif, image/jpeg, image/jpg">
+
+                        <!-- Vai ter o atributo VALUE definido pelo JS, carregando a imagem no tipo Base64 -->
+                        <input type="hidden" name="imgBase64" id="imgBase64">
                     </fieldset>
                 </label>
             </div>
@@ -85,5 +89,22 @@
             </div>
         </form>
         
+
+        <!-- Container do Croppie -->
+        <div id="container-croppie">
+            <div class="wrap-exit">
+                <div id="exit"><i class="fa-solid fa-xmark exit"></i></div>
+            </div>
+
+            <!-- Preview da imagem -->
+            <div class="wrap-preview">
+                <div id="preview"></div>
+            </div>
+
+            <div class="wrap-submit">
+                <input type="button"value="Enviar" id="btn-submit">
+            </div>
+        </div>
+            
     <?php }
 ?>

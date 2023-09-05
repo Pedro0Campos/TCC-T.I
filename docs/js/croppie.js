@@ -55,13 +55,12 @@ function croppie() {
     })
 
     // Fechar o container - apaga os dados do input file
-    $('#exit').on('click', function() {
+    $('.exit').on('click', function() {
         $('#container-croppie')[0].classList.toggle('opened')
         $('body')[0].classList.toggle('disable-scroll')
         $('#input-img')[0].value = ''
     })
 
-    console.log();
 }
 
 croppie()
