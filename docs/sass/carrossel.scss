@@ -257,8 +257,14 @@
     }
 
     /* CONTEUDO DO SLIDE */
+    .splide__slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     .splide__slide img {
         width: 100%;
+        max-width: 100vh;
         margin-bottom: 8px;
     }
 
