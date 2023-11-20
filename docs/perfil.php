@@ -72,16 +72,7 @@
             <input type="button"value="Enviar" id="btn-submit">
         </div>
     </div>
-            
-
-    <!-- Acho que a Biografia não é uma coisa necessaria, mas se quiser manter é só descomentar e adicionar no bd. -->
-    <!-- <div id="bio_amiga">
-        <h3>Biografia</h3>
-        <textarea name="bio_perfil" id="bio_perfil" cols="30" rows="10"></textarea>
-    </div> -->
-
-
-
+    
     <!-- Croppie -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.js"></script>

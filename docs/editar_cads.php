@@ -63,10 +63,12 @@
     <title>Editar</title>
 </head>
 <body>
-    
+
+    <div class="disable-navbar">
+        <?php include_once('navbar.php'); ?>
+    </div>
     <?php
 
-        include('navbar.php');
         $id = $_SESSION['login']['id'];
         $condicao = "SELECT * FROM Usuarios WHERE idUser = '$id'";
         $consulta = query($conexao_db, $condicao);
@@ -78,56 +80,65 @@
         <h1 class="h2">Configuração</h1>
         <hr>
         <div class="img-user">
-            <a href="perfil.php"><img src="<?php echo get_img($_SESSION['login']['imgUser']) ?>" alt="Imagem do usuário E link para o perfil do usuário"></a>
+            <a href="perfil.php"><img src="<?php echo get_img($_SESSION['login']['imgUser']) ?>" class="foto-user" alt="Imagem do usuário E link para o perfil do usuário"></a>
         </div>
+        
+        <div class="display-425px voltar"><a href="perfil.php"><img src="imgs/editar_cads/voltar.svg" alt=""></a></div>
     </div>
 
     <div id="edicao">
-
+        <div class="display-425px">
+            <div class="img-user">
+                <a href="perfil.php"><img src="<?php echo get_img($_SESSION['login']['imgUser']) ?>" class="foto-user" alt="Imagem do usuário E link para o perfil do usuário"></a>
+            </div>
+        </div>
         <form method="post" id="form-edit">
 
             <table>
 
                 <tr>
                     <th>Nome</th>
-                    <td><input type="text" name="nome" id="nome" class="caixas_form border" value="<?php echo $per_user[1];?>"></td>
+                    <td>
+                        <fieldset>
+                            <legend>Nome</legend>
+                            <input type="text" name="nome" id="nome" class="caixas_form border" value="<?php echo $per_user[1];?>">
+                        </fieldset>
+                    </td>
                 </tr>
 
                 <tr>
                     <th>Email</th>
-                    <td><input type="email" name="email" id="email" class="caixas_form border" disabled value="<?php echo $per_user[2];?>"></td>
+                    <td>
+                        <fieldset>
+                            <legend>Email</legend>
+                            <input type="email" name="email" id="email" class="caixas_form border" disabled value="<?php echo $per_user[2];?>">
+                        </fieldset>
+                    </td>
                 </tr>
 
                 <tr>
                     <th>Senha</th>
                     <td>
                         <div class="wrap-senha">
-                            <input type="password" name="senha" id="senha" class="caixas_form border" placeholder="Sem alteração">
-                            <i id="verSenha" class="fa-regular fa-eye-slash" style="cursor: pointer;" onclick="hidePass()"></i>
+                            <fieldset>
+                                <legend>Senha</legend>
+                                <input type="password" name="senha" id="senha" class="caixas_form border" placeholder="Sem alteração">
+                                <i id="verSenha" class="fa-regular fa-eye-slash" style="cursor: pointer;" onclick="hidePass()"></i>
+                            </fieldset>
                         </div>
                     </td>
                 </tr>
-                
-                <!-- 
-                <tr>
-                    <th>Foto</th>
-                    <td>
-                        <input type="file" name="foto" id="foto" class="caixas_form">
-                    </td>
-                </tr>
-                <tr style="font-size: 0.8em;">
-                    <th>Observação:</th>
-                    <td><p class="caixas_form text">Se não inserir nenhuma imagem, a foto atual será preservada</p></td>
-                </tr>
-                 -->
+
                 <tr>
                     <table>
                         <tr>
-                            <td colspan="" style="text-align: right; border: none;" class="wrap-buttons">
-                            <input type="button" value="Deletar" id="del_btn" class="btn" onclick="deletar()">
-                        </td>
-                            <td style="text-align: left; border: none;" class="wrap-button">
-                                <input type="button" value="Editar" id="edit_btn" class="btn" onclick="editar()">
+                            <td class="wrap-buttons">
+                                <button type="button" style="margin: 10px;" id="del_btn" class="btn" onclick="deletar()">
+                                    <span>Deletar</span>
+                                </button>
+                                <button type="button" style="margin: 10px;" id="edit_btn" class="btn" onclick="editar()">
+                                    Editar
+                                </button>
                             </td>
                         </tr>
                     </table>
