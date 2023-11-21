@@ -85,7 +85,7 @@ let carroselPopup = new Splide('#popup', {
     width: '100%',        // Comprimento do carrosel
     // fixedWidth: '400px',  // Altura do slide
     focus:   0,           // Habilita uma classe para personalizar o elemento focado
-    gap: '20px',          // Espaçamento entre os slides
+    gap: '0px',          // Espaçamento entre os slides
     easing: 'ease-out',
 });
 

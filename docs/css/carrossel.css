@@ -274,7 +274,7 @@
   background-color: transparent;
   color: rgba(255, 255, 255, 0);
   height: 80vh;
-  width: 100%;
+  width: 75%;
   /* Todos os slides vão ter 40% de opacidade */
   opacity: 0.4;
   font-size: 14px;
@@ -290,24 +290,25 @@
   align-items: center;
 }
 .carrosel-personagens .splide__slide img {
-  width: 100%;
+  width: 80%;
   max-width: 100vh;
   margin-bottom: 8px;
 }
 .carrosel-personagens .splide__arrow {
   opacity: 1;
   background: transparent;
+  top: 50%;
 }
 .carrosel-personagens .splide__arrow svg {
-  fill: rgb(0, 0, 0);
+  fill: rgb(255, 255, 255);
+  width: 60px;
+  height: 60px;
 }
 .carrosel-personagens .splide__arrow--next {
-  top: 150px;
-  left: 1478px;
+  right: 0;
 }
 .carrosel-personagens .splide__arrow--prev {
-  top: 150px;
-  left: -16px;
+  left: 0;
 }
 .carrosel-personagens .splide__pagination {
   display: none;
