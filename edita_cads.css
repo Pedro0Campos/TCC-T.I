@@ -1,0 +1,85 @@
+/*Id*/
+#top_linha{ /*Primeira div*/
+    border: none black;
+    text-align: center;
+    margin-top: 25px;
+    padding: 5px;
+}
+#top_linha h2{
+    border: none;
+    margin-bottom: 30px;
+}
+#top_linha img{
+    border: none black;
+    border-radius: 100%;
+    height: auto;
+    width: 100px;
+    margin-top: 60px;
+}
+
+#edicao{ /*Segunda div*/
+    border: none 1px;
+    margin-top: 50px;
+}
+#edicao form{
+    border: none 1px;
+    padding: 10px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+#del_btn{
+    border: solid 1px #FF0000;
+    border-radius: 6px;
+    background-color: #fff;
+    color: #FF0000;
+    cursor: pointer;
+    width: 90px;
+    height: 22px;
+}
+#edit_btn{
+    border: solid 1px #5474E5;
+    border-radius: 6px;
+    background-color: #5474E5;
+    color: #fff;
+    cursor: pointer;
+    width: 90px;
+    height: 22px;
+    margin-left: 10px;
+}
+
+/*Class*/
+.caixas_form{
+    border: solid 1px;
+    border-radius: 6px;
+    margin-left: 55px;
+    width: 50%;
+    height: 28px;
+    text-indent: 10px;
+    outline: 0;
+}
+
+/*Tags*/
+table{
+    border: none 1px greenyellow;
+    border-collapse: collapse;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+th{
+    border: solid 1px rgba(128, 128, 128, 0.300);
+    border-left: none;
+    padding: 28px;
+}
+td{
+    border: solid 1px rgba(128, 128, 128, 0.300);
+    border-right: none;
+    border-left: none;
+    padding: 28px;
+}
+hr{
+    border-color: rgba(128, 128, 128, 0.300);
+}
